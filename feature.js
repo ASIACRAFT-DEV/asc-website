@@ -11,7 +11,6 @@
   if (!f) {
     root.innerHTML = `<section class="fp-hero"><div class="fp-hero-inner">
       <a class="back-link" href="index.html">← Back to all features</a>
-      <div class="fp-emoji">🤔</div>
       <h1 class="fp-title">Feature not found</h1>
       <p class="fp-blurb">That feature doesn't exist. Head back and pick one from the list.</p>
     </div></section>`;
@@ -46,7 +45,7 @@
   // "more features" strip — everything except the current one
   const more = FEATURE_ORDER.filter((x) => x !== id).map((x) => {
     const o = FEATURES[x];
-    return `<a class="more-feat" href="feature.html?f=${x}"><span>${o.emoji}</span> ${o.short || o.name}</a>`;
+    return `<a class="more-feat" href="feature.html?f=${x}">${o.short || o.name}</a>`;
   }).join('');
 
   root.innerHTML = `
@@ -54,7 +53,6 @@
       <div class="fp-hero-glow"></div>
       <div class="fp-hero-inner">
         <a class="back-link" href="index.html#features">← Back to all features</a>
-        <div class="fp-emoji">${f.emoji}</div>
         <span class="fp-cat">${f.category}</span>
         <h1 class="fp-title">${f.name}</h1>
         <p class="fp-blurb">${f.blurb}</p>

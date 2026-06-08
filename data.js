@@ -16,7 +16,6 @@ const FEATURES = {
   solforge: {
     name: 'SolForge — Season of the First Sun',
     short: 'SolForge Season',
-    emoji: '☀️',
     accent: 'solar',
     tag: '/gear',
     category: 'Seasonal',
@@ -66,7 +65,6 @@ const FEATURES = {
   crates: {
     name: 'Gacha Crates & Banners',
     short: 'Crates & Banners',
-    emoji: '🎴',
     accent: 'solar',
     tag: '/crates · /summon',
     category: 'Collecting',
@@ -79,12 +77,12 @@ const FEATURES = {
       {
         title: 'Rotating trio banners',
         body:
-          'Instead of one legendary, each banner features a whole themed group — Creation Trio, Weather Trio, Treasures of Ruin, Ultra Beasts, and 30+ more. A 5★ win awards a random member of the active group. Banners rotate daily from a shuffled deck, and no group repeats until every group has had its turn.',
+          'Instead of one legendary, each banner features a whole themed group — Creation Trio, Weather Trio, Treasures of Ruin, Ultra Beasts, and 30+ more. A 5-star win awards a random member of the active group. Banners rotate daily from a shuffled deck, and no group repeats until every group has had its turn.',
       },
       {
         title: 'Pity that carries',
         body:
-          'Every banner shares one pity counter. Lose a 50/50 and the next 5★ is guaranteed to be featured — exactly like the gachas you know. Your pity is tracked per banner and never silently resets.',
+          'Every banner shares one pity counter. Lose a 50/50 and the next 5-star is guaranteed to be featured — exactly like the gachas you know. Your pity is tracked per banner and never silently resets.',
       },
       {
         title: 'See what’s coming',
@@ -110,7 +108,6 @@ const FEATURES = {
   battletower: {
     name: 'Battle Tower',
     short: 'Battle Tower',
-    emoji: '🗼',
     accent: 'ember',
     tag: '/ascbt',
     category: 'Battling',
@@ -153,7 +150,6 @@ const FEATURES = {
   areazero: {
     name: 'Area Zero',
     short: 'Area Zero',
-    emoji: '🌋',
     accent: 'violet',
     tag: '/ascaz · /skill',
     category: 'Battling',
@@ -197,7 +193,6 @@ const FEATURES = {
   gyms: {
     name: 'Gyms & Elite Four',
     short: 'Gyms & Elite Four',
-    emoji: '🏅',
     accent: 'ember',
     tag: '/gym · /pvp ladder',
     category: 'Battling',
@@ -242,7 +237,6 @@ const FEATURES = {
   raids: {
     name: 'Raid Bosses',
     short: 'Raid Bosses',
-    emoji: '🐉',
     accent: 'ember',
     tag: '/ascraid',
     category: 'Battling',
@@ -283,7 +277,6 @@ const FEATURES = {
   dungeons: {
     name: 'Seasonal Dungeons',
     short: 'Dungeons',
-    emoji: '🗝️',
     accent: 'amber',
     tag: '/ascdun · /buykey',
     category: 'Battling',
@@ -326,7 +319,6 @@ const FEATURES = {
   safari: {
     name: 'Safari Zones',
     short: 'Safari',
-    emoji: '🌿',
     accent: 'emerald',
     tag: '/safari',
     category: 'Collecting',
@@ -370,7 +362,6 @@ const FEATURES = {
   warzone: {
     name: 'Warzone PvP',
     short: 'Warzone',
-    emoji: '⚔️',
     accent: 'crimson',
     tag: '/pvp',
     category: 'Battling',
@@ -415,7 +406,6 @@ const FEATURES = {
   clans: {
     name: 'Clans',
     short: 'Clans',
-    emoji: '🛡️',
     accent: 'azure',
     tag: '/clans · /c',
     category: 'Social',
@@ -457,7 +447,6 @@ const FEATURES = {
   jobs: {
     name: 'Jobs & Economy',
     short: 'Jobs & Economy',
-    emoji: '💼',
     accent: 'amber',
     tag: '/jobs · /ascshop',
     category: 'Economy',
@@ -500,7 +489,6 @@ const FEATURES = {
   progression: {
     name: 'Battle Pass, Ranks & Passives',
     short: 'Progression',
-    emoji: '🎖️',
     accent: 'violet',
     tag: '/bp · /ascranks',
     category: 'Progression',
@@ -543,7 +531,6 @@ const FEATURES = {
   hunts: {
     name: 'Poké Hunts',
     short: 'Poké Hunts',
-    emoji: '🎯',
     accent: 'emerald',
     tag: '/hunt · /ghunt',
     category: 'Collecting',
@@ -581,14 +568,13 @@ const FEATURES = {
     notes: [
       'Personal hunts pay 75k–750k coins by tier — one of the strongest steady income sources.',
       'Global hunts are first-come, first-served: if someone else catches it first, the slot is gone until rotation.',
-      'A ⚡ badge on a hunt tile means the target is currently swarming in the Safari.',
+      'A swarm badge on a hunt tile means the target is currently swarming in the Safari.',
     ],
   },
 
   bingo: {
     name: 'Catch Bingo',
     short: 'Catch Bingo',
-    emoji: '🎲',
     accent: 'violet',
     tag: '/bingo',
     category: 'Collecting',
@@ -610,7 +596,7 @@ const FEATURES = {
       {
         title: 'Complete rows for coins',
         body:
-          'Fill all four squares in a row to complete a line. Each completed row is worth coins — claim them with the 📦 button in the /bingo GUI.',
+          'Fill all four squares in a row to complete a line. Each completed row is worth coins — claim them with the claim button in the /bingo GUI.',
       },
       {
         title: 'Race the full card',
@@ -630,7 +616,6 @@ const FEATURES = {
   casino: {
     name: 'Casino',
     short: 'Casino',
-    emoji: '🎰',
     accent: 'crimson',
     tag: '/casino',
     category: 'Economy',
@@ -718,7 +703,6 @@ const MODS = [
 const COMMANDS = [
   {
     group: 'Getting Started',
-    icon: '🚀',
     items: [
       { cmd: '/register <password>', desc: 'Register your account on first join (offline-mode auth)' },
       { cmd: '/login <password>', desc: 'Log in when you join' },
@@ -734,7 +718,6 @@ const COMMANDS = [
   },
   {
     group: 'Pokémon & Catching',
-    icon: '🎯',
     items: [
       { cmd: '/hunt', desc: 'Personal Poké Hunt board (also /hunts, /pokehunt)' },
       { cmd: '/ghunt', desc: 'Server-wide global hunt board' },
@@ -750,7 +733,6 @@ const COMMANDS = [
   },
   {
     group: 'Battling & Competition',
-    icon: '⚔️',
     items: [
       { cmd: '/ascbt', desc: 'Battle Tower — tiered singles & doubles ladder' },
       { cmd: '/gym', desc: 'Challenge the eight gym leaders' },
@@ -766,7 +748,6 @@ const COMMANDS = [
   },
   {
     group: 'Economy & Gambling',
-    icon: '💰',
     items: [
       { cmd: '/jobs', desc: 'Browse and join paying jobs' },
       { cmd: '/ascshop', desc: 'Chest-shop system' },
@@ -779,7 +760,6 @@ const COMMANDS = [
   },
   {
     group: 'Gear, Crates & Forge',
-    icon: '☀️',
     items: [
       { cmd: '/crates', desc: 'Crate hub' },
       { cmd: '/summon', desc: 'Open the gacha banner-select GUI' },
@@ -789,7 +769,6 @@ const COMMANDS = [
   },
   {
     group: 'Progression',
-    icon: '🎖️',
     items: [
       { cmd: '/bp', desc: 'Seasonal Battle Pass' },
       { cmd: '/passive', desc: 'Buy & manage permanent passives' },
@@ -801,7 +780,6 @@ const COMMANDS = [
   },
   {
     group: 'Social & Utility',
-    icon: '🛡️',
     items: [
       { cmd: '/clans', desc: 'Clan hub (alias /c, + clan chat)' },
       { cmd: '/mail', desc: 'In-game mailbox — claim rewards & messages' },
@@ -812,7 +790,6 @@ const COMMANDS = [
   },
   {
     group: 'Help — every mod has its own',
-    icon: '❓',
     items: [
       { cmd: '/ascess help', desc: 'Essentials command list (homes, warps, hunts, casino…)' },
       { cmd: '/ascbt help', desc: 'Battle Tower help' },
@@ -877,5 +854,29 @@ const GUIDE = [
     body:
       'You don’t have to go it alone. Join or start a clan with <code>/clans</code> for shared bonuses and a crew, check your <code>/mail</code> for rewards, and hop in our Discord to find friends, events and support. Welcome to Cobble Asia!',
     cmds: ['/clans', '/mail'],
+  },
+];
+
+// =====================================================================
+//  SERVER NEWS (landing hub). Newest first. Link points to a feature page.
+// =====================================================================
+const NEWS = [
+  {
+    tag: 'Seasonal',
+    title: 'SolForge: Season of the First Sun',
+    body: 'The first full seasonal set is live — forge sun-powered gear, level it with Solar Shards, and chase the server-wide Radiant State.',
+    link: 'feature.html?f=solforge',
+  },
+  {
+    tag: 'PvP',
+    title: 'The Warzone is open',
+    body: 'Step into the tag-to-fight arena. Hit a trainer and a ranked battle starts instantly — win to earn Warzone Points and steal a Pokémon.',
+    link: 'feature.html?f=warzone',
+  },
+  {
+    tag: 'Exploration',
+    title: 'Explore the Umera Safari',
+    body: 'A 26-region reserve with region-locked spawns, roaming Megas and Totems, Tera & Dynamax raids, swarms and timed expeditions.',
+    link: 'feature.html?f=safari',
   },
 ];

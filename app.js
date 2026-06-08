@@ -21,9 +21,9 @@ document.querySelectorAll('.js-discord').forEach((a) => {
   a.setAttribute('rel', 'noopener');
 });
 
-// --- Copy-to-clipboard ---
+// --- Copy-to-clipboard (any element with data-copy) ---
 function wireCopyButtons() {
-  document.querySelectorAll('.copy-btn').forEach((btn) => {
+  document.querySelectorAll('[data-copy]').forEach((btn) => {
     if (btn.dataset.wired) return;
     btn.dataset.wired = '1';
     btn.addEventListener('click', async () => {
@@ -60,15 +60,10 @@ if (grid && typeof FEATURES !== 'undefined') {
     const f = FEATURES[id];
     if (!f) return '';
     const badge = f.featured ? '<span class="fc-badge">Featured</span>' : '';
-    return `<a class="feature-card reveal" href="feature.html?f=${id}" style="--accent-grad:${GRAD[f.accent] || GRAD.solar}">
+    return `<a class="feature-card reveal" href="feature.html?f=${id}">
       ${badge}
-      <div class="fc-top">
-        <div class="fc-icon">${f.emoji}</div>
-        <div>
-          <div class="fc-cat">${f.category}</div>
-          <h3>${f.short || f.name}</h3>
-        </div>
-      </div>
+      <div class="fc-cat">${f.category}</div>
+      <h3>${f.short || f.name}</h3>
       <p>${f.blurb}</p>
       <div class="fc-foot">
         <span class="fc-tag">${f.tag}</span>
@@ -78,12 +73,40 @@ if (grid && typeof FEATURES !== 'undefined') {
   }).join('');
 }
 
-// --- Landing page: mod list ---
-const modList = document.getElementById('mod-list');
-if (modList && typeof MODS !== 'undefined') {
-  modList.innerHTML = MODS.map(
-    (m) => `<div class="mod-pill"><div class="mp-name">${m.name}</div><div class="mp-cmd">${m.cmd}</div></div>`
+// --- Landing page: server news ---
+const newsGrid = document.getElementById('news-grid');
+if (newsGrid && typeof NEWS !== 'undefined') {
+  newsGrid.innerHTML = NEWS.map(
+    (n) => `<a class="news-card" href="${n.link}">
+      <span class="news-tag">${n.tag}</span>
+      <h3>${n.title}</h3>
+      <p>${n.body}</p>
+      <span class="news-more">Read more →</span>
+    </a>`
   ).join('');
+}
+
+// --- Live server status (mcsrvstat.us) ---
+const countEl = document.getElementById('player-count');
+const statusWrap = countEl && countEl.closest('.hub-status');
+if (countEl) {
+  fetch('https://api.mcsrvstat.us/3/' + SERVER.ip)
+    .then((r) => r.json())
+    .then((d) => {
+      if (d && d.online) {
+        const on = (d.players && d.players.online) || 0;
+        const max = (d.players && d.players.max) || 0;
+        countEl.textContent = `${on}${max ? ' / ' + max : ''} players online`;
+        if (statusWrap) statusWrap.classList.add('online');
+      } else {
+        countEl.textContent = 'Server offline';
+        if (statusWrap) statusWrap.classList.add('offline');
+      }
+    })
+    .catch(() => {
+      countEl.textContent = 'Status unavailable';
+      if (statusWrap) statusWrap.classList.add('offline');
+    });
 }
 
 // reveal needs to run after dynamic content is injected

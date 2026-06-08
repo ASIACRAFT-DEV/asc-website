@@ -1048,7 +1048,7 @@ const TEAM = [
       { name: 'Indi', handle: 'IndigoPulse13_', role: 'Owner & Content Design' },
       { name: 'Velpecula', handle: 'VelpeculaTheFox', role: 'Owner & Finance' },
       { name: 'Crysthamyr', role: 'Head Admin' },
-      { name: 'PredatorG', role: 'Core Staff' },
+      { name: 'PredatorG', role: 'Developer' },
       { name: 'JustZeta', role: 'Admin' },
     ],
   },

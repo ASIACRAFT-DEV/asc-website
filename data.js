@@ -53,7 +53,7 @@ const FEATURES = {
     ],
     commands: [
       { cmd: '/gear', desc: 'Open the SolForge catalog — see every piece, its passive, and how to get it' },
-      { cmd: '/ascforge upgrade', desc: 'Spend Solar Shards to level the piece in your hand (I → IV)' },
+      { cmd: '/gear upgrade', desc: 'Spend Solar Shards to level the piece in your hand (I → IV)' },
     ],
     notes: [
       'Every SolForge piece has infinite durability — forge it once, keep it forever.',
@@ -109,7 +109,7 @@ const FEATURES = {
     name: 'Battle Tower',
     short: 'Battle Tower',
     accent: 'ember',
-    tag: '/ascbt',
+    tag: '/bt',
     category: 'Battling',
     featured: true,
     blurb:
@@ -139,7 +139,7 @@ const FEATURES = {
       },
     ],
     commands: [
-      { cmd: '/ascbt', desc: 'Open the Battle Tower hub — pick tier, format, and battle' },
+      { cmd: '/bt', desc: 'Open the Battle Tower hub — pick tier, format, and battle' },
     ],
     notes: [
       'Doubles uses a dedicated per-tier team pool, refreshed when admins add new sets.',
@@ -151,7 +151,7 @@ const FEATURES = {
     name: 'Area Zero',
     short: 'Area Zero',
     accent: 'violet',
-    tag: '/ascaz · /skill',
+    tag: '/az · /skill',
     category: 'Battling',
     featured: true,
     blurb:
@@ -181,7 +181,7 @@ const FEATURES = {
       },
     ],
     commands: [
-      { cmd: '/ascaz', desc: 'Area Zero info, leaderboard and status' },
+      { cmd: '/az', desc: 'Area Zero info, leaderboard and status' },
       { cmd: '/skill', desc: 'Spend your paradox gauge on combat skills' },
     ],
     notes: [
@@ -238,7 +238,7 @@ const FEATURES = {
     name: 'Raid Bosses',
     short: 'Raid Bosses',
     accent: 'ember',
-    tag: '/ascraid',
+    tag: '/raid',
     category: 'Battling',
     blurb:
       'Server-wide raid encounters with rarity-scaled stats, shared HP pools, shield phases and type-weakness mechanics.',
@@ -267,7 +267,7 @@ const FEATURES = {
       },
     ],
     commands: [
-      { cmd: '/ascraid', desc: 'Raid boss info and status' },
+      { cmd: '/raid', desc: 'Raid boss info and status' },
     ],
     notes: [
       'STAB, multi-hit moves and regen all matter — the combat model is deeper than a normal wild fight.',
@@ -278,7 +278,7 @@ const FEATURES = {
     name: 'Seasonal Dungeons',
     short: 'Dungeons',
     accent: 'amber',
-    tag: '/ascdun · /buykey',
+    tag: '/dungeon · /buykey',
     category: 'Battling',
     blurb:
       'Rank-scaled daily keys, relic drops, side-quests and a seasonal currency. Clear dungeons for fragments and prestige.',
@@ -307,7 +307,7 @@ const FEATURES = {
       },
     ],
     commands: [
-      { cmd: '/ascdun', desc: 'Open the dungeon hub and enter runs' },
+      { cmd: '/dungeon', desc: 'Open the dungeon hub and enter runs' },
       { cmd: '/buykey', desc: 'Buy extra dungeon keys with gems' },
     ],
     notes: [
@@ -395,7 +395,7 @@ const FEATURES = {
     commands: [
       { cmd: '/pvp', desc: 'Open the PvP hub — enter the Warzone, check WP' },
       { cmd: '/pvp shop', desc: 'Spend Warzone Points on rewards' },
-      { cmd: '/ascpvp history', desc: 'View your recent Warzone match history' },
+      { cmd: '/pvp history', desc: 'View your recent Warzone match history' },
     ],
     notes: [
       'Steal is real — losing a battle can cost you a Pokémon. Don’t bring what you can’t lose.',
@@ -448,7 +448,7 @@ const FEATURES = {
     name: 'Jobs & Economy',
     short: 'Jobs & Economy',
     accent: 'amber',
-    tag: '/jobs · /ascshop',
+    tag: '/jobs · /chestshop',
     category: 'Economy',
     blurb:
       'Earn coins from mining, fishing, catching and more. Spend across chest shops, the GTS, gacha banners and the forge.',
@@ -478,8 +478,8 @@ const FEATURES = {
     ],
     commands: [
       { cmd: '/jobs', desc: 'Browse and join jobs' },
-      { cmd: '/ascshop', desc: 'Open the chest shop system' },
-      { cmd: '/ascgts', desc: 'Global Trade System' },
+      { cmd: '/chestshop', desc: 'Open the chest shop system' },
+      { cmd: '/gts', desc: 'Global Trade System' },
     ],
     notes: [
       'Donator ranks get a deposit boost on earned coins.',
@@ -490,7 +490,7 @@ const FEATURES = {
     name: 'Battle Pass, Ranks & Passives',
     short: 'Progression',
     accent: 'violet',
-    tag: '/bp · /ascranks',
+    tag: '/bp · /ranks',
     category: 'Progression',
     blurb:
       'Seasonal Battle Pass tracks, an 8-tier rank progression with badges, and permanent passive upgrades you keep forever.',
@@ -520,7 +520,7 @@ const FEATURES = {
     ],
     commands: [
       { cmd: '/bp', desc: 'Open the Battle Pass' },
-      { cmd: '/ascranks', desc: 'View rank progression and perks' },
+      { cmd: '/ranks', desc: 'View rank progression and perks' },
       { cmd: '/passive', desc: 'Buy and manage permanent passives' },
     ],
     notes: [
@@ -661,7 +661,7 @@ const FEATURES = {
     name: 'Pokémon Fusions',
     short: 'Fusions',
     accent: 'violet',
-    tag: '/ascbt shop',
+    tag: '/bt shop',
     category: 'Collecting',
     featured: true,
     blurb:
@@ -686,7 +686,7 @@ const FEATURES = {
       },
     ],
     commands: [
-      { cmd: '/ascbt', desc: 'Battle Tower — earn tokens, then redeem Fusion Splicers in the shop' },
+      { cmd: '/bt', desc: 'Battle Tower — earn tokens, then redeem Fusion Splicers in the shop' },
     ],
     notes: [
       'Fusions are aspect-based forms on the base species — caught and stored like any other Pokémon.',
@@ -716,33 +716,33 @@ const FEATURE_ORDER = [
 
 // Full mod toolbox (landing page mod grid)
 const MODS = [
-  { name: 'Area Zero', cmd: '/ascaz · /skill' },
+  { name: 'Area Zero', cmd: '/az · /skill' },
   { name: 'Battle Pass', cmd: '/bp' },
-  { name: 'Battle Tower', cmd: '/ascbt' },
+  { name: 'Battle Tower', cmd: '/bt' },
   { name: 'Catch Combos', cmd: '/combo' },
-  { name: 'Chest Shop', cmd: '/ascshop' },
+  { name: 'Chest Shop', cmd: '/chestshop' },
   { name: 'Clans', cmd: '/clans · /c' },
   { name: 'Crates & Banners', cmd: '/crates · /summon' },
-  { name: 'Dungeons', cmd: '/ascdun' },
-  { name: 'Essentials', cmd: '/ascess' },
+  { name: 'Dungeons', cmd: '/dungeon' },
+  { name: 'Essentials', cmd: '/ess' },
   { name: 'Forge & SolForge', cmd: '/gear' },
-  { name: 'GTS', cmd: '/ascgts' },
+  { name: 'GTS', cmd: '/gts' },
   { name: 'Gyms', cmd: '/gym' },
   { name: 'Jobs', cmd: '/jobs' },
   { name: 'Leaderboard', cmd: '/lb' },
-  { name: 'Legend Spawns', cmd: '/asclegend' },
-  { name: 'Levels', cmd: '/asclvl' },
+  { name: 'Legend Spawns', cmd: '/legend' },
+  { name: 'Levels', cmd: '/lvl' },
   { name: 'Mail', cmd: '/mail' },
-  { name: 'NPCs', cmd: '/ascnpc' },
+  { name: 'NPCs', cmd: '/npc' },
   { name: 'Pokeditor', cmd: '/pokeditor' },
   { name: 'PokeWiki', cmd: '/pwiki' },
   { name: 'PvP & Warzone', cmd: '/pvp' },
-  { name: 'Raid Boss', cmd: '/ascraid' },
-  { name: 'Ranks', cmd: '/ascranks' },
+  { name: 'Raid Boss', cmd: '/raid' },
+  { name: 'Ranks', cmd: '/ranks' },
   { name: 'Safari', cmd: '/safari' },
   { name: 'Training Grounds', cmd: '/tg' },
   { name: 'Voting', cmd: '/vote' },
-  { name: 'World Tweaks', cmd: '/ascwt' },
+  { name: 'World Tweaks', cmd: '/worldtweaks' },
 ];
 
 // =====================================================================
@@ -775,22 +775,22 @@ const COMMANDS = [
       { cmd: '/safari', desc: 'Enter the Umera Safari reserve' },
       { cmd: '/pwiki <species>', desc: 'Look up a Pokémon’s spawn & info' },
       { cmd: '/pokeditor', desc: 'Edit/inspect your Pokémon (where permitted)' },
-      { cmd: '/asclegend', desc: 'Legendary spawn info' },
-      { cmd: '/ascgts', desc: 'Global Trade System' },
+      { cmd: '/legend', desc: 'Legendary spawn info' },
+      { cmd: '/gts', desc: 'Global Trade System' },
       { cmd: '/pc', desc: 'Open your Cobblemon PC' },
     ],
   },
   {
     group: 'Battling & Competition',
     items: [
-      { cmd: '/ascbt', desc: 'Battle Tower — tiered singles & doubles ladder' },
+      { cmd: '/bt', desc: 'Battle Tower — tiered singles & doubles ladder' },
       { cmd: '/gym', desc: 'Challenge the eight gym leaders' },
       { cmd: '/pvp', desc: 'PvP hub — Warzone, matchmaking, shop' },
       { cmd: '/ladder', desc: 'The Elite Four seat ladder' },
-      { cmd: '/ascraid', desc: 'Raid boss info & encounters' },
-      { cmd: '/ascaz', desc: 'Area Zero combat zone' },
+      { cmd: '/raid', desc: 'Raid boss info & encounters' },
+      { cmd: '/az', desc: 'Area Zero combat zone' },
       { cmd: '/skill', desc: 'Spend your Area Zero paradox gauge' },
-      { cmd: '/ascdun', desc: 'Enter seasonal dungeons' },
+      { cmd: '/dungeon', desc: 'Enter seasonal dungeons' },
       { cmd: '/buykey', desc: 'Buy extra dungeon keys with gems' },
       { cmd: '/tg', desc: 'Training Grounds — EXP buffs' },
     ],
@@ -799,7 +799,7 @@ const COMMANDS = [
     group: 'Economy & Gambling',
     items: [
       { cmd: '/jobs', desc: 'Browse and join paying jobs' },
-      { cmd: '/ascshop', desc: 'Chest-shop system' },
+      { cmd: '/chestshop', desc: 'Chest-shop system' },
       { cmd: '/casino', desc: 'Casino hub' },
       { cmd: '/coinflip <amount> <player>', desc: 'PvP coinflip wager (alias /cf)' },
       { cmd: '/dice <high|low> <amount>', desc: 'Bet high or low on a d100 roll' },
@@ -813,7 +813,7 @@ const COMMANDS = [
       { cmd: '/crates', desc: 'Crate hub' },
       { cmd: '/summon', desc: 'Open the gacha banner-select GUI' },
       { cmd: '/gear', desc: 'SolForge catalog — pieces, passives, how to get' },
-      { cmd: '/ascforge upgrade', desc: 'Spend Solar Shards to level held gear' },
+      { cmd: '/gear upgrade', desc: 'Spend Solar Shards to level held gear' },
     ],
   },
   {
@@ -821,8 +821,8 @@ const COMMANDS = [
     items: [
       { cmd: '/bp', desc: 'Seasonal Battle Pass' },
       { cmd: '/passive', desc: 'Buy & manage permanent passives' },
-      { cmd: '/ascranks', desc: 'Rank progression & perks' },
-      { cmd: '/asclvl', desc: 'ASC level & EXP' },
+      { cmd: '/ranks', desc: 'Rank progression & perks' },
+      { cmd: '/lvl', desc: 'ASC level & EXP' },
       { cmd: '/lb', desc: 'Leaderboards' },
       { cmd: '/title', desc: 'Equip cosmetic titles' },
     ],
@@ -834,17 +834,17 @@ const COMMANDS = [
       { cmd: '/mail', desc: 'In-game mailbox — claim rewards & messages' },
       { cmd: '/ec', desc: 'Open your ender chest' },
       { cmd: '/msg <player>', desc: 'Private message a player' },
-      { cmd: '/ascwt', desc: 'World tweaks & auth utilities' },
+      { cmd: '/worldtweaks', desc: 'World tweaks & auth utilities' },
     ],
   },
   {
     group: 'Help — every mod has its own',
     items: [
-      { cmd: '/ascess help', desc: 'Essentials command list (homes, warps, hunts, casino…)' },
-      { cmd: '/ascbt help', desc: 'Battle Tower help' },
+      { cmd: '/ess help', desc: 'Essentials command list (homes, warps, hunts, casino…)' },
+      { cmd: '/bt help', desc: 'Battle Tower help' },
       { cmd: '/safari help', desc: 'Safari help' },
       { cmd: '/pvp help', desc: 'PvP & Warzone help' },
-      { cmd: '/ascdun help', desc: 'Dungeons help' },
+      { cmd: '/dungeon help', desc: 'Dungeons help' },
       { cmd: '/clans help', desc: 'Clans help' },
       { cmd: '/bp help', desc: 'Battle Pass help' },
       { cmd: '<command> help', desc: 'Add “help” after any ASC command for its full list' },
@@ -883,14 +883,14 @@ const GUIDE = [
   {
     title: 'Make money with Jobs',
     body:
-      'Open <code>/jobs</code> and join the roles that fit how you play — mining, fishing, catching and more pay you coins as you go. Sell extras at player chest shops with <code>/ascshop</code>, or trade Pokémon globally on the <code>/ascgts</code>. Don’t forget to <code>/vote</code> daily for free rewards.',
-    cmds: ['/jobs', '/ascshop', '/vote'],
+      'Open <code>/jobs</code> and join the roles that fit how you play — mining, fishing, catching and more pay you coins as you go. Sell extras at player chest shops with <code>/chestshop</code>, or trade Pokémon globally on the <code>/gts</code>. Don’t forget to <code>/vote</code> daily for free rewards.',
+    cmds: ['/jobs', '/chestshop', '/vote'],
   },
   {
     title: 'Battle & progress',
     body:
-      'Test yourself: challenge the eight gyms with <code>/gym</code>, climb the <code>/ascbt</code> Battle Tower, and join raids with <code>/ascraid</code>. Level your account, climb <code>/ascranks</code>, and work the seasonal <code>/bp</code> Battle Pass for steady rewards.',
-    cmds: ['/gym', '/ascbt', '/bp', '/ascranks'],
+      'Test yourself: challenge the eight gyms with <code>/gym</code>, climb the <code>/bt</code> Battle Tower, and join raids with <code>/raid</code>. Level your account, climb <code>/ranks</code>, and work the seasonal <code>/bp</code> Battle Pass for steady rewards.',
+    cmds: ['/gym', '/bt', '/bp', '/ranks'],
   },
   {
     title: 'Spend & gear up',
@@ -1042,16 +1042,65 @@ const CREDITS = [
 // =====================================================================
 const TEAM = [
   {
-    group: 'Owners',
+    group: 'Core Staff',
     members: [
       { name: 'Kuro', handle: 'kuwusaki', role: 'Owner & Lead Developer' },
-      { name: 'Indi', handle: 'indigo133', role: 'Owner & Content Design' },
-      { name: 'Velpecula', handle: 'VelpeculaTheFox', role: 'Owner' },
+      { name: 'Indi', handle: 'IndigoPulse13_', role: 'Owner & Content Design' },
+      { name: 'Velpecula', handle: 'VelpeculaTheFox', role: 'Owner & Finance' },
+      { name: 'Crysthamyr', role: 'Head Admin' },
+      { name: 'PredatorG', role: 'Core Staff' },
+      { name: 'JustZeta', role: 'Admin' },
     ],
   },
-  // Add more groups as you confirm them, e.g.:
-  // { group: 'Developers', members: [ { name: '', role: 'Developer' } ] },
-  // { group: 'Admins',     members: [ { name: '', role: 'Admin' } ] },
-  // { group: 'Moderators', members: [ { name: '', role: 'Moderator' } ] },
-  // { group: 'Builders',   members: [ { name: '', role: 'Builder' } ] },
+  {
+    group: 'Admins',
+    members: [
+      { name: 'HitoriHachi', role: 'Admin & Builder' },
+      { name: 'AmaxiHaku', role: 'Admin & Builder' },
+      { name: 'mAyHam', role: 'Admin' },
+      { name: '__Vesper', role: 'Admin' },
+    ],
+  },
+  {
+    group: 'Head Moderator',
+    members: [
+      { name: 'PrimeRN', role: 'Head Moderator' },
+    ],
+  },
+  {
+    group: 'Moderators',
+    members: [
+      { name: 'Yberuuuu', role: 'Moderator' },
+      { name: 'SamsonManiac', role: 'Moderator' },
+      { name: 'tobiitobes', role: 'Moderator & Builder' },
+      { name: 'OPaint', role: 'Moderator' },
+      { name: 'Ra1zuuu', role: 'Moderator' },
+      { name: 'EdsonCheah', role: 'Moderator' },
+      { name: 'DaemonSpade', role: 'Moderator' },
+    ],
+  },
+  {
+    group: 'Builders',
+    members: [
+      { name: '_Lutris', role: 'Builder' },
+      { name: 'Leemon', role: 'Builder' },
+    ],
+  },
+  {
+    group: 'Developers',
+    members: [
+      { name: 'ghostplays00', role: 'Developer' },
+    ],
+  },
+  {
+    group: 'Zeniths',
+    members: [
+      { name: 'Slaaaine', role: 'Zenith' },
+      { name: 'Ettlel', role: 'Zenith' },
+      { name: 'RicKKK', role: 'Zenith' },
+      { name: 'HeoLeoLe', role: 'Zenith' },
+      { name: 'zandurrrrrr', role: 'Zenith' },
+      { name: 'McNuggetRice', role: 'Zenith' },
+    ],
+  },
 ];

@@ -656,11 +656,60 @@ const FEATURES = {
       'A shared cooldown may apply across all casino games.',
     ],
   },
+
+  fusions: {
+    name: 'Pokémon Fusions',
+    short: 'Fusions',
+    accent: 'violet',
+    tag: '/ascbt shop',
+    category: 'Collecting',
+    featured: true,
+    blurb:
+      'Fuse two Pokémon into brand-new designs with Fusion Splicers — earned in the Battle Tower.',
+    intro:
+      'Cobble Asia supports custom Pokémon fusions: combine two species into a single new design with its own look. Splicers are an endgame reward, so a fused Pokémon is a real flex on your team.',
+    how: [
+      {
+        title: 'Earn a Fusion Splicer',
+        body:
+          'Splicers are redeemed in the Battle Tower shop with tower tokens. Climb the tower, bank tokens, and trade them in for the splicer you want.',
+      },
+      {
+        title: 'Fuse your Pokémon',
+        body:
+          'Apply the splicer to fuse its two species into a new fused form — a distinct model and design, not just a recolor.',
+      },
+      {
+        title: 'Show it off',
+        body:
+          'Fused designs are some of the rarest-looking Pokémon on the server. Note that some competitive ladders (like the Elite Four) restrict fusions, so they shine most as collection and showcase pieces.',
+      },
+    ],
+    commands: [
+      { cmd: '/ascbt', desc: 'Battle Tower — earn tokens, then redeem Fusion Splicers in the shop' },
+    ],
+    notes: [
+      'Fusions are aspect-based forms on the base species — caught and stored like any other Pokémon.',
+      'Some PvP formats ban fusions for balance; check each ladder’s rules.',
+    ],
+    gallery: [
+      'assets/fusions/fusion-01.webp', 'assets/fusions/fusion-02.webp', 'assets/fusions/fusion-03.gif',
+      'assets/fusions/fusion-04.gif', 'assets/fusions/fusion-05.gif', 'assets/fusions/fusion-06.gif',
+      'assets/fusions/fusion-07.webp', 'assets/fusions/fusion-08.gif', 'assets/fusions/fusion-09.gif',
+      'assets/fusions/fusion-10.webp', 'assets/fusions/fusion-11.gif', 'assets/fusions/fusion-12.gif',
+      'assets/fusions/fusion-13.webp', 'assets/fusions/fusion-14.gif', 'assets/fusions/fusion-15.gif',
+      'assets/fusions/fusion-16.gif', 'assets/fusions/fusion-17.webp', 'assets/fusions/fusion-18.webp',
+    ],
+    credit: {
+      text: 'Fusion designs are from the Starlight Fusion datapack',
+      url: 'https://modrinth.com/datapack/starlightfusion',
+    },
+  },
 };
 
 // Display order + grouping on the landing page
 const FEATURE_ORDER = [
-  'solforge', 'crates', 'battletower', 'areazero', 'gyms', 'raids',
+  'solforge', 'crates', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
   'dungeons', 'safari', 'hunts', 'bingo', 'warzone', 'clans',
   'jobs', 'casino', 'progression',
 ];
@@ -878,5 +927,110 @@ const NEWS = [
     title: 'Explore the Umera Safari',
     body: 'A 26-region reserve with region-locked spawns, roaming Megas and Totems, Tera & Dynamax raids, swarms and timed expeditions.',
     link: 'feature.html?f=safari',
+  },
+];
+
+// =====================================================================
+//  THIRD-PARTY MOD CREDITS (credits.html). Pulled from the live Pebble
+//  /mods/ folder 2026-06-09 — excludes our own asc-* mods. Links/authors
+//  filled in where confidently known; others listed by name + version.
+// =====================================================================
+const CREDITS = [
+  {
+    group: 'Cobblemon & Add-ons',
+    items: [
+      { name: 'Cobblemon', ver: '1.7.3+1.21.1', by: 'Cobblemon Team', url: 'https://modrinth.com/mod/cobblemon' },
+      { name: 'Cobbreeding', ver: '2.2.0', url: 'https://modrinth.com/mod/cobbreeding' },
+      { name: 'Mega Showdown', ver: '1.6.12', url: 'https://modrinth.com/mod/mega-showdown' },
+      { name: 'Starlight Fusion', ver: '1.6.5', url: 'https://modrinth.com/datapack/starlightfusion' },
+      { name: 'ZA Mega Pack (zamega)', ver: '1.5.4' },
+      { name: "Horret's Extended Mega", ver: '1.7.6' },
+      { name: 'TMCraft', ver: '1.4.18' },
+      { name: 'PokéBlocks', ver: '1.4.0' },
+      { name: 'CobbleNav', ver: '2.3.3', by: 'gatekeep06', url: 'https://modrinth.com/mod/cobblemon-pokenav' },
+      { name: 'More Cobblemon Tweaks', ver: '1.3.3', url: 'https://modrinth.com/mod/more-cobblemon-tweaks' },
+      { name: 'CobbleFurnies', ver: '1.0' },
+      { name: 'Cobblemon No Fullness', ver: '2.0.0' },
+      { name: 'Cobblemon Size Variation', ver: '1.4.0' },
+      { name: 'Cobblemon Journey Mounts', ver: '1.7.x' },
+      { name: 'Cobblemon EXP All', ver: '0.0.1' },
+      { name: 'Capture XP', ver: '1.3.0' },
+      { name: 'Catch Indicator', ver: '1.4.1' },
+      { name: 'Complete Cobblemon Collection — Myths & Legends Compat', ver: '2.0.1' },
+      { name: 'Safe Pastures', ver: '1.1.1' },
+      { name: 'CobbleOptimizer', ver: '4.3.3' },
+      { name: 'ASC Wondertrade', ver: '1.1', by: 'Ghost' },
+    ],
+  },
+  {
+    group: 'Performance & Optimization',
+    items: [
+      { name: 'Sodium', ver: '0.6.13', by: 'CaffeineMC', url: 'https://modrinth.com/mod/sodium' },
+      { name: 'Lithium', ver: '0.15.3', by: 'CaffeineMC', url: 'https://modrinth.com/mod/lithium' },
+      { name: 'Krypton', ver: '0.2.8', by: 'astei', url: 'https://modrinth.com/mod/krypton' },
+      { name: 'FerriteCore', ver: '7.0.3', by: 'malte0811', url: 'https://modrinth.com/mod/ferrite-core' },
+      { name: 'ModernFix', ver: '5.25.1', by: 'embeddedt', url: 'https://modrinth.com/mod/modernfix' },
+      { name: 'ImmediatelyFast', ver: '1.6.10', by: 'RaphiMC', url: 'https://modrinth.com/mod/immediatelyfast' },
+      { name: 'Entity Culling', ver: '1.10.0', by: 'tr7zw', url: 'https://modrinth.com/mod/entityculling' },
+      { name: 'Dynamic FPS', ver: '3.11.4', by: 'juliand665', url: 'https://modrinth.com/mod/dynamic-fps' },
+      { name: 'ServerCore', ver: '1.5.10', by: 'Wesley1808', url: 'https://modrinth.com/mod/servercore' },
+      { name: 'Clumps', ver: '19.0.0.1', by: 'Jaredlll08', url: 'https://modrinth.com/mod/clumps' },
+      { name: 'spark', ver: '1.10.109', by: 'lucko', url: 'https://modrinth.com/mod/spark' },
+      { name: 'StutterFix', ver: '0.2.3' },
+      { name: 'PacketFixer', ver: '3.3.1' },
+      { name: 'Scheduled Restart', ver: '1.2.2' },
+    ],
+  },
+  {
+    group: 'Gameplay, Admin & Quality of Life',
+    items: [
+      { name: 'LuckPerms', ver: '5.4.140', by: 'Luck', url: 'https://luckperms.net/' },
+      { name: 'TAB', ver: '5.5.0', by: 'NEZNAMY' },
+      { name: 'Flan', ver: '1.12.6', by: 'Flemmli97', url: 'https://modrinth.com/mod/flan' },
+      { name: 'WorldEdit', ver: '7.3.8', by: 'EngineHub', url: 'https://modrinth.com/plugin/worldedit' },
+      { name: 'Chunky', ver: '1.4.23', by: 'pop4959', url: 'https://modrinth.com/mod/chunky' },
+      { name: 'Multiworld', ver: 'bundle' },
+      { name: 'Simple Voice Chat', ver: '2.6.16', by: 'henkelmax', url: 'https://modrinth.com/mod/simple-voice-chat' },
+      { name: 'Ledger', ver: '1.3.5', url: 'https://modrinth.com/mod/ledger' },
+      { name: 'Styled Chat', ver: '2.6.1', by: 'Patbox', url: 'https://modrinth.com/mod/styled-chat' },
+      { name: 'Chat Notify', ver: '2.6.6' },
+      { name: 'Fabric Tailor', ver: '2.5.0', by: 'Patbox', url: 'https://modrinth.com/mod/fabrictailor' },
+      { name: 'Jade', ver: '15.10.5', by: 'Snownee', url: 'https://modrinth.com/mod/jade' },
+      { name: 'Roughly Enough Items', ver: '16.0.799', by: 'shedaniel', url: 'https://modrinth.com/mod/rei' },
+      { name: 'Inventory Control Tweaks', ver: '1.4.1' },
+      { name: "Xaero's Minimap", ver: '25.3.10', by: 'xaero96', url: 'https://modrinth.com/mod/xaeros-minimap' },
+      { name: "Xaero's World Map", ver: '1.40.11', by: 'xaero96', url: 'https://modrinth.com/mod/xaeros-world-map' },
+      { name: 'Zoomify', ver: '2.15.2', url: 'https://modrinth.com/mod/zoomify' },
+      { name: 'Wakes', ver: '0.4.1', url: 'https://modrinth.com/mod/wakes' },
+      { name: 'Handcrafted', ver: '4.0.3', url: 'https://modrinth.com/mod/handcrafted' },
+      { name: 'Moar Concrete', ver: '1.3.1' },
+      { name: 'HoloDisplays', ver: '0.4.8' },
+      { name: 'NuVotifier', ver: '1.1.0' },
+      { name: 'Skies Clear', ver: '1.1.2' },
+      { name: 'Discord Webhook (mc-discord-webhook)', ver: '1.2.0' },
+    ],
+  },
+  {
+    group: 'Libraries & API',
+    items: [
+      { name: 'Fabric API', ver: '0.116.10', url: 'https://modrinth.com/mod/fabric-api' },
+      { name: 'Fabric Language Kotlin', ver: '1.13.10', url: 'https://modrinth.com/mod/fabric-language-kotlin' },
+      { name: 'Architectury API', ver: '13.0.8', by: 'shedaniel', url: 'https://modrinth.com/mod/architectury-api' },
+      { name: 'Cloth Config', ver: '15.0.140', by: 'shedaniel', url: 'https://modrinth.com/mod/cloth-config' },
+      { name: 'owo-lib', ver: '0.12.15', by: 'glisco', url: 'https://modrinth.com/mod/owo-lib' },
+      { name: 'GeckoLib', ver: '4.8.4', url: 'https://modrinth.com/mod/geckolib' },
+      { name: 'Trinkets', ver: '3.10.0', url: 'https://modrinth.com/mod/trinkets' },
+      { name: 'Accessories', ver: '1.1.0', url: 'https://modrinth.com/mod/accessories' },
+      { name: 'Polymer', ver: '0.9.19', by: 'Patbox', url: 'https://modrinth.com/mod/polymer' },
+      { name: 'Athena', ver: '4.0.3', url: 'https://modrinth.com/mod/athena' },
+      { name: 'Resourceful Lib', ver: '3.0.12', url: 'https://modrinth.com/mod/resourceful-lib' },
+      { name: 'RCT API + RCT Mod', ver: '0.15.2 / 0.18.1' },
+      { name: 'Placeholder API', ver: '2.4.2', by: 'Patbox', url: 'https://modrinth.com/mod/placeholder-api' },
+      { name: 'Forge Config API Port', ver: '21.1.6', url: 'https://modrinth.com/mod/forge-config-api-port' },
+      { name: 'Iceberg', ver: '1.3.2' },
+      { name: 'YetAnotherConfigLib', ver: '3.8.2', url: 'https://modrinth.com/mod/yacl' },
+      { name: 'Mod Menu', ver: '11.0.4', by: 'TerraformersMC', url: 'https://modrinth.com/mod/modmenu' },
+      { name: 'Filament', ver: '0.9.12' },
+    ],
   },
 ];

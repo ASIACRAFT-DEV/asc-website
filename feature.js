@@ -67,6 +67,10 @@
 
       ${cmds ? `<div class="fp-section-label reveal">Commands</div><div class="cmd-table reveal">${cmds}</div>` : ''}
 
+      ${f.gallery ? `<div class="fp-section-label reveal">Fusion showcase</div>
+      <div class="fusion-gallery reveal">${f.gallery.map((src) => `<div class="fusion-tile"><img loading="lazy" src="${src}" alt="Pokémon fusion design" /></div>`).join('')}</div>
+      ${f.credit ? `<p class="fusion-credit">${f.credit.text} — <a href="${f.credit.url}" target="_blank" rel="noopener">view on Modrinth</a></p>` : ''}` : ''}
+
       ${notes ? `<div class="fp-section-label reveal">Good to know</div><div class="notes reveal">${notes}</div>` : ''}
 
       <div class="fp-cta reveal">

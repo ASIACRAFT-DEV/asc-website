@@ -50,11 +50,11 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
   letter-spacing: 0.01em;
 }
 
-/* gold square accent helper */
+/* Poké Ball accent marker (reused via the --pb background) */
 .mk::before {
-  content: ''; display: inline-block; width: 11px; height: 11px;
-  background: var(--gold); margin-right: 10px; vertical-align: middle;
-  transform: translateY(-1px);
+  content: ''; display: inline-block; width: 15px; height: 15px;
+  background: url('assets/pokeball.svg') center/contain no-repeat;
+  margin-right: 10px; vertical-align: middle; transform: translateY(-1px);
 }
 
 /* ---------- NAV ---------- */
@@ -70,8 +70,8 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
 }
 .brand { font-size: 22px; text-decoration: none; color: var(--ink); display: flex; align-items: center; }
 .brand::before {
-  content: ''; width: 14px; height: 14px; background: var(--gold);
-  margin-right: 11px; box-shadow: 3px 3px 0 rgba(176, 133, 36, 0.3);
+  content: ''; width: 22px; height: 22px; margin-right: 11px;
+  background: url('assets/pokeball.svg') center/contain no-repeat;
 }
 .brand-accent { color: var(--gold-deep); }
 .nav-links { display: flex; gap: 30px; align-items: center; }
@@ -105,6 +105,13 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
   background-size: 34px 34px;
   -webkit-mask: radial-gradient(70% 70% at 50% 30%, #000, transparent 80%);
           mask: radial-gradient(70% 70% at 50% 30%, #000, transparent 80%);
+}
+/* faint Poké Ball watermark behind the title */
+.hub-hero::before {
+  content: ''; position: absolute; z-index: 0; top: 50%; left: 50%;
+  width: min(620px, 90vw); height: min(620px, 90vw); transform: translate(-50%, -54%);
+  background: url('assets/pokeball-line.svg') center/contain no-repeat;
+  opacity: 0.06; pointer-events: none;
 }
 .hub-hero-inner { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; }
 .hub-eyebrow {
@@ -358,7 +365,7 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
   background: var(--paper); border: 1px solid var(--line); border-radius: 10px; font-weight: 600; font-size: 14px;
   transition: border-color .15s, color .15s;
 }
-.more-feat::before { content: ''; width: 8px; height: 8px; background: var(--gold); flex: none; }
+.more-feat::before { content: ''; width: 16px; height: 16px; background: url('assets/pokeball.svg') center/contain no-repeat; flex: none; }
 .more-feat:hover { border-color: var(--line-2); color: var(--gold-deep); }
 
 /* command reference groups */
@@ -367,7 +374,7 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
   font-size: 20px; color: var(--ink); display: flex; align-items: center;
   margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--line);
 }
-.cmd-group-title::before { content: ''; width: 12px; height: 12px; background: var(--gold); margin-right: 12px; }
+.cmd-group-title::before { content: ''; width: 20px; height: 20px; background: url('assets/pokeball.svg') center/contain no-repeat; margin-right: 12px; }
 
 /* command chips inside guide steps */
 .guide-cmds { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
@@ -376,6 +383,33 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
   font-family: var(--font-mono); font-size: .9em; color: var(--gold-deep);
   background: var(--gold-bg); padding: 2px 6px; border-radius: 4px;
 }
+
+/* credits list */
+.credit-list { display: flex; flex-direction: column; gap: 8px; }
+.credit-row {
+  display: grid; grid-template-columns: minmax(180px, 1.4fr) 1fr auto 18px; gap: 16px; align-items: center;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 14px 18px;
+  text-decoration: none; color: inherit; transition: border-color .15s, transform .15s;
+}
+a.credit-row:hover { border-color: var(--gold); transform: translateX(3px); }
+.credit-name { font-weight: 600; color: var(--ink); }
+.credit-by { color: var(--ink-2); font-size: 14px; }
+.credit-ver { font-family: var(--font-mono); font-size: 12.5px; color: var(--gold-deep); }
+.credit-link { color: var(--ink-3); font-weight: 700; }
+a.credit-row:hover .credit-link { color: var(--gold-deep); }
+
+/* fusion showcase gallery */
+.fusion-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(150px, 1fr)); gap: 14px; margin-bottom: 24px; }
+.fusion-tile {
+  aspect-ratio: 1; display: grid; place-items: center; overflow: hidden;
+  background: radial-gradient(circle at 50% 32%, #211a10, #0b0906);
+  border: 1px solid var(--line-2); border-radius: 14px;
+  transition: transform .18s, border-color .18s, box-shadow .18s;
+}
+.fusion-tile:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: var(--shadow); }
+.fusion-tile img { width: 88%; height: 88%; object-fit: contain; image-rendering: pixelated; }
+.fusion-credit { text-align: center; color: var(--ink-3); font-size: 14px; margin-bottom: 44px; }
+.fusion-credit a { color: var(--gold-deep); font-weight: 600; }
 
 /* ---------- REVEAL ANIMATION ---------- */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .55s ease, transform .55s ease; }

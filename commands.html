@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Commands — Cobble Asia</title>
+  <meta name="description" content="Full command reference for the Cobble Asia Cobblemon server — every player command, grouped by category." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">
+        <span class="brand-mark">☀️</span> Cobble<span class="brand-accent">Asia</span>
+      </a>
+      <nav class="nav-links">
+        <a href="guide.html">Guide</a>
+        <a href="index.html#features">Features</a>
+        <a href="commands.html">Commands</a>
+        <a href="#" class="nav-cta js-discord">Discord</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="fp-hero">
+      <div class="fp-hero-glow"></div>
+      <div class="fp-hero-inner">
+        <a class="back-link" href="index.html">← Back home</a>
+        <div class="fp-emoji">📜</div>
+        <span class="fp-cat">Reference</span>
+        <h1 class="fp-title">Command List</h1>
+        <p class="fp-blurb">Every player command on the server, grouped by what it does. Add <code>help</code> after any ASC command in-game for its full list.</p>
+      </div>
+    </section>
+
+    <div class="fp-body" style="max-width: 940px;">
+      <div id="cmd-root"><!-- rendered by commands.js --></div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Cobble Asia — a custom Cobblemon server. Join us on <a class="js-discord" href="#">Discord</a>.</p>
+    <p class="footer-dim">Not affiliated with Mojang, Nintendo, or The Pokémon Company.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="commands.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

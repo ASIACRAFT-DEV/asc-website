@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cobble Asia — Custom Cobblemon Server</title>
+  <meta name="description" content="Cobble Asia — a custom Cobblemon Minecraft server with 30+ bespoke mods. SolForge seasonal gear, gacha crates, Battle Tower, Area Zero, Safari, Warzone, gyms, dungeons and more." />
+  <meta property="og:title" content="Cobble Asia — Custom Cobblemon Server" />
+  <meta property="og:description" content="SolForge season, gacha crates, Battle Tower, Area Zero, Safari, Warzone, Elite Four and more — 30+ custom mods." />
+  <meta property="og:type" content="website" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="#top">
+        <span class="brand-mark">☀️</span> Cobble<span class="brand-accent">Asia</span>
+      </a>
+      <nav class="nav-links">
+        <a href="guide.html">Guide</a>
+        <a href="#features">Features</a>
+        <a href="commands.html">Commands</a>
+        <a href="#mods">Mods</a>
+        <a href="#" class="nav-cta js-discord">Discord</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <!-- HERO -->
+    <section class="hero">
+      <div class="sun"></div>
+      <div class="hero-inner">
+        <p class="eyebrow">☀️ Season of the First Sun is live</p>
+        <h1>A Cobblemon world<br /><span class="glow">forged from scratch.</span></h1>
+        <p class="lede">
+          Cobble Asia runs <strong>30+ in-house mods</strong> — the SolForge seasonal set,
+          gacha banners, a tiered Battle Tower, Area Zero raids, a 26-region Safari, the
+          Warzone, gyms, dungeons and a full economy. None of it is off-the-shelf.
+        </p>
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#join">Join the server</a>
+          <a class="btn btn-ghost" href="guide.html">New here? Start guide →</a>
+        </div>
+        <div class="ip-chip">
+          <span class="ip-label">IP</span>
+          <code>play.cobbleasia.net</code>
+          <button class="copy-btn" data-copy="play.cobbleasia.net" aria-label="Copy server IP">Copy</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats reveal">
+      <div class="stat"><span class="stat-num">30+</span><span class="stat-label">Custom mods</span></div>
+      <div class="stat"><span class="stat-num">1.21.1</span><span class="stat-label">Minecraft / Fabric</span></div>
+      <div class="stat"><span class="stat-num">1.7.3</span><span class="stat-label">Cobblemon</span></div>
+      <div class="stat"><span class="stat-num">∞</span><span class="stat-label">Things to do</span></div>
+    </section>
+
+    <!-- SOLFORGE BANNER -->
+    <section id="solforge" class="section" style="padding-bottom: 30px;">
+      <div class="solforge-banner reveal">
+        <a class="sb-inner" href="feature.html?f=solforge" style="text-decoration:none; color:inherit;">
+          <div>
+            <span class="sb-season">Seasonal Set · SolForge</span>
+            <h2>Season of the First Sun</h2>
+            <p>
+              Forge molten, sun-powered gear with passives that scale as you level them.
+              Earn Solar Shards, complete the set, and ignite the server-wide Radiant State.
+            </p>
+            <span class="btn btn-primary" style="margin-top:22px;">See how SolForge works →</span>
+          </div>
+          <div class="sb-emblem">☀️</div>
+        </a>
+      </div>
+    </section>
+
+    <!-- FEATURES -->
+    <section id="features" class="section">
+      <div class="section-head reveal">
+        <span class="section-tag">What's inside</span>
+        <h2 class="section-title">Every system, custom-built</h2>
+        <p class="section-sub">Click any feature to see exactly how it works — step by step, with the commands you'll use.</p>
+      </div>
+      <div class="feature-grid" id="feature-grid"><!-- injected by app.js --></div>
+    </section>
+
+    <!-- MOD LIST -->
+    <section id="mods" class="section section-alt">
+      <div class="section-head reveal">
+        <span class="section-tag">The full toolbox</span>
+        <h2 class="section-title">27 custom mods running live</h2>
+        <p class="section-sub">Everything powering the server, with the headline command for each.</p>
+      </div>
+      <div class="mod-list reveal" id="mod-list"><!-- injected by app.js --></div>
+    </section>
+
+    <!-- JOIN -->
+    <section id="join" class="section join">
+      <div class="join-card reveal">
+        <h2>Ready to play?</h2>
+        <p>Cobblemon 1.21.1 · Fabric. Grab the modpack from our Discord, then connect:</p>
+        <div class="ip-chip ip-chip-lg">
+          <span class="ip-label">IP</span>
+          <code>play.cobbleasia.net</code>
+          <button class="copy-btn" data-copy="play.cobbleasia.net" aria-label="Copy server IP">Copy</button>
+        </div>
+        <div class="cta-row center">
+          <a class="btn btn-primary js-discord" href="#">Get the modpack on Discord</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>Cobble Asia — a custom Cobblemon server. Join us on <a class="js-discord" href="#">Discord</a>.</p>
+    <p class="footer-dim">Not affiliated with Mojang, Nintendo, or The Pokémon Company. Built by the ASIACRAFT-DEV team.</p>
+  </footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>

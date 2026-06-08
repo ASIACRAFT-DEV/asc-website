@@ -53,7 +53,7 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
 /* Poké Ball accent marker (reused via the --pb background) */
 .mk::before {
   content: ''; display: inline-block; width: 15px; height: 15px;
-  background: url('assets/pokeball.svg') center/contain no-repeat;
+  background: url('assets/server-icon.png') center/contain no-repeat;
   margin-right: 10px; vertical-align: middle; transform: translateY(-1px);
 }
 
@@ -71,7 +71,7 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
 .brand { font-size: 22px; text-decoration: none; color: var(--ink); display: flex; align-items: center; }
 .brand::before {
   content: ''; width: 22px; height: 22px; margin-right: 11px;
-  background: url('assets/pokeball.svg') center/contain no-repeat;
+  background: url('assets/server-icon.png') center/contain no-repeat;
 }
 .brand-accent { color: var(--gold-deep); }
 .nav-links { display: flex; gap: 30px; align-items: center; }
@@ -110,10 +110,15 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
 .hub-hero::before {
   content: ''; position: absolute; z-index: 0; top: 50%; left: 50%;
   width: min(620px, 90vw); height: min(620px, 90vw); transform: translate(-50%, -54%);
-  background: url('assets/pokeball-line.svg') center/contain no-repeat;
+  background: url('assets/server-icon.png') center/contain no-repeat;
   opacity: 0.06; pointer-events: none;
 }
 .hub-hero-inner { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; }
+.hub-logo {
+  width: 96px; height: 96px; margin: 0 auto 18px; display: block;
+  image-rendering: auto;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.5)) drop-shadow(0 0 26px rgba(231, 200, 120, 0.25));
+}
 .hub-eyebrow {
   font-family: var(--font-display); color: var(--gold-soft); font-size: 13px;
   letter-spacing: .16em; text-transform: uppercase; margin-bottom: 20px;
@@ -365,7 +370,7 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
   background: var(--paper); border: 1px solid var(--line); border-radius: 10px; font-weight: 600; font-size: 14px;
   transition: border-color .15s, color .15s;
 }
-.more-feat::before { content: ''; width: 16px; height: 16px; background: url('assets/pokeball.svg') center/contain no-repeat; flex: none; }
+.more-feat::before { content: ''; width: 16px; height: 16px; background: url('assets/server-icon.png') center/contain no-repeat; flex: none; }
 .more-feat:hover { border-color: var(--line-2); color: var(--gold-deep); }
 
 /* command reference groups */
@@ -374,7 +379,7 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
   font-size: 20px; color: var(--ink); display: flex; align-items: center;
   margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--line);
 }
-.cmd-group-title::before { content: ''; width: 20px; height: 20px; background: url('assets/pokeball.svg') center/contain no-repeat; margin-right: 12px; }
+.cmd-group-title::before { content: ''; width: 20px; height: 20px; background: url('assets/server-icon.png') center/contain no-repeat; margin-right: 12px; }
 
 /* command chips inside guide steps */
 .guide-cmds { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
@@ -383,6 +388,25 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
   font-family: var(--font-mono); font-size: .9em; color: var(--gold-deep);
   background: var(--gold-bg); padding: 2px 6px; border-radius: 4px;
 }
+
+/* team grid */
+.team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
+.team-card {
+  text-align: center; background: var(--paper); border: 1px solid var(--line); border-radius: var(--radius);
+  padding: 28px 20px; transition: transform .18s, border-color .18s, box-shadow .18s;
+}
+.team-card:hover { transform: translateY(-4px); border-color: var(--gold); box-shadow: var(--shadow); }
+.team-avatar {
+  width: 84px; height: 84px; border-radius: 50%; margin: 0 auto 14px; display: grid; place-items: center;
+  image-rendering: auto; border: 2px solid var(--gold); object-fit: cover; background: var(--paper-3);
+}
+.team-avatar-initials {
+  font-family: var(--font-display); font-size: 30px; color: var(--ink);
+  background: radial-gradient(circle at 50% 35%, var(--gold-soft), var(--gold));
+}
+.team-name { font-family: var(--font-display); font-size: 19px; color: var(--ink); }
+.team-role { color: var(--gold-deep); font-size: 14px; font-weight: 600; margin-top: 3px; }
+.team-handle { color: var(--ink-3); font-size: 13px; font-family: var(--font-mono); margin-top: 6px; }
 
 /* credits list */
 .credit-list { display: flex; flex-direction: column; gap: 8px; }

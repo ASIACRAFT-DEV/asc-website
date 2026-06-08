@@ -1034,3 +1034,24 @@ const CREDITS = [
     ],
   },
 ];
+
+// =====================================================================
+//  STAFF TEAM (team.html). NOTE: the Discord MCP bot can only read
+//  messages, not enumerate members/roles — owners below are confirmed;
+//  fill in the rest (name, role, optional `mc` username for a head icon).
+// =====================================================================
+const TEAM = [
+  {
+    group: 'Owners',
+    members: [
+      { name: 'Kuro', handle: 'kuwusaki', role: 'Owner & Lead Developer' },
+      { name: 'Indi', handle: 'indigo133', role: 'Owner & Content Design' },
+      { name: 'Velpecula', handle: 'VelpeculaTheFox', role: 'Owner' },
+    ],
+  },
+  // Add more groups as you confirm them, e.g.:
+  // { group: 'Developers', members: [ { name: '', role: 'Developer' } ] },
+  // { group: 'Admins',     members: [ { name: '', role: 'Admin' } ] },
+  // { group: 'Moderators', members: [ { name: '', role: 'Moderator' } ] },
+  // { group: 'Builders',   members: [ { name: '', role: 'Builder' } ] },
+];

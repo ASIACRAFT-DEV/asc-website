@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-09T01:29:03.924Z",
+  "generatedAt": "2026-06-09T09:01:36.828Z",
   "count": 30,
   "mods": [
     {
@@ -50,7 +50,7 @@
     {
       "repo": "asc-voting",
       "name": "ASC Voting",
-      "version": "1.2.1"
+      "version": "1.3.0"
     },
     {
       "repo": "asc-areazero",
@@ -85,7 +85,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "6.57.1"
+      "version": "6.60.0"
     },
     {
       "repo": "asc-forge",
@@ -150,7 +150,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.15.0"
+      "version": "1.15.1"
     }
   ]
 }

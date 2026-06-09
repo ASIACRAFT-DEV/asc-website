@@ -1112,7 +1112,7 @@ const TEAM = [
   {
     group: 'Core Staff',
     members: [
-      { name: 'Kuro', handle: 'kuwusaki', role: 'Owner & Lead Developer', avatar: 'assets/team/kuro.png',
+      { name: 'Kuro', handle: 'kuwusaki', role: 'Owner & Lead Developer', avatar: 'assets/team/kuro.gif',
         motto: 'I only require $112/month for Claude Code.' },
       { name: 'Indi', handle: 'IndigoPulse13_', role: 'Owner & Content Design', avatar: 'assets/team/indigopulse.jpg',
         motto: "My whole life is consistent. Everything I do — from what I eat, to when I sleep, to my recovery, to my loved ones. Everything's consistent. It's a routine for me at this point." },
@@ -1120,7 +1120,8 @@ const TEAM = [
         motto: "Be the baddest one they'll ever see." },
       { name: 'Crysthamyr', role: 'Head Admin' },
       { name: 'PredatorG', role: 'Developer' },
-      { name: 'JustZeta', role: 'Admin' },
+      { name: 'Zeta', handle: 'justt_zeta', role: 'Core Management Staff', avatar: 'assets/team/zeta.png',
+        motto: 'You only live once.' },
     ],
   },
   {
@@ -1141,7 +1142,7 @@ const TEAM = [
   {
     group: 'Moderators',
     members: [
-      { name: 'Yberuuuu', role: 'Moderator' },
+      { name: 'Yberuuuu', role: 'Moderator', avatar: 'assets/team/yberu.png', motto: 'Ogerponnnn.' },
       { name: 'SamsonTheManiac', role: 'Moderator', avatar: 'assets/team/samson.png',
         motto: "Life is like a mace — every rise comes with a fall, but if you don't take the shot you won't rise again." },
       { name: 'tobiitobes', role: 'Moderator & Builder', avatar: 'assets/team/tobiitobes.png',

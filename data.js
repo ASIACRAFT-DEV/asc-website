@@ -1138,7 +1138,7 @@ const TEAM = [
   {
     group: 'Head Moderator',
     members: [
-      { name: 'PrimeRN', role: 'Head Moderator' },
+      { name: 'Prime_RN', role: 'Head Moderator', avatar: 'assets/team/prime.png', motto: 'Fear me?' },
     ],
   },
   {
@@ -1149,7 +1149,7 @@ const TEAM = [
         motto: "Life is like a mace — every rise comes with a fall, but if you don't take the shot you won't rise again." },
       { name: 'tobiitobes', role: 'Moderator & Builder', avatar: 'assets/team/tobiitobes.png',
         motto: 'Ecstasy with extra cheese.', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@tobiitobes' }] },
-      { name: 'OPaint', role: 'Moderator' },
+      { name: 'OPaint', role: 'Moderator', avatar: 'assets/team/opaint.jpg', motto: 'a² + b² = c²' },
       { name: 'Raizuuuu', role: 'Moderator', avatar: 'assets/team/raizu.jpg',
         motto: 'Behave or Crys will spank me.', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@ra1zuu' }] },
       { name: 'EdsonCheah', role: 'Moderator' },
@@ -1180,7 +1180,7 @@ const TEAM = [
       { name: 'HeoLeoLe', role: 'Zenith' },
       { name: 'Zandurrrrrr', role: 'Zenith', avatar: 'assets/team/zandurr.png',
         motto: "I stalk myself on the internet just to see what you'll find." },
-      { name: 'McNuggetRice', role: 'Zenith' },
+      { name: 'McNuggetRice', role: 'Zenith', avatar: 'assets/team/mcnugget.jpg', motto: 'una' },
     ],
   },
 ];

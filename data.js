@@ -931,6 +931,74 @@ const NEWS = [
 ];
 
 // =====================================================================
+//  PATCH NOTES (patchnotes.html + landing preview). Player-facing only —
+//  newest first. `type` per change is one of: new | improved | fixed.
+// =====================================================================
+const PATCHNOTES = [
+  {
+    date: '2026-06-09',
+    tag: 'Quality of Life',
+    title: 'Shorter commands & a fresh site',
+    changes: [
+      { type: 'improved', text: 'Every system now has a short command — <code>/bt</code>, <code>/raid</code>, <code>/az</code>, <code>/dungeon</code>, <code>/gear</code>, <code>/ranks</code>, <code>/pvp</code> and more. The clunky <code>/asc</code> prefix is gone.' },
+      { type: 'new', text: 'Added this Patch Notes page and a full staff Team page, and made the whole website mobile-friendly.' },
+    ],
+  },
+  {
+    date: '2026-06-08',
+    tag: 'Dungeons',
+    title: 'Relic & Key system',
+    changes: [
+      { type: 'new', text: 'Seasonal dungeons now drop <strong>relics</strong> and feature side-quests for bonus rewards.' },
+      { type: 'new', text: 'Daily dungeon keys now scale with your rank — grab extra keys with gems via <code>/buykey</code>.' },
+    ],
+  },
+  {
+    date: '2026-06-08',
+    tag: 'Gyms',
+    title: 'Gym reward revamp',
+    changes: [
+      { type: 'improved', text: 'Gym payouts are massively up — earn as much as <strong>120k coins</strong> on the toughest leaders, plus more Rare Candies.' },
+      { type: 'new', text: 'Added a one-time <strong>first-clear bonus</strong> for every gym you beat for the first time.' },
+      { type: 'fixed', text: 'Fixed a bug where some gym clears silently paid out zero coins.' },
+    ],
+  },
+  {
+    date: '2026-06-07',
+    tag: 'Progression',
+    title: 'Permanent Passives',
+    changes: [
+      { type: 'new', text: 'Buy permanent account passives with coins and tokens via <code>/passive</code> — they stack with your clan passives for even bigger bonuses.' },
+    ],
+  },
+  {
+    date: '2026-06-07',
+    tag: 'PvP',
+    title: 'Elite Four ladder & the Warzone',
+    changes: [
+      { type: 'new', text: 'The PvP ladder is now an <strong>Elite Four</strong> — beat a seat holder to claim their seat and earn daily passive income while you defend it. <code>/ladder</code>' },
+      { type: 'new', text: 'The <strong>Warzone</strong> is open: hit another trainer to trigger an instant ranked battle and win Warzone Points. <code>/pvp</code>' },
+    ],
+  },
+  {
+    date: '2026-06-07',
+    tag: 'Crates',
+    title: 'Daily banner rotation',
+    changes: [
+      { type: 'improved', text: 'Gacha banners now rotate <strong>daily</strong> instead of weekly, so there is always something new to pull. <code>/summon</code>' },
+    ],
+  },
+  {
+    date: '2026-06-05',
+    tag: 'Exploration',
+    title: 'Umera Safari rework',
+    changes: [
+      { type: 'improved', text: 'A full Safari overhaul across 26 regions — roaming Megas & Totems, Tera & Dynamax raids, swarms and timed expeditions. <code>/safari</code>' },
+    ],
+  },
+];
+
+// =====================================================================
 //  THIRD-PARTY MOD CREDITS (credits.html). Pulled from the live Pebble
 //  /mods/ folder 2026-06-09 — excludes our own asc-* mods. Links/authors
 //  filled in where confidently known; others listed by name + version.

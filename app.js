@@ -21,6 +21,32 @@ document.querySelectorAll('.js-discord').forEach((a) => {
   a.setAttribute('rel', 'noopener');
 });
 
+// --- Mobile nav: inject a hamburger toggle that opens the link list ---
+(function wireMobileNav() {
+  const inner = document.querySelector('.nav-inner');
+  const links = inner && inner.querySelector('.nav-links');
+  if (!inner || !links) return;
+  const btn = document.createElement('button');
+  btn.className = 'nav-toggle';
+  btn.setAttribute('aria-label', 'Toggle menu');
+  btn.setAttribute('aria-expanded', 'false');
+  btn.innerHTML = '<span></span><span></span><span></span>';
+  inner.appendChild(btn);
+  btn.addEventListener('click', () => {
+    const open = links.classList.toggle('open');
+    btn.classList.toggle('open', open);
+    btn.setAttribute('aria-expanded', open ? 'true' : 'false');
+  });
+  // close the menu after tapping any link
+  links.querySelectorAll('a').forEach((a) =>
+    a.addEventListener('click', () => {
+      links.classList.remove('open');
+      btn.classList.remove('open');
+      btn.setAttribute('aria-expanded', 'false');
+    })
+  );
+})();
+
 // --- Copy-to-clipboard (any element with data-copy) ---
 function wireCopyButtons() {
   document.querySelectorAll('[data-copy]').forEach((btn) => {
@@ -84,6 +110,38 @@ if (newsGrid && typeof NEWS !== 'undefined') {
       <span class="news-more">Read more →</span>
     </a>`
   ).join('');
+}
+
+// --- Landing page: patch notes preview (latest 3) ---
+const patchPreview = document.getElementById('patch-preview');
+if (patchPreview && typeof PATCHNOTES !== 'undefined') {
+  const LABEL = { new: 'New', improved: 'Improved', fixed: 'Fixed' };
+  const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
+  const fmt = (iso) => {
+    const [y, m, d] = (iso || '').split('-').map(Number);
+    return y ? `${months[(m || 1) - 1]} ${d}, ${y}` : iso || '';
+  };
+  patchPreview.innerHTML = PATCHNOTES.slice(0, 3)
+    .map(
+      (p) => `<a class="patch-card" href="patchnotes.html">
+        <div class="patch-head">
+          <span class="patch-tag">${p.tag}</span>
+          <span class="patch-date">${fmt(p.date)}</span>
+        </div>
+        <h3 class="patch-title">${p.title}</h3>
+        <ul class="patch-changes">
+          ${p.changes
+            .map(
+              (c) => `<li class="patch-change">
+                <span class="chg chg-${c.type}">${LABEL[c.type] || c.type}</span>
+                <span class="chg-text">${c.text}</span>
+              </li>`
+            )
+            .join('')}
+        </ul>
+      </a>`
+    )
+    .join('');
 }
 
 // --- Live server status (mcsrvstat.us) ---

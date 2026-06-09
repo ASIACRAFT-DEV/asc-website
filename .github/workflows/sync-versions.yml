@@ -1,0 +1,46 @@
+name: Sync mod versions
+
+# Regenerates versions.json from the asc-* mod repos and commits it when
+# anything changed. That commit lands on main and triggers deploy.yml, so
+# the live site picks up new versions automatically.
+on:
+  schedule:
+    - cron: '0 */6 * * *'   # every 6 hours
+  workflow_dispatch:          # manual "Run workflow" button
+  repository_dispatch:        # optional: mod repos can fire {event_type: mod-pushed}
+    types: [mod-pushed]
+
+permissions:
+  contents: write
+
+concurrency:
+  group: sync-versions
+  cancel-in-progress: true
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Generate versions.json
+        env:
+          # fine-grained PAT with read access to the ASIACRAFT-DEV repos
+          GH_TOKEN: ${{ secrets.MODS_READ_TOKEN }}
+        run: node scripts/sync-versions.mjs
+
+      - name: Commit if changed
+        run: |
+          if git diff --quiet -- versions.json; then
+            echo "No version changes."
+          else
+            git config user.name "asc-version-bot"
+            git config user.email "github-actions[bot]@users.noreply.github.com"
+            git add versions.json
+            git commit -m "chore: sync live mod versions"
+            git push
+          fi

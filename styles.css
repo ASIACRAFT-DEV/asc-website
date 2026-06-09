@@ -475,6 +475,20 @@ a.credit-row:hover .credit-link { color: var(--gold-deep); }
 }
 .chg-text strong { color: var(--ink); font-weight: 600; }
 
+/* ---------- LIVE MOD VERSIONS (commands page) ---------- */
+#mods-root { margin-top: 8px; }
+.mods-grid { display: grid; gap: 9px; grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); }
+.mod-ver {
+  display: flex; align-items: center; justify-content: space-between; gap: 12px;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 10px; padding: 13px 16px;
+}
+.mod-ver-name { font-weight: 600; color: var(--ink); font-size: 14.5px; }
+.mod-ver-num {
+  font-family: var(--font-mono); font-size: 12.5px; color: var(--gold-deep);
+  background: var(--gold-bg); border: 1px solid #e9d9a6; padding: 3px 9px; border-radius: 7px; flex: none;
+}
+.mods-synced { color: var(--ink-3); font-size: 13px; margin-top: 16px; }
+
 /* ---------- MOBILE NAV TOGGLE (hidden until small screens) ---------- */
 .nav-toggle {
   display: none; width: 42px; height: 38px; padding: 9px 8px; cursor: pointer;

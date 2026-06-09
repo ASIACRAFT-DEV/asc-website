@@ -1,0 +1,156 @@
+{
+  "generatedAt": "2026-06-09T01:18:53.550Z",
+  "count": 30,
+  "mods": [
+    {
+      "repo": "asc-catchcombo",
+      "name": "ASC Catch Combos",
+      "version": "1.0.1"
+    },
+    {
+      "repo": "asc-clans",
+      "name": "ASC Clans",
+      "version": "1.16.0"
+    },
+    {
+      "repo": "asc-cobsave",
+      "name": "ASC CobSave",
+      "version": "1.1.2"
+    },
+    {
+      "repo": "asc-craftingstore",
+      "name": "ASC CraftingStore",
+      "version": "1.2.0"
+    },
+    {
+      "repo": "asc-discord",
+      "name": "ASC Discord",
+      "version": "1.5.0"
+    },
+    {
+      "repo": "asc-gyms",
+      "name": "ASC Gyms",
+      "version": "1.4.0"
+    },
+    {
+      "repo": "asc-jobs",
+      "name": "ASC Jobs",
+      "version": "1.9.0"
+    },
+    {
+      "repo": "asc-pokeditor",
+      "name": "ASC Pokeditor",
+      "version": "1.3.0"
+    },
+    {
+      "repo": "asc-traininggrounds",
+      "name": "ASC Training Grounds",
+      "version": "1.3.1"
+    },
+    {
+      "repo": "asc-voting",
+      "name": "ASC Voting",
+      "version": "1.2.1"
+    },
+    {
+      "repo": "asc-areazero",
+      "name": "CobbleAsia Area Zero",
+      "version": "2.10.0"
+    },
+    {
+      "repo": "asc-battletower",
+      "name": "CobbleAsia Battle Tower",
+      "version": "3.18.1"
+    },
+    {
+      "repo": "asc-battlepass",
+      "name": "CobbleAsia BattlePass",
+      "version": "2.16.0"
+    },
+    {
+      "repo": "asc-chestshop",
+      "name": "CobbleAsia ChestShop",
+      "version": "2.4.1"
+    },
+    {
+      "repo": "asc-crates",
+      "name": "CobbleAsia Crates",
+      "version": "2.40.0"
+    },
+    {
+      "repo": "asc-dungeons",
+      "name": "CobbleAsia Dungeons",
+      "version": "1.11.0"
+    },
+    {
+      "repo": "asc-essentials",
+      "name": "CobbleAsia Essentials",
+      "version": "6.57.1"
+    },
+    {
+      "repo": "asc-forge",
+      "name": "CobbleAsia Forge",
+      "version": "2.41.0"
+    },
+    {
+      "repo": "asc-gts",
+      "name": "CobbleAsia GTS",
+      "version": "2.7.0"
+    },
+    {
+      "repo": "asc-leaderboard",
+      "name": "CobbleAsia Leaderboard",
+      "version": "1.5.0"
+    },
+    {
+      "repo": "asc-legendspawns",
+      "name": "CobbleAsia Legend Spawns",
+      "version": "1.1.3"
+    },
+    {
+      "repo": "asc-levels",
+      "name": "CobbleAsia Levels",
+      "version": "1.5.0"
+    },
+    {
+      "repo": "asc-mail",
+      "name": "CobbleAsia Mail",
+      "version": "1.6.0"
+    },
+    {
+      "repo": "asc-npcs",
+      "name": "CobbleAsia NPCs",
+      "version": "2.5.0"
+    },
+    {
+      "repo": "asc-pokewiki",
+      "name": "CobbleAsia PokéWiki",
+      "version": "1.14.3"
+    },
+    {
+      "repo": "asc-pvp",
+      "name": "CobbleAsia PvP",
+      "version": "2.5.1"
+    },
+    {
+      "repo": "asc-raidboss",
+      "name": "CobbleAsia Raid Boss",
+      "version": "4.42.0"
+    },
+    {
+      "repo": "asc-ranks",
+      "name": "CobbleAsia Ranks",
+      "version": "1.23.0"
+    },
+    {
+      "repo": "asc-safari",
+      "name": "CobbleAsia Safari",
+      "version": "3.4.4"
+    },
+    {
+      "repo": "asc-worldtweaks",
+      "name": "CobbleAsia World Tweaks",
+      "version": "1.15.0"
+    }
+  ]
+}

@@ -1152,7 +1152,7 @@ const TEAM = [
       { name: 'OPaint', role: 'Moderator', avatar: 'assets/team/opaint.jpg', motto: 'a² + b² = c²' },
       { name: 'Raizuuuu', role: 'Moderator', avatar: 'assets/team/raizu.jpg',
         motto: 'Behave or Crys will spank me.', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@ra1zuu' }] },
-      { name: 'EdsonCheah', role: 'Moderator' },
+      { name: 'EdsonCheah', role: 'Moderator', avatar: 'assets/team/edson.jpg', motto: "it's ok to not be ok" },
       { name: 'DaemonSpade', role: 'Moderator' },
     ],
   },

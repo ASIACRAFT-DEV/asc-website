@@ -407,6 +407,14 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
 .team-name { font-family: var(--font-display); font-size: 19px; color: var(--ink); }
 .team-role { color: var(--gold-deep); font-size: 14px; font-weight: 600; margin-top: 3px; }
 .team-handle { color: var(--ink-3); font-size: 13px; font-family: var(--font-mono); margin-top: 6px; }
+.team-motto { color: var(--ink-2); font-size: 13.5px; font-style: italic; line-height: 1.5; margin-top: 12px; }
+.team-socials { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-top: 12px; }
+.team-socials a {
+  font-family: var(--font-display); font-size: 11px; letter-spacing: .04em; text-decoration: none;
+  color: var(--gold-deep); background: var(--gold-bg); border: 1px solid #e9d9a6;
+  padding: 4px 11px; border-radius: 100px; transition: background .15s, color .15s;
+}
+.team-socials a:hover { background: var(--gold); color: var(--ink); }
 
 /* credits list */
 .credit-list { display: flex; flex-direction: column; gap: 8px; }

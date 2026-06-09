@@ -1113,8 +1113,10 @@ const TEAM = [
     group: 'Core Staff',
     members: [
       { name: 'Kuro', handle: 'kuwusaki', role: 'Owner & Lead Developer' },
-      { name: 'Indi', handle: 'IndigoPulse13_', role: 'Owner & Content Design' },
-      { name: 'Velpecula', handle: 'VelpeculaTheFox', role: 'Owner & Finance' },
+      { name: 'Indi', handle: 'IndigoPulse13_', role: 'Owner & Content Design', avatar: 'assets/team/indigopulse.jpg',
+        motto: "My whole life is consistent. Everything I do — from what I eat, to when I sleep, to my recovery, to my loved ones. Everything's consistent. It's a routine for me at this point." },
+      { name: 'Velpecula', handle: 'VelpeculaTheFox', role: 'Owner & Finance', avatar: 'assets/team/velpecula.gif',
+        motto: "Be the baddest one they'll ever see." },
       { name: 'Crysthamyr', role: 'Head Admin' },
       { name: 'PredatorG', role: 'Developer' },
       { name: 'JustZeta', role: 'Admin' },
@@ -1126,7 +1128,7 @@ const TEAM = [
       { name: 'HitoriHachi', role: 'Admin & Builder' },
       { name: 'AmaxiHaku', role: 'Admin & Builder' },
       { name: 'mAyHam', role: 'Admin' },
-      { name: '__Vesper', role: 'Admin' },
+      { name: '__Vesper', role: 'Admin', avatar: 'assets/team/vesper.png', motto: "Don't pmo." },
     ],
   },
   {
@@ -1139,10 +1141,13 @@ const TEAM = [
     group: 'Moderators',
     members: [
       { name: 'Yberuuuu', role: 'Moderator' },
-      { name: 'SamsonManiac', role: 'Moderator' },
-      { name: 'tobiitobes', role: 'Moderator & Builder' },
+      { name: 'SamsonTheManiac', role: 'Moderator', avatar: 'assets/team/samson.png',
+        motto: "Life is like a mace — every rise comes with a fall, but if you don't take the shot you won't rise again." },
+      { name: 'tobiitobes', role: 'Moderator & Builder', avatar: 'assets/team/tobiitobes.png',
+        motto: 'Ecstasy with extra cheese.', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@tobiitobes' }] },
       { name: 'OPaint', role: 'Moderator' },
-      { name: 'Ra1zuuu', role: 'Moderator' },
+      { name: 'Raizuuuu', role: 'Moderator', avatar: 'assets/team/raizu.jpg',
+        motto: 'Behave or Crys will spank me.', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@ra1zuu' }] },
       { name: 'EdsonCheah', role: 'Moderator' },
       { name: 'DaemonSpade', role: 'Moderator' },
     ],
@@ -1157,7 +1162,8 @@ const TEAM = [
   {
     group: 'Developers',
     members: [
-      { name: 'ghostplays00', role: 'Developer' },
+      { name: 'ghostplays00', role: 'Developer', avatar: 'assets/team/ghostplays00.png',
+        motto: "You're impossible to underestimate." },
     ],
   },
   {
@@ -1165,7 +1171,7 @@ const TEAM = [
     members: [
       { name: 'Slaaaine', role: 'Zenith' },
       { name: 'Ettlel', role: 'Zenith' },
-      { name: 'RicKKK', role: 'Zenith' },
+      { name: 'RicKKK', role: 'Zenith', avatar: 'assets/team/rickkk.png', motto: 'Always one ping away.' },
       { name: 'HeoLeoLe', role: 'Zenith' },
       { name: 'zandurrrrrr', role: 'Zenith' },
       { name: 'McNuggetRice', role: 'Zenith' },

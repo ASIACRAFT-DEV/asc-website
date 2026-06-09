@@ -1113,7 +1113,8 @@ const TEAM = [
     group: 'Core Staff',
     members: [
       { name: 'Kuro', handle: 'kuwusaki', role: 'Owner & Lead Developer', avatar: 'assets/team/kuro.gif',
-        motto: 'I only require $112/month for Claude Code.' },
+        motto: 'I only require $112/month for Claude Code.',
+        socials: [{ label: 'YouTube', url: 'https://www.youtube.com/@kuwusaki_' }, { label: 'GitHub', url: 'https://github.com/ASC-kuro-code' }] },
       { name: 'Indi', handle: 'IndigoPulse13_', role: 'Owner & Content Design', avatar: 'assets/team/indigopulse.jpg',
         motto: "My whole life is consistent. Everything I do — from what I eat, to when I sleep, to my recovery, to my loved ones. Everything's consistent. It's a routine for me at this point." },
       { name: 'Velpecula', handle: 'VelpeculaTheFox', role: 'Owner & Finance', avatar: 'assets/team/velpecula.gif',

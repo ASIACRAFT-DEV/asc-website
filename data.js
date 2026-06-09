@@ -1127,7 +1127,8 @@ const TEAM = [
   {
     group: 'Admins',
     members: [
-      { name: 'HitoriHachi', role: 'Admin & Builder' },
+      { name: 'HitoriHachi', role: 'Admin & Builder', avatar: 'assets/team/hachi.jpg',
+        motto: 'Take life block by block till you build a masterpiece.', socials: [{ label: 'Twitch', url: 'https://twitch.tv/hitorihachi' }] },
       { name: 'AmaxiHaku', role: 'Admin & Builder' },
       { name: 'mAyHam', role: 'Admin' },
       { name: '__Vesper', role: 'Admin', avatar: 'assets/team/vesper.png', motto: "Don't pmo." },

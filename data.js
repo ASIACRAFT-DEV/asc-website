@@ -937,6 +937,67 @@ const NEWS = [
 const PATCHNOTES = [
   {
     date: '2026-06-09',
+    tag: 'Passives',
+    title: 'Toggle your Night Vision passive',
+    changes: [
+      { type: 'new', text: 'Bought the <strong>Permanent Night Vision</strong> passive? You can now switch the effect on/off without losing the unlock — click the tile in <code>/passive</code> or use <code>/passive nv</code>.' },
+    ],
+  },
+  {
+    date: '2026-06-09',
+    tag: 'Raid Boss',
+    title: 'Fairer raid payouts',
+    changes: [
+      { type: 'improved', text: 'Every raider past the damage threshold now gets the <strong>full participation reward</strong> — no more RNG, and no more high-damage raiders walking away empty-handed.' },
+      { type: 'improved', text: 'Top rewards are back to <strong>Top 1–3</strong>; everyone placing 4th and below gets the guaranteed participation coins + candies.' },
+    ],
+  },
+  {
+    date: '2026-06-09',
+    tag: 'Casino',
+    title: 'Animated dice & blackjack',
+    changes: [
+      { type: 'new', text: '<code>/dice</code> now opens a chest GUI with a spinning d100 reel that decelerates and lands on your roll.' },
+      { type: 'new', text: '<code>/bj</code> blackjack is now a visual card game — cards render as items, the dealer’s hole card stays face-down, and <strong>Hit / Stand / Double</strong> are clickable. Typed commands still work and the odds are unchanged.' },
+    ],
+  },
+  {
+    date: '2026-06-09',
+    tag: 'Area Zero',
+    title: 'Boss & exploit fixes',
+    changes: [
+      { type: 'fixed', text: 'Bosses that could linger for hours now have a hard lifespan cap and always despawn on time.' },
+      { type: 'fixed', text: 'A lag-related bug that could consume your ball without delivering a boss catch is fixed.' },
+      { type: 'fixed', text: 'Combat-logging exploits closed — logging out mid-fight no longer saves your kit, and you can’t shake the combat tag by dodging until it expires.' },
+      { type: 'improved', text: 'Legendary bosses no longer drop the IV Boost token (coins, tokens, EXP and candies are unchanged).' },
+    ],
+  },
+  {
+    date: '2026-06-09',
+    tag: 'Voting',
+    title: 'Date-filtered vote leaderboard',
+    changes: [
+      { type: 'new', text: '<code>/vote top</code> shows the all-time top 10 voters, and <code>/vote top &lt;days&gt;</code> shows the leaders over the last N days (e.g. <code>/vote top 7</code>).' },
+    ],
+  },
+  {
+    date: '2026-06-09',
+    tag: 'Competitive',
+    title: 'Doubles ladders fixed',
+    changes: [
+      { type: 'fixed', text: 'The <strong>Battle Tower</strong> and <code>/ladder</code> Doubles formats now use the correct NatDex Doubles banlist — Doubles-legal Pokémon like Mega Salamence, Flutter Mane and Urshifu-Rapid-Strike are no longer wrongly rejected.' },
+    ],
+  },
+  {
+    date: '2026-06-09',
+    tag: 'Quality of Life',
+    title: 'Cooking Pot fix',
+    changes: [
+      { type: 'fixed', text: 'Quick-crafting a Poké Snack from the recipe book no longer deletes the finished snack.' },
+    ],
+  },
+  {
+    date: '2026-06-09',
     tag: 'Quality of Life',
     title: 'Shorter commands & a fresh site',
     changes: [

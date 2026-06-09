@@ -1158,7 +1158,8 @@ const TEAM = [
   {
     group: 'Builders',
     members: [
-      { name: '_Lutris', role: 'Builder' },
+      { name: '_Lutris', role: 'Builder', avatar: 'assets/team/lutris.png',
+        motto: 'I love mountains, they teach me to keep climbing.', socials: [{ label: 'YouTube', url: 'https://www.youtube.com/@lutris-35' }] },
       { name: 'Leemon', role: 'Builder' },
     ],
   },

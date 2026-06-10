@@ -389,6 +389,38 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
   background: var(--gold-bg); padding: 2px 6px; border-radius: 4px;
 }
 
+/* FAQ accordion */
+.faq-group { margin-bottom: 46px; }
+.faq-cat {
+  font-size: 20px; color: var(--ink); display: flex; align-items: center;
+  margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--line);
+}
+.faq-cat::before { content: ''; width: 20px; height: 20px; background: url('assets/server-icon.png') center/contain no-repeat; margin-right: 12px; flex: none; }
+.faq-list { display: flex; flex-direction: column; gap: 10px; }
+.faq-item {
+  background: var(--paper); border: 1px solid var(--line); border-radius: 10px;
+  padding: 0 20px; transition: border-color .18s, box-shadow .18s;
+}
+.faq-item[open] { border-color: var(--line-2); box-shadow: var(--shadow); }
+.faq-item summary {
+  display: flex; align-items: center; justify-content: space-between; gap: 16px;
+  padding: 17px 0; cursor: pointer; list-style: none; user-select: none;
+}
+.faq-item summary::-webkit-details-marker { display: none; }
+.faq-q { font-weight: 600; color: var(--ink); font-size: 16px; }
+.faq-ic {
+  flex: none; width: 24px; height: 24px; border-radius: 6px; display: grid; place-items: center;
+  font-family: var(--font-display); font-size: 18px; line-height: 1; color: var(--gold-deep);
+  background: var(--gold-bg); border: 1px solid var(--gold); transition: transform .2s;
+}
+.faq-item[open] .faq-ic { transform: rotate(45deg); }
+.faq-a {
+  color: var(--ink-2); font-size: 15.5px; line-height: 1.6;
+  padding: 0 0 18px; border-top: 1px solid var(--line); padding-top: 14px; margin-top: -2px;
+}
+.faq-a code { font-family: var(--font-mono); font-size: .9em; color: var(--gold-deep); background: var(--gold-bg); padding: 2px 6px; border-radius: 4px; }
+.faq-a a { color: var(--gold-deep); font-weight: 600; }
+
 /* team grid */
 .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
 .team-card {

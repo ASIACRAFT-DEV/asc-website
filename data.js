@@ -1246,3 +1246,128 @@ const TEAM = [
     ],
   },
 ];
+
+// =====================================================================
+//  FAQ (faq.html). Grouped Q&A built from the most-asked questions in
+//  our Discord (community-support, bug-reports, suggestions). Answers
+//  may use <code>, <b>, <a> — keep them short and player-facing.
+// =====================================================================
+const FAQ = [
+  {
+    cat: 'Connecting & Setup',
+    items: [
+      {
+        q: 'How do I join? What is the server IP?',
+        a: 'The IP is <code>play.cobbleasia.net</code>. Cobble Asia runs on <b>Minecraft 1.21.1 (Fabric)</b>, so you need our modpack installed first — grab it and the step-by-step install guides from our <a class="js-discord" href="#">Discord</a>. Everything you need (downloads, launchers, versions) lives there.',
+      },
+      {
+        q: 'I get a "NETWORK PROTOCOL ERROR" / Connection refused when joining',
+        a: 'Almost always this means your client mods don\'t match the server. Check three things: (1) you\'re on <b>Fabric</b>, not Forge; (2) you\'re on Minecraft <b>1.21.1</b> exactly; (3) the <b>full Cobble Asia modpack</b> is installed in your <code>mods</code> folder. <b>Do not update individual mods</b> unless we announce it — a single mismatched mod will drop you. Still stuck? Post in <b>#community-support</b> with a screenshot of your mod list.',
+      },
+      {
+        q: 'Which Minecraft version and loader do I need? Does Forge work?',
+        a: 'Only <b>Minecraft 1.21.1 with the Fabric loader</b>. We do not support Forge, or any version higher or lower than 1.21.1 — that\'s the version Cobblemon is built for. If your launcher offers a "Forge 1.21.1" profile, that is the wrong one.',
+      },
+      {
+        q: 'My mods won\'t load / the mod list is empty',
+        a: 'Make sure you <b>extracted the mod .jar files</b> out of the downloaded zip and placed them directly inside your <code>mods</code> folder — leaving the zip in there does nothing. Don\'t mix in mods from other versions, and don\'t keep two copies of the same mod. The title screen should show "Fabric" and a mod count at the bottom-left.',
+      },
+      {
+        q: 'Can I play on TLauncher / Prism / mobile (PojavLauncher)?',
+        a: 'Yes. Our Discord has install guides for the common launchers — <b>Modrinth</b> is the easiest one-click setup, and there are separate guides for Prism/TLauncher and for mobile via <b>PojavLauncher</b>. If you use TLauncher, disable its "TL Skins" add-on, as it can conflict.',
+      },
+      {
+        q: 'How do I register and log in?',
+        a: 'We\'re an offline-mode server, so on your <b>first join</b> you set a password with <code>/register &lt;password&gt;</code>. Every join after that, log in with <code>/login &lt;password&gt;</code>. Keep your password safe — if you lose it, staff can reset it for you.',
+      },
+    ],
+  },
+  {
+    cat: 'Getting Started In-Game',
+    items: [
+      {
+        q: 'I can\'t pick a starter / the starter screen disappeared',
+        a: 'This happens if you <b>catch a wild Pokémon before choosing your starter</b> — Cobblemon then thinks you already have one and hides the prompt. It\'s a Cobblemon limitation, not a bug. Ask a staff member to reset your starter eligibility and the picker will come back.',
+      },
+      {
+        q: 'How do I set a home and get around?',
+        a: 'Use <code>/sethome &lt;name&gt;</code> to save a spot and <code>/home</code> to return to it. <code>/spawn</code> takes you to spawn, <code>/rtp</code> random-teleports you into the wild to explore and catch, <code>/warp</code> reaches named destinations, <code>/back</code> returns you where you just were, and <code>/tpa &lt;player&gt;</code> requests a teleport to a friend.',
+      },
+      {
+        q: 'How do I contact staff or get help in-game?',
+        a: 'Message an online staff member with <code>/msg &lt;name&gt;</code>. For bugs, post in the <b>#bug-reports</b> forum on Discord; for setup/connection help, use <b>#community-support</b>. Add <code>help</code> after any command (e.g. <code>/bt help</code>) to see what it does.',
+      },
+    ],
+  },
+  {
+    cat: 'Catching & Finding Pokémon',
+    items: [
+      {
+        q: 'How do I find where a specific Pokémon spawns?',
+        a: 'Use <code>/pwiki &lt;species&gt;</code> to look up a Pokémon\'s spawn biomes and info, or <code>/checkspawns</code> to see what can spawn where you\'re standing. The in-client <b>PokéNav</b> item also gives you a live spawn check around you. For target catches, <code>/hunt</code> points you at species worth chasing.',
+      },
+      {
+        q: 'What is the PokéNav?',
+        a: 'PokéNav is an in-client item (the CobbleNav mod, part of our pack) that shows what\'s spawning near you, RSE-style. The GUI is client-side and ships in the modpack — if you don\'t have it, reinstall the latest pack from Discord.',
+      },
+      {
+        q: 'How do legendary and mythical spawns work?',
+        a: 'Legendary spawns are tied to <b>Global Energy</b>. Completing <code>/legend</code> tasks raises the server\'s energy bar; once it reaches <b>50%+</b>, legendaries and mythicals can begin spawning (higher energy = better odds). The bar decays slowly over time and drops when a legendary actually spawns — so it\'s a shared, server-wide effort.',
+      },
+      {
+        q: 'What is /hunt?',
+        a: '<code>/hunt</code> is your personal board of tiered catch-bounties (Easy → Master) — catch a Pokémon matching the requirements and turn it in for big coins, EXP and bonus rolls. <code>/ghunt</code> is the server-wide version where the <b>first</b> player to catch the target wins the whole prize. Hunts are some of the best income on the server.',
+      },
+    ],
+  },
+  {
+    cat: 'Money, EXP & Progression',
+    items: [
+      {
+        q: 'How do I make money fast?',
+        a: 'The strongest steady income is <code>/hunt</code> (personal bounties pay 75k–750k by tier) and <code>/ghunt</code> (global hunts up to 1,000,000). On top of that: join <code>/jobs</code> to get paid for mining/fishing/catching, beat <code>/gym</code> leaders and clear <code>/dungeon</code> runs, <code>/vote</code> daily for rewards, and sell to other players via <code>/chestshop</code> and <code>/gts</code>.',
+      },
+      {
+        q: 'How do I get EXP / level up my Pokémon?',
+        a: 'Visit the <b>Training Grounds</b> with <code>/tg</code> for stacking EXP buffs, and earn Rare Candies from gyms, raids and hunts. There\'s no single official "XP farm" warp — the community builds their own and shares them as player warps (<code>/pwarp</code>), so ask around or browse the warp list.',
+      },
+      {
+        q: 'What are relic coins for?',
+        a: 'Relic coins are a base-Cobblemon item, mainly used to <b>evolve Gimmighoul into Gholdengo</b> (1,000 coins). There\'s no extra server-side use planned for them, but you can freely trade or sell spares to other players via <code>/gts</code>.',
+      },
+      {
+        q: 'How does the Elite Four / ladder work?',
+        a: 'The <code>/ladder</code> is a four-seat PvP ladder per format (singles & doubles), E1 (top) down to E4. You pay a coin fee to challenge a seat, and that fee goes <b>straight to the player currently holding it</b>. Beat them and you take the seat; while you hold it you earn daily passive income by mail. Lose and you only lose the title, plus a 48-hour cooldown. <b>Fusions are banned</b> on the ladder.',
+      },
+      {
+        q: 'Why is there a countdown/delay when I teleport?',
+        a: 'The teleport warm-up is tied to your <b>rank</b> — higher progression ranks have a much shorter delay (near-instant at the top). It can\'t be removed entirely because instant teleport would let players escape PvP zones mid-fight.',
+      },
+    ],
+  },
+  {
+    cat: 'World Rules & Common Confusions',
+    items: [
+      {
+        q: 'Why can\'t I break blocks in the Nether / on certain land?',
+        a: 'Two separate reasons. Block-breaking in the <b>Nether is currently disabled on purpose</b> by staff and will be re-enabled when announced. Elsewhere, land can be <b>claimed</b> by other players (Flan claims) — you can\'t build or break inside someone else\'s claim. Claim your own land to build freely.',
+      },
+      {
+        q: 'Why are some Cooking Pot / Campfire recipes locked?',
+        a: 'That\'s a Cobblemon mechanic, not a server restriction. Cooking Pot recipes <b>unlock progressively</b> as you obtain the required ingredients and plants — until then they won\'t appear in the recipe book or REI. Keep gathering ingredients and more recipes open up.',
+      },
+      {
+        q: 'I get an error in Battle Tower with my fusion / custom Pokémon',
+        a: 'This is a known issue with some custom/fusion-form Pokémon in the higher tiers. The tower <b>auto-retries</b>, so you won\'t lose your floor. As a workaround, keep fusion/custom mons <b>out of your lead slot</b> for now — it\'s being worked on.',
+      },
+      {
+        q: 'Will the server ever wipe or reset?',
+        a: 'No wipe is planned. The server is past its early launch and your progress is here to stay — any future change of that kind would be announced well in advance.',
+      },
+      {
+        q: 'Are alternate accounts (alts) allowed?',
+        a: 'Alts aren\'t banned, but running one is genuinely twice the work (double the dailies, jobs and tasks) for little real advantage, and staff keep an eye on abuse. Play how you like, but don\'t expect alts to be a shortcut.',
+      },
+    ],
+  },
+];

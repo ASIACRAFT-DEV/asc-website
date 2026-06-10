@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Credits — Cobble Asia</title>
-  <meta name="description" content="Cobble Asia runs on these community mods and libraries. Credit and thanks to their creators." />
+  <title>FAQ — Cobble Asia</title>
+  <meta name="description" content="Frequently asked questions about Cobble Asia — connecting, install errors, finding Pokémon, making money, the Elite Four ladder, world rules and more." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
@@ -30,27 +30,41 @@
 
   <main>
     <section class="fp-hero">
+      <div class="fp-hero-glow"></div>
       <div class="fp-hero-inner">
         <a class="back-link" href="index.html">← Back home</a>
-        <span class="fp-cat">Credits</span>
-        <h1 class="fp-title">Built on the community</h1>
-        <p class="fp-blurb">Alongside our own ASC mods, Cobble Asia runs on these community projects. Huge thanks to every creator below — go support their work.</p>
+        <span class="fp-cat">Help</span>
+        <h1 class="fp-title">Frequently Asked Questions</h1>
+        <p class="fp-blurb">The questions players ask most — connecting, install errors, finding Pokémon, earning, and how the server's systems work.</p>
+        <div class="ip-chip ip-chip-lg">
+          <span class="ip-label">IP</span>
+          <code>play.cobbleasia.net</code>
+          <button class="copy-btn" data-copy="play.cobbleasia.net" aria-label="Copy server IP">Copy</button>
+        </div>
       </div>
     </section>
 
-    <div class="fp-body" style="max-width: 940px;">
-      <div id="credits-root"><!-- rendered by credits.js --></div>
+    <div class="fp-body">
+      <div id="faq-root"><!-- rendered by faq.js --></div>
+
+      <div class="fp-cta reveal">
+        <p>Didn't find your answer? Ask in <a class="js-discord" href="#">our Discord</a> — #community-support for setup help, #bug-reports for bugs.</p>
+        <div class="cta-row center">
+          <a class="btn btn-primary" href="guide.html">New player? Read the guide →</a>
+          <a class="btn btn-ghost" href="commands.html">Full command list</a>
+        </div>
+      </div>
     </div>
   </main>
 
   <footer class="footer">
     <p>Cobble Asia — a cracked Cobblemon server. Join us on <a class="js-discord" href="#">Discord</a>.</p>
     <p style="margin-bottom:6px;"><a class="js-credits" href="credits.html">Credits</a></p>
-    <p class="footer-dim">Mod names and trademarks belong to their respective authors. Not affiliated with Mojang, Nintendo, or The Pokémon Company.</p>
+    <p class="footer-dim">Not affiliated with Mojang, Nintendo, or The Pokémon Company.</p>
   </footer>
 
   <script src="data.js"></script>
-  <script src="credits.js"></script>
+  <script src="faq.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -1180,7 +1180,7 @@ const TEAM = [
         motto: "My whole life is consistent. Everything I do — from what I eat, to when I sleep, to my recovery, to my loved ones. Everything's consistent. It's a routine for me at this point." },
       { name: 'Velpecula', handle: 'VelpeculaTheFox', role: 'Owner & Finance', avatar: 'assets/team/velpecula.gif',
         motto: "Be the baddest one they'll ever see." },
-      { name: 'Crysthamyr', role: 'Head Admin' },
+      { name: 'Crysthamyr', role: 'Head Admin', avatar: 'assets/team/crys.jpg', motto: "that's just my fly client." },
       { name: 'PredatorG', role: 'Developer' },
       { name: 'Zeta', handle: 'justt_zeta', role: 'Core Management Staff', avatar: 'assets/team/zeta.png',
         motto: 'You only live once.' },

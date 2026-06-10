@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-10T02:33:27.310Z",
+  "generatedAt": "2026-06-10T09:41:34.837Z",
   "count": 30,
   "mods": [
     {
@@ -85,7 +85,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "6.67.0"
+      "version": "6.69.0"
     },
     {
       "repo": "asc-forge",
@@ -145,7 +145,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.5.0"
+      "version": "3.5.2"
     },
     {
       "repo": "asc-worldtweaks",

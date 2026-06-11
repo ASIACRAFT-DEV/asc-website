@@ -1238,7 +1238,7 @@ const TEAM = [
     group: 'Zeniths',
     members: [
       { name: 'Slaaaine', role: 'Zenith', avatar: 'assets/team/slaaaine.png', motto: 'BingBong not bingbonging.' },
-      { name: 'Ettlel', role: 'Zenith' },
+      { name: 'EttLel', role: 'Zenith', avatar: 'assets/team/ettlel.jpg', motto: 'Panda Lover' },
       { name: 'RicKKK', role: 'Zenith', avatar: 'assets/team/rickkk.png', motto: 'Always one ping away.' },
       { name: 'HeoLeoLe', role: 'Zenith', avatar: 'assets/team/heo.gif', motto: 'Crazy? I was crazy once.' },
       { name: 'Zandurrrrrr', role: 'Zenith', avatar: 'assets/team/zandurr.png',

@@ -1223,7 +1223,8 @@ const TEAM = [
     members: [
       { name: '_Lutris', role: 'Builder', avatar: 'assets/team/lutris.png',
         motto: 'I love mountains, they teach me to keep climbing.', socials: [{ label: 'YouTube', url: 'https://www.youtube.com/@lutris-35' }] },
-      { name: 'Leemon', role: 'Builder' },
+      { name: 'Zesty_Leemon', role: 'Builder', avatar: 'assets/team/leemon.png',
+        motto: 'Hotter than Salem 1962.', socials: [{ label: 'Instagram', url: 'https://www.instagram.com/sprucefruits' }] },
     ],
   },
   {

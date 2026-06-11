@@ -144,27 +144,48 @@ if (patchPreview && typeof PATCHNOTES !== 'undefined') {
     .join('');
 }
 
-// --- Live server status (mcsrvstat.us) ---
+// --- Live server status ---
+// Queried from two independent status APIs, whichever answers first wins. A single
+// provider being down, rate-limited, or blocked by a client adblocker (api.mcsrvstat.us
+// is on some block lists) no longer kills the widget. Each call is timeout-bounded so
+// the label can't get stuck on "checking status…".
 const countEl = document.getElementById('player-count');
 const statusWrap = countEl && countEl.closest('.hub-status');
 if (countEl) {
-  fetch('https://api.mcsrvstat.us/3/' + SERVER.ip)
-    .then((r) => r.json())
-    .then((d) => {
-      if (d && d.online) {
-        const on = (d.players && d.players.online) || 0;
-        const max = (d.players && d.players.max) || 0;
-        countEl.textContent = `${on}${max ? ' / ' + max : ''} players online`;
-        if (statusWrap) statusWrap.classList.add('online');
-      } else {
-        countEl.textContent = 'Server offline';
-        if (statusWrap) statusWrap.classList.add('offline');
-      }
-    })
-    .catch(() => {
-      countEl.textContent = 'Status unavailable';
-      if (statusWrap) statusWrap.classList.add('offline');
-    });
+  const setOnline = (on, max) => {
+    countEl.textContent = `${on}${max ? ' / ' + max : ''} players online`;
+    if (statusWrap) { statusWrap.classList.add('online'); statusWrap.classList.remove('offline'); }
+  };
+  const setOffline = (text) => {
+    countEl.textContent = text;
+    if (statusWrap) { statusWrap.classList.add('offline'); statusWrap.classList.remove('online'); }
+  };
+
+  // Fetch with a hard timeout; resolves to parsed JSON or null on any failure.
+  const fetchJson = (url) => {
+    const ctrl = new AbortController();
+    const t = setTimeout(() => ctrl.abort(), 6000);
+    return fetch(url, { signal: ctrl.signal })
+      .then((r) => (r.ok ? r.json() : null))
+      .catch(() => null)
+      .finally(() => clearTimeout(t));
+  };
+
+  // Each provider returns { online, on, max } or null if it couldn't tell us.
+  const providers = [
+    () => fetchJson('https://api.mcsrvstat.us/3/' + SERVER.ip).then((d) =>
+      d ? { online: !!d.online, on: (d.players && d.players.online) || 0, max: (d.players && d.players.max) || 0 } : null),
+    () => fetchJson('https://api.mcstatus.io/v2/status/java/' + SERVER.ip).then((d) =>
+      d ? { online: !!d.online, on: (d.players && d.players.online) || 0, max: (d.players && d.players.max) || 0 } : null),
+  ];
+
+  (async () => {
+    for (const p of providers) {
+      const res = await p();
+      if (res) { res.online ? setOnline(res.on, res.max) : setOffline('Server offline'); return; }
+    }
+    setOffline('Status unavailable');
+  })();
 }
 
 // reveal needs to run after dynamic content is injected

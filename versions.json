@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-12T09:57:55.993Z",
+  "generatedAt": "2026-06-12T14:36:22.874Z",
   "count": 30,
   "mods": [
     {
@@ -40,7 +40,7 @@
     {
       "repo": "asc-pokeditor",
       "name": "ASC Pokeditor",
-      "version": "1.3.0"
+      "version": "1.4.0"
     },
     {
       "repo": "asc-traininggrounds",
@@ -60,7 +60,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.18.1"
+      "version": "3.21.0"
     },
     {
       "repo": "asc-battlepass",
@@ -75,7 +75,7 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.41.0"
+      "version": "2.41.1"
     },
     {
       "repo": "asc-dungeons",
@@ -85,7 +85,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "6.72.0"
+      "version": "6.75.1"
     },
     {
       "repo": "asc-forge",
@@ -95,7 +95,7 @@
     {
       "repo": "asc-gts",
       "name": "CobbleAsia GTS",
-      "version": "2.7.0"
+      "version": "2.8.0"
     },
     {
       "repo": "asc-leaderboard",

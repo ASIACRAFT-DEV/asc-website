@@ -936,6 +936,118 @@ const NEWS = [
 // =====================================================================
 const PATCHNOTES = [
   {
+    date: '2026-06-13',
+    tag: 'Titles',
+    title: 'Titles are now a tradeable item',
+    changes: [
+      { type: 'new', text: 'Titles can now be bought, sold and traded as <strong>nametag items</strong> in six rarities (Common → Mythic). Right-click one to unlock and equip that title. They show up in crates, with dungeon / raid / Area Zero drops to follow.' },
+      { type: 'improved', text: 'Your <strong>Shards</strong> and <strong>Gems</strong> balances are back on the sidebar.' },
+    ],
+  },
+  {
+    date: '2026-06-13',
+    tag: 'Dungeons',
+    title: 'Parties, lives & the Shard Shop',
+    changes: [
+      { type: 'new', text: 'Run dungeons as a <strong>party</strong> with a shared pool of lives — team up and clear together. <code>/dungeon</code>' },
+      { type: 'new', text: 'The new <strong>Shard Shop</strong> spends your Shards on premium goods. <code>/dungeon shop</code>' },
+      { type: 'improved', text: '<code>/dungeon</code> is now the main command (the old <code>/ascdun</code> still works). Dungeons also gained sealable boss chambers, side-quest NPCs, collectible drop nodes and mixed passive/aggressive wild spawns.' },
+    ],
+  },
+  {
+    date: '2026-06-13',
+    tag: 'Crates',
+    title: 'Open crates with a full inventory',
+    changes: [
+      { type: 'improved', text: 'Crates no longer require 10 free slots to open — anything that doesn’t fit is now <strong>mailed to you</strong> instead of being lost or dropped on the ground. <code>/mail</code>' },
+    ],
+  },
+  {
+    date: '2026-06-13',
+    tag: 'Battle Tower',
+    title: 'Doubles banlist fixed',
+    changes: [
+      { type: 'fixed', text: 'Restricted Pokémon (a <strong>Kyogre</strong> rain team, an <strong>Urshifu-Rapid-Strike</strong> team) were leaking into the OU/UU/RU/NU Doubles towers from the shared fallback pool. Those tiers now run a clean, legal team list.' },
+    ],
+  },
+  {
+    date: '2026-06-12',
+    tag: 'Battle Tower',
+    title: 'Endless Decay & token rebalance',
+    changes: [
+      { type: 'new', text: '<strong>Endless Decay</strong> is live: past a threshold your party is level-synced <em>down</em> while opponents stay at Lv.100, so high floors stay a real challenge instead of free farm. Opt-in per tower.' },
+      { type: 'new', text: 'A <strong>Challenge Voucher</strong> consumable skips your high-floor loss cooldown — earnable from raids, dungeons and Area Zero.' },
+      { type: 'improved', text: 'Capped the high-floor <strong>token payout</strong> so deep runs no longer print hundreds of tokens per floor and out-earn every sink in the economy.' },
+    ],
+  },
+  {
+    date: '2026-06-12',
+    tag: 'Economy',
+    title: 'Season 1 economy pass',
+    changes: [
+      { type: 'improved', text: '<code>/ecoguide</code> and the GTS “Recommended Price” tooltip now reflect the current <strong>Season 1</strong> valuations, so the marketplace and chat flex agree.' },
+      { type: 'improved', text: 'Repriced the cheap-but-powerful <code>/pokeditor</code> edits (Hidden Ability, etc.) to match the rebalanced token economy.' },
+    ],
+  },
+  {
+    date: '2026-06-12',
+    tag: 'Crates',
+    title: 'Cosmog pity restored',
+    changes: [
+      { type: 'fixed', text: 'Players who had built pity on the old standalone <strong>Cosmog</strong> banner had it reset to 0 when Cosmog joined the Light Trio. Your accumulated pity has been transferred back onto the group banner.' },
+    ],
+  },
+  {
+    date: '2026-06-12',
+    tag: 'Quality of Life',
+    title: 'Jailed players no longer AFK-kicked',
+    changes: [
+      { type: 'fixed', text: 'A jailed player who couldn’t move far enough to reset the idle timer was being AFK-kicked (and in one case locked out). Jailed players are now exempt from the AFK kick.' },
+    ],
+  },
+  {
+    date: '2026-06-11',
+    tag: 'Area Zero',
+    title: 'Boats banned & fairer surges',
+    changes: [
+      { type: 'fixed', text: 'You can no longer place or ride <strong>boats</strong> inside Area Zero to skate past the combat layer.' },
+      { type: 'improved', text: 'The Energy Surge fill-gate now scales with the online player count, so off-peak players still get wild legendary spawns instead of waiting hours. The Global Energy bar color reflects the active surge tier.' },
+    ],
+  },
+  {
+    date: '2026-06-11',
+    tag: 'Crates',
+    title: 'Crate visuals survive restarts',
+    changes: [
+      { type: 'fixed', text: 'Crates in custom dimensions (like the SolForge crate) no longer lose their floating name and 3D chest model after a server restart.' },
+    ],
+  },
+  {
+    date: '2026-06-11',
+    tag: 'Clans',
+    title: 'Land claiming fix',
+    changes: [
+      { type: 'fixed', text: '<code>/clans claim</code> no longer silently spends a claimblock without actually claiming the land when the claim fails.' },
+    ],
+  },
+  {
+    date: '2026-06-10',
+    tag: 'PvP',
+    title: 'Terastal banned on the Singles ladder',
+    changes: [
+      { type: 'improved', text: 'The <strong>Singles</strong> ranked ladder now runs a Terastal Clause to match National Dex OU — Tera is disabled in Singles bouts. The <strong>Doubles</strong> ladder keeps Tera legal. <code>/ladder</code>' },
+    ],
+  },
+  {
+    date: '2026-06-10',
+    tag: 'Quality of Life',
+    title: 'Movement & Safari fixes',
+    changes: [
+      { type: 'fixed', text: 'Fixed a bug that could leave you completely unable to walk or sprint (zeroed movement speed). Affected players are now auto-healed, and <code>/speed</code> / <code>/walkspeed</code> / <code>/flyspeed</code> gained a <code>reset</code> option.' },
+      { type: 'fixed', text: 'The <strong>Safari</strong> is now build-protected — no more scooping or placing water and lava in the shared Safari world.' },
+    ],
+  },
+  {
     date: '2026-06-09',
     tag: 'Passives',
     title: 'Toggle your Night Vision passive',

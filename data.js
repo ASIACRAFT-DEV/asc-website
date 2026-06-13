@@ -28,7 +28,7 @@ const FEATURES = {
       {
         title: 'Collect the set',
         body:
-          'SolForge has 14 pieces — sword, pickaxe, axe, hoe, shovel, fishing rod, shield, and a full armor set (helmet, chestplate, leggings, boots). Each piece is a custom-modelled item with infinite durability. Get them from the SolForge Chest gacha crate or by forging.',
+          'SolForge has 15 pieces — five weapons (sword, bow, crossbow, trident, shield), five tools (pickaxe, axe, hoe, shovel, fishing rod), a full armor set (helmet, chestplate, leggings, boots), and the Wings of Dawn cosmetic. Each piece is a custom-modelled item with infinite durability. Get them from the SolForge Chest gacha crate or by forging.',
       },
       {
         title: 'Earn Solar Shards',
@@ -58,6 +58,7 @@ const FEATURES = {
     notes: [
       'Every SolForge piece has infinite durability — forge it once, keep it forever.',
       'Level V is grand-prize only, pulled from the SolForge Chest.',
+      'A Level V piece can be pushed to Level VI (Overmax) at the Archaeologist, using Seasonal Essence forged from fishing-caught Sunken Relics — never from crates.',
       'Designed by community admin Indigo as the server’s first full season.',
     ],
   },
@@ -72,7 +73,7 @@ const FEATURES = {
     blurb:
       'Genshin-style pity, rotating legendary trio banners, and shiny pulls you can’t catch in the wild.',
     intro:
-      'Our crate system is a full gacha: featured banners with pity counters, a shuffled weekly rotation so no set is ever predictable, and previews of what’s coming next — all in a spinning chest GUI.',
+      'Our crate system is a full gacha: featured banners with pity counters, a shuffled daily rotation so no set is ever predictable, and previews of what’s coming next — all in a spinning chest GUI.',
     how: [
       {
         title: 'Rotating trio banners',
@@ -137,6 +138,11 @@ const FEATURES = {
         body:
           'Redeem tokens for exclusive rewards including Fusion Splicers — items that let you fuse Pokémon into custom forms.',
       },
+      {
+        title: 'Survive Endless Decay',
+        body:
+          'On towers with Endless Decay enabled, once you climb past the checkpoint floor your whole party is level-synced down while the enemy teams stay at Lv.100 — so the high floors demand sharper play instead of becoming free farm. Fall up there and you reset to the checkpoint and pick up a 24-hour cooldown.',
+      },
     ],
     commands: [
       { cmd: '/bt', desc: 'Open the Battle Tower hub — pick tier, format, and battle' },
@@ -144,6 +150,7 @@ const FEATURES = {
     notes: [
       'Doubles uses a dedicated per-tier team pool, refreshed when admins add new sets.',
       'Tower tokens are spent across multiple systems, not just the tower shop.',
+      'A Challenge Voucher — dropped by raids, dungeons and Area Zero — skips the 24-hour high-floor cooldown.',
     ],
   },
 
@@ -220,7 +227,7 @@ const FEATURES = {
       {
         title: 'Hold or decay',
         body:
-          'Seats persist across restarts, but if you go offline too long or stop defending, your seat decays back to an NPC. Lose a challenge and you’re on a 48-hour cooldown before you can challenge that format again.',
+          'Seats persist across restarts, but if you go offline too long, dodge a challenge, or fail your daily activity quota (stay online or fight enough ladder battles), your seat decays back to an NPC. Lose a challenge and you’re on a 48-hour cooldown before you can challenge that format again.',
       },
     ],
     commands: [
@@ -278,17 +285,22 @@ const FEATURES = {
     name: 'Seasonal Dungeons',
     short: 'Dungeons',
     accent: 'amber',
-    tag: '/dungeon · /buykey',
+    tag: '/dungeon · /party',
     category: 'Battling',
     blurb:
-      'Rank-scaled daily keys, relic drops, side-quests and a seasonal currency. Clear dungeons for fragments and prestige.',
+      'Rank-scaled daily keys, relic drops, side-quests, party runs with shared lives and a Shard shop. Clear dungeons for fragments and prestige.',
     intro:
-      'Dungeons are instanced challenge runs with objectives, optional side-quests, and a layered reward economy. Entry is gated by keys you earn daily based on your rank — or buy with gems.',
+      'Dungeons are instanced challenge runs with objectives, optional side-quests, and a layered reward economy. Entry is gated by keys you earn daily based on your rank — and you can take them on solo or as a party.',
     how: [
       {
         title: 'Get your daily keys',
         body:
-          'Each new day, your Dungeon Keys top up to an allowance based on your donator rank. Need more? Buy extra keys with gems via /buykey.',
+          'Each new day, your Dungeon Keys top up to an allowance based on your donator rank — up to five at the top tier.',
+      },
+      {
+        title: 'Run solo or as a party',
+        body:
+          'Form a party (up to six) and start a run together with a shared pool of lives — die and you’re out, so the team has to play smart. Lives scale with rank, and a Heart Crystal can restore them mid-run.',
       },
       {
         title: 'Clear objectives',
@@ -301,14 +313,20 @@ const FEATURES = {
           'Clearing pays coins and tokens scaled by difficulty, Pokédex reward tokens scaled by how many side-quests you finished, and always a SolForge Crate Key — with a chance at a random SolForge gear piece.',
       },
       {
+        title: 'Spend your Shards',
+        body:
+          'Clearing dungeons earns Shards — spend them in the Shard Shop (/dungeon shop) on premium goods like SolForge gear, cores, crate keys and Rare Candy.',
+      },
+      {
         title: 'Build toward the season',
         body:
           'Dungeons layer on top of a fragment economy — collect fragments and craft keys, working toward prestige titles through the seasonal system.',
       },
     ],
     commands: [
-      { cmd: '/dungeon', desc: 'Open the dungeon hub and enter runs' },
-      { cmd: '/buykey', desc: 'Buy extra dungeon keys with gems' },
+      { cmd: '/dungeon', desc: 'Open the dungeon hub and enter runs (also /ascdun)' },
+      { cmd: '/dungeon shop', desc: 'Spend Shards in the Shard Shop' },
+      { cmd: '/party', desc: 'Form a party for shared-lives dungeon runs' },
     ],
     notes: [
       'Higher ranks get more daily keys — up to five at the top tier.',
@@ -351,7 +369,7 @@ const FEATURES = {
     ],
     commands: [
       { cmd: '/safari', desc: 'Open the Safari hub — passes, raid board, region guide' },
-      { cmd: '/hunt', desc: 'Track your active safari hunt objectives' },
+      { cmd: '/safari expedition', desc: 'Track your active safari expedition objectives' },
     ],
     notes: [
       'Roaming Megas and Totems must be battled or caught — you can’t sword-kill them for the drop.',
@@ -395,7 +413,7 @@ const FEATURES = {
     commands: [
       { cmd: '/pvp', desc: 'Open the PvP hub — enter the Warzone, check WP' },
       { cmd: '/pvp shop', desc: 'Spend Warzone Points on rewards' },
-      { cmd: '/pvp history', desc: 'View your recent Warzone match history' },
+      { cmd: '/pvp points', desc: 'Check your Warzone Points balance' },
     ],
     notes: [
       'Steal is real — losing a battle can cost you a Pokémon. Don’t bring what you can’t lose.',
@@ -417,7 +435,12 @@ const FEATURES = {
       {
         title: 'Found or join a clan',
         body:
-          'Start your own clan or join an existing one. Members get roles (Leader, Vice, member) and a clan tag that shows in chat and the TAB list.',
+          'Start your own clan or join an existing one. Members get roles (Leader, Vice-Leader, Officer, member) and a clan tag that shows in chat and the TAB list.',
+      },
+      {
+        title: 'Claim land & fly',
+        body:
+          'Buy claimblocks from the clan shop and claim chunks with /clans claim to protect your clan’s land. Enable /clans fly so members get flight inside clan-claimed territory, paid from the shared bank.',
       },
       {
         title: 'Share a bank',
@@ -438,6 +461,8 @@ const FEATURES = {
     commands: [
       { cmd: '/clans', desc: 'Open the clan hub' },
       { cmd: '/c', desc: 'Quick clan command + clan chat' },
+      { cmd: '/clans claim', desc: 'Claim the chunk you’re standing in for your clan' },
+      { cmd: '/clans fly', desc: 'Toggle flight inside clan-claimed land' },
     ],
     notes: [
       'Clan passive buys are Leader/Vice only and spend the clan bank.',
@@ -791,7 +816,7 @@ const COMMANDS = [
       { cmd: '/az', desc: 'Area Zero combat zone' },
       { cmd: '/skill', desc: 'Spend your Area Zero paradox gauge' },
       { cmd: '/dungeon', desc: 'Enter seasonal dungeons' },
-      { cmd: '/buykey', desc: 'Buy extra dungeon keys with gems' },
+      { cmd: '/party', desc: 'Party up for shared-lives dungeon runs' },
       { cmd: '/tg', desc: 'Training Grounds — EXP buffs' },
     ],
   },
@@ -1123,7 +1148,7 @@ const PATCHNOTES = [
     title: 'Relic & Key system',
     changes: [
       { type: 'new', text: 'Seasonal dungeons now drop <strong>relics</strong> and feature side-quests for bonus rewards.' },
-      { type: 'new', text: 'Daily dungeon keys now scale with your rank — grab extra keys with gems via <code>/buykey</code>.' },
+      { type: 'new', text: 'Daily dungeon keys now scale with your rank.' },
     ],
   },
   {

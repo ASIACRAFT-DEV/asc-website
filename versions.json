@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T13:27:09.556Z",
+  "generatedAt": "2026-06-13T19:09:17.750Z",
   "count": 30,
   "mods": [
     {
@@ -30,7 +30,7 @@
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "1.5.0"
+      "version": "1.6.1"
     },
     {
       "repo": "asc-jobs",
@@ -85,7 +85,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "6.75.1"
+      "version": "6.81.0"
     },
     {
       "repo": "asc-forge",

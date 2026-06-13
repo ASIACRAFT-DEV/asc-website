@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-13T08:47:52.796Z",
+  "generatedAt": "2026-06-13T13:27:09.556Z",
   "count": 30,
   "mods": [
     {
@@ -60,12 +60,12 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.22.0"
+      "version": "3.22.1"
     },
     {
       "repo": "asc-battlepass",
       "name": "CobbleAsia BattlePass",
-      "version": "2.16.0"
+      "version": "2.17.0"
     },
     {
       "repo": "asc-chestshop",
@@ -75,7 +75,7 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.41.1"
+      "version": "2.43.0"
     },
     {
       "repo": "asc-dungeons",
@@ -120,7 +120,7 @@
     {
       "repo": "asc-npcs",
       "name": "CobbleAsia NPCs",
-      "version": "2.7.0"
+      "version": "2.8.0"
     },
     {
       "repo": "asc-pokewiki",
@@ -140,7 +140,7 @@
     {
       "repo": "asc-ranks",
       "name": "CobbleAsia Ranks",
-      "version": "1.23.0"
+      "version": "1.24.0"
     },
     {
       "repo": "asc-safari",
@@ -150,7 +150,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.15.1"
+      "version": "1.16.0"
     }
   ]
 }

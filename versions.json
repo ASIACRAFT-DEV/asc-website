@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-14T13:29:43.616Z",
+  "generatedAt": "2026-06-14T19:10:01.342Z",
   "count": 30,
   "mods": [
     {
@@ -30,7 +30,7 @@
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "1.6.2"
+      "version": "1.7.0"
     },
     {
       "repo": "asc-jobs",

@@ -114,9 +114,9 @@ const FEATURES = {
     category: 'Battling',
     featured: true,
     blurb:
-      'Climb tiered floors of hand-built OU, Uber and AG NPC teams. Singles and doubles. Cash out tokens in the tower shop.',
+      'Climb tiered floors of hand-built OU, Uber and AG NPC teams. Singles and doubles, rolling 30-day seasons, and ♛ Conqueror crowns for the first to clear each tier.',
     intro:
-      'The Battle Tower is our endgame PvE battling ladder. Each tier fields fully-authored competitive teams — real abilities, natures, EVs, items and movesets — across both singles and doubles formats.',
+      'The Battle Tower is our endgame PvE battling ladder. Each tier fields fully-authored competitive teams — real abilities, natures, EVs, items and movesets — across both singles and doubles formats. It runs on rolling 30-day seasons, so the leaderboards reset and everyone re-climbs for the crowns.',
     how: [
       {
         title: 'Pick your tier and format',
@@ -143,14 +143,26 @@ const FEATURES = {
         body:
           'On towers with Endless Decay enabled, once you climb past the checkpoint floor your whole party is level-synced down while the enemy teams stay at Lv.100 — so the high floors demand sharper play instead of becoming free farm. Fall up there and you reset to the checkpoint and pick up a 24-hour cooldown.',
       },
+      {
+        title: 'Climb a fresh season',
+        body:
+          'The tower runs on rolling 30-day seasons. When a season rolls over every floor and first-clear leaderboard wipes and everyone re-climbs from Floor 1 — but your tokens and lifetime stats are kept. Check the time left with /bt season.',
+      },
+      {
+        title: 'Race for Conqueror crowns',
+        body:
+          'The first player to clear Floor 50 of each tier — Uber, OU, UU, RU, NU, Little Cup and Anything Goes — earns that tier’s ♛ Conqueror crown, a MYTHIC prestige title. Win one and it’s yours forever; only the “reigning champ” pointer moves when someone else first-clears the next season.',
+      },
     ],
     commands: [
       { cmd: '/bt', desc: 'Open the Battle Tower hub — pick tier, format, and battle' },
+      { cmd: '/bt season', desc: 'Show the current season number and time until reset' },
     ],
     notes: [
       'Doubles uses a dedicated per-tier team pool, refreshed when admins add new sets.',
       'Tower tokens are spent across multiple systems, not just the tower shop.',
       'A Challenge Voucher — dropped by raids, dungeons and Area Zero — skips the 24-hour high-floor cooldown.',
+      'Seasons wipe the climb every 30 days but keep your tokens and lifetime stats; Conqueror crowns are kept forever.',
     ],
   },
 
@@ -288,9 +300,9 @@ const FEATURES = {
     tag: '/dungeon · /party',
     category: 'Battling',
     blurb:
-      'Rank-scaled daily keys, relic drops, side-quests, party runs with shared lives and a Shard shop. Clear dungeons for fragments and prestige.',
+      'Rank-scaled daily keys, puzzles, parkour, skill-check trainer battles, party runs with shared lives and a Shard shop. Clear dungeons for relics, fragments and prestige.',
     intro:
-      'Dungeons are instanced challenge runs with objectives, optional side-quests, and a layered reward economy. Entry is gated by keys you earn daily based on your rank — and you can take them on solo or as a party.',
+      'Dungeons are instanced challenge runs with objectives, optional side-quests, and a layered reward economy. Entry is gated by keys you earn daily based on your rank — and you can take them on solo or as a party. Beyond combat, runs now chain puzzles, parkour and trainer skill-checks, all tracked on a live dungeon sidebar.',
     how: [
       {
         title: 'Get your daily keys',
@@ -306,6 +318,16 @@ const FEATURES = {
         title: 'Clear objectives',
         body:
           'Every dungeon has mandatory objectives to clear it, plus optional side-quests (reach, collect, defeat) that aren’t required but boost your rewards when completed.',
+      },
+      {
+        title: 'Solve puzzles & run the gauntlet',
+        body:
+          'Dungeons mix in more than fighting: block-sequence puzzles you activate in the right order, parkour courses where a fall sends you back to your last checkpoint (not the start), and skill-check trainer battles against full authored teams — built for paradox squads. Lose a trainer fight and you’re healed and returned to your checkpoint to try again.',
+      },
+      {
+        title: 'Track it on the sidebar',
+        body:
+          'A live dungeon sidebar — like Area Zero’s — shows your current objective, side-quest progress, every party member’s HP and remaining lives, and the boss HP bar during chamber fights, so the whole team always knows where the run stands.',
       },
       {
         title: 'Earn relic rewards',
@@ -331,6 +353,7 @@ const FEATURES = {
     notes: [
       'Higher ranks get more daily keys — up to five at the top tier.',
       'Side-quests are optional but directly scale your reward quality.',
+      'A single dungeon can chain reach → puzzle → parkour → trainer battle → boss as objectives or side-quests.',
     ],
   },
 

@@ -961,6 +961,67 @@ const NEWS = [
 // =====================================================================
 const PATCHNOTES = [
   {
+    date: '2026-06-15',
+    tag: 'Crates',
+    title: 'One flat summon price on every banner',
+    changes: [
+      { type: 'improved', text: 'Every summon banner now costs the same — <strong>100,000 coins per pull</strong> and <strong>900,000 for a 10-pull</strong>. No more banner being a cheaper outlier, and rotations no longer reset a banner to a stale low price. <code>/summon</code>' },
+    ],
+  },
+  {
+    date: '2026-06-14',
+    tag: 'Battle Tower',
+    title: 'Battle Tower Seasons & Conqueror Crowns',
+    changes: [
+      { type: 'new', text: 'The Battle Tower now runs on <strong>rolling 30-day seasons</strong>. When a season rolls over every floor and first-clear leaderboard wipes and everyone re-climbs from Floor 1 — your <strong>currency and lifetime stats are kept</strong>. Check the timer with <code>/bt season</code>.' },
+      { type: 'new', text: 'Seven <strong>♛ Conqueror crowns</strong> (MYTHIC titles) go to the <strong>first player to clear Floor 50</strong> of each tier — Uber, OU, UU, RU, NU, Little Cup and Anything Goes. Win one and it’s <strong>yours forever</strong>; only the “reigning champ” pointer moves when someone else first-clears next season.' },
+      { type: 'fixed', text: 'Closed an exploit where the <strong>Uber tower ran no clauses at all</strong> — Starlight Fusions (e.g. a Cosmog + Rayquaza fusion), the Species Clause and the Mega-Rayquaza guard were all being skipped. Every tier now enforces its banlist.' },
+    ],
+  },
+  {
+    date: '2026-06-14',
+    tag: 'Dungeons',
+    title: 'Puzzles, parkour & trainer battles',
+    changes: [
+      { type: 'new', text: 'Dungeons gained three new objective types: <strong>block-sequence puzzles</strong>, <strong>parkour courses</strong> (fall and you’re sent back to your last checkpoint, not the start), and <strong>skill-check trainer battles</strong> against full authored teams — built for paradox squads. Lose a trainer fight and you’re healed and returned to your checkpoint to retry.' },
+      { type: 'new', text: 'A live <strong>dungeon sidebar</strong> now shows your objective, sidequests, party HP &amp; lives, and the boss HP bar during chamber fights — just like Area Zero. <code>/dungeon</code>' },
+    ],
+  },
+  {
+    date: '2026-06-14',
+    tag: 'Jobs',
+    title: 'New job: Lumberjack',
+    changes: [
+      { type: 'new', text: 'A dedicated <strong>🪓 Lumberjack</strong> job pays <strong>60 coins per log</strong> you chop (every wood, stem and hyphae type). Logs moved off Farmer, so chopping is now its own role. Placing a log then breaking it pays nothing. <code>/jobs</code>' },
+    ],
+  },
+  {
+    date: '2026-06-14',
+    tag: 'Gyms',
+    title: 'Gym coins are now a first-clear bonus',
+    changes: [
+      { type: 'improved', text: 'Gym coin rewards no longer repeat daily (you could re-beat all 18 gyms for ~2.5M coins/day, forever). Coins now pay out <strong>only on your first-ever clear</strong> of each gym — the full ladder reward (15k → 270k) plus the one-time token bonus. <strong>Rare candies and TMs still drop on every re-clear</strong>, so the daily run still pays something. <code>/gym</code>' },
+    ],
+  },
+  {
+    date: '2026-06-14',
+    tag: 'PvP',
+    title: 'Warzone payouts buffed & Steal Protection',
+    changes: [
+      { type: 'improved', text: 'Warzone now pays <strong>+25 WP per win</strong> (up from +5) — a Legendary Core drops from 300 wins to 60, a Shiny Legendary from 500 to 100. <code>/pvp</code>' },
+      { type: 'new', text: 'Buy <strong>Steal Protection</strong> — coin-bought insurance that shields your Pokémon from being lost on a Warzone defeat. Priced at <strong>750,000 coins</strong> so it’s a real economy sink and a deliberate choice before a risky run.' },
+    ],
+  },
+  {
+    date: '2026-06-14',
+    tag: 'Quality of Life',
+    title: 'Every menu now has a guide book',
+    changes: [
+      { type: 'new', text: 'Almost every in-game menu — crates, dungeons, gyms, jobs, safari, ranks, leaderboards, levels, mail, the Pokéditor, the PokéWiki, raids, the Battle Tower and PvP — now has an <strong>“ℹ How it works” book</strong> in the corner that explains the feature in plain language. No more asking in chat how a screen works.' },
+      { type: 'improved', text: 'Added short command aliases to match the rest: <code>/npc</code>, <code>/ranks</code>, <code>/worldtweaks</code>, <code>/lvl</code> and <code>/raid</code> all work now.' },
+    ],
+  },
+  {
     date: '2026-06-13',
     tag: 'Titles',
     title: 'Titles are now a tradeable item',

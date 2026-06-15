@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-15T01:17:05.149Z",
+  "generatedAt": "2026-06-15T02:48:17.376Z",
   "count": 30,
   "mods": [
     {
@@ -85,7 +85,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "6.83.0"
+      "version": "6.86.0"
     },
     {
       "repo": "asc-forge",
@@ -130,7 +130,7 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.11.0"
+      "version": "2.10.3"
     },
     {
       "repo": "asc-raidboss",

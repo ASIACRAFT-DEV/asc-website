@@ -410,22 +410,27 @@ const FEATURES = {
     blurb:
       'Tag-to-force-battle arena. Hit another trainer inside the zone and a ranked battle starts instantly — winner can steal a Pokémon.',
     intro:
-      'Warzone is high-stakes open PvP. Step into the zone and you’ve consented to fight: melee-hit any other trainer and a ranked NatDex OU singles battle force-starts — no accept, no decline, no dodging. Win to earn Warzone Points and, if you dare, steal one of the loser’s Pokémon.',
+      'Warzone is high-stakes open PvP. Step into the zone and you’ve consented to fight: melee-hit any other trainer and a ranked battle force-starts — no accept, no decline, no dodging. The format rotates daily, so the meta is never stale. Win to earn Warzone Points and, if you dare, steal one of the loser’s Pokémon.',
     how: [
+      {
+        title: 'Check today’s format',
+        body:
+          'The Warzone format rotates every day at midnight (SGT). The tier cycles NatDex OU → NatDex Ubers → Anything Goes, and the battle style alternates Singles ↔ Doubles — so you might play OU Singles one day and Ubers Doubles the next. A server message announces each day’s format, or check /pvp.',
+      },
       {
         title: 'Gear up and enter',
         body:
-          'The Warzone requires a NatDex OU team, all level 100 and fully evolved. There’s an enter button in the /pvp hub that validates your team before warping you in. Entering the zone is consent to be tagged.',
+          'Every format requires a team of level 100, fully evolved Pokémon with no duplicates (Ubers days allow legendaries; Anything Goes drops all bans). There’s an enter button in the /pvp hub that validates your team against today’s format before warping you in. Entering the zone is consent to be tagged.',
       },
       {
         title: 'Tag to fight',
         body:
-          'Hit another trainer with a melee swing and the battle starts immediately — the hit damage is cancelled and a ranked singles match begins. No team preview, no escape. You get 60 seconds of entry protection when you first arrive.',
+          'Hit another trainer with a melee swing and the battle starts immediately — the hit damage is cancelled and a ranked match begins in today’s style. No team preview, no escape. You get 60 seconds of entry protection when you first arrive.',
       },
       {
         title: 'Win for Warzone Points',
         body:
-          'Wins pay +5 Warzone Points, losses cost −3. WP is its own currency — balances can even go negative, so throwing matches doesn’t pay. Both players get a few minutes of tag-immunity after a fight.',
+          'Wins pay +25 Warzone Points, losses cost −3. WP is its own currency — balances can even go negative, so throwing matches doesn’t pay. Both players get a few minutes of tag-immunity after a fight.',
       },
       {
         title: 'Steal and spend',
@@ -983,6 +988,15 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-06-15',
+    tag: 'PvP',
+    title: 'Warzone daily format rotation',
+    changes: [
+      { type: 'new', text: 'The <strong>Warzone format now rotates every day at midnight (SGT)</strong>. The tier cycles <strong>NatDex OU → NatDex Ubers → Anything Goes</strong>: Ubers days let legendaries loose, Anything Goes days drop all competitive bans. Every day still requires level 100, fully evolved, and no duplicate species. <code>/pvp</code>' },
+      { type: 'new', text: 'The battle style now <strong>alternates Singles ↔ Doubles</strong> daily too. With both cycles flipping, you get fresh combos all week — <em>OU Singles → Ubers Doubles → AG Singles → OU Doubles…</em> A server message announces each day’s format; check <code>/pvp</code> or the Enter-the-Warzone button to see what’s live.' },
+    ],
+  },
   {
     date: '2026-06-15',
     tag: 'Crates',

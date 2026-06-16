@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-16T02:50:32.308Z",
+  "generatedAt": "2026-06-16T10:55:20.705Z",
   "count": 30,
   "mods": [
     {
@@ -75,17 +75,17 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.46.0"
+      "version": "2.47.0"
     },
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "1.32.0"
+      "version": "1.37.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "6.95.0"
+      "version": "6.100.0"
     },
     {
       "repo": "asc-forge",

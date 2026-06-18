@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-18T10:06:18.825Z",
+  "generatedAt": "2026-06-18T14:48:03.551Z",
   "count": 30,
   "mods": [
     {
@@ -35,7 +35,7 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "1.11.0"
+      "version": "1.12.0"
     },
     {
       "repo": "asc-pokeditor",
@@ -55,12 +55,12 @@
     {
       "repo": "asc-areazero",
       "name": "CobbleAsia Area Zero",
-      "version": "2.10.1"
+      "version": "2.11.0"
     },
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.22.2"
+      "version": "3.25.0"
     },
     {
       "repo": "asc-battlepass",
@@ -85,7 +85,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "6.105.0"
+      "version": "6.108.0"
     },
     {
       "repo": "asc-forge",
@@ -130,7 +130,7 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.10.3"
+      "version": "2.13.0"
     },
     {
       "repo": "asc-raidboss",
@@ -145,7 +145,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.5.3"
+      "version": "3.6.0"
     },
     {
       "repo": "asc-worldtweaks",

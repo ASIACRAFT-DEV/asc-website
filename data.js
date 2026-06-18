@@ -239,7 +239,7 @@ const FEATURES = {
       {
         title: 'Hold or decay',
         body:
-          'Seats persist across restarts, but if you go offline too long, dodge a challenge, or fail your daily activity quota (stay online or fight enough ladder battles), your seat decays back to an NPC. Lose a challenge and you’re on a 48-hour cooldown before you can challenge that format again.',
+          'Seats persist across restarts, but if you go offline too long, dodge a challenge, or fail your daily activity quota (stay online or fight enough ladder battles), your seat decays back to an NPC. Lose a challenge and you’re on a 12-hour cooldown before you can challenge that format again.',
       },
     ],
     commands: [
@@ -988,6 +988,53 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-06-18',
+    tag: 'Battle Tower',
+    title: 'Battle Tower menus refreshed',
+    changes: [
+      { type: 'improved', text: 'All three Battle Tower screens got a visual overhaul. The hub is now a full-size board of <strong>mode-coloured tier cards</strong> with aligned Best / Rank / Floors lore, your lifetime floors climbed, and both wallets (BT Tokens + Limited Tokens) inline. <strong>Singles and Doubles are now two separate icons</strong> — the active format glows — instead of one toggle. The shop and leaderboard match the new style, with comma-formatted balances and cleaner tooltips throughout. <code>/bt</code>' },
+    ],
+  },
+  {
+    date: '2026-06-16',
+    tag: 'Titles',
+    title: 'Prestige Crowns: Emperor, Hunter & Warden',
+    changes: [
+      { type: 'new', text: 'A new family of <strong>rotating prestige crowns</strong> that move to whoever earns them — separate from the permanent ♛ Conqueror crowns. The <strong>♚ Tower Emperor</strong> goes to the trainer who has climbed the <strong>furthest</strong> (highest floor and tier) in the Battle Tower; lose the lead and the crown moves.' },
+      { type: 'new', text: 'Area Zero now awards three <strong>Hunter</strong> crowns — <strong>Alpha Hunter, Paradox Hunter and Legendary Hunter</strong> — to the players who have defeated the most <strong>wild Alpha, Paradox, and Legendary/Mythical Pokémon</strong> inside the zone. Every wild kill in Area Zero now counts toward them. <code>/az</code>' },
+      { type: 'new', text: 'The <strong>❀ Safari Warden</strong> crown goes to the most active Safari trainer, scored on total <strong>catches plus Tera &amp; Dynamax raid clears</strong> across all your runs. <code>/safari</code>' },
+      { type: 'improved', text: 'The <code>/titles</code> list is now <strong>sorted by rarity</strong>, so your rarest titles sit up top.' },
+    ],
+  },
+  {
+    date: '2026-06-16',
+    tag: 'Jobs',
+    title: 'Job ranks — progression tiers with perks',
+    changes: [
+      { type: 'new', text: 'Every job now ranks up on its own, from <strong>Novice → Apprentice → Journeyman → Expert → Master</strong>, based on that job’s all-time earnings (each job grinds independently). Higher rank means a <strong>bigger payout multiplier</strong> (up to ×1.35 at Master), a <strong>bigger per-cycle cap</strong>, and a cosmetic badge like <strong>“✦ Master Farmer”</strong> shown on your job tiles. Hitting Master broadcasts server-wide. Check it with <code>/job rank</code>.' },
+      { type: 'improved', text: 'No reset — everyone starts at Novice and ranks up from current activity, with no change to existing balances. <code>/jobs</code>' },
+    ],
+  },
+  {
+    date: '2026-06-16',
+    tag: 'PvP',
+    title: 'Elite Four & VGC Doubles fixes',
+    changes: [
+      { type: 'fixed', text: '<strong>VGC Doubles now battles with the four Pokémon you pick</strong> at team preview, not your whole party. Pick your four and those are the ones that fight — un-picked Pokémon are never touched, and fused/aspect forms keep their data.' },
+      { type: 'fixed', text: 'A <strong>frozen Elite Four battle no longer counts as a loss</strong>. If a challenge genuinely hangs mid-fight, it’s now resolved as a void — your entry fee is <strong>refunded</strong> and <strong>no cooldown</strong> is applied. Playing then quitting to dodge a defeat still counts as a loss, so the anti-dodge protection stays.' },
+      { type: 'improved', text: 'The lost-challenge cooldown is cut from <strong>48 hours to 12 hours</strong>, keeping the ladder active without removing the anti-spam gate. <code>/ladder</code>' },
+    ],
+  },
+  {
+    date: '2026-06-16',
+    tag: 'Battle Tower',
+    title: 'Two competitive move loopholes closed',
+    changes: [
+      { type: 'fixed', text: 'In <strong>Little Cup</strong>, the fixed-damage moves <strong>Dragon Rage</strong> (40 HP) and <strong>Sonic Boom</strong> (20 HP) are now banned — at the Lv.5 lock they OHKO/2HKO almost the whole format, which is exactly why Smogon bans them.' },
+      { type: 'fixed', text: 'Closed a defuse-and-keep-move exploit: a player could fuse, learn the fusion-exclusive move <strong>Nihil Light</strong>, then defuse back to plain Rayquaza (tier-legal in Ubers) while keeping the move. Fusion-exclusive moves are now banned in every clause-enforced tier.' },
+    ],
+  },
   {
     date: '2026-06-15',
     tag: 'PvP',

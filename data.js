@@ -1522,7 +1522,6 @@ const TEAM = [
       { name: 'Slaaaine', role: 'Zenith', avatar: 'assets/team/slaaaine.png', motto: 'BingBong not bingbonging.' },
       { name: 'EttLel', role: 'Zenith', avatar: 'assets/team/ettlel.jpg', motto: 'Panda Lover' },
       { name: 'RicKKK', role: 'Zenith', avatar: 'assets/team/rickkk.png', motto: 'Always one ping away.' },
-      { name: 'HeoLeoLe', role: 'Zenith', avatar: 'assets/team/heo.gif', motto: 'Crazy? I was crazy once.' },
       { name: 'Zandurrrrrr', role: 'Zenith', avatar: 'assets/team/zandurr.png',
         motto: "I stalk myself on the internet just to see what you'll find." },
       { name: 'McNuggetRice', role: 'Zenith', avatar: 'assets/team/mcnugget.jpg', motto: 'una' },

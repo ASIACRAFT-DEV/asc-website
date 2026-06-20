@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Team — Cobble Asia</title>
-  <meta name="description" content="Meet the Cobble Asia staff team — owners, developers, admins and moderators keeping the server running." />
+  <title>Tutorial — Cobble Asia</title>
+  <meta name="description" content="Watch the Cobble Asia tutorial video — a full walkthrough of connecting, catching, earning and progressing on the server." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
@@ -31,16 +31,40 @@
 
   <main>
     <section class="fp-hero">
+      <div class="fp-hero-glow"></div>
       <div class="fp-hero-inner">
         <a class="back-link" href="index.html">← Back home</a>
-        <span class="fp-cat">The Team</span>
-        <h1 class="fp-title">Meet the staff</h1>
-        <p class="fp-blurb">The people who build, run and moderate Cobble Asia. Got a question for the team? Reach us on Discord.</p>
+        <span class="fp-cat">Watch</span>
+        <h1 class="fp-title">Tutorial</h1>
+        <p class="fp-blurb">A full video walkthrough of Cobble Asia — from your first join to catching, earning and progressing. Press play and follow along.</p>
+        <div class="ip-chip ip-chip-lg">
+          <span class="ip-label">IP</span>
+          <code>play.cobbleasia.net</code>
+          <button class="copy-btn" data-copy="play.cobbleasia.net" aria-label="Copy server IP">Copy</button>
+        </div>
       </div>
     </section>
 
-    <div class="fp-body" style="max-width: 940px;">
-      <div id="team-root"><!-- rendered by team.js --></div>
+    <div class="fp-body">
+      <div class="guide-video reveal">
+        <div class="gv-head">Watch — Cobble Asia Tutorial</div>
+        <div class="gv-frame">
+          <iframe src="https://www.youtube-nocookie.com/embed/Jh-gbLnmBa0"
+            title="Cobble Asia — Tutorial"
+            loading="lazy"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            referrerpolicy="strict-origin-when-cross-origin"
+            allowfullscreen></iframe>
+        </div>
+      </div>
+
+      <div class="fp-cta reveal">
+        <p>Prefer to read it step by step? The written guide covers the same ground.</p>
+        <div class="cta-row center">
+          <a class="btn btn-primary" href="guide.html">Read the Beginner's Guide →</a>
+          <a class="btn btn-ghost" href="commands.html">Full command list</a>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -51,7 +75,6 @@
   </footer>
 
   <script src="data.js"></script>
-  <script src="team.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

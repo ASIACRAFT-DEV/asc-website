@@ -989,11 +989,129 @@ const NEWS = [
 // =====================================================================
 const PATCHNOTES = [
   {
+    date: '2026-06-20',
+    tag: 'New Player',
+    title: 'Tutorial video — now in-game and on the site',
+    changes: [
+      { type: 'new', text: 'A full <strong>server tutorial video</strong> is now one command away. Type <code>/tutorial</code> in-game (there is also a link in <code>/help</code>) to get the official YouTube walkthrough, and it is embedded on the website at the new <strong>Tutorial</strong> page — a video version of the Beginner’s Guide.' },
+    ],
+  },
+  {
+    date: '2026-06-20',
+    tag: 'Leaderboards',
+    title: 'Five new leaderboards & a refreshed hub',
+    changes: [
+      { type: 'new', text: 'Five new leaderboards — <strong>Shiny Dex, Pokédex, PvP Wins, Total Catches and Shinies Owned</strong> — bringing the board count from 11 to 16. <code>/lb</code>' },
+      { type: 'improved', text: 'The leaderboard hub now <strong>previews the live #1 leader</strong> on every tile, and your own row is highlighted with a glint and a <strong>“This is you”</strong> marker — even when your standing sits on another page.' },
+    ],
+  },
+  {
+    date: '2026-06-20',
+    tag: 'Dungeons',
+    title: 'A proper Dungeons hub menu',
+    changes: [
+      { type: 'new', text: '<code>/dungeon</code> now opens a clean <strong>hub menu</strong> instead of dropping you straight into a list — browse dungeons, track <strong>Quests &amp; Objectives</strong> with live progress bars, hit the Shard Shop, and check <strong>My Stats</strong> (completions, currency balances and your current-run state) all from one screen.' },
+    ],
+  },
+  {
+    date: '2026-06-20',
+    tag: 'Safari',
+    title: 'Roaming Megas can now wander outside the Safari',
+    changes: [
+      { type: 'new', text: 'Safari’s <strong>roaming Mega encounters</strong> can now also roll in satellite worlds like the <strong>build world and resource world</strong> — so you might cross paths with a wandering Mega outside the Safari zone itself. Raids and ambient alpha/totem spawns stay Safari-only. <code>/safari</code>' },
+    ],
+  },
+  {
+    date: '2026-06-20',
+    tag: 'Area Zero',
+    title: 'Ender pearls limited in Area Zero',
+    changes: [
+      { type: 'improved', text: '<strong>Ender pearls are now limited inside Area Zero</strong> — a possession cap plus a throw cooldown — to stop players chain-pearling away to dodge fights. PvP in the zone is meant to be committed, not a teleport spam war. <code>/az</code>' },
+    ],
+  },
+  {
+    date: '2026-06-19',
+    tag: 'Ranks',
+    title: 'Shiny Dex rewards & Dex Crate keys',
+    changes: [
+      { type: 'new', text: 'A separate <strong>Shiny Dex reward track</strong> now pays out as you register distinct shiny species, and every <strong>Dex milestone grants a Dex Crate key</strong> on top of its existing reward. <code>/ranks</code>' },
+      { type: 'improved', text: 'Every tile in the <code>/ranks</code> GUI now showcases the <strong>perks that rank unlocks</strong> — not just the one you are currently on — so you can see what each rank up is worth at a glance.' },
+      { type: 'fixed', text: 'Several Dex and Shiny-Dex reward tiers were paying their coins but <strong>silently skipping the Battle Tower Token reward</strong>. Every token tier now delivers both, and any tokens players were owed have been reimbursed.' },
+    ],
+  },
+  {
+    date: '2026-06-19',
+    tag: 'Crates',
+    title: 'Paradox & legendary IV guarantees fixed',
+    changes: [
+      { type: 'fixed', text: 'Summon-banner pulls of <strong>Paradox Pokémon</strong> (Walking Wake, Iron Hands, Roaring Moon…) were rolling <strong>fully random IVs</strong> instead of the guaranteed three perfect IVs. They now land on the proper IV floor. <code>/summon</code>' },
+      { type: 'improved', text: '<strong>Legendary and shiny-legendary Pokémon Spins</strong> now also carry the guaranteed 3×31 IV floor (and are a touch rarer to match the banner pulls).' },
+    ],
+  },
+  {
+    date: '2026-06-19',
+    tag: 'PvP',
+    title: 'Urshifu-Rapid-Strike is legal on Singles OU',
+    changes: [
+      { type: 'fixed', text: '<strong>Urshifu-Rapid-Strike is now legal on the Singles NatDex OU ladder</strong> — it is an OU Pokémon, not Ubers. Only the <strong>Single-Strike</strong> form stays banned, so the two forms are now gated separately. <code>/pvp</code>' },
+    ],
+  },
+  {
+    date: '2026-06-19',
+    tag: 'Gyms',
+    title: 'Gym challenge & banlist fixes',
+    changes: [
+      { type: 'fixed', text: 'A live gym challenge could <strong>silently fail</strong> and show your opponent “No pending gym challenge” when the challenger’s lead Pokémon was locked by Cobblemon. Challenges now register reliably. <code>/gym</code>' },
+      { type: 'fixed', text: 'Gym teams now follow the correct <strong>NatDex Doubles OU</strong> banlist, so Doubles-legal Pokémon like <strong>Manaphy</strong> are allowed in your teams again.' },
+    ],
+  },
+  {
+    date: '2026-06-19',
+    tag: 'PokéWiki',
+    title: 'Spawn data fixed for the Tapus & space-named species',
+    changes: [
+      { type: 'fixed', text: '<code>/pwiki</code> showed <strong>no spawn biomes or conditions</strong> for species whose names contain a space — the <strong>Tapus, Roaring Moon, Iron Hands, Great Tusk, Flutter Mane and Walking Wake</strong>. Their spawn data now displays correctly. <code>/pwiki</code>' },
+    ],
+  },
+  {
     date: '2026-06-18',
     tag: 'Battle Tower',
     title: 'Battle Tower menus refreshed',
     changes: [
       { type: 'improved', text: 'All three Battle Tower screens got a visual overhaul. The hub is now a full-size board of <strong>mode-coloured tier cards</strong> with aligned Best / Rank / Floors lore, your lifetime floors climbed, and both wallets (BT Tokens + Limited Tokens) inline. <strong>Singles and Doubles are now two separate icons</strong> — the active format glows — instead of one toggle. The shop and leaderboard match the new style, with comma-formatted balances and cleaner tooltips throughout. <code>/bt</code>' },
+    ],
+  },
+  {
+    date: '2026-06-18',
+    tag: 'Anti-Dupe',
+    title: 'Held-item exploits closed',
+    changes: [
+      { type: 'fixed', text: 'Closed a set of <strong>held-item exploits</strong>. Pokémon could <strong>duplicate held crate keys and cores</strong> when fainting in battle, and <code>/pokeconvert</code> / <code>/pokegift</code> / <code>/wondertrade</code> could <strong>silently delete a held item</strong> such as a Mega Stone. Held items are now preserved on conversion and can no longer be duplicated.' },
+      { type: 'fixed', text: '<strong>Starlight Fusion Pokémon can no longer be gifted or wonder-traded</strong> — they were slipping past the fusion gate because they layer forms rather than using a fusion namespace.' },
+    ],
+  },
+  {
+    date: '2026-06-18',
+    tag: 'Area Zero',
+    title: 'Closed a free Area Zero escape',
+    changes: [
+      { type: 'fixed', text: 'Patched an exploit where players could <strong>overflow the gear cap</strong> to get teleported safely to spawn — a free, no-risk exit out of Area Zero. The cap is now enforced properly. <code>/az</code>' },
+    ],
+  },
+  {
+    date: '2026-06-18',
+    tag: 'Quality of Life',
+    title: 'Fossil Pokémon get an IV floor',
+    changes: [
+      { type: 'improved', text: '<strong>Fossil-machine Pokémon</strong> now revive with a guaranteed <strong>three perfect IVs</strong>, matching the floor already used on legendary banner and crate pulls. Reviving a fossil is finally worth it.' },
+    ],
+  },
+  {
+    date: '2026-06-18',
+    tag: 'Flight',
+    title: 'Passive flight buyers can use /fly again',
+    changes: [
+      { type: 'fixed', text: '<strong>Passive flight now actually works with <code>/fly</code></strong>. The 1,000,000-coin / 24h timed-flight perk only responded to double-tap jump, and clan-fly was silently grounding it every few seconds. Both issues are fixed, so paid flight stays on. <code>/fly</code>' },
     ],
   },
   {

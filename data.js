@@ -1006,6 +1006,41 @@ const NEWS = [
 // =====================================================================
 const PATCHNOTES = [
   {
+    date: '2026-06-21',
+    tag: 'PvP',
+    title: 'Warzone win spoils & Warzone Energy',
+    changes: [
+      { type: 'new', text: 'Every <strong>Warzone win</strong> now pays <strong>coins, tokens and a weighted item drop</strong> on top of your Warzone Points — and the payout scales with risk. Win <strong>without holding Steal Protection</strong> for the bigger reward (including a shot at a <strong>Legendary Core</strong>); play it safe with protection up and the rewards are leaner. <code>/pvp</code>' },
+      { type: 'new', text: '<strong>Warzone Energy</strong> — a zone-wide bar that fills as players rack up <strong>wins and successful steals</strong>. When it maxes out, a <strong>wild legendary spawns inside the Warzone</strong> for everyone to fight over, then the bar drains. Server-wide alerts fire at every milestone to pull people into the zone.' },
+    ],
+  },
+  {
+    date: '2026-06-21',
+    tag: 'PvP',
+    title: 'Ash-Greninja is legal on Singles OU',
+    changes: [
+      { type: 'fixed', text: '<strong>Battle Bond / Ash-Greninja is now legal on the Singles NatDex OU ladder</strong> — it is an OU Pokémon, not Ubers. All Greninja forms are allowed in Singles again. <code>/pvp</code>' },
+    ],
+  },
+  {
+    date: '2026-06-21',
+    tag: 'Titles',
+    title: 'Exclusive titles are now truly one-of-a-kind',
+    changes: [
+      { type: 'new', text: 'Bespoke <strong>exclusive titles</strong> are now <strong>auto-granted to their owner on join</strong> — no waiting on staff to hand them over.' },
+      { type: 'fixed', text: 'These one-of-a-kind titles are now <strong>locked out of the title shop</strong> so they can never be bought by anyone else. <code>/title</code>' },
+    ],
+  },
+  {
+    date: '2026-06-20',
+    tag: 'Crates',
+    title: 'Summon banner pricing & GUI fixes',
+    changes: [
+      { type: 'fixed', text: 'Group <strong>summon-banner prices are back to 50,000 a pull and 450,000 for a 10-pull</strong> after they had drifted up to 100k/900k. The correct price is restored automatically. <code>/summon</code>' },
+      { type: 'fixed', text: 'The <strong>banner select screen</strong> no longer floods with duplicated tiles — it now cleanly shows the live banners plus a short “next up” preview.' },
+    ],
+  },
+  {
     date: '2026-06-20',
     tag: 'New Player',
     title: 'Tutorial video — now in-game and on the site',

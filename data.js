@@ -1006,6 +1006,54 @@ const NEWS = [
 // =====================================================================
 const PATCHNOTES = [
   {
+    date: '2026-06-23',
+    tag: 'Quality of Life',
+    title: 'New: /events — an in-game events board',
+    changes: [
+      { type: 'new', text: '<strong>/events</strong> opens an in-game board of upcoming events and contests, so you don’t have to watch Discord to catch them. Browse upcoming and <em>Coming soon!</em> events with their date, time (GMT+8) and signup count, and <strong>click an event to register or leave</strong> — or use <code>/events register</code> / <code>/events unregister</code>. <code>/events</code>' },
+    ],
+  },
+  {
+    date: '2026-06-23',
+    tag: 'Ranks',
+    title: 'Raid-den catches now count toward /dex',
+    changes: [
+      { type: 'fixed', text: 'Pokémon caught in <strong>raid dens</strong> now register toward your <strong>/dex</strong> completion. They previously only appeared in the native Cobblemon Pokédex — opening <code>/dex</code> now reconciles your catches on the spot, so den catches (and trades, <code>/pokegive</code> and crate grants) count immediately instead of only after a relog. <code>/dex</code>' },
+    ],
+  },
+  {
+    date: '2026-06-23',
+    tag: 'PvP',
+    title: 'Warzone raid dens are live',
+    changes: [
+      { type: 'new', text: '<strong>Raid dens now spawn inside the Warzone</strong> — wild dens appear on a timer, and a <strong>legendary den</strong> opens when Warzone Energy maxes out. Hold the area to make it open, then fight for the reward. <code>/warzone</code>' },
+    ],
+  },
+  {
+    date: '2026-06-23',
+    tag: 'Area Zero',
+    title: 'Fixed: phantom boss announcements',
+    changes: [
+      { type: 'fixed', text: 'Area Zero will no longer announce a boss that never actually spawned. A failed spawn could still fire the “a boss has spawned” alert and send you to empty coordinates — the announcement now only fires when the boss is really there.' },
+    ],
+  },
+  {
+    date: '2026-06-22',
+    tag: 'Progression',
+    title: 'Milestone crate keys re-grant after prestige',
+    changes: [
+      { type: 'fixed', text: 'After <strong>prestiging</strong>, re-hitting level milestones (50/60/70/80/90/100) now grants your <strong>level-crate keys</strong> again. They were being swallowed on the second climb — the full Lv1→100 re-climb is the gate, so the keys come back each prestige. <code>/asclvl</code>' },
+    ],
+  },
+  {
+    date: '2026-06-22',
+    tag: 'Raid Boss',
+    title: 'Fixed: a raid ending could lose your other battle',
+    changes: [
+      { type: 'fixed', text: 'Ending a <strong>raid</strong> no longer force-closes an unrelated battle you happen to be in (Elite Four, PvP or wild) and scores it as a loss. Raid cleanup is now scoped to actual raid-boss battles only, so your separate fight — and its entry fee — stays safe.' },
+    ],
+  },
+  {
     date: '2026-06-21',
     tag: 'PvP',
     title: 'Warzone win spoils & Warzone Energy',

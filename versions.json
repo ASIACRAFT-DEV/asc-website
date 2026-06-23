@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-22T20:34:51.927Z",
+  "generatedAt": "2026-06-23T02:15:05.082Z",
   "count": 31,
   "mods": [
     {
@@ -45,7 +45,7 @@
     {
       "repo": "asc-pokeditor",
       "name": "ASC Pokeditor",
-      "version": "1.6.0"
+      "version": "1.6.1"
     },
     {
       "repo": "asc-traininggrounds",
@@ -65,7 +65,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.25.1"
+      "version": "3.25.4"
     },
     {
       "repo": "asc-battlepass",
@@ -90,7 +90,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.10.0"
+      "version": "7.22.0"
     },
     {
       "repo": "asc-forge",
@@ -115,7 +115,7 @@
     {
       "repo": "asc-levels",
       "name": "CobbleAsia Levels",
-      "version": "1.7.0"
+      "version": "1.7.1"
     },
     {
       "repo": "asc-mail",
@@ -135,17 +135,17 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.19.1"
+      "version": "2.19.5"
     },
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.43.1"
+      "version": "4.43.2"
     },
     {
       "repo": "asc-ranks",
       "name": "CobbleAsia Ranks",
-      "version": "1.27.0"
+      "version": "1.29.0"
     },
     {
       "repo": "asc-safari",

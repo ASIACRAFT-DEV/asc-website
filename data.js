@@ -839,6 +839,8 @@ const COMMANDS = [
     group: 'Battling & Competition',
     items: [
       { cmd: '/bt', desc: 'Battle Tower — tiered singles & doubles ladder' },
+      { cmd: '/ascbt prestige <tower>', desc: 'Reset a Floor-100 ladder for a permanent season bonus' },
+      { cmd: '/scout', desc: 'Battle-Scout — see the opponent’s revealed team mid-fight (alias /ascscout)' },
       { cmd: '/gym', desc: 'Challenge the eight gym leaders' },
       { cmd: '/pvp', desc: 'PvP hub — Warzone, matchmaking, shop' },
       { cmd: '/ladder', desc: 'The Elite Four seat ladder' },
@@ -854,7 +856,11 @@ const COMMANDS = [
     group: 'Economy & Gambling',
     items: [
       { cmd: '/jobs', desc: 'Browse and join paying jobs' },
+      { cmd: '/job rank', desc: 'Your per-job rank & perks (Novice → Master)' },
       { cmd: '/chestshop', desc: 'Chest-shop system' },
+      { cmd: '/gem convert <n>', desc: 'Convert coins into Gems (100M coins = 1 Gem)' },
+      { cmd: '/gem shop', desc: 'Open the SolForge Black Market (alias /blackmarket, /bm)' },
+      { cmd: '/effects', desc: 'Buy a temporary status-effect buff (alias /buff)' },
       { cmd: '/casino', desc: 'Casino hub' },
       { cmd: '/coinflip <amount> <player>', desc: 'PvP coinflip wager (alias /cf)' },
       { cmd: '/dice <high|low> <amount>', desc: 'Bet high or low on a d100 roll' },
@@ -880,6 +886,7 @@ const COMMANDS = [
       { cmd: '/passive', desc: 'Buy & manage permanent passives' },
       { cmd: '/ranks', desc: 'Rank progression & perks' },
       { cmd: '/lvl', desc: 'ASC level & EXP' },
+      { cmd: '/levels', desc: 'Prestige menu — reset at Lv.100 for a Star ✨ (/asclvl prestige)' },
       { cmd: '/lb', desc: 'Leaderboards' },
       { cmd: '/title', desc: 'Equip cosmetic titles' },
     ],
@@ -1005,6 +1012,56 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-06-24',
+    tag: 'Economy',
+    title: 'New: Gem conversion + the SolForge Black Market',
+    changes: [
+      { type: 'new', text: 'Gems are now earnable in-game. <strong>/gem convert &lt;n&gt;</strong> turns coins into Gems at <strong>100,000,000 coins = 1 Gem</strong> — a one-way coin sink for the server’s rarest currency. <code>/gem convert</code>' },
+      { type: 'new', text: 'A shady merchant — the <strong>SolForge Black Market</strong> — now appears at Spawn on a rotating timer (every 8h for 1h) with a random, stock-limited, server-wide inventory paid in Gems. Open it with <strong>/gem shop</strong>, <strong>/blackmarket</strong> or <strong>/bm</strong> while the merchant is in town. <code>/blackmarket</code>' },
+    ],
+  },
+  {
+    date: '2026-06-24',
+    tag: 'Quality of Life',
+    title: 'New: /effects — a premium temporary-buff shop',
+    changes: [
+      { type: 'new', text: '<strong>/effects</strong> (alias <strong>/buff</strong>) opens a shop that sells a <strong>temporary</strong> beneficial status effect for a premium coin price — speed, haste, strength, regeneration, night vision and more. Each buy runs for a set duration, then wears off. <code>/effects</code>' },
+    ],
+  },
+  {
+    date: '2026-06-24',
+    tag: 'PvP',
+    title: 'New: /scout — Battle-Scout team tracker',
+    changes: [
+      { type: 'new', text: 'Tired of memorising which of your opponent’s Pokémon have already been out? <strong>/scout</strong> (alias <strong>/ascscout</strong>) opens a live tracker for the battle you’re in or spectating — who’s been revealed, who’s on the field, who’s fainted, plus form, HP% and a computed speed tier. <code>/scout</code>' },
+    ],
+  },
+  {
+    date: '2026-06-24',
+    tag: 'Progression',
+    title: 'New: Prestige — Levels Star Reset & Battle Tower Seasonal Prestige',
+    changes: [
+      { type: 'new', text: '<strong>Levels Prestige</strong> — hit Lv.100 and run <strong>/asclvl prestige</strong> (or <strong>/levels</strong> for the GUI) to reset to Lv.1 for a permanent <strong>Star ✨</strong>. Each Star adds a wild-shiny boost (up to +50%); Prestige is infinite. <code>/levels</code>' },
+      { type: 'new', text: '<strong>Battle Tower Prestige</strong> — clear Floor 100 on a tower+format, then <strong>/ascbt prestige &lt;tower&gt;</strong> to wipe that ladder back to Floor 1 for a permanent (until the season wipe) token bonus and softened level decay. <code>/ascbt prestige</code>' },
+    ],
+  },
+  {
+    date: '2026-06-24',
+    tag: 'Crates',
+    title: 'New: Mythical & Ultra Beast Spins',
+    changes: [
+      { type: 'new', text: 'Four new Spin tiers join the rotation — <strong>Mythical</strong>, <strong>Shiny Mythical</strong>, <strong>Ultra Beast</strong> and <strong>Shiny Ultra Beast</strong> — each rolling from its own dedicated pool. The Legendary Spin is now <strong>legendary-only</strong>, so every tier feels distinct.' },
+    ],
+  },
+  {
+    date: '2026-06-24',
+    tag: 'Jobs',
+    title: 'New: Job ranks — Novice → Master',
+    changes: [
+      { type: 'new', text: 'Every job now tracks its own lifetime earnings and ranks up through <strong>Novice → Apprentice → Journeyman → Expert → Master</strong>, each tier paying a bigger payout multiplier and a higher cycle cap. Check your progress with <strong>/job rank</strong>. <code>/job rank</code>' },
+    ],
+  },
   {
     date: '2026-06-23',
     tag: 'Quality of Life',

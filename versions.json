@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-23T19:50:35.236Z",
+  "generatedAt": "2026-06-24T02:26:53.364Z",
   "count": 31,
   "mods": [
     {
@@ -45,7 +45,7 @@
     {
       "repo": "asc-pokeditor",
       "name": "ASC Pokeditor",
-      "version": "1.6.1"
+      "version": "1.7.0"
     },
     {
       "repo": "asc-traininggrounds",

@@ -546,14 +546,19 @@ const FEATURES = {
     tag: '/bp · /ranks',
     category: 'Progression',
     blurb:
-      'Seasonal Battle Pass tracks, an 8-tier rank progression with badges, and permanent passive upgrades you keep forever.',
+      'Seasonal Battle Pass tracks, the gem-only Solar Pass with 30 days of daily rewards, an 8-tier rank progression with badges, and permanent passive upgrades you keep forever.',
     intro:
-      'Three progression systems that reward the time you put in: a seasonal Battle Pass with reward tracks, an eight-tier rank ladder with cosmetic glyph badges, and permanent passives that make your account stronger for good.',
+      'Progression systems that reward the time you put in: a seasonal Battle Pass with reward tracks, the new Solar Pass that mails you rewards every day for a month, an eight-tier rank ladder with cosmetic glyph badges, and permanent passives that make your account stronger for good.',
     how: [
       {
         title: 'Climb the Battle Pass',
         body:
           'Complete quests to level a seasonal Battle Pass and unlock reward tracks. Each season resets with fresh rewards to chase.',
+      },
+      {
+        title: 'Unlock the Solar Pass',
+        body:
+          'The Solar Pass is a gem-only premium pass, separate from the regular Battle Pass. Buy it once and you’re paid a reward bundle every day for 30 days — coins, Origin & Legacy crate keys and Master Balls — delivered straight to your in-game mail, even while you’re offline. Open /bp and pick Solar Pass to grab it or check your days remaining, and buy again any time to extend.',
       },
       {
         title: 'Rank up',
@@ -988,22 +993,22 @@ const GUIDE = [
 // =====================================================================
 const NEWS = [
   {
+    tag: 'Battle Pass',
+    title: 'The Solar Pass has arrived',
+    body: 'A gem-only premium pass that pays out every single day for 30 days — 67k coins, Origin & Legacy keys and Master Balls, mailed straight to you. Buy again to extend.',
+    link: 'feature.html?f=progression',
+  },
+  {
     tag: 'Seasonal',
     title: 'SolForge: Season of the First Sun',
     body: 'The first full seasonal set is live — forge sun-powered gear, level it with Solar Shards, and chase the server-wide Radiant State.',
     link: 'feature.html?f=solforge',
   },
   {
-    tag: 'PvP',
-    title: 'The Warzone is open',
-    body: 'Step into the tag-to-fight arena. Hit a trainer and a ranked battle starts instantly — win to earn Warzone Points and steal a Pokémon.',
-    link: 'feature.html?f=warzone',
-  },
-  {
-    tag: 'Exploration',
-    title: 'Explore the Umera Safari',
-    body: 'A 26-region reserve with region-locked spawns, roaming Megas and Totems, Tera & Dynamax raids, swarms and timed expeditions.',
-    link: 'feature.html?f=safari',
+    tag: 'Crates',
+    title: 'Mythical & Ultra Beast Spins',
+    body: 'Four new Spin tiers join the rotation — Mythical, Shiny Mythical, Ultra Beast and Shiny Ultra Beast — each rolling from its own pool, with the Legendary Spin now legendary-only.',
+    link: 'feature.html?f=crates',
   },
 ];
 
@@ -1012,6 +1017,14 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-06-24',
+    tag: 'Battle Pass',
+    title: 'New: the Solar Pass — 30 days of daily rewards',
+    changes: [
+      { type: 'new', text: 'A new gem-only premium pass, separate from the Battle Pass. Open <strong>/bp</strong> and pick <strong>Solar Pass</strong> — buy it with Gems and you’re paid a reward bundle <strong>every day for 30 days</strong>: <strong>67,000 coins + 1 Origin Key + 1 Legacy Key + 2 Master Balls</strong>, delivered to your <strong>/mail</strong> even while you’re offline. Buy again any time to <strong>extend</strong> your days, and check days remaining + your next reward in the Solar Pass menu. <code>/bp</code>' },
+    ],
+  },
   {
     date: '2026-06-24',
     tag: 'Economy',

@@ -1018,6 +1018,65 @@ const NEWS = [
 // =====================================================================
 const PATCHNOTES = [
   {
+    date: '2026-06-25',
+    tag: 'Clans',
+    title: 'New: clan member cap + buyable member slots',
+    changes: [
+      { type: 'new', text: 'Clans now have a roster cap of <strong>10 members</strong> (the leader counts toward it). To grow bigger, buy <strong>extra member slots</strong> from the shared clan bank on <strong>/clans shop</strong> — each slot costs more than the last (the 11th seat is 100,000 coins, ×1.5 every slot after) up to a hard cap of <strong>20 members</strong>. Clans already over 10 get a <strong>72-hour grace window</strong> to buy slots; after that the <strong>newest-joined</strong> members are auto-removed down to the cap — leaders, vice-leaders and officers are never auto-kicked. <code>/clans shop</code>' },
+    ],
+  },
+  {
+    date: '2026-06-25',
+    tag: 'Leaderboard',
+    title: 'New: a Dex % leaderboard',
+    changes: [
+      { type: 'new', text: 'A new <strong>Dex %</strong> board joins the Collection row of <strong>/lb</strong> — it ranks Pokédex completion as a percentage (e.g. <strong>73.2% (751/1025)</strong>) instead of a raw species count, so you can see who is closest to a living dex. <code>/lb</code>' },
+    ],
+  },
+  {
+    date: '2026-06-25',
+    tag: 'Gyms',
+    title: 'Fixed: dead-on-arrival gym battles & stuck "leader is busy"',
+    changes: [
+      { type: 'fixed', text: 'Gym battles that silently failed to start — cancelled after ~15 seconds with no battle ever appearing — are now handled automatically. The server detects when the shared battle engine has wedged, recovers it for everyone at once, and briefly blocks new challenges with a clear <em>“the battle engine is recovering — this is NOT a loss”</em> message instead of letting you eat another dead battle. <code>/gym</code>' },
+      { type: 'fixed', text: 'A gym battle that got force-closed or wedged no longer leaves the leader stuck as permanently <em>“busy with another challenge”</em> — the busy lock now clears itself (and on disconnect), so the leader is challengeable again without a restart.' },
+      { type: 'fixed', text: 'Zygarde’s 10% Forme is no longer wrongly rejected as banned in NatDex Doubles OU gyms — gym legality is now form-aware, so only the actually-banned formes are blocked.' },
+    ],
+  },
+  {
+    date: '2026-06-25',
+    tag: 'Pokémon',
+    title: 'Fixed: held-item dupe & duplicate Pokémon',
+    changes: [
+      { type: 'fixed', text: 'Closed a held-item duplication exploit where a Pokémon’s held item could drop to the ground during gym, Elite Four and Battle Tower battles while the Pokémon kept the item. Pokémon in your party or PC never drop their held item now — only genuinely wild ones do.' },
+      { type: 'fixed', text: 'Added a duplicate-Pokémon integrity sweep that detects and removes copies of the same Pokémon left in two slots at once (party/PC), checked automatically when you join.' },
+    ],
+  },
+  {
+    date: '2026-06-25',
+    tag: 'Ranks',
+    title: 'Fixed: Shiny Dex now registers PC shinies automatically',
+    changes: [
+      { type: 'fixed', text: 'The <strong>Shiny Dex</strong> no longer only counts the shinies in your party at login. It now reconciles your <strong>PC boxes</strong> — and any shiny you get mid-session via hatch, trade, GTS, crate or <code>/pokegive</code> — within about a minute, so you no longer have to cycle 6 shinies into your party and relog to register them 6 at a time. <code>/shinydex</code>' },
+    ],
+  },
+  {
+    date: '2026-06-25',
+    tag: 'Crates',
+    title: 'Fixed: SolForge Marshadow leaking into banner pulls',
+    changes: [
+      { type: 'fixed', text: 'The server-exclusive <strong>SolForge Marshadow</strong> (a Black Market–only mon) could be pulled as a rare consolation prize from several <strong>/banner</strong> gacha pools. The reward pools now exclude every SolForge species, so it stays obtainable only where it’s meant to be.' },
+    ],
+  },
+  {
+    date: '2026-06-25',
+    tag: 'Quality of Life',
+    title: 'Improved: colored NPC nametags',
+    changes: [
+      { type: 'improved', text: 'NPC floating nametags are no longer all plain white — each NPC now gets a stable color from a readable palette, so a hub full of trainers actually has some variety to it.' },
+    ],
+  },
+  {
     date: '2026-06-24',
     tag: 'Battle Pass',
     title: 'New: the Solar Pass — 30 days of daily rewards',

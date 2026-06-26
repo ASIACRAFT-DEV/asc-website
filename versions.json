@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-26T08:51:05.422Z",
+  "generatedAt": "2026-06-26T14:04:25.506Z",
   "count": 31,
   "mods": [
     {
@@ -15,7 +15,7 @@
     {
       "repo": "asc-clans",
       "name": "ASC Clans",
-      "version": "1.21.0"
+      "version": "1.21.1"
     },
     {
       "repo": "asc-cobsave",
@@ -25,7 +25,7 @@
     {
       "repo": "asc-craftingstore",
       "name": "ASC CraftingStore",
-      "version": "1.2.0"
+      "version": "1.2.1"
     },
     {
       "repo": "asc-discord",
@@ -40,12 +40,12 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "1.13.0"
+      "version": "1.14.0"
     },
     {
       "repo": "asc-pokeditor",
       "name": "ASC Pokeditor",
-      "version": "1.7.0"
+      "version": "1.8.1"
     },
     {
       "repo": "asc-traininggrounds",
@@ -60,17 +60,17 @@
     {
       "repo": "asc-areazero",
       "name": "CobbleAsia Area Zero",
-      "version": "2.11.0"
+      "version": "2.12.0"
     },
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.26.1"
+      "version": "3.27.1"
     },
     {
       "repo": "asc-battlepass",
       "name": "CobbleAsia BattlePass",
-      "version": "2.17.1"
+      "version": "2.18.2"
     },
     {
       "repo": "asc-chestshop",
@@ -85,12 +85,12 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "1.40.1"
+      "version": "1.41.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.34.2"
+      "version": "7.37.0"
     },
     {
       "repo": "asc-forge",
@@ -115,7 +115,7 @@
     {
       "repo": "asc-levels",
       "name": "CobbleAsia Levels",
-      "version": "1.7.1"
+      "version": "1.7.2"
     },
     {
       "repo": "asc-mail",
@@ -135,7 +135,7 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.22.1"
+      "version": "2.27.0"
     },
     {
       "repo": "asc-raidboss",
@@ -145,17 +145,17 @@
     {
       "repo": "asc-ranks",
       "name": "CobbleAsia Ranks",
-      "version": "1.29.1"
+      "version": "1.30.0"
     },
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.9.0"
+      "version": "3.9.1"
     },
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.16.0"
+      "version": "1.17.2"
     }
   ]
 }

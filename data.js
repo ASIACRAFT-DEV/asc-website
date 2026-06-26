@@ -1941,3 +1941,28 @@ const FAQ = [
     ],
   },
 ];
+
+// =====================================================================
+//  VOTE (vote.html). One entry per vote site — add a site by adding a
+//  line here. `name` is the display name, `url` is the vote link.
+//  Rewards mirror asc-voting's in-game config (vote key + coins, plus
+//  streak bonuses) — keep in sync if the in-game rewards change.
+// =====================================================================
+const VOTE_SITES = [
+  { name: 'Minecraft-MP', url: 'https://minecraft-mp.com/server/357992/vote/' },
+  { name: 'MinecraftServers.org', url: 'https://minecraftservers.org/vote/687471' },
+  { name: 'TopG', url: 'https://topg.org/minecraft-servers/server-682257' },
+  { name: 'TopMinecraftServers', url: 'https://topminecraftservers.org/vote/43474' },
+  { name: 'Minecraft-ServerList', url: 'https://minecraft-serverlist.com/server/5283/vote' },
+  { name: 'MineList.net', url: 'https://minelist.net/vote/5293' },
+  { name: 'Minecraft-Server-List.com', url: 'https://minecraft-server-list.com/server/520843/vote/' },
+  { name: 'MinecraftBestServers', url: 'https://minecraftbestservers.com/server-cobbleasia.7049/vote/' },
+];
+
+const VOTE_REWARDS = {
+  perVote: ['1× Vote Crate Key', '5,000 coins'],
+  streaks: [
+    { day: 7, reward: '2× Vote Crate Keys' },
+    { day: 30, reward: '5× Vote Crate Keys' },
+  ],
+};

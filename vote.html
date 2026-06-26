@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Commands — Cobble Asia</title>
-  <meta name="description" content="Full command reference for the Cobble Asia Cobblemon server — every player command, grouped by category." />
+  <title>Vote — Cobble Asia</title>
+  <meta name="description" content="Vote for Cobble Asia on the server lists and earn vote crate keys and coins in-game. Daily voting streaks give bonus rewards." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
@@ -35,15 +35,27 @@
       <div class="fp-hero-glow"></div>
       <div class="fp-hero-inner">
         <a class="back-link" href="index.html">← Back home</a>
-        <span class="fp-cat">Reference</span>
-        <h1 class="fp-title">Command List</h1>
-        <p class="fp-blurb">Every player command on the server, grouped by what it does. Add <code>help</code> after any ASC command in-game for its full list.</p>
+        <span class="fp-cat">Support Us</span>
+        <h1 class="fp-title">Vote for Cobble Asia</h1>
+        <p class="fp-blurb">Voting pushes us up the server lists and brings in new trainers — and you get rewarded for it. Vote on every site each day for keys, coins and streak bonuses.</p>
+        <div class="ip-chip ip-chip-lg">
+          <span class="ip-label">IP</span>
+          <code>play.cobbleasia.net</code>
+          <button class="copy-btn" data-copy="play.cobbleasia.net" aria-label="Copy server IP">Copy</button>
+        </div>
       </div>
     </section>
 
-    <div class="fp-body" style="max-width: 940px;">
-      <div id="cmd-root"><!-- rendered by commands.js --></div>
-      <div id="mods-root"><!-- live mod versions, rendered by versions.js --></div>
+    <div class="fp-body">
+      <div id="vote-root"><!-- rendered by vote.js --></div>
+
+      <div class="fp-cta reveal">
+        <p>Vote with the same name you use in-game so rewards reach you. Rewards land via <a href="commands.html">/vote</a> — claim queued rewards there if you voted while offline.</p>
+        <div class="cta-row center">
+          <a class="btn btn-primary js-discord" href="#">Join the Discord →</a>
+          <a class="btn btn-ghost" href="faq.html">Voting FAQ</a>
+        </div>
+      </div>
     </div>
   </main>
 
@@ -54,8 +66,7 @@
   </footer>
 
   <script src="data.js"></script>
-  <script src="commands.js"></script>
-  <script src="versions.js"></script>
+  <script src="vote.js"></script>
   <script src="app.js"></script>
 </body>
 </html>

@@ -430,6 +430,32 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
 .faq-a code { font-family: var(--font-mono); font-size: .9em; color: var(--gold-deep); background: var(--gold-bg); padding: 2px 6px; border-radius: 4px; }
 .faq-a a { color: var(--gold-deep); font-weight: 600; }
 
+/* vote page */
+.vote-list { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 14px; margin-bottom: 46px; }
+.vote-card {
+  display: flex; align-items: center; gap: 16px; text-decoration: none;
+  background: var(--paper); border: 1px solid var(--line); border-radius: 12px;
+  border-left: 3px solid var(--gold); padding: 18px 20px;
+  transition: transform .18s, border-color .18s, box-shadow .18s;
+}
+.vote-card:hover { transform: translateY(-3px); border-color: var(--line-2); box-shadow: var(--shadow); }
+.vote-num { font-family: var(--font-display); font-size: 15px; color: var(--gold-deep); background: var(--gold-bg); border: 1px solid var(--gold); border-radius: 8px; padding: 5px 9px; flex: none; }
+.vote-meta { display: flex; flex-direction: column; gap: 3px; flex: 1; min-width: 0; }
+.vote-name { font-weight: 700; color: var(--ink); font-size: 16px; }
+.vote-blurb { color: var(--ink-2); font-size: 13.5px; }
+.vote-go { font-family: var(--font-display); font-size: 13px; letter-spacing: .04em; color: var(--gold-deep); flex: none; }
+.vote-card:hover .vote-go { color: var(--gold); }
+
+.vote-rewards { background: var(--gold-bg); border: 1px solid var(--gold); border-radius: var(--radius); padding: 28px 28px 22px; margin-bottom: 46px; }
+.vote-rewards .faq-cat { border-bottom-color: var(--line-2); }
+.vote-rewards-sub { color: var(--ink-2); font-weight: 600; font-size: 14px; margin: 16px 0 8px; }
+.vote-reward-list { list-style: none; display: flex; flex-direction: column; gap: 7px; }
+.vote-reward-list li { color: var(--ink); font-size: 15px; padding-left: 24px; position: relative; }
+.vote-reward-list li::before { content: '✦'; position: absolute; left: 0; color: var(--gold-deep); }
+.vote-reward-list li b { color: var(--gold-deep); }
+.vote-note { color: var(--ink-2); font-size: 14px; line-height: 1.6; margin-top: 18px; padding-top: 16px; border-top: 1px solid var(--line-2); }
+.vote-note code { font-family: var(--font-mono); font-size: .9em; color: var(--gold-deep); background: #fff; padding: 2px 6px; border-radius: 4px; border: 1px solid var(--gold); }
+
 /* team grid */
 .team-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(180px, 1fr)); gap: 16px; }
 .team-card {

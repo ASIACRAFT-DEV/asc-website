@@ -1906,8 +1906,16 @@ const FAQ = [
         a: 'Relic coins are a base-Cobblemon item, mainly used to <b>evolve Gimmighoul into Gholdengo</b> (1,000 coins). There\'s no extra server-side use planned for them, but you can freely trade or sell spares to other players via <code>/gts</code>.',
       },
       {
+        q: 'What are gems and how do I use them?',
+        a: 'Gems are the server\'s <b>premium currency</b>, separate from coins. You earn them from the store and events, or convert coins into gems with <code>/gem convert</code> — the rate is steep on purpose, so gems stay rare. Spend them in the <b>SolForge Black Market</b> (<code>/gem shop</code> or <code>/bm</code>), a rotating shop of custom Pokémon and high-end gear.',
+      },
+      {
         q: 'How does the Elite Four / ladder work?',
-        a: 'The <code>/ladder</code> is a four-seat PvP ladder per format (singles & doubles), E1 (top) down to E4. You pay a coin fee to challenge a seat, and that fee goes <b>straight to the player currently holding it</b>. Beat them and you take the seat; while you hold it you earn daily passive income by mail. Lose and you only lose the title, plus a 48-hour cooldown. <b>Fusions are banned</b> on the ladder.',
+        a: 'The <code>/ladder</code> is a four-seat PvP ladder per format (singles & doubles), E1 (top) down to E4. You pay a coin fee to challenge a seat, and that fee goes <b>straight to the player currently holding it</b>. Beat them and you take the seat; while you hold it you earn daily passive income by mail. Lose and you only lose the title, plus a short cooldown. <b>Fusions are banned</b> on the ladder.',
+      },
+      {
+        q: 'What PvP is there besides the ladder?',
+        a: 'Three systems, each different. <code>/ladder</code> is the <b>Elite Four</b> — take and hold one of four seats for daily passive income. <code>/pvp queue &lt;singles|doubles&gt;</code> enters the <b>Poké Ball League</b>, a ranked seasonal ladder where you climb tiers for rewards. <code>/warzone</code> (<code>/wz</code>) is a <b>force-fight zone</b> with a daily rotating battle format. Type <code>/pvp</code> for the hub.',
       },
       {
         q: 'Why is there a countdown/delay when I teleport?',
@@ -1919,16 +1927,16 @@ const FAQ = [
     cat: 'World Rules & Common Confusions',
     items: [
       {
-        q: 'Why can\'t I break blocks in the Nether / on certain land?',
-        a: 'Two separate reasons. Block-breaking in the <b>Nether is currently disabled on purpose</b> by staff and will be re-enabled when announced. Elsewhere, land can be <b>claimed</b> by other players (Flan claims) — you can\'t build or break inside someone else\'s claim. Claim your own land to build freely.',
+        q: 'Why can\'t I break blocks somewhere?',
+        a: 'Usually one of two reasons. Some areas are <b>protected zones</b> — the server spawns, Safari, Area Zero and similar event maps are build-locked on purpose. Everywhere else, land can be <b>claimed</b> by other players (Flan claims), and you can\'t build or break inside someone else\'s claim. The <b>Nether and the normal wild are open</b> — if you can\'t break in the Nether you\'re almost certainly standing in a claim. Claim your own land to build freely.',
       },
       {
         q: 'Why are some Cooking Pot / Campfire recipes locked?',
         a: 'That\'s a Cobblemon mechanic, not a server restriction. Cooking Pot recipes <b>unlock progressively</b> as you obtain the required ingredients and plants — until then they won\'t appear in the recipe book or REI. Keep gathering ingredients and more recipes open up.',
       },
       {
-        q: 'I get an error in Battle Tower with my fusion / custom Pokémon',
-        a: 'This is a known issue with some custom/fusion-form Pokémon in the higher tiers. The tower <b>auto-retries</b>, so you won\'t lose your floor. As a workaround, keep fusion/custom mons <b>out of your lead slot</b> for now — it\'s being worked on.',
+        q: 'Can I use fusion / custom Pokémon in Battle Tower?',
+        a: 'Yes — within each tier\'s rules. Fusions are checked against the tier you\'re entering, and some are restricted in specific tiers to keep things fair. The old crash/stall issues with fusion and Terastal forms have been <b>fixed</b>: if a team isn\'t legal for a tier the tower now tells you up front instead of erroring out mid-run.',
       },
       {
         q: 'Will the server ever wipe or reset?',

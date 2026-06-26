@@ -1911,7 +1911,7 @@ const FAQ = [
       },
       {
         q: 'How does the Elite Four / ladder work?',
-        a: 'The <code>/ladder</code> is a four-seat PvP ladder per format (singles & doubles), E1 (top) down to E4. You pay a coin fee to challenge a seat, and that fee goes <b>straight to the player currently holding it</b>. Beat them and you take the seat; while you hold it you earn daily passive income by mail. Lose and you only lose the title, plus a short cooldown. <b>Fusions are banned</b> on the ladder.',
+        a: 'The <code>/ladder</code> is a four-seat PvP ladder per format (singles & doubles), E1 (top) down to E4. You pay a coin fee to challenge a seat, and that fee goes <b>straight to the player currently holding it</b>. Beat them and you take the seat; while you hold it you earn daily passive income by mail. Lose and you only lose the title, plus a 12-hour cooldown. <b>Fusions are banned</b> on the ladder.',
       },
       {
         q: 'What PvP is there besides the ladder?',

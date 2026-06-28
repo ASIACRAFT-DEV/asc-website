@@ -630,6 +630,52 @@ const FEATURES = {
     ],
   },
 
+  fishing: {
+    name: 'Fishing',
+    short: 'Fishing',
+    accent: 'emerald',
+    tag: '/fish',
+    category: 'Economy',
+    featured: true,
+    blurb:
+      'Cast a rod, reel in rarity- and size-scaled catches, and sell them for molla. Hourly tournaments and a Mystery Tide event where rare water legendaries lurk in secret biomes.',
+    intro:
+      'Fishing is a full income loop you can do anywhere there is water. Every reel-in rolls a custom catch with its own rarity and a randomized weight and length — bigger fish are worth more. Catches go into your virtual Fish Bag (never clutters your inventory, never lost), and you cash them in for molla whenever you like.',
+    how: [
+      {
+        title: 'Cast & reel',
+        body:
+          'Use any vanilla fishing rod near water. Each catch rolls a rarity from Trash up through Common, Uncommon, Rare, Epic, Legendary and Mythic, plus a random size. The closer a fish is to its species record size, the more it sells for. Junk catches (Old Boot, Rusty Can, Cracked iPhone) are the gag tier.',
+      },
+      {
+        title: 'Bag, sell & codex',
+        body:
+          'Open /fish for the hub or /fish bag for your paginated Fish Bag — click any fish to sell it, or Sell All in one go. Your Codex tracks first-catches and record sizes per species, and /fish top ranks the server by total earnings, biggest catch, and most fish caught.',
+      },
+      {
+        title: 'Hourly tournaments',
+        body:
+          'Every hour a rotating tournament runs — Most Fish, Biggest Fish, Smallest Fish, Longest Fish, Shortest Fish, Total Weight, Most Valuable, and Most iPhones. The top 3 split a molla prize pool. Check live standings any time from the hub.',
+      },
+      {
+        title: 'Mystery Tide',
+        body:
+          'Every hour, for 20 minutes, the Mystery Tide stirs. Rare water-based legendaries and mythicals (Kyogre, Palkia, Suicune, Lugia, Manaphy and more) can only be fished up during this window — and only from a secret biome the event keeps hidden. Cast around to find the right waters; fish the wrong biome too long and the tide will tell you to look elsewhere.',
+      },
+    ],
+    commands: [
+      { cmd: '/fish', desc: 'Open the fishing hub (bag, sell, codex, leaderboard, event status)' },
+      { cmd: '/fish bag', desc: 'Open your Fish Bag — click a fish to sell it' },
+      { cmd: '/fish sell', desc: 'Sell your entire bag for molla' },
+      { cmd: '/fish top', desc: 'Fishing leaderboards (value, biggest, count)' },
+    ],
+    notes: [
+      'The legendary catches in the Mystery Tide are intentionally ultra-rare — and only obtainable during the event.',
+      'Auto-fishing is detected and throttled: macro-regular casts earn worthless junk until you fish like a human.',
+      'Alias: /ascfish.',
+    ],
+  },
+
   bingo: {
     name: 'Catch Bingo',
     short: 'Catch Bingo',
@@ -768,7 +814,7 @@ const FEATURES = {
 // Display order + grouping on the landing page
 const FEATURE_ORDER = [
   'solforge', 'crates', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
-  'dungeons', 'safari', 'hunts', 'bingo', 'warzone', 'clans',
+  'dungeons', 'safari', 'hunts', 'fishing', 'bingo', 'warzone', 'clans',
   'jobs', 'casino', 'progression',
 ];
 
@@ -784,6 +830,7 @@ const MODS = [
   { name: 'Crates & Banners', cmd: '/crates · /summon' },
   { name: 'Dungeons', cmd: '/dungeon' },
   { name: 'Essentials', cmd: '/ess' },
+  { name: 'Fishing', cmd: '/fish' },
   { name: 'Forge & SolForge', cmd: '/gear' },
   { name: 'GTS', cmd: '/gts' },
   { name: 'Gyms', cmd: '/gym' },
@@ -866,6 +913,10 @@ const COMMANDS = [
       { cmd: '/gem convert <n>', desc: 'Convert coins into Gems (100M coins = 1 Gem)' },
       { cmd: '/gem shop', desc: 'Open the SolForge Black Market (alias /blackmarket, /bm)' },
       { cmd: '/effects', desc: 'Buy a temporary status-effect buff (alias /buff)' },
+      { cmd: '/fish', desc: 'Fishing hub — catch & sell fish for molla (alias /ascfish)' },
+      { cmd: '/fish bag', desc: 'Open your Fish Bag; click a fish to sell it' },
+      { cmd: '/fish sell', desc: 'Sell your whole Fish Bag at once' },
+      { cmd: '/fish top', desc: 'Fishing leaderboards (value, biggest, count)' },
       { cmd: '/casino', desc: 'Casino hub' },
       { cmd: '/coinflip <amount> <player>', desc: 'PvP coinflip wager (alias /cf)' },
       { cmd: '/dice <high|low> <amount>', desc: 'Bet high or low on a d100 roll' },

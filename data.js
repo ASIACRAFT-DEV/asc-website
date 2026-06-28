@@ -676,6 +676,43 @@ const FEATURES = {
     ],
   },
 
+  playtime: {
+    name: 'Playtime Rewards',
+    short: 'Playtime',
+    accent: 'azure',
+    tag: '/playtime',
+    category: 'Progression',
+    featured: true,
+    blurb:
+      'Get paid for the hours you put in. Every 10h of active play unlocks a reward, every 100h a bigger one — and it loops forever. Milestone titles along the way.',
+    intro:
+      'Playtime Rewards is an infinite claim ladder that turns your time on the server into loot. Open /playtime to see the ladder, and click a glowing tile to claim everything you have earned so far. There is no end — the rewards keep coming the longer you play. Only real, active playtime counts: AFK time is excluded, so you have to actually be playing.',
+    how: [
+      {
+        title: 'Every 10 hours',
+        body:
+          'Each 10 hours of active play unlocks a tier worth coins and useful items (Great Balls and the like). Tiers stack — log in after a long grind and one click claims every tier you are owed at once.',
+      },
+      {
+        title: 'Every 100 hours',
+        body:
+          'Tiers that land on a 100-hour mark pay a much bigger haul — a large coin sum, Tokens, and a crate key. Past 1000h it keeps going: you earn one of these milestone hauls for every additional 100 hours.',
+      },
+      {
+        title: 'Milestone titles',
+        body:
+          'Cross 100h, 250h, 500h and 1000h to permanently earn the ⌚ Dedicated, Committed, Devoted and NoLife titles. The single #1 most-played player on the server also holds the exclusive rotating ⌚ The Timeless crown — out-play them to take it.',
+      },
+    ],
+    commands: [
+      { cmd: '/playtime', desc: 'Open the Playtime Rewards ladder (alias /pt)' },
+    ],
+    notes: [
+      'AFK time does not count toward the ladder — only active playtime.',
+      'Reward amounts are tunable by staff and may be adjusted over time.',
+    ],
+  },
+
   bingo: {
     name: 'Catch Bingo',
     short: 'Catch Bingo',
@@ -724,14 +761,14 @@ const FEATURES = {
     tag: '/casino',
     category: 'Economy',
     blurb:
-      'Gamble your coins on Coinflip, Dice and Blackjack — fair odds, no house edge, winner takes all.',
+      'Gamble your coins across five games — Coinflip, Dice, Blackjack, the Lottery and Lucky Key Spin — from one /casino hub.',
     intro:
-      'Feeling lucky? The Casino lets you wager coins across three games. Challenge other players to a Coinflip, bet high-or-low on Dice, or play Blackjack against the dealer. The games are tuned to fair odds — risk your coins for the thrill, not against a stacked house.',
+      'Feeling lucky? The Casino bundles five ways to wager into a single hub. Challenge other players to a Coinflip, bet high-or-low on Dice, beat the dealer at Blackjack, buy into the Lottery, or take a 100k spin at a crate key on Lucky Key Spin. The bet-driven games run on fair odds; Lucky Key Spin carries a small house edge as a deliberate coin sink.',
     how: [
       {
         title: 'Open the casino',
         body:
-          'Use /casino for the casino hub, or jump straight into a game with its command. All games bet in coins. There may be a shared cooldown between plays, and gambling can be limited to a casino zone.',
+          'Use /casino for the hub — a chest GUI hosting all five games — or jump straight into one with its command. All games bet in coins. There may be a shared cooldown between plays, and gambling can be limited to a casino zone.',
       },
       {
         title: 'Coinflip — player vs player',
@@ -748,15 +785,22 @@ const FEATURES = {
         body:
           'Play classic blackjack with /bj <bet>. Hit, stand or double down to get closer to 21 than the dealer without busting. Blackjack pays fair and the dealer follows standard rules.',
       },
+      {
+        title: 'Lucky Key Spin — gamble for a crate key',
+        body:
+          'Pay a flat 100,000 coins and /keyspin (alias /lucky) for an animated case-roll reel: 45% Vote Key, 22.5% Legacy Key, 22.5% Origin Key, with a 10% bust as the house edge. Win a Legacy or Origin key and it announces server-wide. Claim one free spin every 24h with /keyspin free.',
+      },
     ],
     commands: [
-      { cmd: '/casino', desc: 'Open the casino hub' },
+      { cmd: '/casino', desc: 'Open the casino hub (all five games)' },
       { cmd: '/coinflip <amount> <player>', desc: 'Challenge a player to a coinflip (alias /cf)' },
       { cmd: '/dice <high|low> <amount>', desc: 'Bet high or low on a d100 roll' },
       { cmd: '/bj <bet>', desc: 'Play blackjack against the dealer (hit / stand / double)' },
+      { cmd: '/keyspin', desc: 'Spend 100k for a Lucky Key Spin (alias /lucky)' },
+      { cmd: '/keyspin free', desc: 'Claim your free daily Lucky Key Spin' },
     ],
     notes: [
-      'Games are tuned to fair, no-house-edge odds — but you can still lose your bet. Gamble responsibly.',
+      'The bet-driven games are tuned to fair odds; Lucky Key Spin keeps a small house-edge bust as an intentional coin sink — you can still lose, so gamble responsibly.',
       'A shared cooldown may apply across all casino games.',
     ],
   },
@@ -815,7 +859,7 @@ const FEATURES = {
 const FEATURE_ORDER = [
   'solforge', 'crates', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
   'dungeons', 'safari', 'hunts', 'fishing', 'bingo', 'warzone', 'clans',
-  'jobs', 'casino', 'progression',
+  'jobs', 'casino', 'playtime', 'progression',
 ];
 
 // Full mod toolbox (landing page mod grid)
@@ -870,6 +914,7 @@ const COMMANDS = [
       { cmd: '/back', desc: 'Return to your previous location' },
       { cmd: '/kits', desc: 'Claim your starter kit and any kits you have access to' },
       { cmd: '/daily', desc: 'Claim your daily reward' },
+      { cmd: '/playtime', desc: 'Claim playtime rewards — loot every 10h, bigger every 100h (alias /pt)' },
     ],
   },
   {
@@ -921,6 +966,8 @@ const COMMANDS = [
       { cmd: '/coinflip <amount> <player>', desc: 'PvP coinflip wager (alias /cf)' },
       { cmd: '/dice <high|low> <amount>', desc: 'Bet high or low on a d100 roll' },
       { cmd: '/bj <bet>', desc: 'Blackjack against the dealer' },
+      { cmd: '/keyspin', desc: 'Lucky Key Spin — spend 100k for a crate key (alias /lucky)' },
+      { cmd: '/keyspin free', desc: 'Claim your free daily Lucky Key Spin' },
       { cmd: '/vote', desc: 'Vote links + streak rewards' },
     ],
   },
@@ -944,6 +991,7 @@ const COMMANDS = [
       { cmd: '/lvl', desc: 'ASC level & EXP' },
       { cmd: '/levels', desc: 'Prestige menu — reset at Lv.100 for a Star ✨ (/asclvl prestige)' },
       { cmd: '/lb', desc: 'Leaderboards' },
+      { cmd: '/shinydex', desc: 'Shiny Dex ladder — /shinydex refresh to register stored shinies' },
       { cmd: '/title', desc: 'Equip cosmetic titles' },
     ],
   },
@@ -1044,22 +1092,22 @@ const GUIDE = [
 // =====================================================================
 const NEWS = [
   {
+    tag: 'Playtime',
+    title: 'Playtime Rewards — get paid for playing',
+    body: 'A new /playtime claim ladder rewards active play forever: a reward every 10h, a bigger haul every 100h, looping past 1000h — plus milestone titles. Idling never advances it.',
+    link: 'feature.html?f=playtime',
+  },
+  {
+    tag: 'Casino',
+    title: 'Lucky Key Spin lands in the Casino',
+    body: 'Spend 100k for an animated case-roll spin at a Vote, Legacy or Origin key — with a daily free spin on the house. Joins Coinflip, Dice, Blackjack and the Lottery in /casino.',
+    link: 'feature.html?f=casino',
+  },
+  {
     tag: 'Battle Pass',
     title: 'The Solar Pass has arrived',
     body: 'A gem-only premium pass that pays out every single day for 30 days — 67k coins, Origin & Legacy keys and Master Balls, mailed straight to you. Buy again to extend.',
     link: 'feature.html?f=progression',
-  },
-  {
-    tag: 'Seasonal',
-    title: 'SolForge: Season of the First Sun',
-    body: 'The first full seasonal set is live — forge sun-powered gear, level it with Solar Shards, and chase the server-wide Radiant State.',
-    link: 'feature.html?f=solforge',
-  },
-  {
-    tag: 'Crates',
-    title: 'Mythical & Ultra Beast Spins',
-    body: 'Four new Spin tiers join the rotation — Mythical, Shiny Mythical, Ultra Beast and Shiny Ultra Beast — each rolling from its own pool, with the Legendary Spin now legendary-only.',
-    link: 'feature.html?f=crates',
   },
 ];
 
@@ -1068,6 +1116,121 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-06-28',
+    tag: 'Mail',
+    title: 'Fixed: mailbox clear no longer destroys unclaimed rewards',
+    changes: [
+      { type: 'fixed', text: 'A daily admin mailbox-clear was wiping mail that still held <strong>unclaimed</strong> items and currency — including level-crate keys players hadn’t collected yet. The clear is now safe by default: it removes spam, fully-claimed, expired and revoked mail, but <strong>preserves any mail still carrying unclaimed rewards</strong>, so nothing you haven’t opened gets deleted. <code>/mail</code>' },
+    ],
+  },
+  {
+    date: '2026-06-28',
+    tag: 'PvP',
+    title: 'Improved: friendly duels bring your full team + a visible move timer',
+    changes: [
+      { type: 'improved', text: 'Direct R-key challenges and <strong>/pvp challenge</strong> duels no longer force you to pick 4 of 6 in Team Preview — that VGC rule is now <strong>ranked / ladder only</strong>. Friendly duels bring your <strong>full party</strong>: you pick just your on-field lead(s) — 1 in Singles, 2 in Doubles — and the rest ride along as usable reserves, so you can finally practise the official National Dex Doubles OU format. <code>/pvp</code>' },
+      { type: 'improved', text: 'The per-turn battle timer is now <strong>visible on the action bar</strong> — a green → yellow → red countdown shown to both players every second during the move-choice window, across every PvP battle type (ranked, ladder, Warzone, friendly). <code>/pvp</code>' },
+    ],
+  },
+  {
+    date: '2026-06-28',
+    tag: 'Safari',
+    title: 'Fixed: server crash when a Safari pass expired',
+    changes: [
+      { type: 'fixed', text: 'Closed a crash where the whole server could go down when a player’s Safari pass expired — the exit teleport was firing mid server-tick. Pass expiry and exit are now handled safely off the tick loop. <code>/safari</code>' },
+    ],
+  },
+  {
+    date: '2026-06-28',
+    tag: 'Area Zero',
+    title: 'Fixed: PvP kills could be farmed for skill charges',
+    changes: [
+      { type: 'fixed', text: 'Trading player kills in Area Zero could rapidly bank Paradox Gauge <strong>skill charges</strong> (the zone-wide AOE casts) — a player kill was the single biggest gauge fill and had no anti-farm guard, so two players (or an alt) could trade kills to spam zone-wide skills on everyone in the sphere. Kill-based gauge gain is now capped at the wild-mon rate, with a per-victim cooldown. <code>/skill</code>' },
+    ],
+  },
+  {
+    date: '2026-06-27',
+    tag: 'Casino',
+    title: 'New: Lucky Key Spin — a 100k coin-sink gamble',
+    changes: [
+      { type: 'new', text: 'A new game joins <strong>/casino</strong>: <strong>Lucky Key Spin</strong>. Pay a flat <strong>100,000 coins</strong> to spin an animated case-roll reel for a weighted key prize — <strong>45% Vote Key / 22.5% Legacy Key / 22.5% Origin Key</strong>, with a 10% bust as the house edge. Win a Legacy or Origin key and it’s announced server-wide. Everyone also gets <strong>one free spin every 24h</strong>. <code>/keyspin</code> (alias <code>/lucky</code>), or <code>/keyspin free</code> for the daily.' },
+    ],
+  },
+  {
+    date: '2026-06-27',
+    tag: 'Playtime',
+    title: 'New: Playtime Rewards — an infinite /playtime claim ladder',
+    changes: [
+      { type: 'new', text: '<strong>/playtime</strong> (alias <strong>/pt</strong>) opens a claim ladder that rewards <strong>active</strong> play: every 10h unlocks a tier, and every 100h pays a bigger haul — and it <strong>never stops</strong>, looping the major reward every 100h past 1000h. Click any glowing tile to claim everything you’re owed in one shot. Playtime is AFK-adjusted, so idling never advances it, and milestone titles drop at 100h / 250h / 500h / 1000h. <code>/playtime</code>' },
+    ],
+  },
+  {
+    date: '2026-06-27',
+    tag: 'Raid Boss',
+    title: 'Fixed: offline-at-payout raiders lost their rewards',
+    changes: [
+      { type: 'fixed', text: 'Top-damage raiders who briefly disconnected or lagged out the instant a raid boss died were skipped entirely by the coin payout — the classic “did enough damage, got no money” report. Payouts now reach everyone who qualified, even if they dropped at the exact moment of the kill. <code>/raid</code>' },
+    ],
+  },
+  {
+    date: '2026-06-27',
+    tag: 'Ranks',
+    title: 'New: instant Shiny Dex refresh',
+    changes: [
+      { type: 'new', text: 'Added <strong>/shinydex refresh</strong> (and a Refresh button in the GUI) so you can register stored shinies instantly instead of relogging. Background sweeps already pick up party + PC shinies within a minute, but the button gives you the update on demand — no more risky rapid relogging to force a scan. <code>/shinydex</code>' },
+    ],
+  },
+  {
+    date: '2026-06-27',
+    tag: 'Pokémon',
+    title: 'Fixed: fusion conversion, Pokédex voucher & breeding bugs',
+    changes: [
+      { type: 'fixed', text: '<strong>/pokeconvert</strong> now refuses fused Pokémon (Necrozma, Kyurem, Calyrex and addon fusions) instead of sealing them into a capsule they could never be split out of again — unfuse first, then convert.' },
+      { type: 'fixed', text: 'The Pokédex Entry Voucher no longer offers species you’ve <strong>already</strong> registered — multi-word caught species (Tapu Koko and friends) now correctly drop out of the picker.' },
+      { type: 'fixed', text: 'Single-ability Pokémon (e.g. Clauncher) are no longer mis-read as having a Hidden Ability and wrongly locked out of non-OT breeding.' },
+    ],
+  },
+  {
+    date: '2026-06-26',
+    tag: 'Ranks',
+    title: 'Improved: Pokédex completion rewards buffed + back-paid',
+    changes: [
+      { type: 'improved', text: 'Every Pokédex completion tier now pays out more coins, tokens and keys. Because dex tiers are one-time claims, anyone who <strong>already claimed</strong> a tier gets the difference <strong>back-paid to /mail</strong> on their next login — so early completionists aren’t shortchanged by the buff. <code>/ranks</code>' },
+    ],
+  },
+  {
+    date: '2026-06-26',
+    tag: 'Jobs',
+    title: 'Improved: Slayer now pays for 11 more mobs',
+    changes: [
+      { type: 'improved', text: 'The Slayer job was missing a chunk of common hostiles, so a lot of grinding paid nothing. Added <strong>11 more mob types</strong> to the kill table — zombified piglins, piglins, zoglins, vexes, shulkers, silverfish, endermites, and slimes / magma cubes (at a low per-kill rate so split-farms can’t trivially slam the paycheck cap). <code>/jobs</code>' },
+    ],
+  },
+  {
+    date: '2026-06-26',
+    tag: 'Clans',
+    title: 'Improved: /clan kick can now remove offline members',
+    changes: [
+      { type: 'improved', text: '<strong>/clan kick</strong> previously only matched currently-online players, so an inactive member who’d stopped logging in could never be removed. It now resolves clanmates by name (with tab-completion) and kicks offline members by UUID — the role rules for who-can-kick-whom are unchanged. <code>/clans</code>' },
+    ],
+  },
+  {
+    date: '2026-06-26',
+    tag: 'Pokeditor',
+    title: 'Fixed: Hidden Power charged tokens but never learned',
+    changes: [
+      { type: 'fixed', text: 'Teaching certain moves — notably <strong>Hidden Power</strong> — could spend move tokens without the Pokémon ever actually learning the move. Move-teaching now verifies the move applied and <strong>refunds your tokens</strong> if it can’t be learned. Past failed charges are being refunded manually. <code>/pokeditor</code>' },
+    ],
+  },
+  {
+    date: '2026-06-26',
+    tag: 'Quality of Life',
+    title: 'Fixed: broken Pokémon interaction wheel on right-click',
+    changes: [
+      { type: 'fixed', text: 'Right-clicking a Pokémon (Rayquaza especially) could spam errors and fail to open the interaction wheel, thanks to a bug in an external Mega-Evolution mod. The call site is now hardened so the wheel opens normally again — and a related server hard-crash from the same mod’s glow effect was closed too.' },
+    ],
+  },
   {
     date: '2026-06-25',
     tag: 'Clans',

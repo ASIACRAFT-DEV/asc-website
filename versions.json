@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-28T02:35:57.596Z",
-  "count": 31,
+  "generatedAt": "2026-06-28T08:40:51.844Z",
+  "count": 32,
   "mods": [
     {
       "repo": "asc-catchcombo",
@@ -60,7 +60,7 @@
     {
       "repo": "asc-areazero",
       "name": "CobbleAsia Area Zero",
-      "version": "2.12.0"
+      "version": "2.13.0"
     },
     {
       "repo": "asc-battletower",
@@ -76,6 +76,11 @@
       "repo": "asc-chestshop",
       "name": "CobbleAsia ChestShop",
       "version": "2.5.0"
+    },
+    {
+      "repo": "asc-cosmetics",
+      "name": "CobbleAsia Cosmetics",
+      "version": "0.1.0"
     },
     {
       "repo": "asc-crates",
@@ -120,7 +125,7 @@
     {
       "repo": "asc-mail",
       "name": "CobbleAsia Mail",
-      "version": "1.9.0"
+      "version": "1.10.0"
     },
     {
       "repo": "asc-npcs",

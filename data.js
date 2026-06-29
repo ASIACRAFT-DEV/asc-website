@@ -2064,7 +2064,6 @@ const TEAM = [
       { name: 'Velpecula', handle: 'VelpeculaTheFox', role: 'Owner & Finance', avatar: 'assets/team/velpecula.gif',
         motto: "Be the baddest one they'll ever see." },
       { name: 'Crysthamyr', role: 'Head Admin', avatar: 'assets/team/crys.jpg', motto: "that's just my fly client." },
-      { name: 'PredatorG', role: 'Developer' },
       { name: 'Zeta', handle: 'justt_zeta', role: 'Core Management Staff', avatar: 'assets/team/zeta.png',
         motto: 'You only live once.' },
     ],
@@ -2078,18 +2077,25 @@ const TEAM = [
       { name: 'mAyHAmBLOOM', role: 'Admin', avatar: 'assets/team/mayham.png',
         motto: 'Life is too short to do boring things.' },
       { name: '__Vesper', role: 'Admin', avatar: 'assets/team/vesper.png', motto: "Don't pmo." },
+      { name: 'Prime_RN', role: 'Admin', avatar: 'assets/team/prime.png', motto: 'Fear me?' },
+    ],
+  },
+  {
+    group: 'Event Manager',
+    members: [
+      { name: 'CallMeAtom', role: 'Event Manager', avatar: 'assets/team/atom.jpg',
+        motto: "I've died before. It was boring, so I stood up." },
     ],
   },
   {
     group: 'Head Moderator',
     members: [
-      { name: 'Prime_RN', role: 'Head Moderator', avatar: 'assets/team/prime.png', motto: 'Fear me?' },
+      { name: 'Yberuuuu', role: 'Head Moderator', avatar: 'assets/team/yberu.png', motto: 'Ogerponnnn.' },
     ],
   },
   {
     group: 'Moderators',
     members: [
-      { name: 'Yberuuuu', role: 'Moderator', avatar: 'assets/team/yberu.png', motto: 'Ogerponnnn.' },
       { name: 'SamsonTheManiac', role: 'Moderator', avatar: 'assets/team/samson.png',
         motto: "Life is like a mace — every rise comes with a fall, but if you don't take the shot you won't rise again." },
       { name: 'tobiitobes', role: 'Moderator & Builder', avatar: 'assets/team/tobiitobes.png',
@@ -2099,6 +2105,14 @@ const TEAM = [
         motto: 'Behave or Crys will spank me.', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@ra1zuu' }] },
       { name: 'EdsonCheah', role: 'Moderator', avatar: 'assets/team/edson.jpg', motto: "it's ok to not be ok" },
       { name: 'DaemonSpade', role: 'Moderator' },
+    ],
+  },
+  {
+    group: 'Helpers',
+    members: [
+      { name: 'DennnPham', role: 'Helper', avatar: 'assets/team/dennn.png', motto: 'Eat Sleep Hustle Repeat 🔁' },
+      { name: 'Tadzuna', role: 'Helper', avatar: 'assets/team/tadzuna.jpg',
+        motto: "Ayoko sa mahal, gusto ko sa mura, kasi yung una ko'ng minahal, iba'ng lalake inuna" },
     ],
   },
   {

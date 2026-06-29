@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-06-29T02:36:14.980Z",
-  "count": 32,
+  "generatedAt": "2026-06-29T10:23:16.485Z",
+  "count": 33,
   "mods": [
     {
       "repo": "asc-catchcombo",
@@ -33,9 +33,14 @@
       "version": "1.5.0"
     },
     {
+      "repo": "asc-fishing",
+      "name": "ASC Fishing",
+      "version": "1.3.0"
+    },
+    {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "1.19.1"
+      "version": "1.20.0"
     },
     {
       "repo": "asc-jobs",

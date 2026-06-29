@@ -288,6 +288,10 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
   letter-spacing: .08em; text-transform: uppercase; color: var(--ink);
   background: var(--gold); padding: 4px 9px; border-radius: 100px;
 }
+.fc-badge.soon {
+  color: #fff;
+  background: linear-gradient(120deg, #b06bff, #7a4bd6);
+}
 
 /* ---------- JOIN ---------- */
 .join { display: flex; justify-content: center; }

@@ -85,7 +85,9 @@ if (grid && typeof FEATURES !== 'undefined') {
   grid.innerHTML = FEATURE_ORDER.map((id) => {
     const f = FEATURES[id];
     if (!f) return '';
-    const badge = f.featured ? '<span class="fc-badge">Featured</span>' : '';
+    const badge = f.soon
+      ? '<span class="fc-badge soon">Coming Soon</span>'
+      : (f.featured ? '<span class="fc-badge">Featured</span>' : '');
     return `<a class="feature-card reveal" href="feature.html?f=${id}">
       ${badge}
       <div class="fc-cat">${f.category}</div>

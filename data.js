@@ -106,6 +106,45 @@ const FEATURES = {
     ],
   },
 
+  cosmetics: {
+    name: 'Player Cosmetics',
+    short: 'Cosmetics',
+    accent: 'violet',
+    tag: '/cosmetics',
+    category: 'Collecting',
+    soon: true,
+    blurb:
+      'Glowing particle effects that follow your trainer — halos, auras, trails and more, seen by everyone around you. No mod or download needed.',
+    intro:
+      'Show off your style. Cosmetics are server-side particle effects you wear on your trainer — pick one from a simple menu and you start glowing for everyone nearby. There’s nothing to install: it all runs on the server, so any player sees your flair the moment you equip it. Revealing soon!',
+    how: [
+      {
+        title: 'Open the menu',
+        body:
+          'Run /cosmetics to open the picker — a clean, paginated GUI of every effect. Click one to equip it, click again to swap, or hit Off to clear. Your choice is saved, so it sticks between sessions.',
+      },
+      {
+        title: 'Pick your vibe',
+        body:
+          'A growing collection across themes: Halos, Auras and Trails to start, plus Elemental (Inferno Spiral, Blizzard, Thunder Lord, Rainstorm, Tornado, Crystal Storm), Cosmic (Galaxy Orbit, Solar Ascension, Celestial Ring, Aurora, Meteor Shower), Nature, Spirit, and Prestige flair like the Champion crown.',
+      },
+      {
+        title: 'Unlock more',
+        body:
+          'Cosmetics unlock through ranks and donator perks — the higher your tier, the flashier the flair you can wear. New effects get added over time, so there’s always something fresh to chase.',
+      },
+    ],
+    commands: [
+      { cmd: '/cosmetics', desc: 'Open the cosmetic picker' },
+      { cmd: '/cosmetics off', desc: 'Remove your active cosmetic' },
+    ],
+    notes: [
+      'Fully server-side — no client mod or resource pack to install.',
+      'Effects are performance-tuned (distance-culled and budget-capped) so they stay smooth even when players gather.',
+      'Revealing soon — which ranks unlock which effects is being finalized.',
+    ],
+  },
+
   battletower: {
     name: 'Battle Tower',
     short: 'Battle Tower',
@@ -857,7 +896,7 @@ const FEATURES = {
 
 // Display order + grouping on the landing page
 const FEATURE_ORDER = [
-  'solforge', 'crates', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
+  'solforge', 'crates', 'cosmetics', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
   'dungeons', 'safari', 'hunts', 'fishing', 'bingo', 'warzone', 'clans',
   'jobs', 'casino', 'playtime', 'progression',
 ];
@@ -871,6 +910,7 @@ const MODS = [
   { name: 'Chest Shop', cmd: '/chestshop' },
   { name: 'Claim Blocks', cmd: '/ascclaim' },
   { name: 'Clans', cmd: '/clans · /c' },
+  { name: 'Cosmetics', cmd: '/cosmetics' },
   { name: 'Crates & Banners', cmd: '/crates · /summon' },
   { name: 'Dungeons', cmd: '/dungeon' },
   { name: 'Essentials', cmd: '/ess' },

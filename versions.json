@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T08:57:31.053Z",
+  "generatedAt": "2026-06-30T13:56:53.403Z",
   "count": 33,
   "mods": [
     {
@@ -40,7 +40,7 @@
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "1.20.2"
+      "version": "1.22.0"
     },
     {
       "repo": "asc-jobs",
@@ -85,7 +85,7 @@
     {
       "repo": "asc-cosmetics",
       "name": "CobbleAsia Cosmetics",
-      "version": "0.2.0"
+      "version": "0.4.0"
     },
     {
       "repo": "asc-crates",
@@ -165,7 +165,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.17.2"
+      "version": "1.19.0"
     }
   ]
 }

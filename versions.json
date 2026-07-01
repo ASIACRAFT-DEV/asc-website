@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-30T19:43:31.184Z",
+  "generatedAt": "2026-07-01T02:36:45.084Z",
   "count": 33,
   "mods": [
     {
@@ -35,7 +35,7 @@
     {
       "repo": "asc-fishing",
       "name": "ASC Fishing",
-      "version": "1.4.0"
+      "version": "1.6.0"
     },
     {
       "repo": "asc-gyms",
@@ -50,7 +50,7 @@
     {
       "repo": "asc-pokeditor",
       "name": "ASC Pokeditor",
-      "version": "1.8.2"
+      "version": "1.8.3"
     },
     {
       "repo": "asc-traininggrounds",
@@ -100,7 +100,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.44.2"
+      "version": "7.47.1"
     },
     {
       "repo": "asc-forge",
@@ -130,7 +130,7 @@
     {
       "repo": "asc-mail",
       "name": "CobbleAsia Mail",
-      "version": "1.10.0"
+      "version": "1.11.0"
     },
     {
       "repo": "asc-npcs",

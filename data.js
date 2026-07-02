@@ -145,6 +145,46 @@ const FEATURES = {
     ],
   },
 
+  transform: {
+    name: 'Transform',
+    short: 'Transform',
+    accent: 'violet',
+    tag: '/transform',
+    category: 'Battling',
+    soon: true,
+    blurb:
+      'Become your lead Pokémon and fight as it — cast a type-based skill in full PvP combat. Everyone sees you as your ace, no download needed.',
+    intro:
+      'Ever wanted to *be* your ace? /transform turns you into your lead Pokémon — everyone around sees you as your Charizard, Gengar, whatever leads your party — and lets you fight as it. It’s fully server-side, so there’s nothing to install. A fresh feature in testing.',
+    how: [
+      {
+        title: 'Become your Pokémon',
+        body:
+          'Run /transform to turn into your lead Pokémon; run it again to turn back. Others see the Pokémon move as you move — a live disguise driven by the server.',
+      },
+      {
+        title: 'Cast your skill',
+        body:
+          'Triple-tap Sneak to unleash a skill powered by your Pokémon’s type — Fire casts Flame Burst (burns), Water an Aqua Jet (slows), Ghost a Shadow Ball (withers), Electric a Thunderbolt, and 14 more. Each is an area burst around you.',
+      },
+      {
+        title: 'Full combat',
+        body:
+          'Skills hit both players and wild Pokémon, so transform-battles are on. Damage falls off toward the edge of the burst, with a short cooldown between casts.',
+      },
+    ],
+    commands: [
+      { cmd: '/transform', desc: 'Become your lead Pokémon (toggle)' },
+      { cmd: '/transform on · off', desc: 'Explicitly transform or revert' },
+      { cmd: 'Triple-tap Sneak', desc: 'Cast your type’s skill (full combat)' },
+    ],
+    notes: [
+      'Fully server-side — no client mod or resource pack to install.',
+      'Skills are themed by your Pokémon’s primary type; balance (damage, radius, cooldown) is server-tuned.',
+      'A new feature in playtest — expect tuning and more to come.',
+    ],
+  },
+
   battletower: {
     name: 'Battle Tower',
     short: 'Battle Tower',
@@ -896,7 +936,7 @@ const FEATURES = {
 
 // Display order + grouping on the landing page
 const FEATURE_ORDER = [
-  'solforge', 'crates', 'cosmetics', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
+  'solforge', 'crates', 'cosmetics', 'transform', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
   'dungeons', 'safari', 'hunts', 'fishing', 'bingo', 'warzone', 'clans',
   'jobs', 'casino', 'playtime', 'progression',
 ];
@@ -931,6 +971,7 @@ const MODS = [
   { name: 'Ranks', cmd: '/ranks' },
   { name: 'Safari', cmd: '/safari' },
   { name: 'Training Grounds', cmd: '/tg' },
+  { name: 'Transform', cmd: '/transform' },
   { name: 'Voting', cmd: '/vote' },
   { name: 'World Tweaks', cmd: '/worldtweaks' },
 ];

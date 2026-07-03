@@ -717,7 +717,7 @@ const FEATURES = {
     category: 'Economy',
     featured: true,
     blurb:
-      'Cast a rod, reel in rarity- and size-scaled catches, and sell them for molla. Hourly tournaments and a Mystery Tide event where rare water legendaries lurk in secret biomes.',
+      'Cast a rod, reel in rarity- and size-scaled catches, and sell them for molla. Scheduled tournaments a few times a day and a Mystery Tide event where rare water legendaries lurk in one hidden biome — event-only.',
     intro:
       'Fishing is a full income loop you can do anywhere there is water. Every reel-in rolls a custom catch with its own rarity and a randomized weight and length — bigger fish are worth more. Catches go into your virtual Fish Bag (never clutters your inventory, never lost), and you cash them in for molla whenever you like.',
     how: [
@@ -732,14 +732,14 @@ const FEATURES = {
           'Open /fish for the hub or /fish bag for your paginated Fish Bag — click any fish to sell it, or Sell All in one go. Your Codex tracks first-catches and record sizes per species, and /fish top ranks the server by total earnings, biggest catch, and most fish caught.',
       },
       {
-        title: 'Hourly tournaments',
+        title: 'Scheduled tournaments',
         body:
-          'Every hour a rotating tournament runs — Most Fish, Biggest Fish, Smallest Fish, Longest Fish, Shortest Fish, Total Weight, Most Valuable, and Most iPhones. The top 3 split a molla prize pool. Check live standings any time from the hub.',
+          'A few times a day, on a fixed schedule (default 02:00, 07:00, 14:00 and 19:00 server time), a rotating tournament runs — Most Fish, Biggest Fish, Smallest Fish, Longest Fish, Shortest Fish, Total Weight, Most Valuable, and Most iPhones. The top 3 split a molla prize pool. Check live standings any time from the hub.',
       },
       {
         title: 'Mystery Tide',
         body:
-          'Every hour, for 20 minutes, the Mystery Tide stirs. Rare water-based legendaries and mythicals (Kyogre, Palkia, Suicune, Lugia, Manaphy and more) can only be fished up during this window — and only from a secret biome the event keeps hidden. Cast around to find the right waters; fish the wrong biome too long and the tide will tell you to look elsewhere.',
+          'On the same schedule, the Mystery Tide stirs. Rare water legendaries and mythicals (Kyogre, Palkia, Suicune, Lugia, Manaphy and more) can only be fished up during this window — and only from one secret biome. The event names a shortlist of candidate waters but just one is correct, and it gives no hints at all: fishing the wrong biome stays completely silent, so you’re gambling on where to cast.',
       },
     ],
     commands: [
@@ -749,6 +749,7 @@ const FEATURES = {
       { cmd: '/fish top', desc: 'Fishing leaderboards (value, biggest, count)' },
     ],
     notes: [
+      'Legendary and Mythic fish only bite during a live tournament window — you can’t farm them around the clock.',
       'The legendary catches in the Mystery Tide are intentionally ultra-rare — and only obtainable during the event.',
       'Auto-fishing is detected and throttled: macro-regular casts earn worthless junk until you fish like a human.',
       'Alias: /ascfish.',
@@ -799,14 +800,14 @@ const FEATURES = {
     tag: '/bingo',
     category: 'Collecting',
     blurb:
-      'A 4×4 catch card. Fill rows for coins, complete the whole card fast for big payouts and Origin Keys.',
+      'A relaxed weekly 4×4 catch card. Fill rows and the full card for coins and Origin Keys — rewards pay out automatically, no claiming, no rush.',
     intro:
-      'Bingo is a catch-’em challenge on a timer. Roll a card of sixteen species, then catch them to mark squares — complete lines for coins and race to fill the whole card before the clock runs out for the top rewards.',
+      'Bingo is a laid-back weekly side-goal. Roll a card of sixteen species, then catch them at your own pace over the week to mark squares — complete lines for coins and finish the whole card for a big bonus. Everything pays out the instant you complete it, so there’s nothing to claim and no timer breathing down your neck.',
     how: [
       {
-        title: 'Roll a card',
+        title: 'Roll a weekly card',
         body:
-          'Open /bingo to start a 4×4 card — sixteen random species pulled from the huntable pool. You have six hours before the card expires.',
+          'Open /bingo to start a 4×4 card — sixteen random species pulled from the huntable pool. Cards run weekly, so there’s no rush to finish in one sitting; if you’ve none active, opening /bingo just rolls you a fresh one.',
       },
       {
         title: 'Catch to mark squares',
@@ -814,22 +815,22 @@ const FEATURES = {
           'Catch any species shown on your card and that square fills automatically. No need to manually match — the card tracks your catches as they happen.',
       },
       {
-        title: 'Complete rows for coins',
+        title: 'Rows pay out automatically',
         body:
-          'Fill all four squares in a row to complete a line. Each completed row is worth coins — claim them with the claim button in the /bingo GUI.',
+          'Fill all four squares in a row to complete a line, and its coin + token reward is paid to you the moment it completes. No claim button, no cashing out — each row simply pays once, as you finish it.',
       },
       {
-        title: 'Race the full card',
+        title: 'Complete the full card',
         body:
-          'Mark all sixteen squares to complete the card and get a server-wide shout-out. The faster you finish, the bigger the bonus — completing under an hour pays the most, plus Origin Keys for the crate system.',
+          'Mark all sixteen squares to complete the card for a full-card bonus — a big coin haul, Origin Keys and tokens — plus a server-wide shout-out. Like the rows, it’s paid automatically the moment you finish.',
       },
     ],
     commands: [
-      { cmd: '/bingo', desc: 'Start or open your bingo card' },
+      { cmd: '/bingo', desc: 'Start or open your weekly bingo card' },
     ],
     notes: [
-      'Full-card rewards are time-tiered: finish under 1h, 3h, or 6h for descending payouts + Origin Keys.',
-      'Rewards are collected from the claim button — don’t forget to cash out before the card expires.',
+      'Rewards are fully automatic — rows and the full-card bonus pay the instant you complete them. The 📦 button is just a card view now.',
+      'A fresh card rolls every week; catch at your own pace as a relaxed side-goal alongside everything else.',
     ],
   },
 
@@ -1173,6 +1174,12 @@ const GUIDE = [
 // =====================================================================
 const NEWS = [
   {
+    tag: 'Cozy Update',
+    title: 'Bingo goes weekly again & the toughest Hunts eased up',
+    body: '/bingo is back to a relaxed weekly card that pays out automatically — no claiming, no 6-hour rush — and the Hard/Insane/Master Poké Hunts dropped their nature and Hidden-Ability demands. Less grind, more cozy.',
+    link: 'feature.html?f=bingo',
+  },
+  {
     tag: 'Playtime',
     title: 'Playtime Rewards — get paid for playing',
     body: 'A new /playtime claim ladder rewards active play forever: a reward every 10h, a bigger haul every 100h, looping past 1000h — plus milestone titles. Idling never advances it.',
@@ -1184,12 +1191,6 @@ const NEWS = [
     body: 'Spend 100k for an animated case-roll spin at a Vote, Legacy or Origin key — with a daily free spin on the house. Joins Coinflip, Dice, Blackjack and the Lottery in /casino.',
     link: 'feature.html?f=casino',
   },
-  {
-    tag: 'Battle Pass',
-    title: 'The Solar Pass has arrived',
-    body: 'A gem-only premium pass that pays out every single day for 30 days — 67k coins, Origin & Legacy keys and Master Balls, mailed straight to you. Buy again to extend.',
-    link: 'feature.html?f=progression',
-  },
 ];
 
 // =====================================================================
@@ -1197,6 +1198,81 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-07-03',
+    tag: 'Bingo',
+    title: 'Improved: Catch Bingo is a relaxed weekly card again — and it pays itself',
+    changes: [
+      { type: 'improved', text: 'By popular request, <strong>/bingo</strong> is back to a <strong>weekly</strong> card instead of a 6-hour sprint — and rewards now <strong>pay out automatically</strong> the instant you complete a row or the full card, with no claim button and no rush. The 16-species roll and every bonus it feeds are unchanged; it’s just a cozy side-goal you chip away at over the week again. <code>/bingo</code>' },
+    ],
+  },
+  {
+    date: '2026-07-03',
+    tag: 'Poké Hunts',
+    title: 'Improved: the hardest Poké Hunts got less punishing',
+    changes: [
+      { type: 'improved', text: 'The <strong>Hard, Insane and Master</strong> hunt tiers are softened back toward their older difficulty: <strong>nature requirements are gone</strong> (an uncounterable 1-in-25 roll with no server Synchronize), Master no longer demands a <strong>Hidden Ability</strong>, and the single-stat and total IV floors are lowered across the board. Payouts, timers, entry fees and the poké-ball / fully-evolved gates are unchanged. <code>/hunt</code>' },
+    ],
+  },
+  {
+    date: '2026-07-03',
+    tag: 'Dungeons',
+    title: 'New: mob-wave Arena chambers + an on-screen objective bar',
+    changes: [
+      { type: 'new', text: 'Dungeons can now include <strong>Arena chambers</strong> — walk your whole party in and the room seals, then you fight <strong>five escalating waves</strong> of aggressive Pokémon (fodder, elites, and a scaled-up boss on the final wave) before it opens again. <code>/dungeon</code>' },
+      { type: 'improved', text: 'Your <strong>current objective now shows on a boss bar</strong> at the top of the screen with a live progress gauge, so it’s no longer buried in chat. Sword-killing a dungeon mob also correctly counts toward kill objectives now — not just Cobblemon battles. <code>/dungeon</code>' },
+    ],
+  },
+  {
+    date: '2026-07-03',
+    tag: 'Raid Boss',
+    title: 'Improved: raid bosses now telegraph their weakness',
+    changes: [
+      { type: 'improved', text: 'A raid boss’s type weakness already rotates as it loses HP — now it’s actually <strong>visible</strong>. The raid boss bar shows the current <strong>⚠ WEAK: TYPE</strong>, and every phase change throws a center-screen title telling the whole raid what to bring next. No more spamming one move blind — you can read the fight. <code>/raid</code>' },
+    ],
+  },
+  {
+    date: '2026-07-03',
+    tag: 'Quality of Life',
+    title: 'Fixed: buying a PC box could always fail',
+    changes: [
+      { type: 'fixed', text: 'Buying an extra PC box (through <strong>/passive</strong>) could fail every single time with “couldn’t add a PC box right now — you were not charged.” The underlying box-resize call is fixed, so boxes now purchase and persist correctly. Anyone who hit the error was never charged. <code>/passive</code>' },
+    ],
+  },
+  {
+    date: '2026-07-02',
+    tag: 'Gyms',
+    title: 'Improved: every gym now runs on one stable battle engine',
+    changes: [
+      { type: 'improved', text: 'All gym battles — Singles and Doubles — now run through the same <strong>RCT</strong> engine Battle Tower uses, with the older AI kept only as an emergency fallback. This kills a whole class of mid-battle force-switch stalls. Singles gyms keep their Terastal ban, and a singles leader now appears as a humanoid NPC on the pad. <code>/gym</code>' },
+      { type: 'improved', text: 'When the shared battle engine wedges, it now <strong>self-heals in seconds</strong> instead of minutes and stops throwing you into a dead engine while it recovers — so far fewer challenges get burned on a “no response from the battle engine” start. <code>/gym</code>' },
+    ],
+  },
+  {
+    date: '2026-07-02',
+    tag: 'PvP',
+    title: 'Fixed: base Kyurem is legal again in ranked & gyms',
+    changes: [
+      { type: 'fixed', text: 'Base <strong>Kyurem</strong> is National Dex OU, not Uber — it was being wrongly banned in Singles gym and ladder battles. It’s unbanned; only <strong>Kyurem-Black</strong> and <strong>Kyurem-White</strong> stay Uber-banned. <code>/pvp</code> · <code>/gym</code>' },
+    ],
+  },
+  {
+    date: '2026-07-01',
+    tag: 'PvP',
+    title: 'New: solo-queue AI fallback so you can climb off-peak',
+    changes: [
+      { type: 'new', text: 'Use <strong>/pvp queue</strong> and if no human match is found within 15 seconds you’ll battle an <strong>AI Trainer</strong> instead, so you can keep climbing toward Ultraball even when nobody’s online. AI wins pay reduced RP, don’t touch your win/loss record, and <strong>can’t promote you past Ultraball</strong> — Masterball stays strictly player-vs-player. <code>/pvp</code>' },
+    ],
+  },
+  {
+    date: '2026-07-01',
+    tag: 'Fishing',
+    title: 'Changed: fishing events run on a set schedule + rare fish are event-only',
+    changes: [
+      { type: 'improved', text: 'Fishing tournaments and the Mystery Tide no longer fire hourly — they now run on a <strong>fixed daily schedule</strong> (default 02:00, 07:00, 14:00 and 19:00 server time). The <strong>Mystery Tide</strong> is now a gamble: it names five candidate biomes but only <strong>one</strong> actually holds the tide, and there are <strong>no hints</strong> — fishing a wrong biome stays completely silent. <code>/fish</code>' },
+      { type: 'improved', text: 'To stop around-the-clock macro farming, <strong>Legendary and Mythic fish now only bite during a live tournament window</strong>. Outside events the odds redistribute down to Epic-and-below. <code>/fish</code>' },
+    ],
+  },
   {
     date: '2026-06-28',
     tag: 'Mail',

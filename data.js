@@ -2241,13 +2241,6 @@ const TEAM = [
     ],
   },
   {
-    group: 'Developers',
-    members: [
-      { name: 'ghostplays00', role: 'Developer', avatar: 'assets/team/ghostplays00.png',
-        motto: "You're impossible to underestimate." },
-    ],
-  },
-  {
     group: 'Zeniths',
     members: [
       { name: 'Slaaaine', role: 'Zenith', avatar: 'assets/team/slaaaine.png', motto: 'BingBong not bingbonging.' },

@@ -394,6 +394,11 @@ const FEATURES = {
           'Form a party (up to six) and start a run together with a shared pool of lives — die and you’re out, so the team has to play smart. Lives scale with rank, and a Heart Crystal can restore them mid-run.',
       },
       {
+        title: 'Build a party for Set Bonuses',
+        body:
+          'Your six Cobblemon double as a gear set. Share an elemental type across 2, 4 or 6 of your party and you unlock tiered Set Bonuses that stay active for the whole run — stronger hits, damage resistance, thorns, knockback and more. Dual-types count for both of their types, so a clever squad can stack several bonuses at once. Preview what your current party grants with /dungeon setbonus, and watch the active bonuses on the dungeon sidebar.',
+      },
+      {
         title: 'Clear objectives',
         body:
           'Every dungeon has mandatory objectives to clear it, plus optional side-quests (reach, collect, defeat) that aren’t required but boost your rewards when completed.',
@@ -427,11 +432,13 @@ const FEATURES = {
     commands: [
       { cmd: '/dungeon', desc: 'Open the dungeon hub and enter runs (also /ascdun)' },
       { cmd: '/dungeon shop', desc: 'Spend Shards in the Shard Shop' },
+      { cmd: '/dungeon setbonus', desc: 'Preview the type Set Bonuses your party grants' },
       { cmd: '/party', desc: 'Form a party for shared-lives dungeon runs' },
     ],
     notes: [
       'Higher ranks get more daily keys — up to five at the top tier.',
       'Side-quests are optional but directly scale your reward quality.',
+      'Set Bonuses reward type-themed teams: six mons of one type is the strongest single bonus, but mixed dual-type squads can stack several at once.',
       'A single dungeon can chain reach → puzzle → parkour → trainer battle → boss as objectives or side-quests.',
     ],
   },
@@ -625,7 +632,7 @@ const FEATURES = {
     tag: '/bp · /ranks',
     category: 'Progression',
     blurb:
-      'Seasonal Battle Pass tracks, the gem-only Solar Pass with 30 days of daily rewards, an 8-tier rank progression with badges, and permanent passive upgrades you keep forever.',
+      'Seasonal Battle Pass tracks, the gem-only Solar Pass with 30 days of daily rewards, an 8-tier rank progression with badges, per-region Pokédex tracks, and permanent passive upgrades you keep forever.',
     intro:
       'Progression systems that reward the time you put in: a seasonal Battle Pass with reward tracks, the new Solar Pass that mails you rewards every day for a month, an eight-tier rank ladder with cosmetic glyph badges, and permanent passives that make your account stronger for good.',
     how: [
@@ -645,6 +652,11 @@ const FEATURES = {
           'An 8-tier rank progression tracks your overall account, with cosmetic badge glyphs that show next to your name. Ranks also gate access to certain features and perks.',
       },
       {
+        title: 'Complete Regional Dexes',
+        body:
+          'On top of the national Dex, every region from Kanto to Paldea has its own completion track. Register 25%, 50%, 75% and 100% of a region’s Pokémon and each milestone pays out — coins, tokens, and a Dex Crate key at 100%. It reuses the Pokémon you’ve already caught, so past progress counts the moment a track goes live. Open /regiondex to see all nine regions and how close you are on each.',
+      },
+      {
         title: 'Buy permanent passives',
         body:
           'Spend coins and Battle Tower tokens on permanent passive stats — shiny rate, hidden ability rate, catch rate, EXP, egg hatch speed, night vision. These never expire.',
@@ -658,9 +670,11 @@ const FEATURES = {
     commands: [
       { cmd: '/bp', desc: 'Open the Battle Pass' },
       { cmd: '/ranks', desc: 'View rank progression and perks' },
+      { cmd: '/regiondex', desc: 'Track per-region Pokédex completion for milestone rewards' },
       { cmd: '/passive', desc: 'Buy and manage permanent passives' },
     ],
     notes: [
+      'Regional Dex milestones stack with your national Dex — the same catches count toward both.',
       'Passives stack personal + clan tiers additively — being in an active clan compounds your account.',
     ],
   },
@@ -753,6 +767,40 @@ const FEATURES = {
       'The legendary catches in the Mystery Tide are intentionally ultra-rare — and only obtainable during the event.',
       'Auto-fishing is detected and throttled: macro-regular casts earn worthless junk until you fish like a human.',
       'Alias: /ascfish.',
+    ],
+  },
+
+  archaeology: {
+    name: 'Archaeology',
+    short: 'Archaeology',
+    accent: 'amber',
+    tag: 'Brush suspicious sand',
+    category: 'Collecting',
+    blurb:
+      'Brush suspicious sand and gravel at desert wells, pyramids, and ocean & trail ruins for a shot at Cobblemon loot — Rare Candy, EXP Candy, Poké Balls, relic coins, even a Master Ball — plus rare bottle caps for IV training.',
+    intro:
+      'The vanilla archaeology dig sites are worth visiting again. Every suspicious sand or gravel block you brush keeps all its normal pottery-sherd chances and adds a Cobblemon bonus roll on top — useful trainer items you’d otherwise grind or buy, with a rare jackpot and even rarer IV bottle caps.',
+    how: [
+      {
+        title: 'Find a dig site',
+        body:
+          'Suspicious sand and gravel appear at the usual vanilla spots: desert wells, desert pyramids, warm and cold ocean ruins, and trail ruins. Anywhere you can brush, the bonus loot applies — in every world.',
+      },
+      {
+        title: 'Brush for bonus loot',
+        body:
+          'Brush a block as normal. Alongside the vanilla sherds, there’s a chance for a Cobblemon reward — Rare Candy, EXP Candy, Poké Balls of various tiers, relic coins, and a rare Master Ball jackpot. The bonus is additive, so you never lose the pottery you came for.',
+      },
+      {
+        title: 'Dig up bottle caps',
+        body:
+          'Rarely, a brush turns up a Bottle Cap for IV training — usually a random-stat cap, and very occasionally a Gold (perfect-IV) cap. A genuine slice of endgame IV gear from a low-stakes side activity.',
+      },
+    ],
+    commands: [],
+    notes: [
+      'The bonus loot is additive — you never lose the normal archaeology sherds by having it enabled.',
+      'Applies in every world, at all six vanilla archaeology loot sites.',
     ],
   },
 
@@ -938,7 +986,7 @@ const FEATURES = {
 // Display order + grouping on the landing page
 const FEATURE_ORDER = [
   'solforge', 'crates', 'cosmetics', 'transform', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
-  'dungeons', 'safari', 'hunts', 'fishing', 'bingo', 'warzone', 'clans',
+  'dungeons', 'safari', 'hunts', 'fishing', 'archaeology', 'bingo', 'warzone', 'clans',
   'jobs', 'casino', 'playtime', 'progression',
 ];
 
@@ -1027,6 +1075,7 @@ const COMMANDS = [
       { cmd: '/az', desc: 'Area Zero combat zone' },
       { cmd: '/skill', desc: 'Spend your Area Zero paradox gauge' },
       { cmd: '/dungeon', desc: 'Enter seasonal dungeons' },
+      { cmd: '/dungeon setbonus', desc: 'Preview your party’s type Set Bonuses' },
       { cmd: '/party', desc: 'Party up for shared-lives dungeon runs' },
       { cmd: '/tg', desc: 'Training Grounds — EXP buffs' },
     ],
@@ -1070,6 +1119,7 @@ const COMMANDS = [
       { cmd: '/bp', desc: 'Seasonal Battle Pass' },
       { cmd: '/passive', desc: 'Buy & manage permanent passives' },
       { cmd: '/ranks', desc: 'Rank progression & perks' },
+      { cmd: '/regiondex', desc: 'Per-region Pokédex completion & milestone rewards' },
       { cmd: '/lvl', desc: 'ASC level & EXP' },
       { cmd: '/levels', desc: 'Prestige menu — reset at Lv.100 for a Star ✨ (/asclvl prestige)' },
       { cmd: '/lb', desc: 'Leaderboards' },
@@ -1200,6 +1250,14 @@ const NEWS = [
 const PATCHNOTES = [
   {
     date: '2026-07-03',
+    tag: 'Dungeons',
+    title: 'New: party Set Bonuses — your six Cobblemon are a gear set',
+    changes: [
+      { type: 'new', text: 'Your dungeon party doubles as an MMO-style gear set. Share an <strong>elemental type</strong> across <strong>2, 4 or 6</strong> of your six Cobblemon and you unlock tiered <strong>Set Bonuses</strong> that stay active for the whole run — stronger hits, damage resistance, thorns, knockback and more. <strong>Dual-types count for both</strong> of their types, so a clever team can stack several bonuses at once. Preview what your current party grants with <strong>/dungeon setbonus</strong> (works outside a run too), and watch the active bonuses on the dungeon sidebar. <code>/dungeon setbonus</code>' },
+    ],
+  },
+  {
+    date: '2026-07-03',
     tag: 'Bingo',
     title: 'Improved: Catch Bingo is a relaxed weekly card again — and it pays itself',
     changes: [
@@ -1271,6 +1329,14 @@ const PATCHNOTES = [
     changes: [
       { type: 'improved', text: 'Fishing tournaments and the Mystery Tide no longer fire hourly — they now run on a <strong>fixed daily schedule</strong> (default 02:00, 07:00, 14:00 and 19:00 server time). The <strong>Mystery Tide</strong> is now a gamble: it names five candidate biomes but only <strong>one</strong> actually holds the tide, and there are <strong>no hints</strong> — fishing a wrong biome stays completely silent. <code>/fish</code>' },
       { type: 'improved', text: 'To stop around-the-clock macro farming, <strong>Legendary and Mythic fish now only bite during a live tournament window</strong>. Outside events the odds redistribute down to Epic-and-below. <code>/fish</code>' },
+    ],
+  },
+  {
+    date: '2026-06-28',
+    tag: 'Ranks',
+    title: 'New: Regional Dex tracks for every generation',
+    changes: [
+      { type: 'new', text: 'On top of the national Dex, every region from <strong>Kanto to Paldea</strong> now has its own completion track. Register <strong>25%, 50%, 75% and 100%</strong> of a region’s Pokémon and each milestone pays out — coins, tokens, and a <strong>Dex Crate key at 100%</strong>. It reuses the Pokémon you’ve <strong>already caught</strong>, so past progress counts the moment the track goes live. Open <strong>/regiondex</strong> to see all nine regions and how close you are on each. <code>/regiondex</code>' },
     ],
   },
   {
@@ -1445,6 +1511,14 @@ const PATCHNOTES = [
     title: 'Improved: colored NPC nametags',
     changes: [
       { type: 'improved', text: 'NPC floating nametags are no longer all plain white — each NPC now gets a stable color from a readable palette, so a hub full of trainers actually has some variety to it.' },
+    ],
+  },
+  {
+    date: '2026-06-24',
+    tag: 'World Tweaks',
+    title: 'New: archaeology digs drop Cobblemon loot',
+    changes: [
+      { type: 'new', text: 'Brushing <strong>suspicious sand and gravel</strong> — at desert wells, desert pyramids, warm & cold ocean ruins and trail ruins — now has a chance to turn up <strong>Cobblemon loot</strong> on top of the usual pottery sherds: <strong>Rare Candy, EXP Candy, Poké Balls, relic coins</strong>, and a rare <strong>Master Ball</strong> jackpot. The bonus is additive, so you never lose the vanilla sherds. Rarely a brush even yields a <strong>Bottle Cap</strong> for IV training — occasionally a Gold (perfect-IV) one. Works in every world.' },
     ],
   },
   {

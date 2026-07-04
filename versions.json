@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-04T01:59:10.022Z",
+  "generatedAt": "2026-07-04T08:24:34.146Z",
   "count": 34,
   "mods": [
     {
@@ -95,7 +95,7 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "1.54.1"
+      "version": "1.61.0"
     },
     {
       "repo": "asc-essentials",

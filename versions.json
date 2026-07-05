@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-05T08:41:22.092Z",
+  "generatedAt": "2026-07-05T13:09:34.676Z",
   "count": 34,
   "mods": [
     {
@@ -85,7 +85,7 @@
     {
       "repo": "asc-cosmetics",
       "name": "CobbleAsia Cosmetics",
-      "version": "0.4.0"
+      "version": "0.5.0"
     },
     {
       "repo": "asc-crates",
@@ -95,7 +95,7 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "1.72.0"
+      "version": "1.74.1"
     },
     {
       "repo": "asc-essentials",

@@ -1341,6 +1341,14 @@ const PATCHNOTES = [
   {
     date: '2026-07-06',
     tag: 'SolForge',
+    title: 'Coming soon: Ceruledge joins the SolForge lineup',
+    changes: [
+      { type: 'new', text: 'A <strong>Steel/Fighting Ceruledge</strong> is joining the SolForge set as its sixth signature Pokémon, alongside Marshadow, Rayquaza, Hydreigon, Sigilyph and Armarouge. Its custom look is still being finished off, so keep an eye out for it dropping into the SolForge lineup soon.' },
+    ],
+  },
+  {
+    date: '2026-07-06',
+    tag: 'SolForge',
     title: 'New: Solar Ascension — forge your own SolForge gear',
     changes: [
       { type: 'new', text: 'Once you’re wearing a <strong>4-piece</strong> SolForge set you can forge more of the set yourself: spend <strong>Solar Shards</strong> at <strong>/ascforge solforge</strong> to craft a fresh SolForge gear piece, no crate required. A new way to complete the set through pure play. <code>/gear</code>' },

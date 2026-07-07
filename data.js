@@ -443,6 +443,54 @@ const FEATURES = {
     ],
   },
 
+  skills: {
+    name: 'Skills — McMMO-style grinding',
+    short: 'Skills',
+    accent: 'emerald',
+    tag: '/skills',
+    category: 'Progression',
+    featured: true,
+    blurb:
+      'Thirteen grinding skills across gathering, combat and utility. Every action you take levels a skill, stacks your Power Level and earns milestone coins and rank titles.',
+    intro:
+      'Skills brings classic McMMO-style progression to Cobble Asia. Just play the game — mine, chop, fish, fight, tame Pokémon, take a fall — and the matching skill levels on its own. There is nothing to activate: your Power Level is the sum of all thirteen skills and quietly grows the more you play.',
+    how: [
+      {
+        title: 'Level thirteen skills',
+        body:
+          'Five gathering skills (Mining, Woodcutting, Excavation, Herbalism, Fishing), four combat skills (Swords, Axes, Unarmed, Archery) and four utility skills (Taming from catching Pokémon, Acrobatics from surviving falls, Repair from anvils, Alchemy from brewing). Each climbs from 0 all the way to 1000.',
+      },
+      {
+        title: 'Watch your Power Level climb',
+        body:
+          'Your Power Level is the sum of every skill level. It shows up when players hover your name in chat, so a high Power Level is a visible flex — no command needed to prove you put in the hours.',
+      },
+      {
+        title: 'Earn tier titles',
+        body:
+          'Every skill passes through Novice, Apprentice (25), Adept (50), Expert (75) and Master (100) — so hitting 100 in Mining makes you a Master Miner. Titles never spam chat; they surface on your name hover and in the /skills menu. The whole server is notified every 50 levels and when someone earns a new title.',
+      },
+      {
+        title: 'Collect milestone coins',
+        body:
+          'Every 10 levels in a skill pays out a coin milestone, so steady grinding is steadily rewarded on top of whatever you were already doing to earn the XP.',
+      },
+      {
+        title: 'Climb the leaderboard',
+        body:
+          'Power Level is a full leaderboard category — check where you rank in /lb, and admins can raise a floating Power Level hologram at spawn for everyone to chase.',
+      },
+    ],
+    commands: [
+      { cmd: '/skills', desc: 'Open the skills menu — see every skill, its level and your Power Level (also /mcmmo)' },
+    ],
+    notes: [
+      'There are no passive combat perks at launch — skills are pure progression, titles and bragging rights.',
+      'Placed blocks don’t grant gathering XP, so you can’t farm a skill by breaking what you just placed.',
+      'PvP kills don’t grant combat XP — only fighting mobs does.',
+    ],
+  },
+
   safari: {
     name: 'Safari Zones',
     short: 'Safari',
@@ -1224,6 +1272,24 @@ const GUIDE = [
 // =====================================================================
 const NEWS = [
   {
+    tag: 'New Feature',
+    title: 'Skills are live — McMMO-style grinding lands on Cobble Asia',
+    body: 'Thirteen skills — Mining, Woodcutting, Fishing, Swords, Archery, Taming and more — now level on their own as you play. Every action stacks your Power Level (shown on your name hover), earns milestone coins, and unlocks Master titles. Open /skills to see them all.',
+    link: 'feature.html?f=skills',
+  },
+  {
+    tag: 'Season',
+    title: 'SolForge — Season of the First Sun is open',
+    body: 'Our first full season is live. Forge sun-powered weapons, tools and armor, level them with Solar Shards through /gear, and chase the server-wide Radiant State. Collect the 15-piece set from the SolForge Chest or forge your way there.',
+    link: 'feature.html?f=solforge',
+  },
+  {
+    tag: 'Dungeons',
+    title: 'Seasonal Dungeons are open — solo or party runs',
+    body: 'Rank-scaled daily keys, puzzles, parkour and skill-check trainer battles. Take them on solo or as a party of six with shared lives, build a type-themed team for Set Bonuses, and clear runs for relics, Shards and SolForge keys. Start at /dungeon.',
+    link: 'feature.html?f=dungeons',
+  },
+  {
     tag: 'Cozy Update',
     title: 'Bingo goes weekly again & the toughest Hunts eased up',
     body: '/bingo is back to a relaxed weekly card that pays out automatically — no claiming, no 6-hour rush — and the Hard/Insane/Master Poké Hunts dropped their nature and Hidden-Ability demands. Less grind, more cozy.',
@@ -1248,6 +1314,46 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-07-07',
+    tag: 'Skills',
+    title: 'New: McMMO-style Skills — thirteen skills that level as you play',
+    changes: [
+      { type: 'new', text: 'A whole new progression system landed: <strong>13 skills</strong> that level on their own as you play — five gathering (Mining, Woodcutting, Excavation, Herbalism, Fishing), four combat (Swords, Axes, Unarmed, Archery) and four utility (Taming from catching Pokémon, Acrobatics from surviving falls, Repair, Alchemy). Each climbs from 0 to <strong>1000</strong>. Your <strong>Power Level</strong> is the sum of them all and shows when players hover your name. Passing 25/50/75/100 in a skill earns <strong>Novice → Master</strong> titles (hover-only, never chat spam), the server is pinged every 50 levels, and every 10 levels pays a <strong>coin milestone</strong>. Track where you rank on the <strong>Power Level leaderboard</strong>. Open it all with <code>/skills</code>.' },
+    ],
+  },
+  {
+    date: '2026-07-07',
+    tag: 'Mail',
+    title: 'Fixed: crate keys and rewards can no longer be lost to a full inventory',
+    changes: [
+      { type: 'fixed', text: 'If your inventory was full when a <strong>crate key</strong> was granted or a reward was handed out, it could simply vanish. Overflow now goes to your <strong>/mail</strong> instead of dropping into the void, so you can always claim it later. <code>/mail</code>' },
+    ],
+  },
+  {
+    date: '2026-07-07',
+    tag: 'Dungeons',
+    title: 'Fixed: Arena chamber sealing quirks',
+    changes: [
+      { type: 'fixed', text: 'Arena chambers could seal a player into a spot they couldn’t stand in, and a second party could get tangled up in someone else’s sealed arena. Seals now drop you on solid ground and only admit <strong>your own engaging party</strong>. <code>/dungeon</code>' },
+    ],
+  },
+  {
+    date: '2026-07-06',
+    tag: 'SolForge',
+    title: 'New: Solar Ascension — forge your own SolForge gear',
+    changes: [
+      { type: 'new', text: 'Once you’re wearing a <strong>4-piece</strong> SolForge set you can forge more of the set yourself: spend <strong>Solar Shards</strong> at <strong>/ascforge solforge</strong> to craft a fresh SolForge gear piece, no crate required. A new way to complete the set through pure play. <code>/gear</code>' },
+    ],
+  },
+  {
+    date: '2026-07-06',
+    tag: 'Dungeons',
+    title: 'Improved: bigger parties, bigger runs',
+    changes: [
+      { type: 'improved', text: 'Party dungeon runs are rebalanced so a full squad actually feels like one — <strong>mob spawns scale with party size</strong> instead of thinning out, kill rewards were bumped, and the clear payout rose from <strong>100k to 150k coins</strong>. Rallying six players is now clearly worth it. <code>/dungeon</code> · <code>/party</code>' },
+    ],
+  },
   {
     date: '2026-07-03',
     tag: 'Dungeons',

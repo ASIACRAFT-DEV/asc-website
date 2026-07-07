@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-06T19:43:24.520Z",
-  "count": 34,
+  "generatedAt": "2026-07-07T02:08:07.972Z",
+  "count": 35,
   "mods": [
     {
       "repo": "asc-catchcombo",
@@ -48,6 +48,11 @@
       "version": "1.14.0"
     },
     {
+      "repo": "asc-mcmmo",
+      "name": "ASC McMMO",
+      "version": "1.2.0"
+    },
+    {
       "repo": "asc-pokeditor",
       "name": "ASC Pokeditor",
       "version": "1.8.3"
@@ -65,7 +70,7 @@
     {
       "repo": "asc-areazero",
       "name": "CobbleAsia Area Zero",
-      "version": "2.13.0"
+      "version": "2.13.1"
     },
     {
       "repo": "asc-battletower",
@@ -90,17 +95,17 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.51.1"
+      "version": "2.52.0"
     },
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "1.76.1"
+      "version": "1.77.2"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.55.0"
+      "version": "7.56.3"
     },
     {
       "repo": "asc-forge",
@@ -115,7 +120,7 @@
     {
       "repo": "asc-leaderboard",
       "name": "CobbleAsia Leaderboard",
-      "version": "1.10.2"
+      "version": "1.11.0"
     },
     {
       "repo": "asc-legendspawns",
@@ -130,7 +135,7 @@
     {
       "repo": "asc-mail",
       "name": "CobbleAsia Mail",
-      "version": "1.12.0"
+      "version": "1.13.0"
     },
     {
       "repo": "asc-npcs",

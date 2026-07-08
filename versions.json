@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T01:49:10.250Z",
+  "generatedAt": "2026-07-08T08:08:52.705Z",
   "count": 35,
   "mods": [
     {
@@ -50,7 +50,7 @@
     {
       "repo": "asc-mcmmo",
       "name": "ASC McMMO",
-      "version": "2.0.0"
+      "version": "2.0.1"
     },
     {
       "repo": "asc-pokeditor",
@@ -100,12 +100,12 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "1.85.0"
+      "version": "1.87.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.59.0"
+      "version": "7.59.1"
     },
     {
       "repo": "asc-forge",
@@ -130,7 +130,7 @@
     {
       "repo": "asc-levels",
       "name": "CobbleAsia Levels",
-      "version": "1.7.2"
+      "version": "1.8.0"
     },
     {
       "repo": "asc-mail",

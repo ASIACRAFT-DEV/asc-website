@@ -1315,6 +1315,46 @@ const NEWS = [
 // =====================================================================
 const PATCHNOTES = [
   {
+    date: '2026-07-10',
+    tag: 'Season Vault',
+    title: 'New: the Season Vault — carry a few things across the wipe',
+    changes: [
+      { type: 'new', text: 'A brand-new <strong>Season Vault</strong> keeps a handful of your things safe from eco wipes, Poké wipes and season resets — open it with <strong>/svault</strong> (alias <code>/seasonvault</code>). Store <strong>legendary &amp; mythical Pokémon</strong> and <strong>SolForge Pokémon</strong>, plus items and <strong>SolForge gear</strong>; how much you can keep grows with your donator rank. A few rules keep it fair — no fusions or Manaphy on the Pokémon side, and dex modifiers, Master &amp; Origin Balls and shulker boxes can’t be stored. <code>/svault</code>' },
+    ],
+  },
+  {
+    date: '2026-07-10',
+    tag: 'Event',
+    title: 'New: END OF THE WORLD — the Season 1 finale',
+    changes: [
+      { type: 'new', text: 'Season 1 is going out with a bang. <strong>Global Energy is now unstable</strong> — a legendary can <strong>surge at any time</strong> instead of waiting on a fixed threshold, so keep a party ready at all times. The finale runs until the season wraps up on <strong>August 1</strong>.' },
+    ],
+  },
+  {
+    date: '2026-07-08',
+    tag: 'Dungeons',
+    title: 'Improved: clear grades reworked + a SolForge Key on every clear',
+    changes: [
+      { type: 'improved', text: 'Dungeon clears were regraded — the top <strong>S+</strong> rank now takes a sub-15-minute run — and <strong>every grade now drops a SolForge Key</strong>, so every clear moves you toward SolForge gear. <code>/dungeon</code>' },
+    ],
+  },
+  {
+    date: '2026-07-08',
+    tag: 'Dungeons',
+    title: 'Fixed: the Twin boss no longer freezes the fight',
+    changes: [
+      { type: 'fixed', text: 'The Twins’ finale could lock up mid-fight on the old ritual step. That step is gone — it’s now a clean <strong>twin-link + orb</strong> encounter that plays through without stalling. Totems also work again in every dungeon. <code>/dungeon</code>' },
+    ],
+  },
+  {
+    date: '2026-07-08',
+    tag: 'SolForge',
+    title: 'Improved: every SolForge piece comes fully enchanted',
+    changes: [
+      { type: 'improved', text: 'All SolForge gear now carries its <strong>full enchant set</strong>, and pieces already in circulation were topped up automatically — no more half-enchanted drops. A glitch that wiped a piece’s gradient name when enchanting it on an anvil is fixed too. <code>/gear</code>' },
+    ],
+  },
+  {
     date: '2026-07-07',
     tag: 'Skills',
     title: 'New: McMMO-style Skills — thirteen skills that level as you play',

@@ -147,10 +147,12 @@ if (patchPreview && typeof PATCHNOTES !== 'undefined') {
 }
 
 // --- Live server status ---
-// Queried from two independent status APIs, whichever answers first wins. A single
-// provider being down, rate-limited, or blocked by a client adblocker (api.mcsrvstat.us
-// is on some block lists) no longer kills the widget. Each call is timeout-bounded so
-// the label can't get stuck on "checking status…".
+// Queried from two independent status APIs. The server is treated as ONLINE if EITHER
+// provider reports it online — a single provider being down, rate-limited, adblock-
+// blocked (api.mcsrvstat.us is on some block lists), or serving a STALE cached "offline"
+// no longer wins over a healthy reading from the other (mcsrvstat.us falsely reported
+// offline while the server was full — 2026-07-11). Each call is timeout-bounded so the
+// label can't get stuck on "checking status…".
 const countEl = document.getElementById('player-count');
 const statusWrap = countEl && countEl.closest('.hub-status');
 if (countEl) {
@@ -182,11 +184,20 @@ if (countEl) {
   ];
 
   (async () => {
-    for (const p of providers) {
-      const res = await p();
-      if (res) { res.online ? setOnline(res.on, res.max) : setOffline('Server offline'); return; }
+    // Query BOTH providers; ONLINE wins if ANY says online (use the higher player
+    // count). Only "Server offline" when every provider answered and all said offline;
+    // only "Status unavailable" when none answered at all.
+    const results = await Promise.all(providers.map((p) => p().catch(() => null)));
+    const answered = results.filter((r) => r);
+    const onlineRes = answered.filter((r) => r.online);
+    if (onlineRes.length) {
+      const best = onlineRes.reduce((a, b) => (b.on > a.on ? b : a));
+      setOnline(best.on, best.max);
+    } else if (answered.length) {
+      setOffline('Server offline');
+    } else {
+      setOffline('Status unavailable');
     }
-    setOffline('Status unavailable');
   })();
 }
 

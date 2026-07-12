@@ -1277,42 +1277,6 @@ const NEWS = [
     body: 'The Season of the First Sun is going out with a bang. The END OF THE WORLD event is live until the season closes on August 1, 2026 — every banner unlocked, Unstable Global Energy surging and hourly fishing. Say your goodbyes, then see everything coming in Season 2.',
     link: 'guide.html',
   },
-  {
-    tag: 'New Feature',
-    title: 'Skills are live — McMMO-style grinding lands on Cobble Asia',
-    body: 'Thirteen skills — Mining, Woodcutting, Fishing, Swords, Archery, Taming and more — now level on their own as you play. Every action stacks your Power Level (shown on your name hover), earns milestone coins, and unlocks Master titles. Open /skills to see them all.',
-    link: 'feature.html?f=skills',
-  },
-  {
-    tag: 'Season',
-    title: 'SolForge — Season of the First Sun is open',
-    body: 'Our first full season is live. Forge sun-powered weapons, tools and armor, level them with Solar Shards through /gear, and chase the server-wide Radiant State. Collect the 15-piece set from the SolForge Chest or forge your way there.',
-    link: 'feature.html?f=solforge',
-  },
-  {
-    tag: 'Dungeons',
-    title: 'Seasonal Dungeons are open — solo or party runs',
-    body: 'Rank-scaled daily keys, puzzles, parkour and skill-check trainer battles. Take them on solo or as a party of six with shared lives, build a type-themed team for Set Bonuses, and clear runs for relics, Shards and SolForge keys. Start at /dungeon.',
-    link: 'feature.html?f=dungeons',
-  },
-  {
-    tag: 'Cozy Update',
-    title: 'Bingo goes weekly again & the toughest Hunts eased up',
-    body: '/bingo is back to a relaxed weekly card that pays out automatically — no claiming, no 6-hour rush — and the Hard/Insane/Master Poké Hunts dropped their nature and Hidden-Ability demands. Less grind, more cozy.',
-    link: 'feature.html?f=bingo',
-  },
-  {
-    tag: 'Playtime',
-    title: 'Playtime Rewards — get paid for playing',
-    body: 'A new /playtime claim ladder rewards active play forever: a reward every 10h, a bigger haul every 100h, looping past 1000h — plus milestone titles. Idling never advances it.',
-    link: 'feature.html?f=playtime',
-  },
-  {
-    tag: 'Casino',
-    title: 'Lucky Key Spin lands in the Casino',
-    body: 'Spend 100k for an animated case-roll spin at a Vote, Legacy or Origin key — with a daily free spin on the house. Joins Coinflip, Dice, Blackjack and the Lottery in /casino.',
-    link: 'feature.html?f=casino',
-  },
 ];
 
 // =====================================================================

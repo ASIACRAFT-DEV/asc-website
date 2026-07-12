@@ -635,3 +635,68 @@ a.credit-row:hover .credit-link { color: var(--gold-deep); }
   .ip-chip { width: 100%; }
   .ip-chip code { flex: 1; min-width: 0; overflow-wrap: anywhere; }
 }
+
+/* ============================================================
+   SEASON 2 CHANGES  (guide.html)
+   ============================================================ */
+.s2-intro { margin-bottom: 30px; }
+.s2-intro p { color: var(--ink-2); font-size: 16.5px; line-height: 1.7; margin: 0 0 14px; }
+
+.s2-block {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-left: 3px solid var(--gold);
+  border-radius: var(--radius);
+  padding: 30px 32px;
+  margin-bottom: 22px;
+}
+.s2-h {
+  font-family: var(--font-display);
+  font-size: clamp(20px, 3vw, 26px);
+  color: var(--ink);
+  line-height: 1.2;
+  margin: 0 0 6px;
+}
+.s2-block > p { color: var(--ink-2); font-size: 15.5px; line-height: 1.65; margin: 12px 0; }
+.s2-block .guide-cmds { margin: 12px 0 4px; }
+
+.s2-sub {
+  font-family: var(--font-display);
+  font-size: 14px;
+  color: var(--gold-deep);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+  margin: 20px 0 8px;
+}
+.s2-list { list-style: none; display: flex; flex-direction: column; gap: 8px; margin: 8px 0; padding: 0; }
+.s2-list li {
+  position: relative; padding-left: 22px;
+  color: var(--ink-2); font-size: 15.5px; line-height: 1.5;
+}
+.s2-list li::before { content: "▸"; position: absolute; left: 2px; color: var(--gold); }
+.s2-list li strong { color: var(--ink); }
+
+.s2-callout {
+  background: var(--gold-bg);
+  border: 1px solid var(--gold);
+  border-radius: 10px;
+  padding: 14px 18px;
+  margin: 16px 0 6px;
+  font-size: 15px; line-height: 1.55; color: var(--ink);
+}
+.s2-callout .s2-star { font-family: var(--font-display); color: var(--gold-deep); font-size: 17px; }
+
+.s2-table-wrap { overflow-x: auto; margin: 16px 0 6px; }
+.s2-table { width: 100%; border-collapse: collapse; font-size: 14.5px; min-width: 460px; }
+.s2-table th {
+  font-family: var(--font-display); text-align: left; color: var(--ink);
+  background: var(--gold-bg); padding: 11px 14px;
+  border-bottom: 2px solid var(--gold); font-size: 13px; letter-spacing: .03em;
+}
+.s2-table td { padding: 10px 14px; border-bottom: 1px solid var(--line); color: var(--ink-2); }
+.s2-table tr:last-child td { border-bottom: none; }
+.s2-table td:first-child { color: var(--ink); font-weight: 600; }
+
+@media (max-width: 640px) {
+  .s2-block { padding: 24px 20px; }
+}

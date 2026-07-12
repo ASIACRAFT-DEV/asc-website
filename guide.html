@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Beginner's Guide — Cobble Asia</title>
-  <meta name="description" content="New to Cobble Asia? This beginner's guide walks you through connecting, catching, earning and progressing on the server, step by step." />
+  <title>Season 2 Changes — Cobble Asia</title>
+  <meta name="description" content="Season 2 Gameplay Overhaul — Banner &amp; Summon revamp, Battle Pass, Area Zero, Battle Tower, Gyms &amp; Elite Four, Rank progression and PvP Ranked. Every activity now matters." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/server-icon.png" />
-  <link rel="stylesheet" href="styles.css?v=202607070855" />
+  <link rel="stylesheet" href="styles.css?v=202607120900" />
 </head>
 <body>
   <header class="nav">
@@ -20,7 +20,7 @@
         <a href="commands.html">Commands</a>
         <a href="https://cobbleasia.craftingstore.net" target="_blank" rel="noopener">Store</a>
         <a href="team.html">Team</a>
-        <a href="guide.html">Guide</a>
+        <a href="guide.html">Season 2</a>
         <a href="tutorial.html">Tutorial</a>
         <a href="faq.html">FAQ</a>
         <a href="patchnotes.html">Patch Notes</a>
@@ -35,34 +35,230 @@
       <div class="fp-hero-glow"></div>
       <div class="fp-hero-inner">
         <a class="back-link" href="index.html">← Back home</a>
-        <span class="fp-cat">New Player</span>
-        <h1 class="fp-title">Beginner's Guide</h1>
-        <p class="fp-blurb">Brand new to Cobble Asia? Follow these eight steps to go from first join to fully set up.</p>
-        <div class="ip-chip ip-chip-lg">
-          <span class="ip-label">IP</span>
-          <code>play.cobbleasia.net</code>
-          <button class="copy-btn" data-copy="play.cobbleasia.net" aria-label="Copy server IP">Copy</button>
-        </div>
+        <span class="fp-cat">🌋 Season 2</span>
+        <h1 class="fp-title">Season 2 Gameplay Overhaul</h1>
+        <p class="fp-blurb">Every activity now has a purpose. Progress by actually playing the game — not just farming coins.</p>
       </div>
     </section>
 
     <div class="fp-body">
-      <div class="guide-video reveal">
-        <div class="gv-head">Watch — Server Guide Video</div>
-        <div class="gv-frame">
-          <iframe src="https://www.youtube-nocookie.com/embed/Jh-gbLnmBa0"
-            title="Cobble Asia — Server Guide"
-            loading="lazy"
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-            referrerpolicy="strict-origin-when-cross-origin"
-            allowfullscreen></iframe>
-        </div>
+      <div class="s2-intro reveal">
+        <p>Season 2 is all about giving every activity a purpose. In Season 1, we noticed a few unhealthy gameplay loops:</p>
+        <ul class="s2-list">
+          <li>Farming money became the best strategy for almost everything.</li>
+          <li>Legendary Pokémon became less valuable because anyone could eventually gamble for them.</li>
+          <li>Battle Pass rewards weren't exciting enough.</li>
+          <li>Battle Tower became repetitive.</li>
+          <li>Some progression systems had too many requirements.</li>
+        </ul>
+        <p><strong>Season 2 aims to fix these problems.</strong></p>
       </div>
 
-      <div class="steps" id="guide-root"><!-- rendered by guide.js --></div>
+      <!-- BANNER & SUMMON -->
+      <div class="s2-block reveal">
+        <h2 class="s2-h">🎰 Banner &amp; Summon Revamp</h2>
+        <div class="guide-cmds"><code>/gamble</code><code>/ascsummon</code><code>/banner</code></div>
+        <p>One of the biggest problems we saw was that players would simply grind money and gamble until they obtained every Legendary. This made trading less meaningful and removed the excitement of obtaining rare Pokémon.</p>
+
+        <div class="s2-sub">Changes</div>
+        <ul class="s2-list">
+          <li>Pity increased from <strong>200 → 250</strong> pulls</li>
+          <li>Banner pulls are no longer purchased using coins</li>
+          <li>Banners now use <strong>Banner Pulls</strong>, a special currency</li>
+        </ul>
+
+        <div class="s2-sub">You can obtain Banner Pulls through</div>
+        <ul class="s2-list">
+          <li>Battle Tower</li>
+          <li>Area Zero</li>
+          <li>Dungeons</li>
+          <li>Daily Quests</li>
+          <li>Weekly Quests</li>
+          <li>Battle Pass</li>
+          <li>Banner Rotation</li>
+        </ul>
+
+        <p>Banners are now divided into <strong>Versions</strong>, each lasting 4 weeks. Instead of Trio Banners, we'll now feature <strong>Generation Banners (Gen 1–9)</strong>.</p>
+        <p>This keeps banners fresh while making Legendary Pokémon more valuable again.</p>
+      </div>
+
+      <!-- BATTLE PASS -->
+      <div class="s2-block reveal">
+        <h2 class="s2-h">🎟 Battle Pass Revamp</h2>
+        <p>The Season 1 Battle Pass simply wasn't rewarding enough. Season 2 greatly improves both the free and premium tracks.</p>
+
+        <div class="s2-sub">Rewards include</div>
+        <ul class="s2-list">
+          <li>Banner Pulls every 10 levels</li>
+          <li><strong>Premium Pass</strong> receives double Banner Pull rewards</li>
+          <li>Seasonal Essence</li>
+          <li>IV Modifiers</li>
+          <li>SBCs / GBCs</li>
+          <li>Various progression materials</li>
+        </ul>
+
+        <div class="s2-sub">Final Reward</div>
+        <p>Reach Level 100 to earn a:</p>
+        <div class="s2-callout"><span class="s2-star">⭐ Shiny Legendary Spin</span></div>
+        <p>The Battle Pass now rotates every <strong>45 days</strong>.</p>
+      </div>
+
+      <!-- AREA ZERO -->
+      <div class="s2-block reveal">
+        <h2 class="s2-h">🌌 Area Zero Revamp</h2>
+        <p>Area Zero has consistently been our most popular endgame activity, so we're expanding it significantly.</p>
+
+        <div class="s2-sub">New Features</div>
+        <ul class="s2-list">
+          <li>PvP-enabled zones with <strong>2x loot</strong></li>
+          <li>Alpha, Paradox, and Legendary Pokémon can spawn inside PvP zones</li>
+          <li>Catch privilege is determined by <strong>Last Hit</strong></li>
+          <li>Chance to obtain: Banner Pulls, Elemental DNA, IV Modifiers</li>
+        </ul>
+
+        <div class="s2-sub">Spawn System</div>
+        <ul class="s2-list">
+          <li>Alpha every <strong>10 minutes</strong></li>
+          <li>Paradox every <strong>30 minutes</strong></li>
+          <li>After defeating 5 Alphas + 5 Paradox Pokémon, a <strong>Legendary</strong> will spawn</li>
+        </ul>
+        <p>Progress is now visible directly on the Area Zero HUD.</p>
+      </div>
+
+      <!-- BATTLE TOWER -->
+      <div class="s2-block reveal">
+        <h2 class="s2-h">🏆 Battle Tower Revamp</h2>
+        <p>Battle Tower was fun initially, but eventually became repetitive and easy to cheese. Season 2 completely redesigns it.</p>
+
+        <div class="s2-sub">Tower Changes</div>
+        <ul class="s2-list">
+          <li>Removed all format-specific towers</li>
+          <li>Only <strong>Singles</strong> and <strong>Doubles</strong> remain</li>
+          <li>Opponents use randomized teams ranging from OU to AG</li>
+        </ul>
+
+        <div class="s2-sub">Survival Mechanics</div>
+        <ul class="s2-list">
+          <li>You begin with only <strong>3 Pokémon</strong></li>
+          <li>More party slots unlock as you climb higher</li>
+          <li>Fainted Pokémon cannot be used again during the run</li>
+          <li>Auto Heal now activates every <strong>5 floors</strong> instead of every floor</li>
+        </ul>
+
+        <div class="s2-sub">Quality of Life</div>
+        <ul class="s2-list">
+          <li>Checkpoints are now saved every floor</li>
+          <li>Disconnecting no longer sends you back several floors</li>
+        </ul>
+
+        <div class="s2-sub">Balance Changes</div>
+        <ul class="s2-list">
+          <li>Illegal Fusion Pokémon banned</li>
+          <li>Mega Rayquaza nerfed inside Battle Tower</li>
+          <li>Sorry, Cosmog Ray and Gardevoir Queen enjoyers 😅</li>
+        </ul>
+
+        <div class="s2-sub">Floor Decay</div>
+        <p>After Floor 50, every 10 floors your team level decreases by 5:</p>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Floor</th><th>Team Level</th></tr></thead>
+            <tbody>
+              <tr><td>Floor 60</td><td>Lv95</td></tr>
+              <tr><td>Floor 70</td><td>Lv90</td></tr>
+              <tr><td>Floor 80</td><td>Lv85</td></tr>
+              <tr><td>Floor 90</td><td>Lv80</td></tr>
+              <tr><td>Floor 100</td><td>Lv75</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="s2-sub">Auto Prestige</div>
+        <p>After clearing Floor 100:</p>
+        <ul class="s2-list">
+          <li>Automatically restart from Floor 1</li>
+          <li>Earn increased Token multipliers each Prestige</li>
+        </ul>
+        <p>Leaderboard titles remain for the <strong>Singles Crown</strong> and <strong>Doubles Crown</strong>.</p>
+      </div>
+
+      <!-- GYMS & ELITE FOUR -->
+      <div class="s2-block reveal">
+        <h2 class="s2-h">🏅 Gyms &amp; Elite Four Revamp</h2>
+        <p>Having 24 Elite Four members across multiple formats was simply too much. We're returning to a simpler progression.</p>
+
+        <div class="s2-sub">Changes</div>
+        <ul class="s2-list">
+          <li>One Elite Four</li>
+          <li><strong>NatDex OU</strong> format</li>
+          <li>Requires <strong>8 Gym Badges</strong> to challenge</li>
+        </ul>
+        <p>Player Gym Leaders were a fun idea, but participation remained very low. Gym Badges will now play a much larger role in progression.</p>
+      </div>
+
+      <!-- RANK PROGRESSION -->
+      <div class="s2-block reveal">
+        <h2 class="s2-h">📈 Rank Progression Revamp</h2>
+        <p>Ranks are now much simpler. Progress through:</p>
+        <p><strong>Rookie → Trainer → Ace Trainer → Pro Trainer → Veteran Trainer → Master Trainer</strong></p>
+        <p>Each rank requires four categories:</p>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Rank</th><th>Playtime</th><th>Pokédex</th><th>Gym Badges</th><th>PvP Wins</th></tr></thead>
+            <tbody>
+              <tr><td>Rookie</td><td>0 Hours</td><td>0%</td><td>1</td><td>0</td></tr>
+              <tr><td>Trainer</td><td>1 Day</td><td>10%</td><td>3</td><td>10</td></tr>
+              <tr><td>Ace Trainer</td><td>3 Days</td><td>25%</td><td>5</td><td>30</td></tr>
+              <tr><td>Pro Trainer</td><td>7 Days</td><td>50%</td><td>7</td><td>50</td></tr>
+              <tr><td>Veteran Trainer</td><td>14 Days</td><td>75%</td><td>9</td><td>100</td></tr>
+              <tr><td>Master Trainer</td><td>30 Days</td><td>100%</td><td>All</td><td>250</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Much easier to understand while still rewarding long-term progression.</p>
+      </div>
+
+      <!-- PVP RANKED -->
+      <div class="s2-block reveal">
+        <h2 class="s2-h">⚔ PvP Ranked Revamp</h2>
+        <div class="guide-cmds"><code>/pvp</code></div>
+        <p>Since PvP is now part of rank progression, we're redesigning Ranked as well.</p>
+
+        <div class="s2-sub">Ranked Tiers</div>
+        <ul class="s2-list">
+          <li>Poké Ball IV → I</li>
+          <li>Great Ball IV → I</li>
+          <li>Ultra Ball IV → I</li>
+          <li><strong>Master Tier</strong></li>
+        </ul>
+
+        <div class="s2-sub">Master Tier</div>
+        <p>Only <strong>10 players</strong> may hold Master Tier at any given time. To qualify:</p>
+        <ul class="s2-list">
+          <li>Reach Ultra Ball I</li>
+          <li>Rankings are based on total wins</li>
+          <li>Every 24 hours, the Top 10 eligible players are promoted into Master Tier</li>
+        </ul>
+        <p>Master Tier is designed to be competitive, prestigious, and constantly changing.</p>
+      </div>
+
+      <!-- FINAL THOUGHTS -->
+      <div class="s2-block reveal">
+        <h2 class="s2-h">Final Thoughts</h2>
+        <p>Season 2 is focused on making every activity matter. Instead of farming one thing for everything else, you'll progress by actually playing the game:</p>
+        <ul class="s2-list">
+          <li>🏆 Climb Battle Tower for Banner Pulls.</li>
+          <li>🌌 Explore Area Zero for rare resources.</li>
+          <li>⚔ Compete in PvP to reach Master Tier.</li>
+          <li>🏅 Challenge Gyms and the Elite Four.</li>
+          <li>📖 Complete the Battle Pass.</li>
+          <li>🎰 Spend your hard-earned Banner Pulls on the current banner rotation.</li>
+        </ul>
+        <p>Every system is now connected, creating a more rewarding endgame where time spent playing translates directly into progression — not just more coins.</p>
+      </div>
 
       <div class="fp-cta reveal">
-        <p>That's the basics — now go explore everything else.</p>
+        <p>Ready to dive into Season 2?</p>
         <div class="cta-row center">
           <a class="btn btn-primary" href="index.html#features">Browse all features →</a>
           <a class="btn btn-ghost" href="commands.html">Full command list</a>
@@ -77,8 +273,7 @@
     <p class="footer-dim">Not affiliated with Mojang, Nintendo, or The Pokémon Company.</p>
   </footer>
 
-  <script src="data.js?v=202607070855"></script>
-  <script src="guide.js?v=202607070855"></script>
-  <script src="app.js?v=202607070855"></script>
+  <script src="data.js?v=202607120900"></script>
+  <script src="app.js?v=202607120900"></script>
 </body>
 </html>

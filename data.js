@@ -1272,6 +1272,12 @@ const GUIDE = [
 // =====================================================================
 const NEWS = [
   {
+    tag: 'Event',
+    title: 'END OF THE WORLD — Season 1 ends August 1, 2026',
+    body: 'The Season of the First Sun is going out with a bang. The END OF THE WORLD event is live until the season closes on August 1, 2026 — every banner unlocked, Unstable Global Energy surging and hourly fishing. Say your goodbyes, then see everything coming in Season 2.',
+    link: 'guide.html',
+  },
+  {
     tag: 'New Feature',
     title: 'Skills are live — McMMO-style grinding lands on Cobble Asia',
     body: 'Thirteen skills — Mining, Woodcutting, Fishing, Swords, Archery, Taming and more — now level on their own as you play. Every action stacks your Power Level (shown on your name hover), earns milestone coins, and unlocks Master titles. Open /skills to see them all.',

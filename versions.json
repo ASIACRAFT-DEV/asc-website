@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-13T01:52:54.307Z",
-  "count": 35,
+  "generatedAt": "2026-07-13T14:07:18.340Z",
+  "count": 36,
   "mods": [
     {
       "repo": "asc-catchcombo",
@@ -15,7 +15,7 @@
     {
       "repo": "asc-clans",
       "name": "ASC Clans",
-      "version": "1.21.1"
+      "version": "1.24.0"
     },
     {
       "repo": "asc-cobsave",
@@ -26,6 +26,11 @@
       "repo": "asc-craftingstore",
       "name": "ASC CraftingStore",
       "version": "1.2.1"
+    },
+    {
+      "repo": "asc-dexquest",
+      "name": "ASC Dex Quests",
+      "version": "1.0.1"
     },
     {
       "repo": "asc-discord",
@@ -75,7 +80,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.29.0"
+      "version": "3.31.0"
     },
     {
       "repo": "asc-battlepass",
@@ -100,12 +105,12 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "1.94.0"
+      "version": "1.95.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.69.0"
+      "version": "7.76.0"
     },
     {
       "repo": "asc-forge",
@@ -165,7 +170,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.9.2"
+      "version": "3.10.1"
     },
     {
       "repo": "asc-transform",

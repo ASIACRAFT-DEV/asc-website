@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-14T01:29:12.854Z",
-  "count": 36,
+  "generatedAt": "2026-07-14T07:47:57.823Z",
+  "count": 37,
   "mods": [
     {
       "repo": "asc-catchcombo",
@@ -88,6 +88,11 @@
       "version": "2.18.2"
     },
     {
+      "repo": "asc-breeding",
+      "name": "CobbleAsia Breeding",
+      "version": "1.0.0"
+    },
+    {
       "repo": "asc-chestshop",
       "name": "CobbleAsia ChestShop",
       "version": "2.5.0"
@@ -110,7 +115,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.76.0"
+      "version": "7.81.0"
     },
     {
       "repo": "asc-forge",

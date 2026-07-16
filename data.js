@@ -1115,6 +1115,9 @@ const COMMANDS = [
     items: [
       { cmd: '/bt', desc: 'Battle Tower — tiered singles & doubles ladder' },
       { cmd: '/ascbt prestige <tower>', desc: 'Reset a Floor-100 ladder for a permanent season bonus' },
+      { cmd: '/bts2', desc: 'Battle Tower S2 — roguelike climb: draft a team, ascend, shop every few floors' },
+      { cmd: '/bts2 battle', desc: 'Fight the next floor of your roguelike run (alias /bts2 next)' },
+      { cmd: '/bts2 forfeit', desc: 'Abandon your Battle Tower S2 run' },
       { cmd: '/scout', desc: 'Battle-Scout — see the opponent’s revealed team mid-fight (alias /ascscout)' },
       { cmd: '/gym', desc: 'Challenge the eight gym leaders' },
       { cmd: '/pvp', desc: 'PvP hub — Warzone, matchmaking, shop' },

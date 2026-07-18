@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/server-icon.png" />
-  <link rel="stylesheet" href="styles.css?v=202607120900" />
+  <link rel="stylesheet" href="styles.css?v=202607180900" />
 </head>
 <body>
   <header class="nav">
@@ -58,8 +58,69 @@
         <p><strong>Season 2 aims to fix these problems.</strong></p>
       </div>
 
+      <!-- WIPE CHECKLIST / STATUS BOARD -->
+      <div class="s2-status reveal">
+        <div class="s2-status-head">
+          <h2>🛠️ Season 2 Progress Tracker</h2>
+          <p>A live look at where every Season 2 system stands. Click any item to jump to its details below.</p>
+        </div>
+
+        <div class="s2-legend-row">
+          <span class="s2-pill"><span class="s2-dot ready"></span>Ready — built &amp; live</span>
+          <span class="s2-pill"><span class="s2-dot dev"></span>Under Development</span>
+          <span class="s2-pill"><span class="s2-dot todo"></span>Not Started Yet</span>
+        </div>
+
+        <div class="s2-status-grid">
+          <!-- READY -->
+          <div class="s2-col ready">
+            <div class="s2-col-head">
+              <span class="s2-col-title">Ready for Implementation</span>
+              <span class="s2-col-count">5</span>
+            </div>
+            <ul class="s2-check">
+              <li><a href="#s2-bazaar"><span class="mark">✓</span><span>Cobble Bazaar — Dynamic Shop</span></a></li>
+              <li><a href="#s2-clans"><span class="mark">✓</span><span>Clan Revamp<span class="lbl-sub">territory, wars, clan raid boss</span></span></a></li>
+              <li><a href="#s2-breeding"><span class="mark">✓</span><span>Breeding Changes<span class="lbl-sub">HA gate + /unbreed lock</span></span></a></li>
+              <li><a href="#s2-dexquest"><span class="mark">✓</span><span>Pokédex Research Quests<span class="lbl-sub">live — reward values being tuned</span></span></a></li>
+              <li><a href="#s2-battletower"><span class="mark">✓</span><span>Battle Tower Revamp<span class="lbl-sub">roguelike Nuzlocke climb</span></span></a></li>
+            </ul>
+          </div>
+
+          <!-- UNDER DEVELOPMENT -->
+          <div class="s2-col dev">
+            <div class="s2-col-head">
+              <span class="s2-col-title">Under Development</span>
+              <span class="s2-col-count">3</span>
+            </div>
+            <ul class="s2-check">
+              <li><a href="#s2-areazero"><span class="mark">●</span><span>Area Zero Revamp<span class="lbl-sub">PvP zones, Alpha/Paradox spawns</span></span></a></li>
+              <li><a href="#s2-pvp"><span class="mark">●</span><span>PvP Ranked Revamp<span class="lbl-sub">Ball tiers + Master Tier</span></span></a></li>
+              <li><a href="#s2-raidboss"><span class="mark">●</span><span>Raid Boss Revamp<span class="lbl-sub">spawns hidden in the Safari</span></span></a></li>
+            </ul>
+          </div>
+
+          <!-- NOT STARTED -->
+          <div class="s2-col todo">
+            <div class="s2-col-head">
+              <span class="s2-col-title">Not Started Yet</span>
+              <span class="s2-col-count">7</span>
+            </div>
+            <ul class="s2-check">
+              <li><a href="#s2-banner"><span class="mark">○</span><span>Banner &amp; Summon Revamp<span class="lbl-sub">Banner Pulls currency</span></span></a></li>
+              <li><a href="#s2-economy"><span class="mark">○</span><span>Coins &amp; Economy Revamp<span class="lbl-sub">server-wide coin nerf</span></span></a></li>
+              <li><a href="#s2-jobs"><span class="mark">○</span><span>Jobs Revamp<span class="lbl-sub">Paycheck questline + NPCs</span></span></a></li>
+              <li><a href="#s2-battlepass"><span class="mark">○</span><span>Battle Pass Revamp</span></a></li>
+              <li><a href="#s2-paradox"><span class="mark">○</span><span>Paradox Crafting<span class="lbl-sub">Elemental DNA</span></span></a></li>
+              <li><a href="#s2-legend"><span class="mark">○</span><span>Global Energy &amp; Legend<span class="lbl-sub">per-player Legend bar</span></span></a></li>
+              <li><a href="#s2-gyms"><span class="mark">○</span><span>Gyms &amp; Elite Four Revamp</span></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
       <!-- BANNER & SUMMON -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-banner">
         <h2 class="s2-h">🎰 Banner &amp; Summon Revamp</h2>
         <div class="guide-cmds"><code>/gamble</code><code>/ascsummon</code><code>/banner</code></div>
         <p>One of the biggest problems we saw was that players would simply grind money and gamble until they obtained every Legendary. This made trading less meaningful and removed the excitement of obtaining rare Pokémon.</p>
@@ -87,7 +148,7 @@
       </div>
 
       <!-- COINS & ECONOMY -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-economy">
         <h2 class="s2-h">💰 Coins &amp; Economy Revamp</h2>
         <p>Money is no longer the driving force for Legendaries — but coins still matter. In Season 2 they shift from "buy everything" to fuelling the content loop.</p>
 
@@ -105,7 +166,7 @@
       </div>
 
       <!-- COBBLE BAZAAR -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-bazaar">
         <h2 class="s2-h">🏪 Cobble Bazaar — Dynamic Shop</h2>
         <div class="guide-cmds"><code>/shop</code></div>
         <p>Season 2's <code>/shop</code> becomes the <strong>Cobble Bazaar</strong> — a living market where prices move with supply and demand instead of sitting at fixed values.</p>
@@ -121,7 +182,7 @@
       </div>
 
       <!-- JOBS -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-jobs">
         <h2 class="s2-h">🧰 Jobs Revamp</h2>
         <div class="guide-cmds"><code>/jobs</code></div>
         <p>Jobs move from a <strong>passive income</strong> system to an <strong>activity-driven questline</strong>. Instead of coins trickling in while you grind one action, you complete job quests to earn <strong>Paychecks</strong> — then claim them from that job's dedicated <strong>NPC</strong>.</p>
@@ -162,7 +223,7 @@
       </div>
 
       <!-- BATTLE PASS -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-battlepass">
         <h2 class="s2-h">🎟 Battle Pass Revamp</h2>
         <p>The Season 1 Battle Pass simply wasn't rewarding enough. Season 2 greatly improves both the free and premium tracks.</p>
 
@@ -183,7 +244,7 @@
       </div>
 
       <!-- AREA ZERO -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-areazero">
         <h2 class="s2-h">🌌 Area Zero Revamp</h2>
         <p>Area Zero has consistently been our most popular endgame activity, so we're expanding it significantly.</p>
 
@@ -206,7 +267,7 @@
       </div>
 
       <!-- PARADOX CRAFTING -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-paradox">
         <h2 class="s2-h">🧬 Paradox Crafting</h2>
         <p>Paradox Pokémon can no longer be caught from wild spawns. In Season 2 you craft them instead.</p>
 
@@ -218,7 +279,7 @@
       </div>
 
       <!-- RAID BOSS -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-raidboss">
         <h2 class="s2-h">🐲 Raid Boss Revamp</h2>
         <p>Raid Bosses are moving out into the world — finding one is now part of the hunt.</p>
 
@@ -232,7 +293,7 @@
       </div>
 
       <!-- POKEDEX RESEARCH QUESTS -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-dexquest">
         <h2 class="s2-h">📒 Pokédex Research Quests</h2>
         <p>Inspired by Legends: Arceus, every Pokémon gets its own research quest — giving the Safari a real purpose beyond just catching, and giving players something to do other than dungeon speedruns and fishing.</p>
 
@@ -258,7 +319,7 @@
       </div>
 
       <!-- GLOBAL ENERGY / LEGEND -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-legend">
         <h2 class="s2-h">⚡ Global Energy &amp; Legend Revamp</h2>
         <p>Legendary spawning moves from a shared server bar to something personal you build up yourself.</p>
 
@@ -281,7 +342,7 @@
       </div>
 
       <!-- BATTLE TOWER -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-battletower">
         <h2 class="s2-h">🏆 Battle Tower Revamp</h2>
         <p>Battle Tower was fun initially, but eventually became repetitive and easy to cheese. Season 2 completely redesigns it into a roguelike climb.</p>
 
@@ -360,7 +421,7 @@
       </div>
 
       <!-- GYMS & ELITE FOUR -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-gyms">
         <h2 class="s2-h">🏅 Gyms &amp; Elite Four Revamp</h2>
         <p>Having 24 Elite Four members across multiple formats was simply too much. We're returning to a simpler progression.</p>
 
@@ -374,7 +435,7 @@
       </div>
 
       <!-- CLANS -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-clans">
         <h2 class="s2-h">🛡️ Clan Revamp</h2>
         <p>Clans get a full progression and territory system in Season 2 — building a clan base is now something you earn and invest in.</p>
 
@@ -432,7 +493,7 @@
       </div>
 
       <!-- PVP RANKED -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-pvp">
         <h2 class="s2-h">⚔ PvP Ranked Revamp</h2>
         <div class="guide-cmds"><code>/pvp</code></div>
         <p>Since PvP is now part of rank progression, we're redesigning Ranked as well.</p>
@@ -456,7 +517,7 @@
       </div>
 
       <!-- BREEDING -->
-      <div class="s2-block reveal">
+      <div class="s2-block reveal" id="s2-breeding">
         <h2 class="s2-h">🥚 Breeding Changes</h2>
         <div class="guide-cmds"><code>/unbreed</code></div>
         <p>Breeding gets fairer in Season 2 — genetics behave the way they should, and the Pokémon market stays healthy.</p>

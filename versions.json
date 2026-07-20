@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-20T02:04:58.946Z",
+  "generatedAt": "2026-07-20T08:41:35.297Z",
   "count": 37,
   "mods": [
     {
@@ -105,7 +105,7 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.55.0"
+      "version": "2.57.0"
     },
     {
       "repo": "asc-dungeons",
@@ -115,7 +115,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.91.0"
+      "version": "7.93.0"
     },
     {
       "repo": "asc-forge",
@@ -145,7 +145,7 @@
     {
       "repo": "asc-mail",
       "name": "CobbleAsia Mail",
-      "version": "1.13.0"
+      "version": "1.13.1"
     },
     {
       "repo": "asc-npcs",

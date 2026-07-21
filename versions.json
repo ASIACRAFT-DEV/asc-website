@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-21T01:47:42.541Z",
+  "generatedAt": "2026-07-21T08:08:25.887Z",
   "count": 37,
   "mods": [
     {
@@ -50,7 +50,7 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "1.14.0"
+      "version": "2.1.0"
     },
     {
       "repo": "asc-mcmmo",
@@ -80,7 +80,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.37.0"
+      "version": "3.37.1"
     },
     {
       "repo": "asc-battlepass",
@@ -105,17 +105,17 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.57.0"
+      "version": "2.57.2"
     },
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "1.96.0"
+      "version": "1.96.1"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.93.0"
+      "version": "7.94.4"
     },
     {
       "repo": "asc-forge",
@@ -150,7 +150,7 @@
     {
       "repo": "asc-npcs",
       "name": "CobbleAsia NPCs",
-      "version": "2.9.2"
+      "version": "2.10.0"
     },
     {
       "repo": "asc-pokewiki",

@@ -1288,6 +1288,23 @@ const NEWS = [
 // =====================================================================
 const PATCHNOTES = [
   {
+    date: '2026-07-22',
+    tag: 'Season 2',
+    title: 'Revealed: Season 2 — ARCTIS, an age of Eternal Winter',
+    changes: [
+      { type: 'new', text: 'When Season 1 closes on <strong>August 1</strong>, <strong>Season 2 — Arctis</strong> begins. An <strong>Eternal Winter</strong> settles over Cobble Asia: an ancient frozen kingdom, aurora skies, crystal and permafrost, and the primordial cold of <strong>Kyurem</strong>. The whole site and server have been reforged in frost to match — new logo, new look, new age. Bundle up.' },
+    ],
+  },
+  {
+    date: '2026-07-22',
+    tag: 'Arctis',
+    title: 'Season 2 preview: the Arctis frozen gear set + signature Pokémon',
+    changes: [
+      { type: 'new', text: 'A new <strong>Arctis</strong> gear season is coming to the Forge — frost-forged <strong>armor, weapons and tools</strong> (Frostfang, Rimecleaver, Icebreaker and more) with icy passives that can freeze foes, boost Ice- &amp; Fairy-type catches, and scale all the way to <strong>Overmax</strong>. Complete the set for the <strong>Domain of Arctis</strong> bonus. <strong>SolForge</strong> gear stays on as a Season 1 legacy set. <code>/gear</code>' },
+      { type: 'new', text: 'Eight signature <strong>Arctis Pokémon</strong> — frozen ultimate forms led by <strong>Arctis Kyurem</strong> and <strong>Arctis Dialga</strong> — headline the new roster, each with its own defining frost ability and signature move.' },
+    ],
+  },
+  {
     date: '2026-07-10',
     tag: 'Season Vault',
     title: 'New: the Season Vault — carry a few things across the wipe',

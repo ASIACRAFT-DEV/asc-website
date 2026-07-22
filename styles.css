@@ -55,7 +55,7 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
 /* Poké Ball accent marker (reused via the --pb background) */
 .mk::before {
   content: ''; display: inline-block; width: 15px; height: 15px;
-  background: url('assets/server-icon.png') center/contain no-repeat;
+  background: url('assets/brand-frost.png') center/contain no-repeat;
   margin-right: 10px; vertical-align: middle; transform: translateY(-1px);
 }
 
@@ -73,7 +73,7 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
 .brand { font-size: 22px; text-decoration: none; color: var(--ink); display: flex; align-items: center; }
 .brand::before {
   content: ''; width: 22px; height: 22px; margin-right: 11px;
-  background: url('assets/server-icon.png') center/contain no-repeat;
+  background: url('assets/brand-frost.png') center/contain no-repeat;
 }
 .brand-accent { color: var(--gold-deep); }
 .nav-links { display: flex; gap: 30px; align-items: center; }
@@ -112,7 +112,7 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
 .hub-hero::before {
   content: ''; position: absolute; z-index: 0; top: 50%; left: 50%;
   width: min(620px, 90vw); height: min(620px, 90vw); transform: translate(-50%, -54%);
-  background: url('assets/server-icon.png') center/contain no-repeat;
+  background: url('assets/brand-frost.png') center/contain no-repeat;
   opacity: 0.06; pointer-events: none;
 }
 .hub-hero-inner { position: relative; z-index: 1; max-width: 880px; margin: 0 auto; }
@@ -399,7 +399,7 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
   background: var(--paper); border: 1px solid var(--line); border-radius: 10px; font-weight: 600; font-size: 14px;
   transition: border-color .15s, color .15s;
 }
-.more-feat::before { content: ''; width: 16px; height: 16px; background: url('assets/server-icon.png') center/contain no-repeat; flex: none; }
+.more-feat::before { content: ''; width: 16px; height: 16px; background: url('assets/brand-frost.png') center/contain no-repeat; flex: none; }
 .more-feat:hover { border-color: var(--line-2); color: var(--gold-deep); }
 
 /* command reference groups */
@@ -408,7 +408,7 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
   font-size: 20px; color: var(--ink); display: flex; align-items: center;
   margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--line);
 }
-.cmd-group-title::before { content: ''; width: 20px; height: 20px; background: url('assets/server-icon.png') center/contain no-repeat; margin-right: 12px; }
+.cmd-group-title::before { content: ''; width: 20px; height: 20px; background: url('assets/brand-frost.png') center/contain no-repeat; margin-right: 12px; }
 
 /* command chips inside guide steps */
 .guide-cmds { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
@@ -424,7 +424,7 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
   font-size: 20px; color: var(--ink); display: flex; align-items: center;
   margin-bottom: 18px; padding-bottom: 14px; border-bottom: 1px solid var(--line);
 }
-.faq-cat::before { content: ''; width: 20px; height: 20px; background: url('assets/server-icon.png') center/contain no-repeat; margin-right: 12px; flex: none; }
+.faq-cat::before { content: ''; width: 20px; height: 20px; background: url('assets/brand-frost.png') center/contain no-repeat; margin-right: 12px; flex: none; }
 .faq-list { display: flex; flex-direction: column; gap: 10px; }
 .faq-item {
   background: var(--paper); border: 1px solid var(--line); border-radius: 10px;

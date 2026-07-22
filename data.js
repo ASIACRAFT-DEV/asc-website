@@ -13,17 +13,47 @@ const SERVER = {
 
 // accent keys map to CSS gradients defined in styles.css (--g-solar etc.)
 const FEATURES = {
-  solforge: {
-    name: 'SolForge — Season of the First Sun',
-    short: 'SolForge Season',
-    accent: 'solar',
+  arctis: {
+    name: 'Arctis — Season 2',
+    short: 'Arctis Season',
+    accent: 'azure',
     tag: '/gear',
     category: 'Seasonal',
     featured: true,
     blurb:
-      'The first seasonal gear set. Forge molten sun-powered tools and armor, level them with Solar Shards, and chase the Radiant State.',
+      'The Season 2 seasonal set — frost-forged gear with icy passives, a Domain of Arctis set bonus, and eight signature frozen Pokémon. Arrives August 1.',
     intro:
-      'SolForge is our flagship seasonal content drop — a full set of solar-themed weapons, tools and armor, each with its own passive that scales as you upgrade it. Everything ties into one loop: play the game, earn Solar Shards, forge and level your gear, and build toward the server-wide Radiant State.',
+      'Arctis is Season 2: an Eternal Winter of frost-forged armor, weapons and tools, each with a passive you level from I to Overmax (VI). Complete the set for the server-wide Domain of Arctis bonus, and hunt the eight signature Arctis Pokémon led by Kyurem and Dialga. The full gear and roster breakdown lives on the Forge page.',
+    how: [
+      { title: 'Collect the frozen set', body: 'Thirteen pieces — Arctis Crown / Plate / Greaves / Sabatons armor, the Frostfang sword, Rimecleaver axe, Whitewind bow, Borealis crossbow and Aegis shield, plus the Icebreaker, Permafrost, Snowreaper and Glacial Line tools. Pull them from the Arctis Chest or forge them.' },
+      { title: 'Earn Frozen Shards', body: 'Mining, chopping, hunting and the season’s tools drop Frozen Shards — the Arctis currency you spend to level your gear.' },
+      { title: 'Level to Overmax', body: 'Raise each piece I → VI with /gear upgrade. Higher levels raise the passive’s proc chance (Standard 5–17%, Icebreaker premium 3–15%), capping at 25% Overmax.' },
+      { title: 'Trigger the Domain of Arctis', body: 'Wear the full armor set and every passive chance rises, you take less damage from Dungeon & Area Zero enemies, nearby PvE enemies can be Frozen, and you leave a crystalline frost trail.' },
+      { title: 'Hunt the signature Pokémon', body: 'Eight frozen ultimate forms headline the roster — Kingambit, Tyrantrum, Noivern, Claydol, Escavalier, Dusknoir, Kyurem (720 BST AG) and Dialga (680 BST AG) — each with one defining frost ability.' },
+    ],
+    commands: [
+      { cmd: '/gear', desc: 'Open the Arctis catalog — pieces, passives and how to get them' },
+      { cmd: '/ascforge upgrade', desc: 'Spend Frozen Shards to level the piece in your hand (I → VI)' },
+    ],
+    notes: [
+      'Arctis arrives with the Season 2 wipe on August 1.',
+      'SolForge stays as a Season 1 legacy set — you keep it and can still play it.',
+      'Every Arctis piece has infinite durability.',
+      'Full gear + roster breakdown on the Forge page.',
+    ],
+  },
+
+  solforge: {
+    name: 'SolForge — Season 1 (Legacy)',
+    short: 'SolForge (Legacy)',
+    accent: 'solar',
+    tag: '/gear',
+    category: 'Seasonal',
+    featured: false,
+    blurb:
+      'The first seasonal gear set. Sun-powered tools and armor leveled with Solar Shards — now a Season 1 legacy set as Arctis takes over.',
+    intro:
+      'SolForge was our flagship Season 1 drop — a full set of solar-themed weapons, tools and armor, each with its own passive that scales as you upgrade it. With Season 2 it becomes a legacy set: you keep every piece and can still play it, but new SolForge Keys leave the store. Everything ties into one loop: earn Solar Shards, forge and level your gear, and chase the server-wide Radiant State.',
     how: [
       {
         title: 'Collect the set',
@@ -56,6 +86,7 @@ const FEATURES = {
       { cmd: '/gear upgrade', desc: 'Spend Solar Shards to level the piece in your hand (I → IV)' },
     ],
     notes: [
+      'Season 1 legacy set — kept and still playable in Season 2, but no longer sold. Arctis is the current seasonal set.',
       'Every SolForge piece has infinite durability — forge it once, keep it forever.',
       'Level V is grand-prize only, pulled from the SolForge Chest.',
       'A Level V piece can be pushed to Level VI (Overmax) at the Archaeologist, using Seasonal Essence forged from fishing-caught Sunken Relics — never from crates.',
@@ -189,59 +220,54 @@ const FEATURES = {
     name: 'Battle Tower',
     short: 'Battle Tower',
     accent: 'ember',
-    tag: '/bt',
+    tag: '/bts2',
     category: 'Battling',
     featured: true,
     blurb:
-      'Climb tiered floors of hand-built OU, Uber and AG NPC teams. Singles and doubles, rolling 30-day seasons, and ♛ Conqueror crowns for the first to clear each tier.',
+      'A roguelike Nuzlocke climb. Draft 3 Pokémon, ascend floor by floor with no healing and permanent deaths, and chase the Singles & Doubles Crowns.',
     intro:
-      'The Battle Tower is our endgame PvE battling ladder. Each tier fields fully-authored competitive teams — real abilities, natures, EVs, items and movesets — across both singles and doubles formats. It runs on rolling 30-day seasons, so the leaderboards reset and everyone re-climbs for the crowns.',
+      'Season 2 rebuilds the Battle Tower into a roguelike climb. Draft a small team, fight randomized OU-to-AG opponents floor by floor, and survive with no healing between fights and permanent knockouts. It rewards real teambuilding over one broken move.',
     how: [
       {
-        title: 'Pick your tier and format',
+        title: 'Draft your run',
         body:
-          'Choose a competitive tier (OU through Anything-Goes) and a format. Singles and doubles each have their own per-tier team pools, so a doubles run never feels like singles with two mons.',
+          'Draft 3 Pokémon from your party to start. The rest of your party is parked safely in your PC for the whole run and handed straight back when it ends.',
       },
       {
-        title: 'Battle authored teams',
+        title: 'Climb with real stakes',
         body:
-          'Every NPC team is built like a real competitive squad — correct items, spreads and four-move sets, legal for its tier. Higher tiers field Ubers, restricted legendaries and proper AG cheese.',
+          'No healing between floors — HP, status and PP all carry over. If a Pokémon faints, it’s out for the rest of the run. Opponents scale from 3 mons up to a full 6 by Floor 10.',
       },
       {
-        title: 'Earn tower tokens',
+        title: 'Choose at checkpoints',
         body:
-          'Win battles to earn tokens. Tokens are the tower currency and also feed into other systems — passives, the forge, and more.',
+          'Every 10 floors, pick exactly one reward: Heal Party (restore HP/status/PP on survivors), Swap (retire a downed mon for a fresh one from your PC — the only way to recover a death), or Open Shop to spend BT Tokens.',
       },
       {
-        title: 'Spend in the tower shop',
+        title: 'Unlock more slots',
         body:
-          'Redeem tokens for exclusive rewards including Fusion Splicers — items that let you fuse Pokémon into custom forms.',
+          'New team slots open at floors 10, 25 and 50, up to 6 — each lets you draft another Pokémon out of your PC from the /bts2 menu.',
       },
       {
-        title: 'Survive Endless Decay',
+        title: 'Push through floor decay',
         body:
-          'On towers with Endless Decay enabled, once you climb past the checkpoint floor your whole party is level-synced down while the enemy teams stay at Lv.100 — so the high floors demand sharper play instead of becoming free farm. Fall up there and you reset to the checkpoint and pick up a 24-hour cooldown.',
+          'After Floor 50 your team level drops 5 every 10 floors (Lv95 down to Lv75 by Floor 100), so the top demands sharper play. Clear Floor 100 to auto-prestige from Floor 1 with a bigger Token multiplier.',
       },
       {
-        title: 'Climb a fresh season',
+        title: 'Claim the Crowns',
         body:
-          'The tower runs on rolling 30-day seasons. When a season rolls over every floor and first-clear leaderboard wipes and everyone re-climbs from Floor 1 — but your tokens and lifetime stats are kept. Check the time left with /bt season.',
-      },
-      {
-        title: 'Race for Conqueror crowns',
-        body:
-          'The first player to clear Floor 50 of each tier — Uber, OU, UU, RU, NU, Little Cup and Anything Goes — earns that tier’s ♛ Conqueror crown, a MYTHIC prestige title. Win one and it’s yours forever; only the “reigning champ” pointer moves when someone else first-clears the next season.',
+          'Leaderboard titles remain for the Singles Crown and Doubles Crown. Fusions are allowed and NPCs use them too; Cosmog Ray’s one-shot spam is nerfed so AG isn’t the only climb worth doing.',
       },
     ],
     commands: [
-      { cmd: '/bt', desc: 'Open the Battle Tower hub — pick tier, format, and battle' },
-      { cmd: '/bt season', desc: 'Show the current season number and time until reset' },
+      { cmd: '/bts2', desc: 'Open Battle Tower S2 — draft a team and start a roguelike climb' },
+      { cmd: '/bts2 battle', desc: 'Fight the next floor of your run (alias /bts2 next)' },
+      { cmd: '/bts2 forfeit', desc: 'Abandon your current run' },
     ],
     notes: [
-      'Doubles uses a dedicated per-tier team pool, refreshed when admins add new sets.',
-      'Tower tokens are spent across multiple systems, not just the tower shop.',
-      'A Challenge Voucher — dropped by raids, dungeons and Area Zero — skips the 24-hour high-floor cooldown.',
-      'Seasons wipe the climb every 30 days but keep your tokens and lifetime stats; Conqueror crowns are kept forever.',
+      'Checkpoints save every floor — closing the menu or disconnecting won’t waste your choice or send you back floors.',
+      'Downed Pokémon can’t be revived — not by Heal Party, not from the Shop. The one Swap at a checkpoint is the only recovery.',
+      'Draft carefully: you climb with 3–6 Pokémon, not a full team of 6.',
     ],
   },
 
@@ -249,42 +275,41 @@ const FEATURES = {
     name: 'Area Zero',
     short: 'Area Zero',
     accent: 'violet',
-    tag: '/az · /skill',
+    tag: '/az',
     category: 'Battling',
     featured: true,
     blurb:
-      'A paradox-energy combat zone with roaming bosses, a KDA leaderboard, bounties, KOTH, and its own skill system.',
+      'A high-stakes endgame combat zone — opt-in PvP with 2x loot, Alpha/Paradox/Legendary spawns, Elemental DNA, and a per-player boss cycle.',
     intro:
-      'Area Zero is a dedicated combat layer with its own rules. Drop in for paradox-powered PvP and PvE, climb the KDA leaderboard, hunt bounties, and unleash gauge-charged skills you won’t find anywhere else on the server.',
+      'Area Zero is a dedicated combat layer with its own rules. Drop into PvP-enabled zones for double loot, defeat Alphas and Paradox Pokémon for rare resources, and build toward a personal Legendary spawn — all tracked live on the Area Zero HUD.',
     how: [
       {
         title: 'Enter the zone',
         body:
-          'Warp into Area Zero (Trainer rank gated, with a confirmation step). Inside, an active spawner keeps paradox Pokémon flowing and the zone alive.',
+          'Warp into Area Zero (a coin entry fee, like the other Orb-rewarding content). Inside, spawners keep Alpha and Paradox Pokémon flowing.',
       },
       {
-        title: 'Charge your paradox gauge',
+        title: 'Work the spawn cycle',
         body:
-          'Fighting builds a paradox gauge. Spend it on /skill abilities — bursts, buffs and zone-control powers unique to Area Zero.',
+          'An Alpha spawns every 10 minutes and a Paradox every 30 minutes. After you defeat 5 Alphas and 5 Paradox Pokémon, a Legendary spawns for you — your progress shows on the HUD.',
       },
       {
-        title: 'Climb the KDA leaderboard',
+        title: 'Catch by Last Hit',
         body:
-          'Kills, deaths and assists are tracked. Top the leaderboard, collect bounties on other players, and fight for King of the Hill control points.',
+          'PvP-enabled zones drop 2x loot and can spawn Alpha, Paradox and Legendary Pokémon. Only Alphas are catchable, and the catch goes to whoever lands the Last Hit — so the fight is a DPS race.',
       },
       {
-        title: 'Hunt the bosses',
+        title: 'Farm Elemental DNA',
         body:
-          'Roaming paradox bosses rotate through the zone on a schedule (Blue/Red, Alpha/Paradox). Only the top damage-dealer can catch one — everyone else is racing to out-DPS the room.',
+          'Paradox Pokémon aren’t catchable here — defeat them for Elemental DNA, the material you feed into Paradox Crafting. Encounters also have a chance to drop Orbs and IV Modifiers.',
       },
     ],
     commands: [
-      { cmd: '/az', desc: 'Area Zero info, leaderboard and status' },
-      { cmd: '/skill', desc: 'Spend your paradox gauge on combat skills' },
+      { cmd: '/az', desc: 'Area Zero info, HUD progress and status' },
     ],
     notes: [
-      'Area Zero is paradox-energy only — regular legendaries are kept out by design.',
-      'Boss rewards go to the top damage-dealer, so bring your best DPS.',
+      'Elemental DNA from Area Zero powers Paradox Crafting — Paradox can no longer be caught from wild spawns.',
+      'The Alpha catch is decided by Last Hit, so bring your best DPS.',
     ],
   },
 
@@ -292,43 +317,36 @@ const FEATURES = {
     name: 'Gyms & Elite Four',
     short: 'Gyms & Elite Four',
     accent: 'ember',
-    tag: '/gym · /pvp ladder',
+    tag: '/gym',
     category: 'Battling',
     featured: true,
     blurb:
-      'Beat custom gym leaders for badges, then claim a seat on the Elite Four ladder and bank every challenger’s entry fee.',
+      'Beat eight custom gym leaders for badges, then challenge a single NatDex OU Elite Four once you hold all eight.',
     intro:
-      'Two connected challenges. Work through eight custom gym leaders for badges and rewards, then take on the ASC Elite Four — a four-seat PvP ladder where holding a seat earns you passive income from everyone who challenges it.',
+      'Season 2 returns to a clean progression path: work through eight type-themed gyms for badges, then take on one Elite Four in NatDex OU. Gym Badges now carry real weight — they gate the Elite Four and feed your rank progression.',
     how: [
       {
         title: 'Earn your badges',
         body:
-          'Eight gyms, each on a type theme, laid out in a staircase GUI from gym 1 to gym 8. Beating a leader pays coins and Rare Candies, with a one-time first-clear bonus of Battle Tower tokens for each new badge.',
+          'Eight gyms, each on a type theme, laid out in a staircase GUI from gym 1 to gym 8. Beating a leader pays coins and Rare Candies, with a one-time first-clear bonus for each new badge.',
+      },
+      {
+        title: 'Collect all eight',
+        body:
+          'Gym Badges are the gate — you need all eight before the Elite Four will accept your challenge. They also weigh into your overall rank progression.',
       },
       {
         title: 'Challenge the Elite Four',
         body:
-          'The ladder has four seats per format (singles and doubles), E1 (apex) down to E4 (entry). Pay a coin fee to challenge a seat — and that fee goes straight to whoever currently holds it.',
-      },
-      {
-        title: 'Take a seat, defend it',
-        body:
-          'Beat the holder and you claim their seat. Empty seats are held by giga-OP authored NPC teams. While you hold a seat you earn daily passive income via mail — the higher the seat, the bigger the payout.',
-      },
-      {
-        title: 'Hold or decay',
-        body:
-          'Seats persist across restarts, but if you go offline too long, dodge a challenge, or fail your daily activity quota (stay online or fight enough ladder battles), your seat decays back to an NPC. Lose a challenge and you’re on a 12-hour cooldown before you can challenge that format again.',
+          'One Elite Four, one format: NatDex OU. It’s the server’s championship test — down from the old 24 members across multiple formats to a single, focused climb.',
       },
     ],
     commands: [
-      { cmd: '/gym', desc: 'Open the gym staircase and challenge leaders' },
-      { cmd: '/pvp ladder', desc: 'View the Elite Four, fees, and challenge a seat' },
-      { cmd: '/ladder info', desc: 'Check fees, your seat, and cooldowns' },
+      { cmd: '/gym', desc: 'Open the gym staircase, challenge leaders, and take on the Elite Four' },
     ],
     notes: [
-      'Fusions are banned on the Elite Four ladder — including Starlight aspect-based fusions.',
-      'Challenge fees are escrowed and released to the holder when the battle ends.',
+      'One Elite Four in NatDex OU — the multi-format seat ladder and player Gym Leaders are retired in Season 2.',
+      'All 8 Gym Badges are required to challenge the Elite Four.',
     ],
   },
 
@@ -534,52 +552,41 @@ const FEATURES = {
     ],
   },
 
-  warzone: {
-    name: 'Warzone PvP',
-    short: 'Warzone',
+  pvp: {
+    name: 'PvP Ranked',
+    short: 'PvP Ranked',
     accent: 'crimson',
     tag: '/pvp',
     category: 'Battling',
     featured: true,
     blurb:
-      'Tag-to-force-battle arena. Hit another trainer inside the zone and a ranked battle starts instantly — winner can steal a Pokémon.',
+      'A ranked ladder through Poké, Great and Ultra Ball tiers into a 10-player Master Tier. In Season 2, PvP feeds rank progression.',
     intro:
-      'Warzone is high-stakes open PvP. Step into the zone and you’ve consented to fight: melee-hit any other trainer and a ranked battle force-starts — no accept, no decline, no dodging. The format rotates daily, so the meta is never stale. Win to earn Warzone Points and, if you dare, steal one of the loser’s Pokémon.',
+      'Season 2 makes PvP part of progression with a redesigned Ranked ladder. Climb the Ball tiers by winning, then fight for one of just ten Master Tier spots. Open-world Warzone is retired — clan-vs-clan combat now lives in Clan Wars.',
     how: [
       {
-        title: 'Check today’s format',
+        title: 'Climb the Ball tiers',
         body:
-          'The Warzone format rotates every day at midnight (SGT). The tier cycles NatDex OU → NatDex Ubers → Anything Goes, and the battle style alternates Singles ↔ Doubles — so you might play OU Singles one day and Ubers Doubles the next. A server message announces each day’s format, or check /pvp.',
+          'Ranked runs through Poké Ball IV→I, Great Ball IV→I and Ultra Ball IV→I. Win ranked matches to climb toward the top.',
       },
       {
-        title: 'Gear up and enter',
+        title: 'Reach Ultra Ball I',
         body:
-          'Every format requires a team of level 100, fully evolved Pokémon with no duplicates (Ubers days allow legendaries; Anything Goes drops all bans). There’s an enter button in the /pvp hub that validates your team against today’s format before warping you in. Entering the zone is consent to be tagged.',
+          'Ultra Ball I is the gate to Master Tier — once you’re there, your total wins put you in the running for promotion.',
       },
       {
-        title: 'Tag to fight',
+        title: 'Fight for Master Tier',
         body:
-          'Hit another trainer with a melee swing and the battle starts immediately — the hit damage is cancelled and a ranked match begins in today’s style. No team preview, no escape. You get 60 seconds of entry protection when you first arrive.',
-      },
-      {
-        title: 'Win for Warzone Points',
-        body:
-          'Wins pay +25 Warzone Points, losses cost −3. WP is its own currency — balances can even go negative, so throwing matches doesn’t pay. Both players get a few minutes of tag-immunity after a fight.',
-      },
-      {
-        title: 'Steal and spend',
-        body:
-          'The winner takes one random Pokémon from the loser’s party. Spend your WP in the Warzone shop on Pokédex tokens, Paradox & Legendary Cores, master balls and more.',
+          'Only 10 players hold Master Tier at once. Every 24 hours the top 10 eligible players by total wins are promoted in — prestigious, competitive and always changing.',
       },
     ],
     commands: [
-      { cmd: '/pvp', desc: 'Open the PvP hub — enter the Warzone, check WP' },
-      { cmd: '/pvp shop', desc: 'Spend Warzone Points on rewards' },
-      { cmd: '/pvp points', desc: 'Check your Warzone Points balance' },
+      { cmd: '/pvp', desc: 'Open the PvP hub — queue ranked and check your tier' },
+      { cmd: '/pvp rank', desc: 'Check your ranked tier and progress' },
     ],
     notes: [
-      'Steal is real — losing a battle can cost you a Pokémon. Don’t bring what you can’t lose.',
-      'Anti-win-trade protections cap rewarded wins against the same opponent.',
+      'Master Tier is capped at 10 players and re-evaluated every 24 hours by total wins.',
+      'The old open-world Warzone is retired — clan-vs-clan combat is now Clan Wars.',
     ],
   },
 
@@ -589,45 +596,48 @@ const FEATURES = {
     accent: 'azure',
     tag: '/clans · /c',
     category: 'Social',
+    featured: true,
     blurb:
-      'Form a clan, climb the combined-balance leaderboard, stack passive bonuses and rep your tag in chat and TAB.',
+      'Claim territory with permits, pay land tax as an official clan, run a clan Raid Boss, and wage Clan Wars for each other’s Pokémon.',
     intro:
-      'Clans give you a crew, a shared bank, and a competitive identity. Pool resources, buy clan-wide passive bonuses, and push up the combined-balance leaderboard together.',
+      'Season 2 gives clans a full progression and territory system. Earn your base through permits, defend claimed land, field a dedicated clan Raid Boss, and settle rivalries in Clan Wars — the clan-vs-clan combat that replaces the old Warzone.',
     how: [
       {
-        title: 'Found or join a clan',
+        title: 'Earn your base with permits',
         body:
-          'Start your own clan or join an existing one. Members get roles (Leader, Vice-Leader, Officer, member) and a clan tag that shows in chat and the TAB list.',
+          'Setting up a clan base follows clear steps: obtain a Clan Permit, create your clan, then buy a Clan Base Build Permit to claim territory. Officers can expand the claimed area later.',
       },
       {
-        title: 'Claim land & fly',
+        title: 'Pick a territory size',
         body:
-          'Buy claimblocks from the clan shop and claim chunks with /clans claim to protect your clan’s land. Enable /clans fly so members get flight inside clan-claimed territory, paid from the shared bank.',
+          'Build permits come in three sizes — 250×250, 500×500 and 1000×1000. Official clans are recognized on the server and pay a 5% land tax scaled to how large their territory is.',
       },
       {
-        title: 'Share a bank',
+        title: 'Grow the roster',
         body:
-          'Clans have a shared bank. Leaders and Vices can spend it — including on clan-wide passive upgrades that benefit every member.',
+          'Clans cap at 5 members, and you can buy up to +5 extra slots. The cap keeps players from merging into one mega-clan. Set relations with /clan ally and /clan enemy, and talk in clan chat and ally chat.',
       },
       {
-        title: 'Stack clan passives',
+        title: 'Run a clan Raid Boss',
         body:
-          'On top of your personal permanent passives, clan passive tiers stack additively — so an active clan makes everyone’s shiny rate, catch rate and more better.',
+          'Each clan gets its own dedicated Raid Boss that spawns on a fixed timer — only that clan’s members can hit it. A Clan NPC auto-spawns at the center of the build (or the leader can place it).',
       },
       {
-        title: 'Climb the leaderboard',
+        title: 'Wage Clan Wars',
         body:
-          'Clans are ranked on a combined-balance board. Build wealth as a group and rep your tag at the top.',
+          'Clan Wars replaces Warzone: proper clan-vs-clan conflict with raid-boss spawns and Pokémon battles. Lose a battle and you forfeit 1 Pokémon to the enemy clan — the losing clan can buy them back after the match, or the winners keep them as War Tokens.',
       },
     ],
     commands: [
-      { cmd: '/clans', desc: 'Open the clan hub' },
+      { cmd: '/clans', desc: 'Open the clan hub — permits, territory and members' },
       { cmd: '/c', desc: 'Quick clan command + clan chat' },
-      { cmd: '/clans claim', desc: 'Claim the chunk you’re standing in for your clan' },
-      { cmd: '/clans fly', desc: 'Toggle flight inside clan-claimed land' },
+      { cmd: '/clan ally', desc: 'Set another clan as an ally (ally chat)' },
+      { cmd: '/clan enemy', desc: 'Declare a rival clan for Clan Wars' },
     ],
     notes: [
-      'Clan passive buys are Leader/Vice only and spend the clan bank.',
+      'Official clans pay a 5% land tax scaled to territory size.',
+      'Member cap is 5, expandable by +5 bought slots.',
+      'Clan Wars replaces the old Warzone as clan-vs-clan combat.',
     ],
   },
 
@@ -638,37 +648,39 @@ const FEATURES = {
     tag: '/jobs · /chestshop',
     category: 'Economy',
     blurb:
-      'Earn coins from mining, fishing, catching and more. Spend across chest shops, the GTS, gacha banners and the forge.',
+      'Nine jobs, now an activity-driven questline — do the work, complete quests, and claim Paychecks from each job’s NPC. Trade on chest shops and the GTS.',
     intro:
-      'The economy ties everything together. Take on jobs to earn coins from the activities you already do, then spend that wealth across every other system on the server.',
+      'Season 2 turns Jobs from passive income into a questline. Do a job’s activity to complete quests, earn Paychecks, Job EXP and Reputation, then claim your pay from that job’s NPC. Coins still tie the economy together — spend across chest shops, the GTS, banners and the forge.',
     how: [
       {
-        title: 'Pick up jobs',
+        title: 'Work the questline',
         body:
-          'Join jobs that pay you for activities — mining, fishing, catching Pokémon and more. The more you play your role, the more you earn.',
+          'Nine jobs — Farmer, Fisher, Miner, Lumberjack, Slayer, Artisan, Explorer, Builder and Trainer. Do the activity to complete daily & weekly quests (Collection, Crafting, Combat, Exploration, Delivery) and earn a Paycheck + Job EXP + Reputation.',
       },
       {
-        title: 'Trade with other players',
+        title: 'Claim at the Job NPC',
         body:
-          'Set up chest shops to sell to other trainers, or use the GTS to trade Pokémon globally.',
+          'Paychecks can’t be claimed remotely — visit that job’s NPC to accept quests, track progress and collect your pay. No AFK salary, no automation.',
       },
       {
-        title: 'Spend everywhere',
+        title: 'Climb three tiers',
         body:
-          'Coins fuel the gacha banners, the forge upgrade ladder, gym and dungeon entry, Safari passes and more. There’s always something to save toward.',
+          'Each job climbs three tiers as you earn Job EXP & Reputation — unlocking harder quests, bigger paychecks, more quest slots and exclusive rewards.',
       },
       {
-        title: 'Earn passive income',
+        title: 'Trade and spend',
         body:
-          'Hold an Elite Four seat or vote for the server to stack up recurring rewards on top of your job income.',
+          'Set up chest shops to sell to other trainers, or use the GTS to trade Pokémon globally. Coins fuel banners, the forge upgrade ladder, dungeon and Safari entry, and more.',
       },
     ],
     commands: [
-      { cmd: '/jobs', desc: 'Browse and join jobs' },
+      { cmd: '/jobs', desc: 'Browse jobs, track quests and see your tier' },
       { cmd: '/chestshop', desc: 'Open the chest shop system' },
       { cmd: '/gts', desc: 'Global Trade System' },
     ],
     notes: [
+      'Paychecks must be claimed at a job’s NPC — no passive/AFK income.',
+      'Coin payouts were rebalanced in Season 2 so every coin is worth more.',
       'Donator ranks get a deposit boost on earned coins.',
     ],
   },
@@ -1033,14 +1045,14 @@ const FEATURES = {
 
 // Display order + grouping on the landing page
 const FEATURE_ORDER = [
-  'solforge', 'crates', 'cosmetics', 'transform', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
-  'dungeons', 'safari', 'hunts', 'fishing', 'archaeology', 'bingo', 'warzone', 'clans',
+  'arctis', 'solforge', 'crates', 'cosmetics', 'transform', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
+  'dungeons', 'safari', 'hunts', 'fishing', 'archaeology', 'bingo', 'pvp', 'clans',
   'jobs', 'casino', 'playtime', 'progression',
 ];
 
 // Full mod toolbox (landing page mod grid)
 const MODS = [
-  { name: 'Area Zero', cmd: '/az · /skill' },
+  { name: 'Area Zero', cmd: '/az' },
   { name: 'Battle Pass', cmd: '/bp' },
   { name: 'Battle Tower', cmd: '/bt' },
   { name: 'Catch Combos', cmd: '/combo' },
@@ -1052,7 +1064,7 @@ const MODS = [
   { name: 'Dungeons', cmd: '/dungeon' },
   { name: 'Essentials', cmd: '/ess' },
   { name: 'Fishing', cmd: '/fish' },
-  { name: 'Forge & SolForge', cmd: '/gear' },
+  { name: 'Forge — Arctis & SolForge', cmd: '/gear' },
   { name: 'GTS', cmd: '/gts' },
   { name: 'Gyms', cmd: '/gym' },
   { name: 'Jobs', cmd: '/jobs' },
@@ -1063,7 +1075,7 @@ const MODS = [
   { name: 'NPCs', cmd: '/npc' },
   { name: 'Pokeditor', cmd: '/pokeditor' },
   { name: 'PokeWiki', cmd: '/pwiki' },
-  { name: 'PvP & Warzone', cmd: '/pvp' },
+  { name: 'PvP Ranked', cmd: '/pvp' },
   { name: 'Raid Boss', cmd: '/raid' },
   { name: 'Ranks', cmd: '/ranks' },
   { name: 'Safari', cmd: '/safari' },
@@ -1113,18 +1125,14 @@ const COMMANDS = [
   {
     group: 'Battling & Competition',
     items: [
-      { cmd: '/bt', desc: 'Battle Tower — tiered singles & doubles ladder' },
-      { cmd: '/ascbt prestige <tower>', desc: 'Reset a Floor-100 ladder for a permanent season bonus' },
-      { cmd: '/bts2', desc: 'Battle Tower S2 — roguelike climb: draft a team, ascend, shop every few floors' },
-      { cmd: '/bts2 battle', desc: 'Fight the next floor of your roguelike run (alias /bts2 next)' },
-      { cmd: '/bts2 forfeit', desc: 'Abandon your Battle Tower S2 run' },
+      { cmd: '/bts2', desc: 'Battle Tower — roguelike climb: draft a team, ascend, shop every few floors' },
+      { cmd: '/bts2 battle', desc: 'Fight the next floor of your run (alias /bts2 next)' },
+      { cmd: '/bts2 forfeit', desc: 'Abandon your Battle Tower run' },
       { cmd: '/scout', desc: 'Battle-Scout — see the opponent’s revealed team mid-fight (alias /ascscout)' },
-      { cmd: '/gym', desc: 'Challenge the eight gym leaders' },
-      { cmd: '/pvp', desc: 'PvP hub — Warzone, matchmaking, shop' },
-      { cmd: '/ladder', desc: 'The Elite Four seat ladder' },
+      { cmd: '/gym', desc: 'Challenge the eight gym leaders and the Elite Four' },
+      { cmd: '/pvp', desc: 'PvP hub — ranked Ball tiers & Master Tier' },
       { cmd: '/raid', desc: 'Raid boss info & encounters' },
       { cmd: '/az', desc: 'Area Zero combat zone' },
-      { cmd: '/skill', desc: 'Spend your Area Zero paradox gauge' },
       { cmd: '/dungeon', desc: 'Enter seasonal dungeons' },
       { cmd: '/dungeon setbonus', desc: 'Preview your party’s type Set Bonuses' },
       { cmd: '/party', desc: 'Party up for shared-lives dungeon runs' },
@@ -1207,7 +1215,7 @@ const COMMANDS = [
       { cmd: '/ess help', desc: 'Essentials command list (homes, warps, hunts, casino…)' },
       { cmd: '/bt help', desc: 'Battle Tower help' },
       { cmd: '/safari help', desc: 'Safari help' },
-      { cmd: '/pvp help', desc: 'PvP & Warzone help' },
+      { cmd: '/pvp help', desc: 'PvP Ranked help' },
       { cmd: '/dungeon help', desc: 'Dungeons help' },
       { cmd: '/clans help', desc: 'Clans help' },
       { cmd: '/bp help', desc: 'Battle Pass help' },

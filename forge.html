@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>The Forge — Cobble Asia</title>
+  <meta name="description" content="The Forge — Cobble Asia's seasonal gear system. Everything about the current SolForge set (Season of the First Sun) and the upcoming Arctis set (Eternal Winter): pieces, passives, proc scaling, upgrading and set bonuses." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/brand-frost.png" />
+  <link rel="stylesheet" href="styles.css?v=202607221948" />
+</head>
+<body>
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Cobble<span class="brand-accent">Asia</span></a>
+            <nav class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="commands.html">Commands</a>
+        <a href="https://cobbleasia.craftingstore.net" target="_blank" rel="noopener">Store</a>
+        <a href="team.html">Team</a>
+        <a href="guide.html">Season 2</a>
+        <a href="tutorial.html">Tutorial</a>
+        <a href="forge.html">Forge</a>
+        <a href="patchnotes.html">Patch Notes</a>
+        <a href="vote.html">Vote</a>
+        <a href="#" class="nav-cta js-discord">Discord</a>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="fp-hero">
+      <div class="fp-hero-glow"></div>
+      <div class="fp-hero-inner">
+        <a class="back-link" href="index.html">← Back home</a>
+        <span class="fp-cat">⚒️ The Forge</span>
+        <h1 class="fp-title">The Forge — Seasonal Gear</h1>
+        <p class="fp-blurb">Every season, the Forge mints a full set of themed gear with passives you level up. Season 1 is <strong>SolForge</strong>; Season 2 brings <strong>Arctis</strong>. Here's everything about both.</p>
+        <div class="guide-cmds"><code>/gear</code><code>/ascforge</code></div>
+      </div>
+    </section>
+
+    <div class="fp-body">
+
+      <!-- QUICK JUMP -->
+      <div class="s2-status reveal">
+        <div class="s2-status-head">
+          <h2>⚒️ Two Seasons of Gear</h2>
+          <p>SolForge is live now and becomes a legacy set once Season 2 begins. Arctis is the new frozen set arriving with the Aug 1 wipe. Jump to a section below.</p>
+        </div>
+        <div class="s2-legend-row">
+          <a class="s2-pill" href="#how"><span class="s2-dot ready"></span>How gear works</a>
+          <a class="s2-pill" href="#solforge"><span class="s2-dot ready"></span>SolForge — Season 1 (current → legacy)</a>
+          <a class="s2-pill" href="#arctis"><span class="s2-dot dev"></span>Arctis — Season 2 (upcoming)</a>
+          <a class="s2-pill" href="#getgear"><span class="s2-dot todo"></span>How to get gear</a>
+        </div>
+      </div>
+
+      <!-- HOW GEAR WORKS -->
+      <div class="s2-block reveal" id="how">
+        <h2 class="s2-h">🛠️ How Seasonal Gear Works</h2>
+        <div class="guide-cmds"><code>/gear</code><code>/ascforge upgrade</code></div>
+        <p>Forge gear is netherite-equivalent equipment with a twist: every piece carries a named <strong>passive ability</strong>, and each piece has a <strong>Level</strong> that you raise to make that passive stronger and more likely to trigger. The whole set shares a look, a currency, and a full-set bonus.</p>
+
+        <div class="s2-sub">The core loop</div>
+        <ul class="s2-list">
+          <li><strong>Every piece has a passive</strong> — armor, weapons and tools each do something unique.</li>
+          <li><strong>Level I → VI.</strong> Higher levels raise the passive's proc chance. Level VI is <strong>Overmax</strong>, the peak.</li>
+          <li><strong>Upgrade with the season's shards.</strong> Hold a piece and run <code>/ascforge upgrade</code> to spend shards and raise its Level.</li>
+          <li><strong>Infinite durability</strong> — Forge gear never breaks.</li>
+          <li><strong>Set bonus.</strong> Wear the full armor set for a season-wide bonus that boosts every passive at once.</li>
+          <li>Browse the whole catalog any time with <code>/gear</code>.</li>
+        </ul>
+        <p>Only <strong>one seasonal set is craftable at a time</strong> — the current season's. When a new season starts, the previous set becomes a <strong>legacy set</strong>: you keep every piece you own and can still play it, but new keys and shards for it leave the store.</p>
+      </div>
+
+      <!-- SOLFORGE -->
+      <div class="s2-block reveal" id="solforge">
+        <h2 class="s2-h">☀️ SolForge — Season 1</h2>
+        <div class="s2-callout" style="margin-bottom:16px;"><span class="s2-star">Season of the First Sun</span></div>
+        <p><strong>Live now — becomes a legacy set on August 1.</strong> Our first full seasonal set: sun-touched gear powered by <strong>Solar Shards</strong>. Charge your <strong>Solar Resonance</strong> meter as you play to ignite <strong>Radiant State</strong>, a server-announced power surge. Once Season 2 begins you keep all your SolForge gear and can still use it — but new SolForge Keys leave the store.</p>
+
+        <div class="s2-sub">Armor</div>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Piece</th><th>Passive</th></tr></thead>
+            <tbody>
+              <tr><td>👑 Dawnseer <em>(Helmet)</em></td><td>Bonus rewards from hunts, raids &amp; crates.</td></tr>
+              <tr><td>🛡 Heart of Helios <em>(Chest)</em></td><td>Solar Blessing buffs — luck, shard boost &amp; bonus EXP.</td></tr>
+              <tr><td>👖 Radiant Flow <em>(Legs)</em></td><td>In-battle heal &amp; status cleanse.</td></tr>
+              <tr><td>🥾 Sunwalker <em>(Boots)</em></td><td>Draws solar-type spawns with rare IVs &amp; abilities.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="s2-sub">Weapons &amp; Tools</div>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Item</th><th>Passive</th></tr></thead>
+            <tbody>
+              <tr><td>⚔ Sunflare Sword</td><td>Solar Burst ignite + bonus Solar Shards on kills.</td></tr>
+              <tr><td>⛏ Starforge Breaker <em>(Pickaxe)</em></td><td>Solar Shard drops from mined ore.</td></tr>
+              <tr><td>🪓 Emberroot <em>(Axe)</em></td><td>Solar Shard drops from chopped logs.</td></tr>
+              <tr><td>🌾 Bloom of Helios <em>(Hoe)</em></td><td>Crop duplication, regrowth &amp; AOE harvest.</td></tr>
+              <tr><td>🥄 Chronoshift <em>(Shovel)</em></td><td>Solar Surge timed buffs.</td></tr>
+              <tr><td>🛡 Solar Aegis <em>(Shield)</em></td><td>Solar Guard on a successful block.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>The full set also includes the <strong>Solar Arc</strong> (bow), <strong>Helios Repeater</strong> (crossbow), <strong>Sunspear</strong> (trident) and <strong>Solar Current</strong> (fishing rod).</p>
+
+        <div class="s2-sub">Leveling &amp; Overmax</div>
+        <ul class="s2-list">
+          <li>Upgrade pieces <strong>I → V</strong> with <strong>Solar Shards</strong> via <code>/ascforge upgrade</code>.</li>
+          <li>Push a Level V piece to <strong>VI (Overmax)</strong> at the <strong>Archaeologist</strong> using a <strong>Seasonal Essence</strong>.</li>
+          <li>Every piece has <strong>infinite durability</strong>.</li>
+        </ul>
+
+        <div class="s2-sub">The SolForge Chest</div>
+        <p>Spin the seasonal gacha crate for gear and Solar Shards. The grand prize is a guaranteed <strong>Level V</strong> piece — the only way to mint a max-tier item — backed by a <strong>pity system</strong> so a streak of bad luck always pays off. <strong>SolForge Keys</strong> are available in the store while Season 1 lasts, and every dungeon clear drops one too.</p>
+
+        <div class="s2-sub">Seasonal Titles</div>
+        <div class="s2-callout">Stormforged · Solar Warden · Forgeborn · Radiant · Astraforged · Sunbound</div>
+        <p>Earned through dungeon clears, leaderboards &amp; seasonal feats. Once the season ends these become <strong>unobtainable forever</strong>, and unspent Solar Shards convert to <strong>Legacy Fragments</strong> for future seasons.</p>
+      </div>
+
+      <!-- ARCTIS -->
+      <div class="s2-block reveal" id="arctis">
+        <h2 class="s2-h">❄️ Arctis — Season 2</h2>
+        <div class="s2-callout" style="margin-bottom:16px;"><span class="s2-star">The Age of Eternal Winter</span></div>
+        <p><strong>Arrives with the August 1 wipe.</strong> An ancient frozen kingdom wakes — aurora skies, crystal, permafrost, and the primordial cold of <strong>Kyurem</strong>. Arctis is the new seasonal Forge set, and it brings a roster of signature frozen Pokémon with it.</p>
+
+        <div class="s2-sub">Arctis Armor</div>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Piece</th><th>Passive</th></tr></thead>
+            <tbody>
+              <tr><td>👑 Arctis Crown <em>(Helmet)</em></td><td><strong>Frozen Instinct</strong> — boosts Ice- &amp; Fairy-type spawns and gives them an IV boost; attackers can be <strong>Frozen</strong> (bosses Slowed instead).</td></tr>
+              <tr><td>🛡 Arctis Plate <em>(Chest)</em></td><td><strong>Frozen Soul</strong> (PvE) — Ice/Fairy start battles with +1 Atk or SpA; <strong>Heart of the Glacier</strong> cuts damage from Dungeon &amp; Area Zero enemies.</td></tr>
+              <tr><td>👖 Arctis Greaves <em>(Legs)</em></td><td><strong>Glacial Pursuit</strong> — higher catch rate on Ice/Fairy (small bonus to all); <strong>Frozen Recovery</strong> heals on PvE kills.</td></tr>
+              <tr><td>🥾 Arctis Sabatons <em>(Boots)</em></td><td><strong>Winter's Grace</strong> — frozen terrain generates Frozen Crystals; <strong>Permafrost</strong> inflicts Frostbite on Dungeon/AZ enemies.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="s2-sub">Weapons &amp; Tools</div>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Item</th><th>Passive</th></tr></thead>
+            <tbody>
+              <tr><td>⚔ Frostfang <em>(Sword)</em></td><td><strong>Absolute Zero</strong> (PvP) — melee hits can inflict <strong>Frostbound</strong> (slow + no sprinting).</td></tr>
+              <tr><td>🪓 Rimecleaver <em>(Axe)</em></td><td><strong>Frozen Hunt</strong> — held in the offhand, defeating wild Pokémon grants Seasonal Gear EXP + Frozen Shards.</td></tr>
+              <tr><td>🏹 Whitewind <em>(Bow)</em></td><td><strong>Whiteout</strong> (PvP) — arrows create an icy gust that slows and cuts jump height.</td></tr>
+              <tr><td>🎯 Borealis <em>(Crossbow)</em></td><td><strong>Aurora Shot</strong> (PvP) — bolts can partially ignore the target's armor.</td></tr>
+              <tr><td>🛡 Aegis <em>(Shield)</em></td><td><strong>Icebound Aegis</strong> (PvP) — a successful melee block can Frostbound the attacker.</td></tr>
+              <tr><td>⛏ Icebreaker <em>(Pickaxe)</em></td><td><strong>Frozen Excavation</strong> — mining frozen blocks rewards Ancient Dungeon Fragments, Gear EXP &amp; Frozen Shards (premium loot).</td></tr>
+              <tr><td>🥄 Permafrost <em>(Shovel)</em></td><td><strong>Frozen Cache</strong> — digging rewards Vote Keys, Level Keys &amp; Gear EXP.</td></tr>
+              <tr><td>🌾 Snowreaper <em>(Hoe)</em></td><td><strong>Cryogenic Bloom</strong> — harvesting rewards Bonus Crops, Rare Berries, Mint Leaves &amp; EV-reducing berries.</td></tr>
+              <tr><td>🎣 Glacial Line <em>(Rod)</em></td><td><strong>Frozen Waters</strong> — fished Pokémon have a higher chance of a Hidden Ability, higher IVs, or Alpha.</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="s2-sub">Proc Scaling</div>
+        <p>Each Arctis piece levels I → VI. Higher levels raise the chance its passive triggers, all the way up to <strong>Overmax (VI)</strong>.</p>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Level</th><th>Standard</th><th>Premium — Icebreaker</th></tr></thead>
+            <tbody>
+              <tr><td>I</td><td>5%</td><td>3%</td></tr>
+              <tr><td>II</td><td>8%</td><td>6%</td></tr>
+              <tr><td>III</td><td>11%</td><td>9%</td></tr>
+              <tr><td>IV</td><td>14%</td><td>12%</td></tr>
+              <tr><td>V</td><td>17%</td><td>15%</td></tr>
+              <tr><td>VI — Overmax</td><td>25%</td><td>25%</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="s2-sub">Full Set Bonus</div>
+        <div class="s2-callout"><span class="s2-star">❄️ Domain of Arctis</span></div>
+        <p>Wear the complete Arctis armor and every passive activation chance increases, you gain extra damage reduction against Dungeon &amp; Area Zero enemies, nearby PvE enemies can be <strong>Frozen</strong> when they attack, and you leave a crystalline frost trail wrapped in a radiant aurora.</p>
+
+        <div class="s2-sub">Signature Arctis Pokémon</div>
+        <p>Eight frozen ultimate forms headline the season — each a defining form with one signature ability and its own signature move.</p>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Pokémon</th><th>Type</th><th>BST</th><th>Role</th><th>Ability</th></tr></thead>
+            <tbody>
+              <tr><td>Arctis Kingambit</td><td>Fairy / Steel</td><td>600</td><td>Royal Duelist</td><td>Royal Edge</td></tr>
+              <tr><td>Arctis Tyrantrum</td><td>Dragon / Ice</td><td>650</td><td>Physical Wallbreaker</td><td>Absolute Predator</td></tr>
+              <tr><td>Arctis Noivern</td><td>Dragon / Dark</td><td>620</td><td>Special Wallbreaker</td><td>Frozen Requiem</td></tr>
+              <tr><td>Arctis Claydol</td><td>Rock / Fairy</td><td>580</td><td>Defensive Support</td><td>Frozen Domain</td></tr>
+              <tr><td>Arctis Escavalier</td><td>Bug / Fighting</td><td>600</td><td>Physical Sweeper</td><td>Relentless Assault</td></tr>
+              <tr><td>Arctis Dusknoir</td><td>Ghost / Psychic</td><td>620</td><td>Physical Juggernaut</td><td>Eternal Spirit</td></tr>
+              <tr><td>Arctis Kyurem</td><td>Ice / Dragon</td><td>720</td><td>AG Special Calamity</td><td>Absolute Zero</td></tr>
+              <tr><td>Arctis Dialga</td><td>Dragon / Steel</td><td>680</td><td>AG Temporal Fortress</td><td>Chrono Lock</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Seasonal Pokémon are treated as ultimate forms — no Mega Evolution, no secondary or Hidden Abilities, just one defining power each.</p>
+
+        <div class="s2-callout" style="margin-top:18px;">
+          ⚠️ <strong>Disclaimer:</strong> Arctis details are from the locked design spec and may change before Season 2 launches.
+        </div>
+      </div>
+
+      <!-- HOW TO GET GEAR -->
+      <div class="s2-block reveal" id="getgear">
+        <h2 class="s2-h">🎴 How to Get Forge Gear</h2>
+        <ul class="s2-list">
+          <li><strong>Season Chest keys</strong> — spin the current season's chest (SolForge Chest now, Arctis Chest at launch). Keys are sold in the store and the grand prize is a guaranteed <strong>Level V</strong> piece.</li>
+          <li><strong>Dungeon clears</strong> — every clear drops a seasonal key, so running dungeons steadily builds toward a full set.</li>
+          <li><strong>Shards from gameplay</strong> — mining, chopping, hunting and the season's tools all drop shards you spend on <code>/ascforge upgrade</code>.</li>
+          <li><strong>Overmax materials</strong> — Seasonal Essence (and its equivalents) push a Level V piece to Overmax at the Archaeologist.</li>
+        </ul>
+      </div>
+
+      <div class="fp-cta reveal">
+        <p>Ready to forge? Browse the live catalog in-game.</p>
+        <div class="cta-row center">
+          <a class="btn btn-primary" href="https://cobbleasia.craftingstore.net" target="_blank" rel="noopener">Get keys in the store →</a>
+          <a class="btn btn-ghost" href="guide.html">Season 2 overview</a>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p>Cobble Asia — a cracked Cobblemon server. Join us on <a class="js-discord" href="#">Discord</a>.</p>
+    <p style="margin-bottom:6px;"><a class="js-credits" href="credits.html">Credits</a></p>
+    <p class="footer-dim">Not affiliated with Mojang, Nintendo, or The Pokémon Company.</p>
+  </footer>
+
+  <script src="data.js?v=202607221948"></script>
+  <script src="app.js?v=202607221948"></script>
+</body>
+</html>

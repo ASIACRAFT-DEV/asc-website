@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-07-21T19:04:31.118Z",
-  "count": 38,
+  "generatedAt": "2026-07-22T01:46:37.668Z",
+  "count": 39,
   "mods": [
     {
       "repo": "asc-catchcombo",
@@ -103,6 +103,11 @@
       "version": "2.5.0"
     },
     {
+      "repo": "asc-clientui",
+      "name": "CobbleAsia Client UI",
+      "version": "1.0.0"
+    },
+    {
       "repo": "asc-cosmetics",
       "name": "CobbleAsia Cosmetics",
       "version": "0.5.0"
@@ -110,7 +115,7 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.58.0"
+      "version": "2.59.0"
     },
     {
       "repo": "asc-dungeons",
@@ -120,7 +125,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.94.5"
+      "version": "7.95.0"
     },
     {
       "repo": "asc-forge",

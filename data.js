@@ -21,7 +21,7 @@ const FEATURES = {
     category: 'Seasonal',
     featured: true,
     blurb:
-      'The Season 2 seasonal set — frost-forged gear with icy passives, a Domain of Arctis set bonus, and eight signature frozen Pokémon. Launches August 9 (Open Beta August 1).',
+      'The Season 2 seasonal set — frost-forged gear with icy passives, a Domain of Arctis set bonus, and eight signature frozen Pokémon. Open Beta August 1, full launch August 9.',
     intro:
       'Arctis is Season 2: an Eternal Winter of frost-forged armor, weapons and tools, each with a passive you level from I to Overmax (VI). Complete the set for the server-wide Domain of Arctis bonus, and hunt the eight signature Arctis Pokémon led by Kyurem and Dialga. The full gear and roster breakdown lives on the Forge page.',
     how: [

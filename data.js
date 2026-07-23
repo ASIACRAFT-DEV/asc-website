@@ -519,12 +519,12 @@ const FEATURES = {
     blurb:
       'The Umera reserve: 26 themed regions, region-locked spawns, roaming Megas and Totems, Tera & Dynamax raids, swarms and expeditions.',
     intro:
-      'The Safari is a whole second world — Umera, a 26-region reserve where each area has its own curated spawn pool. Buy a timed pass, explore, and hunt encounters you can’t find anywhere else: roaming Mega evolutions, Totem Pokémon, native raids and rotating swarms.',
+      'The Safari is a whole second world — Umera, a 26-region reserve where each area has its own curated spawn pool. Walk in free, explore, and hunt encounters you can’t find anywhere else: roaming Mega evolutions, Totem Pokémon, Raid Bosses, Dynamax/Gigantamax raids, Raid Dens and rotating swarms.',
     how: [
       {
-        title: 'Buy a pass and enter',
+        title: 'Enter for free',
         body:
-          'Safari access runs on timed passes — Explorer (1 hour), Adventurer (2 hours) and Expedition (4 hours), bought with coins. Open /safari for the hub: pass status, the raid board, and a region guide.',
+          'The Safari is completely free to enter — no coin gate, no timed passes. Open /safari for the hub: the raid board and a region guide, then head in and hunt.',
       },
       {
         title: 'Explore 26 regions',
@@ -543,7 +543,7 @@ const FEATURES = {
       },
     ],
     commands: [
-      { cmd: '/safari', desc: 'Open the Safari hub — passes, raid board, region guide' },
+      { cmd: '/safari', desc: 'Open the Safari hub — raid board, region guide' },
       { cmd: '/safari expedition', desc: 'Track your active safari expedition objectives' },
     ],
     notes: [
@@ -670,7 +670,7 @@ const FEATURES = {
       {
         title: 'Trade and spend',
         body:
-          'Set up chest shops to sell to other trainers, or use the GTS to trade Pokémon globally. Coins fuel banners, the forge upgrade ladder, dungeon and Safari entry, and more.',
+          'Set up chest shops to sell to other trainers, or use the GTS to trade Pokémon globally. Coins fuel banners, the forge upgrade ladder, dungeon entry, and more.',
       },
     ],
     commands: [

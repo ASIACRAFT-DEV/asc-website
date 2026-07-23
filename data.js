@@ -21,7 +21,7 @@ const FEATURES = {
     category: 'Seasonal',
     featured: true,
     blurb:
-      'The Season 2 seasonal set — frost-forged gear with icy passives, a Domain of Arctis set bonus, and eight signature frozen Pokémon. Arrives August 1.',
+      'The Season 2 seasonal set — frost-forged gear with icy passives, a Domain of Arctis set bonus, and eight signature frozen Pokémon. Launches August 9 (Open Beta August 1).',
     intro:
       'Arctis is Season 2: an Eternal Winter of frost-forged armor, weapons and tools, each with a passive you level from I to Overmax (VI). Complete the set for the server-wide Domain of Arctis bonus, and hunt the eight signature Arctis Pokémon led by Kyurem and Dialga. The full gear and roster breakdown lives on the Forge page.',
     how: [
@@ -36,7 +36,7 @@ const FEATURES = {
       { cmd: '/ascforge upgrade', desc: 'Spend Frozen Shards to level the piece in your hand (I → VI)' },
     ],
     notes: [
-      'Arctis arrives with the Season 2 wipe on August 1.',
+      'Arctis arrives with Season 2 — Open Beta August 1, official launch August 9.',
       'SolForge stays as a Season 1 legacy set — you keep it and can still play it.',
       'Every Arctis piece has infinite durability.',
       'Full gear + roster breakdown on the Forge page.',
@@ -1283,9 +1283,15 @@ const GUIDE = [
 // =====================================================================
 const NEWS = [
   {
+    tag: 'Schedule',
+    title: 'Season 2 Schedule — Season 1 ends July 26, launch August 9',
+    body: 'The full timeline is locked. Season 1’s last day is July 26. The server goes offline July 27–31 for maintenance and Season 2 prep, then the Open Beta (OBT) runs August 1–6 — everyone welcome, with boosted testing rates and all beta progress wiped before release. Bug fixes land August 7–8, and Season 2 officially launches August 9.',
+    link: 'patchnotes.html',
+  },
+  {
     tag: 'Event',
-    title: 'END OF THE WORLD — Season 1 ends August 1, 2026',
-    body: 'The Season of the First Sun is going out with a bang. The END OF THE WORLD event is live until the season closes on August 1, 2026 — every banner unlocked, Unstable Global Energy surging and hourly fishing. Say your goodbyes, then see everything coming in Season 2.',
+    title: 'END OF THE WORLD — Season 1 ends July 26, 2026',
+    body: 'The Season of the First Sun is going out with a bang. The END OF THE WORLD event is live until the season closes on July 26, 2026 — every banner unlocked, Unstable Global Energy surging and hourly fishing. Say your goodbyes, then see everything coming in Season 2.',
     link: 'guide.html',
   },
 ];
@@ -1300,7 +1306,7 @@ const PATCHNOTES = [
     tag: 'Season 2',
     title: 'Revealed: Season 2 — ARCTIS, an age of Eternal Winter',
     changes: [
-      { type: 'new', text: 'When Season 1 closes on <strong>August 1</strong>, <strong>Season 2 — Arctis</strong> begins. An <strong>Eternal Winter</strong> settles over Cobble Asia: an ancient frozen kingdom, aurora skies, crystal and permafrost, and the primordial cold of <strong>Kyurem</strong>. The whole site and server have been reforged in frost to match — new logo, new look, new age. Bundle up.' },
+      { type: 'new', text: 'When Season 1 closes on <strong>July 26</strong>, <strong>Season 2 — Arctis</strong> begins — Open Beta <strong>August 1</strong>, official launch <strong>August 9</strong>. An <strong>Eternal Winter</strong> settles over Cobble Asia: an ancient frozen kingdom, aurora skies, crystal and permafrost, and the primordial cold of <strong>Kyurem</strong>. The whole site and server have been reforged in frost to match — new logo, new look, new age. Bundle up.' },
     ],
   },
   {
@@ -1310,6 +1316,19 @@ const PATCHNOTES = [
     changes: [
       { type: 'new', text: 'A new <strong>Arctis</strong> gear season is coming to the Forge — frost-forged <strong>armor, weapons and tools</strong> (Frostfang, Rimecleaver, Icebreaker and more) with icy passives that can freeze foes, boost Ice- &amp; Fairy-type catches, and scale all the way to <strong>Overmax</strong>. Complete the set for the <strong>Domain of Arctis</strong> bonus. <strong>SolForge</strong> gear stays on as a Season 1 legacy set. <code>/gear</code>' },
       { type: 'new', text: 'Eight signature <strong>Arctis Pokémon</strong> — frozen ultimate forms led by <strong>Arctis Kyurem</strong> and <strong>Arctis Dialga</strong> — headline the new roster, each with its own defining frost ability and signature move.' },
+    ],
+  },
+  {
+    date: '2026-07-18',
+    tag: 'Schedule',
+    title: 'Season 2 schedule — Season 1 ends July 26, Season 2 launches August 9',
+    changes: [
+      { type: 'new', text: '<strong>The end-of-Season-1 and Season-2 launch schedule is finalized.</strong> We’re taking extra time to test and polish so Season 2 launches in the best possible state.' },
+      { type: 'new', text: '🏁 <strong>Season 1 last day — July 26.</strong> Season 1 officially concludes; make sure to finish anything you’d like to accomplish before then.' },
+      { type: 'new', text: '🔧 <strong>Maintenance &amp; Season 2 prep — July 27–31.</strong> The server is offline while we prepare the update, run maintenance and finalize all new systems.' },
+      { type: 'new', text: '🧪 <strong>Open Beta Test (OBT) — August 1–6.</strong> Everyone’s welcome to help test the revamped features, new mechanics and balance. All OBT progress is wiped before release, and rates may be temporarily increased to test progression more efficiently.' },
+      { type: 'new', text: '🛠️ <strong>Bug fixes &amp; final prep — August 7–8.</strong> We review OBT bug reports, fix critical issues and make final balance adjustments before launch.' },
+      { type: 'new', text: '🚀 <strong>Official Season 2 launch — August 9.</strong> Season 2 officially begins! A huge thank you to everyone who supported Season 1 — see you in Arctis. ❤️' },
     ],
   },
   {
@@ -1325,7 +1344,7 @@ const PATCHNOTES = [
     tag: 'Event',
     title: 'New: END OF THE WORLD — the Season 1 finale',
     changes: [
-      { type: 'new', text: 'Season 1 is going out with a bang. <strong>Global Energy is now unstable</strong> — a legendary can <strong>surge at any time</strong> instead of waiting on a fixed threshold, so keep a party ready at all times. The finale runs until the season wraps up on <strong>August 1</strong>.' },
+      { type: 'new', text: 'Season 1 is going out with a bang. <strong>Global Energy is now unstable</strong> — a legendary can <strong>surge at any time</strong> instead of waiting on a fixed threshold, so keep a party ready at all times. The finale runs until the season wraps up on <strong>July 26</strong>.' },
     ],
   },
   {

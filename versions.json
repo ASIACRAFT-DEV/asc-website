@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T01:53:56.064Z",
+  "generatedAt": "2026-07-23T08:12:51.416Z",
   "count": 39,
   "mods": [
     {
@@ -105,7 +105,7 @@
     {
       "repo": "asc-clientui",
       "name": "CobbleAsia Client UI",
-      "version": "1.0.0"
+      "version": "1.1.0"
     },
     {
       "repo": "asc-cosmetics",
@@ -125,12 +125,12 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.97.1"
+      "version": "7.98.0"
     },
     {
       "repo": "asc-forge",
       "name": "CobbleAsia Forge",
-      "version": "2.49.1"
+      "version": "2.51.0"
     },
     {
       "repo": "asc-gts",

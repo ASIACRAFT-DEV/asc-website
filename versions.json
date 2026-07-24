@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-24T01:49:53.666Z",
+  "generatedAt": "2026-07-24T08:08:31.613Z",
   "count": 39,
   "mods": [
     {
@@ -15,7 +15,7 @@
     {
       "repo": "asc-clans",
       "name": "ASC Clans",
-      "version": "1.24.0"
+      "version": "1.24.1"
     },
     {
       "repo": "asc-cobsave",
@@ -100,7 +100,7 @@
     {
       "repo": "asc-chestshop",
       "name": "CobbleAsia ChestShop",
-      "version": "2.5.0"
+      "version": "2.5.1"
     },
     {
       "repo": "asc-clientui",

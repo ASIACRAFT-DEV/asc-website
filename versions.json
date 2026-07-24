@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-23T18:59:55.085Z",
+  "generatedAt": "2026-07-24T01:49:53.666Z",
   "count": 39,
   "mods": [
     {
@@ -85,12 +85,12 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.38.0"
+      "version": "3.39.0"
     },
     {
       "repo": "asc-battlepass",
       "name": "CobbleAsia BattlePass",
-      "version": "2.18.2"
+      "version": "2.19.0"
     },
     {
       "repo": "asc-breeding",
@@ -105,7 +105,7 @@
     {
       "repo": "asc-clientui",
       "name": "CobbleAsia Client UI",
-      "version": "1.1.0"
+      "version": "1.3.0"
     },
     {
       "repo": "asc-cosmetics",
@@ -125,12 +125,12 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.98.1"
+      "version": "7.101.0"
     },
     {
       "repo": "asc-forge",
       "name": "CobbleAsia Forge",
-      "version": "2.51.0"
+      "version": "2.53.0"
     },
     {
       "repo": "asc-gts",
@@ -185,7 +185,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.10.1"
+      "version": "3.11.0"
     },
     {
       "repo": "asc-transform",

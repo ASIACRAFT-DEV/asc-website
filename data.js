@@ -1302,6 +1302,17 @@ const NEWS = [
 // =====================================================================
 const PATCHNOTES = [
   {
+    date: '2026-07-25',
+    tag: 'Legendaries',
+    title: 'Season 2: legendary hunting goes personal',
+    changes: [
+      { type: 'new', text: 'The shared <strong>Global Energy</strong> bar is retired. From Season 2, every player has their own <strong>Legend bar</strong> — fill it, and at <strong>100%</strong> you roll a <strong>25% chance</strong> for a Legendary to spawn <strong>for you</strong>. Win or lose, the bar then resets to 0%. No more waiting on the whole server to fill one bar, and no more watching someone else get the spawn you helped pay for. <code>/legend</code>' },
+      { type: 'new', text: 'Fill it through <strong>Daily &amp; Weekly Quests</strong>, <strong>PvP wins</strong>, and defeating <strong>Alphas &amp; Paradox</strong> Pokémon, with <strong>Jobs</strong> and your usual catching, training, PokéHunts, Bingo and Battle Tower play chipping in. Every activity is <strong>capped</strong>, so no single grind can fill the bar on its own — you get there by playing across the server.' },
+      { type: 'new', text: 'Your roll respects <strong>where you are</strong>. Biome, time of day and weather all matter, exactly as <code>/pwiki</code> describes them. Standing somewhere no Legendary can appear <strong>holds</strong> your full bar instead of wasting it — you\'ll be told to move, and you lose nothing.' },
+      { type: 'improved', text: '<strong>Box legendaries are out of the wild spawn pool.</strong> Kyurem, Rayquaza, Mewtwo, Zacian, Koraidon and the rest of the box-art legends can no longer be rolled from a Legend bar. Every other Legendary and Mythical is still in.' },
+    ],
+  },
+  {
     date: '2026-07-22',
     tag: 'Season 2',
     title: 'Revealed: Season 2 — ARCTIS, an age of Eternal Winter',
@@ -2563,7 +2574,19 @@ const FAQ = [
       },
       {
         q: 'How do legendary and mythical spawns work?',
-        a: 'Legendary spawns are tied to <b>Global Energy</b>. Completing <code>/legend</code> tasks raises the server\'s energy bar; once it reaches <b>50%+</b>, legendaries and mythicals can begin spawning (higher energy = better odds). The bar decays slowly over time and drops when a legendary actually spawns — so it\'s a shared, server-wide effort.',
+        a: 'Every player has their own <b>Legend bar</b> — open it with <code>/legend</code>. Playing fills it, and when it hits <b>100%</b> you roll a <b>25% chance</b> for a Legendary to spawn <b>for you</b>. Win or lose that roll, your bar resets to 0% and you start building again. The old shared server-wide Global Energy bar is gone — legendary hunting is personal now.',
+      },
+      {
+        q: 'How do I fill my Legend bar?',
+        a: 'Mainly <b>Daily and Weekly Quests</b> (<code>/bp</code>), <b>PvP wins</b> (<code>/pvp</code>), and defeating <b>Alpha and Paradox</b> Pokémon — Area Zero is the densest source. <b>Jobs</b> claims help a little, and catching, training, PokéHunts, Bingo and Battle Tower all still chip in. Every activity has a <b>cap</b> on how much of the bar it can fill, so no single grind gets you there — you reach 100% by playing across the server. Skip an activity for a day and its energy slowly decays.',
+      },
+      {
+        q: 'My Legend bar is full but nothing happened — why?',
+        a: 'You have to be somewhere a Legendary can actually appear. Biome, time of day and weather all count, exactly like the spawn conditions <code>/pwiki &lt;species&gt;</code> lists. If nothing is eligible where you\'re standing, the game <b>holds your full bar</b> rather than spending it, and tells you to move — you lose nothing. Travel to a matching biome and the roll fires.',
+      },
+      {
+        q: 'Can I get a box legendary from the Legend bar?',
+        a: 'No. <b>Box legendaries are not in the wild spawn pool</b> — Mewtwo, Lugia, Ho-Oh, Kyogre, Groudon, Rayquaza, Dialga, Palkia, Giratina, Reshiram, Zekrom, Kyurem, Xerneas, Yveltal, Solgaleo, Lunala, Necrozma, Zacian, Zamazenta, Eternatus, Calyrex, Koraidon and Miraidon can\'t be rolled from your Legend bar. Everything else legendary and mythical is fair game.',
       },
       {
         q: 'What is /hunt?',

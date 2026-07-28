@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-27T19:13:35.327Z",
+  "generatedAt": "2026-07-28T01:43:30.644Z",
   "count": 39,
   "mods": [
     {
@@ -15,7 +15,7 @@
     {
       "repo": "asc-clans",
       "name": "ASC Clans",
-      "version": "1.24.1"
+      "version": "1.25.0"
     },
     {
       "repo": "asc-cobsave",
@@ -40,12 +40,12 @@
     {
       "repo": "asc-fishing",
       "name": "ASC Fishing",
-      "version": "1.8.0"
+      "version": "1.9.0"
     },
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "1.27.1"
+      "version": "1.28.0"
     },
     {
       "repo": "asc-jobs",
@@ -85,7 +85,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.40.0"
+      "version": "3.42.0"
     },
     {
       "repo": "asc-battlepass",
@@ -100,7 +100,7 @@
     {
       "repo": "asc-chestshop",
       "name": "CobbleAsia ChestShop",
-      "version": "2.5.1"
+      "version": "2.6.0"
     },
     {
       "repo": "asc-clientui",
@@ -110,7 +110,7 @@
     {
       "repo": "asc-cosmetics",
       "name": "CobbleAsia Cosmetics",
-      "version": "0.5.0"
+      "version": "0.6.0"
     },
     {
       "repo": "asc-crates",
@@ -125,7 +125,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.105.0"
+      "version": "7.108.0"
     },
     {
       "repo": "asc-forge",
@@ -135,7 +135,7 @@
     {
       "repo": "asc-gts",
       "name": "CobbleAsia GTS",
-      "version": "2.10.1"
+      "version": "2.11.0"
     },
     {
       "repo": "asc-leaderboard",
@@ -150,17 +150,17 @@
     {
       "repo": "asc-levels",
       "name": "CobbleAsia Levels",
-      "version": "1.8.0"
+      "version": "1.9.0"
     },
     {
       "repo": "asc-mail",
       "name": "CobbleAsia Mail",
-      "version": "1.13.1"
+      "version": "1.14.0"
     },
     {
       "repo": "asc-npcs",
       "name": "CobbleAsia NPCs",
-      "version": "2.10.0"
+      "version": "2.11.1"
     },
     {
       "repo": "asc-pokewiki",
@@ -175,12 +175,12 @@
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.48.0"
+      "version": "4.49.0"
     },
     {
       "repo": "asc-ranks",
       "name": "CobbleAsia Ranks",
-      "version": "1.33.1"
+      "version": "1.34.0"
     },
     {
       "repo": "asc-safari",

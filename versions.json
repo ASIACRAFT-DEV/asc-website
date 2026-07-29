@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-28T19:08:37.976Z",
+  "generatedAt": "2026-07-29T01:44:46.236Z",
   "count": 39,
   "mods": [
     {
@@ -40,7 +40,7 @@
     {
       "repo": "asc-fishing",
       "name": "ASC Fishing",
-      "version": "2.0.0"
+      "version": "2.0.1"
     },
     {
       "repo": "asc-gyms",
@@ -85,7 +85,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.42.0"
+      "version": "3.43.0"
     },
     {
       "repo": "asc-battlepass",

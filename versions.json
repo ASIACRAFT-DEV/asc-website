@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-29T01:44:46.236Z",
+  "generatedAt": "2026-07-29T08:21:11.758Z",
   "count": 39,
   "mods": [
     {
@@ -85,7 +85,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.43.0"
+      "version": "3.44.0"
     },
     {
       "repo": "asc-battlepass",
@@ -170,7 +170,7 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.39.1"
+      "version": "2.42.0"
     },
     {
       "repo": "asc-raidboss",

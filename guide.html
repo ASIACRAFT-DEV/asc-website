@@ -4,12 +4,12 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Season 2 Changes — Cobble Asia</title>
-  <meta name="description" content="Season 2 Gameplay Overhaul — the Arctis frozen gear set &amp; signature Pokémon, Banner &amp; Summon revamp, Battle Pass, Area Zero, Battle Tower, Gyms &amp; Elite Four, Rank progression and PvP Ranked. Every activity now matters." />
+  <meta name="description" content="Season 2 Gameplay Overhaul — Arctis frozen gear &amp; signature Pokémon, a fresh single world with per-biome /rtp, Orb-based banners, rebuilt breeding, Pokémon fishing, the player Bazaar, Battle Tower, Area Zero, Gyms &amp; Elite Four and PvP Ranked. Open Beta August 1." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/brand-frost.png" />
-  <link rel="stylesheet" href="styles.css?v=202607250730" />
+  <link rel="stylesheet" href="styles.css?v=202607301659" />
 </head>
 <body>
   <header class="nav">
@@ -43,7 +43,11 @@
 
     <div class="fp-body">
       <div class="s2-callout reveal" style="margin-bottom: 26px;">
-        ⚠️ <strong>Disclaimer:</strong> These changes are not final and are subject to change before Season 2 launches.
+        ❄️ <strong>The Season 2 world is built.</strong> The map has been wiped and regenerated, every system below is finished and installed, and the <strong>Arctis Open Beta opens August 1</strong> — everyone's invited. Official launch is <strong>August 9</strong>. Numbers and payouts will keep getting tuned through the beta.
+      </div>
+
+      <div class="s2-callout reveal" style="margin-bottom: 26px;">
+        🖥️ <strong>You need the modpack to join.</strong> Season 2 runs on a custom interface — our client mod (<strong>asc-clientui</strong>) ships in the official CobbleAsia modpack and is now <strong>required to connect</strong>. Grab the pack from Discord before you log in.
       </div>
 
       <div class="s2-intro reveal">
@@ -61,13 +65,13 @@
       <!-- WIPE CHECKLIST / STATUS BOARD -->
       <div class="s2-status reveal">
         <div class="s2-status-head">
-          <h2>🛠️ Season 2 Progress Tracker</h2>
-          <p>A live look at where every Season 2 system stands. Click any item to jump to its details below.</p>
+          <h2>🛠️ Season 2 Status Board</h2>
+          <p>Where every Season 2 system stands going into the Open Beta. Click any item to jump to its details below.</p>
         </div>
 
         <div class="s2-legend-row">
-          <span class="s2-pill"><span class="s2-dot ready"></span>Ready — built &amp; live</span>
-          <span class="s2-pill"><span class="s2-dot dev"></span>Under Development</span>
+          <span class="s2-pill"><span class="s2-dot ready"></span>Built &amp; installed</span>
+          <span class="s2-pill"><span class="s2-dot dev"></span>Still being tuned</span>
           <span class="s2-pill"><span class="s2-dot todo"></span>Not Started Yet</span>
         </div>
 
@@ -75,36 +79,45 @@
           <!-- READY -->
           <div class="s2-col ready">
             <div class="s2-col-head">
-              <span class="s2-col-title">Ready for Implementation</span>
-              <span class="s2-col-count">11</span>
+              <span class="s2-col-title">Built &amp; Installed</span>
+              <span class="s2-col-count">21</span>
             </div>
             <ul class="s2-check">
+              <li><a href="#s2-arctis"><span class="mark">✓</span><span>Arctis — Season 2 Set<span class="lbl-sub">frozen gear + 8 signature Pokémon</span></span></a></li>
+              <li><a href="#s2-world"><span class="mark">✓</span><span>One World, One Border<span class="lbl-sub">fresh map, ±5000 border, per-biome /rtp</span></span></a></li>
+              <li><a href="#s2-starter"><span class="mark">✓</span><span>Starter Questline<span class="lbl-sub">9 guided first steps — /quest</span></span></a></li>
+              <li><a href="#s2-ui"><span class="mark">✓</span><span>Custom Interface<span class="lbl-sub">real screens, not chest menus</span></span></a></li>
               <li><a href="#s2-banner"><span class="mark">✓</span><span>Banner &amp; Summon Revamp<span class="lbl-sub">Orbs currency + Gen 1–9 banners, 250 pity</span></span></a></li>
-              <li><a href="#s2-bazaar"><span class="mark">✓</span><span>Cobble Bazaar — Dynamic Shop<span class="lbl-sub">/shop + /bazaar order book</span></span></a></li>
-              <li><a href="#s2-clans"><span class="mark">✓</span><span>Clan Revamp<span class="lbl-sub">territory, wars, clan raid boss</span></span></a></li>
-              <li><a href="#s2-breeding"><span class="mark">✓</span><span>Breeding Changes<span class="lbl-sub">HA gate + /unbreed lock</span></span></a></li>
-              <li><a href="#s2-dexquest"><span class="mark">✓</span><span>Pokédex Research Quests<span class="lbl-sub">live — reward values being finalized</span></span></a></li>
+              <li><a href="#s2-economy"><span class="mark">✓</span><span>Coins &amp; Economy Revamp<span class="lbl-sub">coin faucets cut ~60%</span></span></a></li>
+              <li><a href="#s2-bazaar"><span class="mark">✓</span><span>Bazaar &amp; the Player Market<span class="lbl-sub">/shop pricing + /bazaar order book</span></span></a></li>
+              <li><a href="#s2-jobs"><span class="mark">✓</span><span>Jobs Revamp<span class="lbl-sub">quest questline + per-job NPCs</span></span></a></li>
+              <li><a href="#s2-battlepass"><span class="mark">✓</span><span>Battle Pass Revamp<span class="lbl-sub">Orbs, Essence, L100 Shiny Spin</span></span></a></li>
+              <li><a href="#s2-areazero"><span class="mark">✓</span><span>Area Zero Revamp<span class="lbl-sub">PvP zones + DNA loop</span></span></a></li>
+              <li><a href="#s2-paradox"><span class="mark">✓</span><span>Paradox Crafting<span class="lbl-sub">Elemental DNA synthesizer</span></span></a></li>
+              <li><a href="#s2-raidboss"><span class="mark">✓</span><span>Raid Boss Revamp<span class="lbl-sub">hidden in the Safari, free entry</span></span></a></li>
+              <li><a href="#s2-dexquest"><span class="mark">✓</span><span>Pokédex Research Quests<span class="lbl-sub">931 quests across Gen 1–9</span></span></a></li>
+              <li><a href="#s2-legend"><span class="mark">✓</span><span>Legend Bar &amp; Roulette<span class="lbl-sub">per-player bar, manual /legend roll</span></span></a></li>
               <li><a href="#s2-battletower"><span class="mark">✓</span><span>Battle Tower Revamp<span class="lbl-sub">roguelike Nuzlocke climb</span></span></a></li>
-              <li><a href="#s2-paradox"><span class="mark">✓</span><span>Paradox Crafting<span class="lbl-sub">Elemental DNA synthesizer — /ascess paradox</span></span></a></li>
-              <li><a href="#s2-legend"><span class="mark">✓</span><span>Global Energy &amp; Legend<span class="lbl-sub">per-player Legend bar — /legend</span></span></a></li>
+              <li><a href="#s2-gyms"><span class="mark">✓</span><span>Gyms &amp; Elite Four Revamp<span class="lbl-sub">one NatDex OU E4, 8-badge gate</span></span></a></li>
+              <li><a href="#s2-clans"><span class="mark">✓</span><span>Clan Revamp<span class="lbl-sub">territory, wars, clan raid boss</span></span></a></li>
               <li><a href="#s2-pvp"><span class="mark">✓</span><span>PvP Ranked Revamp<span class="lbl-sub">Ball tiers + Master Tier</span></span></a></li>
-              <li><a href="#s2-economy"><span class="mark">✓</span><span>Coins &amp; Economy Revamp<span class="lbl-sub">coin faucets cut ~60% — live</span></span></a></li>
-              <li><a href="#s2-jobs"><span class="mark">✓</span><span>Jobs Revamp<span class="lbl-sub">quest-based questline + per-job NPCs</span></span></a></li>
+              <li><a href="#s2-breeding"><span class="mark">✓</span><span>Breeding Rebuilt<span class="lbl-sub">ASC Ranch + walk-to-hatch eggs</span></span></a></li>
+              <li><a href="#s2-fishing"><span class="mark">✓</span><span>Fishing 2.0<span class="lbl-sub">you reel in Pokémon now</span></span></a></li>
+              <li><a href="#s2-voteparty"><span class="mark">✓</span><span>Vote Party &amp; Skills<span class="lbl-sub">community wheel + 16 grind skills</span></span></a></li>
             </ul>
           </div>
 
           <!-- UNDER DEVELOPMENT -->
           <div class="s2-col dev">
             <div class="s2-col-head">
-              <span class="s2-col-title">Under Development</span>
-              <span class="s2-col-count">5</span>
+              <span class="s2-col-title">Still Being Tuned</span>
+              <span class="s2-col-count">4</span>
             </div>
             <ul class="s2-check">
-              <li><a href="#s2-arctis"><span class="mark">●</span><span>Arctis — Season 2 Set<span class="lbl-sub">frozen gear + 8 signature Pokémon</span></span></a></li>
-              <li><a href="#s2-areazero"><span class="mark">●</span><span>Area Zero Revamp<span class="lbl-sub">built — final DNA-loop wiring</span></span></a></li>
-              <li><a href="#s2-raidboss"><span class="mark">●</span><span>Raid Boss Revamp<span class="lbl-sub">Safari-hidden relocation pending</span></span></a></li>
-              <li><a href="#s2-battlepass"><span class="mark">●</span><span>Battle Pass Revamp<span class="lbl-sub">milestones in — Orbs next</span></span></a></li>
-              <li><a href="#s2-gyms"><span class="mark">●</span><span>Gyms &amp; Elite Four Revamp<span class="lbl-sub">RCT + badge gate — E4 streamline next</span></span></a></li>
+              <li><a href="#s2-jobs"><span class="mark">●</span><span>Job paycheck scale<span class="lbl-sub">first-pass numbers — expect balancing</span></span></a></li>
+              <li><a href="#s2-dexquest"><span class="mark">●</span><span>Research quest rewards<span class="lbl-sub">coin + material values not final</span></span></a></li>
+              <li><a href="#s2-arctis"><span class="mark">●</span><span>Arctis proc rates<span class="lbl-sub">passive trigger chances under review</span></span></a></li>
+              <li><a href="#s2-economy"><span class="mark">●</span><span>Coin faucet balance<span class="lbl-sub">watching the beta economy closely</span></span></a></li>
             </ul>
           </div>
 
@@ -115,7 +128,7 @@
               <span class="s2-col-count">0</span>
             </div>
             <ul class="s2-check">
-              <li class="s2-empty"><span>Everything's underway — nothing left in the backlog 🎉</span></li>
+              <li class="s2-empty"><span>Everything on the Season 2 list is built 🎉</span></li>
             </ul>
           </div>
         </div>
@@ -198,6 +211,85 @@
         <p>Seasonal Pokémon are treated as ultimate forms — no Mega Evolution, no secondary or Hidden Abilities, just one defining power each.</p>
       </div>
 
+      <!-- ONE WORLD, ONE BORDER -->
+      <div class="s2-block reveal" id="s2-world">
+        <h2 class="s2-h">🗺️ One World, One Border</h2>
+        <div class="guide-cmds"><code>/rtp</code><code>/spawn</code><code>/hub</code></div>
+        <p>Season 1 sprawled across a handful of overworlds. Season 2 is <strong>one map</strong> — freshly generated on a brand-new seed, fully <strong>pre-generated</strong> before you arrive, and fenced in on purpose so the world stays a place instead of an empty frontier.</p>
+
+        <div class="s2-sub">A finite, fully-loaded map</div>
+        <ul class="s2-list">
+          <li>The overworld is capped at a <strong>10,000 × 10,000</strong> square — 5,000 blocks in every direction from spawn</li>
+          <li>Every chunk inside that border is <strong>pre-generated</strong>, so exploring doesn't lag the server and nobody walks into unloaded terrain</li>
+          <li>A smaller world means you'll actually run into other trainers — bases, shops and clan territory all sit within reach</li>
+          <li>All the themed destinations (Safari, Area Zero, dungeons, event worlds) are still their own separate spaces</li>
+        </ul>
+
+        <div class="s2-sub">/rtp is now per-biome</div>
+        <p>Random teleport no longer picks a world — it picks a <strong>biome</strong>. Open <code>/rtp</code> for the biome picker or type it straight out:</p>
+        <div class="s2-callout">
+          <code>/rtp cherry_grove</code> &nbsp;·&nbsp; <code>/rtp desert</code> &nbsp;·&nbsp; <code>/rtp random</code>
+        </div>
+        <ul class="s2-list">
+          <li>The picker shows every biome that exists on this map and <strong>how much of the world</strong> it covers</li>
+          <li>Every trip is a genuinely random spot inside that biome — not the one nearest corner everybody else got sent to</li>
+          <li>Oceans and cave-only biomes are excluded, so you never land swimming or buried</li>
+          <li>One flat cooldown for everyone, no matter where you go</li>
+        </ul>
+        <p>Hunting a specific Pokémon? Look up its biome with <code>/pwiki &lt;species&gt;</code>, then <code>/rtp</code> straight there.</p>
+
+        <div class="s2-sub">A new spawn — and the old hub is still there</div>
+        <ul class="s2-list">
+          <li><code>/spawn</code> drops you at <strong>Dragonforstborn</strong>, the new Season 2 frozen spawn city — NPCs, shops, warps and the job boards all live here</li>
+          <li><code>/hub</code> takes you back to the old lobby, kept around for events and nostalgia</li>
+        </ul>
+      </div>
+
+      <!-- STARTER QUESTLINE -->
+      <div class="s2-block reveal" id="s2-starter">
+        <h2 class="s2-h">🎓 The Starter Questline</h2>
+        <div class="guide-cmds"><code>/quest</code></div>
+        <p>New players used to land at spawn, read a wall of commands, and bounce. Season 2 replaces that with a <strong>nine-step questline</strong> that walks you through the server by actually making you play it. No cutscene, no locked tutorial room — you're in the real world from the first second.</p>
+
+        <div class="s2-sub">The nine steps</div>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>#</th><th>Quest</th><th>What it teaches</th></tr></thead>
+            <tbody>
+              <tr><td>1</td><td>Open your Quest Log</td><td><code>/quest</code> — your progress tracker</td></tr>
+              <tr><td>2</td><td>Craft a Poké Ball</td><td>we hand you the apricorns and copper</td></tr>
+              <tr><td>3</td><td>Catch a Pokémon</td><td>rewards your first <strong>Orb</strong></td></tr>
+              <tr><td>4</td><td>Spend it on the Starter Banner</td><td>how summoning works — guaranteed Pikachu</td></tr>
+              <tr><td>5</td><td>Claim some land</td><td>protecting your base</td></tr>
+              <tr><td>6</td><td>Look up a species</td><td><code>/pwiki</code> — where things spawn</td></tr>
+              <tr><td>7</td><td>Take a job</td><td>how you'll earn coins</td></tr>
+              <tr><td>8</td><td>Collect your first paycheck</td><td>the job NPC loop</td></tr>
+              <tr><td>9</td><td>Buy something on <code>/shop</code></td><td>spending what you earned</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>Finish all nine and you graduate straight into Dragonforstborn spawn with a Pikachu, a job, a claim and coins in the bank. Veterans can blitz it in a few minutes; it never blocks you from doing anything else.</p>
+      </div>
+
+      <!-- CUSTOM INTERFACE -->
+      <div class="s2-block reveal" id="s2-ui">
+        <h2 class="s2-h">🖥️ A Real Interface</h2>
+        <p>For two years every ASC menu was a chest full of item icons. Season 2 replaces that with <strong>proper custom screens</strong> — over <strong>20 mods</strong> rebuilt with real panels, tabs, progress bars, scrolling lists, hover tooltips and animated reels.</p>
+
+        <div class="s2-sub">What that changes</div>
+        <ul class="s2-list">
+          <li><strong>Readable menus</strong> — actual text and layout instead of guessing what a stack of paper means</li>
+          <li><strong>Animated spins</strong> — banner pulls, the Battle Pass Shiny Legendary Spin, the Legend roulette and the Vote Party wheel all animate at full framerate</li>
+          <li><strong>Screens where there weren't any</strong> — catch combos, claim blocks, Transform, World Tweaks and NPCs got their first real GUI</li>
+          <li>The heavy things that need item slots — your vault, the casino tables, the Forge bench, custom crafting — deliberately stay as chest menus, because that's what works</li>
+        </ul>
+
+        <div class="s2-callout">
+          <span class="s2-star">🖥️ The client mod is required</span>
+        </div>
+        <p>All of this renders through <strong>asc-clientui</strong>, a small client-side mod bundled in the official CobbleAsia modpack. It holds <em>only</em> the drawing code — every rule, rate and reward stays on the server — and it's now <strong>required to join</strong>, so the server can count on you having the interface. Get the pack from our Discord and you're set.</p>
+      </div>
+
       <!-- BANNER & SUMMON -->
       <div class="s2-block reveal" id="s2-banner">
         <h2 class="s2-h">🎰 Banner &amp; Summon Revamp</h2>
@@ -206,24 +298,36 @@
 
         <div class="s2-sub">Changes</div>
         <ul class="s2-list">
-          <li>Pity increased from <strong>90 → 250</strong> pulls</li>
-          <li>Banners now use <strong>Orbs</strong>, a special currency — mainly earned through gameplay</li>
-          <li>You can still buy a limited <strong>10–20 pulls per day</strong> with coins, and coin gains are being heavily nerfed</li>
+          <li>Hard pity increased from <strong>90 → 250</strong> pulls, with soft pity from <strong>205</strong> — the real average sits around <strong>185</strong></li>
+          <li>Base 5★ rate is <strong>0.2%</strong></li>
+          <li>Banners now use <strong>Orbs</strong>, a special currency — mainly earned through gameplay. <strong>1 Orb</strong> per single pull, <strong>10</strong> for a ten-pull</li>
+          <li>You can still buy Orbs with coins — <strong>50,000 coins each, capped at 15 a day</strong> across every purchase route — and coin gains have been heavily cut</li>
         </ul>
 
-        <div class="s2-sub">You can obtain Orbs through</div>
-        <ul class="s2-list">
-          <li>Battle Tower</li>
-          <li>Area Zero</li>
-          <li>Dungeons</li>
-          <li>Daily Quests</li>
-          <li>Weekly Quests</li>
-          <li>Battle Pass</li>
-          <li>Banner Rotation</li>
-        </ul>
+        <div class="s2-sub">Where Orbs come from</div>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Source</th><th>Orbs</th><th>Cap</th></tr></thead>
+            <tbody>
+              <tr><td>Daily Commissions</td><td>1 for finishing 4</td><td>7 / week</td></tr>
+              <tr><td>Weekly Commissions</td><td>3 for finishing all</td><td>3 / week</td></tr>
+              <tr><td>Battle Pass — free track</td><td>5 → 15 at Lv 15/35/55/70/90</td><td>50 / season</td></tr>
+              <tr><td>Battle Pass — premium</td><td>+10 → 25 at Lv 15/45/70/90</td><td>+70 / season</td></tr>
+              <tr><td>Area Zero bosses</td><td>1 Alpha · 2 Paradox · 3 Legendary</td><td>per event</td></tr>
+              <tr><td>Dungeon clears</td><td>scales with difficulty</td><td>10 / week</td></tr>
+              <tr><td>Battle Tower in-run shop</td><td>250 BT Tokens each</td><td>10 / week</td></tr>
+              <tr><td>Warzone shop</td><td>400 Warzone Points each</td><td>10 / week</td></tr>
+              <tr><td>Fishing up an Alpha</td><td>1 per Alpha</td><td>5 / week</td></tr>
+              <tr><td>Buying with coins</td><td>50,000 coins each</td><td>15 / day</td></tr>
+            </tbody>
+          </table>
+        </div>
 
-        <p>Banners are now divided into <strong>Versions</strong>, each lasting 4 weeks. Instead of Trio Banners, we'll now feature <strong>Generation Banners (Gen 1–9)</strong>.</p>
-        <p>This keeps banners fresh while making Legendary Pokémon more valuable again.</p>
+        <p>Banners are now divided into <strong>Versions</strong>, each lasting 4 weeks. Instead of Trio Banners, we now feature <strong>Generation Banners (Gen 1–9)</strong>, rotating on a live countdown you can see in the banner screen.</p>
+
+        <div class="s2-sub">Wish History</div>
+        <p>Every pull you make is now recorded. Open the <strong>Wish History</strong> panel from the banner screen to see your full pull log, what you got, and exactly how many pulls you are from pity — the same way a gacha should show it. Chat version: <code>/ascsummon history</code>.</p>
+        <p>Together this keeps banners fresh while making Legendary Pokémon valuable again.</p>
       </div>
 
       <!-- COINS & ECONOMY -->
@@ -236,16 +340,22 @@
           <li>Shop purchases, as always</li>
           <li>Entry cost for the content that rewards Orbs — <strong>Battle Tower, Area Zero, Dungeons and Raid Bosses</strong></li>
           <li><strong>Dungeon Keys</strong> are now purchasable with coins — the daily key allowance is removed</li>
-          <li>A limited <strong>10–20 Orbs per day</strong> can still be bought with coins</li>
+          <li><strong>15 Orbs a day</strong> can still be bought with coins, at 50,000 each</li>
           <li>Buy <strong>Claim Blocks</strong> and extra <strong>PC slots</strong></li>
           <li>Convert coins directly into <strong>Tokens and Shards</strong></li>
         </ul>
-        <p>To make that work, we're rebalancing the coin economy so <strong>coins matter more</strong> and money stops being the shortcut to everything.</p>
+        <p>To make that work, we rebalanced the coin economy so <strong>coins matter more</strong> and money stops being the shortcut to everything.</p>
 
-        <div class="s2-sub">What's being reduced</div>
+        <div class="s2-sub">What was reduced — roughly 60% across the board</div>
         <ul class="s2-list">
-          <li>Coin payouts from <strong>Jobs, Fishing, Global Hunt, Area Zero &amp; Raid Bosses, Contracts, Bingo, Daily Login, Playtime and the Solar Pass</strong></li>
-          <li>This makes every coin you earn worth more, and pairs with the new <strong>Orbs</strong> currency that powers banners</li>
+          <li>Coin payouts from <strong>Jobs, Fishing, Poké Hunts, the Global Hunt, Area Zero &amp; Raid Bosses, Contracts, Bingo, Daily Login, Playtime and the Solar Pass</strong></li>
+          <li><strong>Donator kit coin payouts</strong> were scaled to match — the keys, Cores, candy and balls in every paid kit are untouched, because that's what you actually bought</li>
+          <li>Clan bank interest is capped again, so a big treasury can no longer print coins overnight</li>
+        </ul>
+
+        <div class="s2-sub">Buffed instead</div>
+        <ul class="s2-list">
+          <li>The <strong>free kit ladder</strong> (Rookie through Professor) had its item counts increased by about <strong>50%</strong> — free kits pay in gear, not coins, so they got better instead of worse</li>
         </ul>
 
         <div class="s2-sub">What's staying the same</div>
@@ -253,23 +363,33 @@
           <li><strong>Competitive rewards are untouched</strong> — Gyms, the PvP Ladder and Dungeons pay exactly as before</li>
           <li><strong>Voting rewards and the Casino are unchanged</strong></li>
         </ul>
-        <p>Every coin now carries more weight — thanks for building the economy with us. ☀️</p>
+        <p>Every coin now carries more weight — thanks for building the economy with us. ❄️</p>
       </div>
 
       <!-- COBBLE BAZAAR -->
       <div class="s2-block reveal" id="s2-bazaar">
-        <h2 class="s2-h">🏪 Cobble Bazaar — Dynamic Shop</h2>
-        <div class="guide-cmds"><code>/shop</code></div>
-        <p>Season 2's <code>/shop</code> becomes the <strong>Cobble Bazaar</strong> — a living market where prices move with supply and demand instead of sitting at fixed values.</p>
+        <h2 class="s2-h">🏪 The Bazaar &amp; the Player Market</h2>
+        <div class="guide-cmds"><code>/shop</code><code>/bazaar</code></div>
+        <p>Season 2 splits buying and selling into two places, on purpose. <code>/shop</code> is the <strong>Cobble Bazaar</strong> — the server's own store, with prices that move. <code>/bazaar</code> is a <strong>player-driven order book</strong>, and it's where things are actually worth money.</p>
 
-        <div class="s2-sub">How prices move</div>
+        <div class="s2-sub">/shop — the Cobble Bazaar</div>
         <ul class="s2-list">
           <li>The more an item is <strong>bought</strong>, the higher its buy price climbs</li>
-          <li>The more an item is <strong>sold</strong>, the lower its sell price drops</li>
-          <li>Buy price always stays <strong>above</strong> sell price — no infinite money printer</li>
-          <li>Prices slowly <strong>heal back</strong> toward baseline over time</li>
+          <li>Selling into the shop relieves that pressure and pushes the price back down</li>
+          <li>Prices never fall below their <strong>base value</strong>, and buy always stays above sell — no infinite money printer</li>
+          <li>⚠️ <strong>Shop buyback is only 2%</strong> of an item's buy price. The shop is a dump bin for junk, not a way to make money</li>
         </ul>
-        <p>Watch the market, buy low and sell high — the Bazaar rewards paying attention to the economy instead of grinding one item forever.</p>
+
+        <div class="s2-sub">/bazaar — the player order book</div>
+        <p>Selling to other players is the real market. The Bazaar works like a proper exchange:</p>
+        <ul class="s2-list">
+          <li><strong>Instant Buy / Instant Sell</strong> — take the best price on the book right now</li>
+          <li><strong>Create a Buy Order</strong> or a <strong>Sell Offer</strong> — name your price and wait for someone to cross it</li>
+          <li>Every <code>/shop</code> item is tradeable, priced <strong>per single item</strong>, with a live buy/sell ladder you can read before committing</li>
+          <li>Orders are <strong>escrowed</strong> — your coins or items are held up front, so a fill is always honoured. Log off mid-order and your payout waits for you in <strong>Claim All</strong></li>
+          <li>A small <strong>1% tax</strong> comes out of seller proceeds and is burned — a permanent coin sink</li>
+        </ul>
+        <p>Books start empty and players make the liquidity. Watch the ladder, undercut, sit on a bid, buy low and sell high — the Bazaar rewards paying attention to the economy instead of grinding one item forever. Alias: <code>/baz</code>.</p>
       </div>
 
       <!-- JOBS -->
@@ -304,33 +424,46 @@
         </div>
 
         <div class="s2-sub">Job Tiers</div>
-        <p>Each job climbs through <strong>three tiers</strong> as you earn Job EXP &amp; Reputation — unlocking harder quests, bigger paychecks, more quest slots, and exclusive rewards.</p>
+        <p>Each job climbs through <strong>three tiers</strong> — Apprentice, Journeyman and Master — earned from <strong>both</strong> Job EXP and Reputation. Higher tiers mean more quest slots (3 → 4 → 5), bigger paychecks (up to <strong>×1.6</strong>) and tier-exclusive quests.</p>
 
         <div class="s2-sub">Quest rotation</div>
         <ul class="s2-list">
-          <li>Daily &amp; weekly quest pools, with room for seasonal &amp; event quests</li>
+          <li>Daily &amp; weekly quest pools, rotating server-wide, with room for seasonal &amp; event quests</li>
           <li>Quest types: Collection, Crafting, Combat, Exploration &amp; Delivery</li>
         </ul>
+
+        <div class="s2-sub">Tracking your quests</div>
+        <p><code>/jobs</code> now opens with two tabs — <strong>JOBS</strong> and <strong>MY QUESTS</strong>. The quests tab is a live tracker: what you've accepted with progress bars, what's claimable, and this rotation's board for every job you're hired into. Prefer chat? <code>/job quests</code> prints the same thing.</p>
+        <p>Accepting and claiming still happen at the NPC — the tracker just means you never have to walk over to find out whether it's worth walking over.</p>
       </div>
 
       <!-- BATTLE PASS -->
       <div class="s2-block reveal" id="s2-battlepass">
         <h2 class="s2-h">🎟 Battle Pass Revamp</h2>
-        <p>The Season 1 Battle Pass simply wasn't rewarding enough. Season 2 greatly improves both the free and premium tracks.</p>
+        <div class="guide-cmds"><code>/bp</code></div>
+        <p>The Season 1 Battle Pass simply wasn't rewarding enough. Season 2 rebuilds both tracks around the two currencies that actually matter now — and puts it all on a real scrolling screen instead of a chest.</p>
 
-        <div class="s2-sub">Rewards include</div>
+        <div class="s2-sub">Orb rewards</div>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Track</th><th>Levels</th><th>Orbs</th><th>Season total</th></tr></thead>
+            <tbody>
+              <tr><td>Free</td><td>15 · 35 · 55 · 70 · 90</td><td>5 → 15</td><td>50</td></tr>
+              <tr><td>Premium</td><td>15 · 45 · 70 · 90</td><td>+10 → 25</td><td>+70</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="s2-sub">Also on the track</div>
         <ul class="s2-list">
-          <li>Orbs every 10 levels</li>
-          <li><strong>Premium Pass</strong> receives double Orb rewards</li>
-          <li>Seasonal Essence</li>
-          <li>IV Modifiers</li>
-          <li>SBCs / GBCs</li>
-          <li>Various progression materials</li>
+          <li><strong>Seasonal Essence</strong> — premium levels 20/40/60/85/95, the material behind seasonal gear relics</li>
+          <li>IV Modifiers, SBCs / GBCs and progression materials throughout</li>
         </ul>
 
         <div class="s2-sub">Final Reward</div>
         <p>Reach Level 100 to earn a:</p>
         <div class="s2-callout"><span class="s2-star">⭐ Shiny Legendary Spin</span></div>
+        <p>The spin is a full animated reel that lands on a guaranteed shiny legendary, and the whole server hears about it. You get one at Level 100 and <strong>another for every Prestige</strong> after that.</p>
         <p>The Battle Pass now rotates every <strong>45 days</strong>.</p>
       </div>
 
@@ -413,15 +546,23 @@
       <!-- GLOBAL ENERGY / LEGEND -->
       <div class="s2-block reveal" id="s2-legend">
         <h2 class="s2-h">⚡ Global Energy &amp; Legend Revamp</h2>
-        <p>Legendary spawning moves from a shared server bar to something personal you build up yourself.</p>
+        <div class="guide-cmds"><code>/legend</code><code>/legend roll</code></div>
+        <p>Legendary spawning moves from a shared server bar to something personal you build up yourself — and you decide when to cash it in.</p>
 
         <div class="s2-sub">Changes</div>
         <ul class="s2-list">
           <li><code>/legend</code> as the old shared system is <strong>scrapped</strong>, and Global Energy is now <strong>hidden</strong></li>
           <li><code>/legend</code> is now <strong>per-player</strong> — everyone has their own Legend bar</li>
-          <li>When your Legend bar is <strong>full</strong>, there's a <strong>25% chance</strong> a Legendary spawns for you — if you meet the biome requirements</li>
+          <li>The roll is <strong>manual</strong>. Nothing fires automatically: when your bar is full, you pull the trigger yourself with <code>/legend roll</code></li>
           <li>After that roll, your Legend chance resets back to <strong>0%</strong> — win or lose</li>
           <li><strong>Box legendaries are out of the wild pool</strong> — Kyurem, Rayquaza, Mewtwo, Zacian, Koraidon and the rest can't be rolled</li>
+        </ul>
+
+        <div class="s2-sub">The two-roll roulette</div>
+        <p>Pulling the trigger plays out as an animated wheel with two stages:</p>
+        <ul class="s2-list">
+          <li><strong>Roll one — Fate.</strong> A <strong>25% chance</strong> to succeed. Miss it and the wheel stops there</li>
+          <li><strong>Roll two — the Roster.</strong> Hit it, and the wheel spins again across every Legendary eligible where you're standing, landing on the one that spawns for you</li>
         </ul>
 
         <div class="s2-sub">Filling your Legend bar</div>
@@ -455,7 +596,7 @@
           <li>You <strong>draft 3 Pokémon</strong> from your party to start the run. The rest of your party is kept safe in your <strong>PC</strong> for the duration, and handed straight back when the run ends.</li>
           <li><strong>If a Pokémon goes down, it's out for the entire run.</strong> No revives — not from a heal, not from the Shop. Choose your leads carefully.</li>
           <li><strong>No healing between floors.</strong> HP, status <em>and</em> PP all carry from floor to floor, so you can't top up with <code>/pokeheal</code>, a potion or a healer — you have to bring a real team, not one OP move.</li>
-          <li>New team slots unlock at <strong>floors 10, 25 and 50</strong> (up to 6). Each one lets you draft an extra Pokémon <strong>out of your PC</strong> from the <code>/bts2</code> menu.</li>
+          <li>New team slots unlock at <strong>floors 10, 25 and 50</strong> (up to 6). Each one lets you draft an extra Pokémon <strong>out of your PC</strong> from the <code>/bt</code> menu.</li>
         </ul>
 
         <div class="s2-sub">Opponent Scaling</div>
@@ -473,7 +614,7 @@
         </div>
 
         <div class="s2-sub">Checkpoints — Choose One</div>
-        <p>Every 10 floors you hit a checkpoint and pick <strong>exactly one</strong> reward. Your choice is saved — closing the menu or logging out won't waste it, just reopen <code>/bts2</code>.</p>
+        <p>Every 10 floors you hit a checkpoint and pick <strong>exactly one</strong> reward. Your choice is saved — closing the menu or logging out won't waste it, just reopen <code>/bt</code>.</p>
         <ul class="s2-list">
           <li><strong>❤ Heal Party</strong> — restore HP, status and PP on your surviving Pokémon. <em>Does not revive downed Pokémon.</em></li>
           <li><strong>🔄 Swap</strong> — one switch: retire a downed Pokémon and bring a fresh one in from your PC, at full health. This is the <em>only</em> way to recover from a death.</li>
@@ -615,9 +756,59 @@
 
       <!-- BREEDING -->
       <div class="s2-block reveal" id="s2-breeding">
-        <h2 class="s2-h">🥚 Breeding Changes</h2>
-        <div class="guide-cmds"><code>/unbreed</code></div>
-        <p>Breeding gets fairer in Season 2 — genetics behave the way they should, and the Pokémon market stays healthy.</p>
+        <h2 class="s2-h">🥚 Breeding, Rebuilt From Scratch</h2>
+        <div class="guide-cmds"><code>/ascbreed</code><code>/unbreed</code></div>
+        <p>Nobody liked the old breeding mod, so <strong>we wrote our own</strong>. Season 2 breeding is an in-house ASC system built around one idea borrowed from Pixelmon: <strong>where you breed matters</strong>. Building a good ranch is the investment, and the ranch is the sink.</p>
+
+        <div class="s2-sub">Any pasture is a ranch</div>
+        <ul class="s2-list">
+          <li>Place a <strong>Cobblemon pasture</strong> and right-click it — that's your ranch. No special block to craft or find</li>
+          <li>Assign <strong>two parents</strong> from your party; both appear beside the ranch and <strong>roam around inside it</strong></li>
+          <li>You can run up to <strong>3 active ranches</strong> at once</li>
+          <li>Check what you've got going with <code>/ascbreed info</code></li>
+        </ul>
+
+        <div class="s2-sub">Build the right environment</div>
+        <p>A ranch reads the blocks around it and scores how well the environment suits your parents' <strong>types</strong> — faithful to the Pixelmon block table. Fire parents want campfires and magma; Ice parents want packed ice; Steel wants iron blocks; Dragon, Ghost and Psychic want emerald, and so on.</p>
+        <ul class="s2-list">
+          <li>A block only counts if its type matches <strong>one of the parents</strong> — and remember <strong>Ditto counts as Normal</strong></li>
+          <li>Only the <strong>highest block in each column</strong> counts, within a few blocks of the ranch's height</li>
+          <li>Environment strength runs 0 → 2 and directly sets your <strong>egg timer speed</strong> — a bad pen produces nothing</li>
+          <li>The ranch screen re-scans <strong>live</strong>, so you can watch strength climb as you place blocks</li>
+          <li>Range upgrades grow the pen from <strong>9×9 up to 15×15</strong> — and are refunded if the ranch is broken</li>
+        </ul>
+
+        <div class="s2-sub">Walk your eggs</div>
+        <p>Eggs are real items, and they hatch the mainline way: <strong>carry it and walk</strong>. Better IVs mean more steps, so a great egg makes you earn it. Hover the egg and it tells you exactly what's inside <em>before</em> it hatches — IVs, nature, ability, egg moves, size, shiny, and steps remaining.</p>
+        <p>Abilities that speed up hatching work as you'd expect: a parent with <strong>Flame Body</strong>, <strong>Magma Armor</strong> or <strong>Steam Engine</strong> halves the walk.</p>
+
+        <div class="s2-sub">Full mainline inheritance</div>
+        <ul class="s2-list">
+          <li><strong>Destiny Knot</strong> — 5 inherited IVs · <strong>power items</strong> — pin a specific stat · <strong>Everstone</strong> — pass the nature (and regional form)</li>
+          <li><strong>Masuda Method</strong> shiny odds, egg moves from the father or a benched parent, and Poké Ball inheritance</li>
+          <li><strong>Size inheritance</strong> — babies can inherit a parent's scale, shown as a % on the egg</li>
+          <li><strong>Light Ball</strong> on a parent → the bred Pichu knows <strong>Volt Tackle</strong></li>
+          <li><strong>Mirror Herb</strong> — teaches an egg move between incompatible parents with no egg produced</li>
+          <li>Special cases handled properly: Manaphy breeds <strong>Phione</strong>, Nidoran ♂/♀ and Volbeat/Illumise roll correctly, and baby forms (Munchlax, Wynaut, Happiny…) hatch as babies by default</li>
+        </ul>
+
+        <div class="s2-sub">Ditto × Ditto</div>
+        <p>The mainline forbids it. We don't. Two Dittos in a ranch produce a <strong>completely random species</strong> — a genuine gacha sink, with IVs, nature, size and ball still inherited from the pair. Legendaries and other restricted tiers are excluded.</p>
+
+        <div class="s2-sub">Kuro's Hourglasses &amp; the Shiny Charm</div>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Item</th><th>Effect</th></tr></thead>
+            <tbody>
+              <tr><td>⏳ Copper Hourglass</td><td>Skip <strong>10%</strong> of the current egg timer</td></tr>
+              <tr><td>⏳ Silver Hourglass</td><td>Skip <strong>25%</strong> of the current egg timer</td></tr>
+              <tr><td>⏳ Gold Hourglass</td><td><strong>Instant egg</strong> — bypasses the environment entirely</td></tr>
+              <tr><td>⏳ Platinum Hourglass</td><td>Instant egg with <strong>5 perfect IVs</strong></td></tr>
+              <tr><td>⏳ Diamond Hourglass</td><td>Instant <strong>flawless</strong> egg — 6 × 31</td></tr>
+              <tr><td>🌟 Shiny Charm</td><td>Held by a parent — <strong>3× shiny odds</strong> on that ranch, stacking with Masuda. Takes the held-item slot, so it trades off against Destiny Knot</td></tr>
+            </tbody>
+          </table>
+        </div>
 
         <div class="s2-sub">Hidden Abilities</div>
         <ul class="s2-list">
@@ -636,6 +827,58 @@
         </ul>
       </div>
 
+      <!-- FISHING 2.0 -->
+      <div class="s2-block reveal" id="s2-fishing">
+        <h2 class="s2-h">🎣 Fishing 2.0 — You Reel In Pokémon Now</h2>
+        <div class="guide-cmds"><code>/fish</code></div>
+        <p>Season 1 fishing caught <em>fish</em> — a separate little economy bolted onto the side. Season 2 rebuilds it around the actual game: <strong>every cast pulls up a Pokémon</strong>.</p>
+
+        <div class="s2-sub">Catch, then choose</div>
+        <ul class="s2-list">
+          <li>Cast anywhere there's water. Each reel-in rolls a <strong>water or coastal species</strong> at a random level and size, filed into your Fish Bag</li>
+          <li><strong>Left-click to claim</strong> — the Pokémon goes to your party or PC for real</li>
+          <li><strong>Right-click to release</strong> — cash it in for coins instead</li>
+          <li>Your Codex still tracks first-catches and records, and <code>/fish top</code> still ranks the server</li>
+        </ul>
+
+        <div class="s2-sub">Alphas</div>
+        <ul class="s2-list">
+          <li>Uncommon-and-above catches have a <strong>0.5% chance</strong> to come up as an <strong>Alpha</strong> — announced server-wide</li>
+          <li>Each Alpha pays <strong>1 Orb</strong>, capped at <strong>5 per week</strong>. Past the cap you still keep the Alpha, it just pays coins instead</li>
+          <li>Alphas and shinies <strong>ignore your bag limit</strong> — a full bag will never throw one away</li>
+        </ul>
+
+        <div class="s2-sub">Tournaments &amp; the Mystery Wormhole</div>
+        <ul class="s2-list">
+          <li>A rotating <strong>tournament</strong> runs every two hours — Most Caught, Biggest, Smallest, Most Valuable and more, with a top-3 prize pool</li>
+          <li>On <strong>weekends</strong> the <strong>Mystery Wormhole</strong> opens for an hour at a random announced time. It names one biome and one featured legendary — go there and the rare tiers unlock at <strong>double rate</strong></li>
+        </ul>
+        <p>Auto-fishing is still detected and throttled — macro-regular casting earns you junk until you fish like a person.</p>
+      </div>
+
+      <!-- VOTE PARTY & SKILLS -->
+      <div class="s2-block reveal" id="s2-voteparty">
+        <h2 class="s2-h">🎉 Vote Party &amp; Skills</h2>
+        <div class="guide-cmds"><code>/voteparty</code><code>/skills</code></div>
+
+        <div class="s2-sub">Vote Party — the community wheel</div>
+        <p>Server votes now build toward a <strong>Vote Party</strong>. When the counter fills and enough players are online, the wheel opens <strong>for everybody at once</strong>: every online trainer's name goes on a roulette, it spins, and whoever it lands on gets a <strong>guaranteed Legendary spawn</strong>.</p>
+        <ul class="s2-list">
+          <li>You don't have to do anything but be online — voting is the ticket</li>
+          <li>The whole server watches the same spin land on the same name</li>
+          <li><code>/vote</code> still pays its own streak rewards on top, unchanged from Season 1</li>
+        </ul>
+
+        <div class="s2-sub">Skills — 16 of them</div>
+        <p>Everything you do levels something. Sixteen skills across gathering, combat, utility and <strong>Pokémon</strong> — including <strong>Battling</strong> and <strong>Breeding</strong> — each climbing to Lv 1000, all summing into a single <strong>Power Level</strong> that shows on your name in chat.</p>
+        <ul class="s2-list">
+          <li><strong>Perks</strong> scale with level — double drops while gathering, bonus melee damage, dodging fall damage, and bonus coins on fishing, catching, battling and breeding</li>
+          <li><strong>Achievements</strong> for every skill ladder, plus <em>Renaissance</em> (all skills Lv 50) and <em>Grandmaster</em> (all skills Lv 100)</li>
+          <li>Tier titles from Novice up to <strong>Master</strong> — surfaced on your name hover, never spammed in chat</li>
+          <li>Power Level is a full leaderboard category on <code>/lb</code></li>
+        </ul>
+      </div>
+
       <!-- FINAL THOUGHTS -->
       <div class="s2-block reveal">
         <h2 class="s2-h">Final Thoughts</h2>
@@ -646,10 +889,14 @@
           <li>⚔ Compete in PvP to reach Master Tier.</li>
           <li>🏅 Challenge Gyms and the Elite Four.</li>
           <li>📖 Complete the Battle Pass.</li>
+          <li>📒 Work through the Pokédex research quests.</li>
+          <li>🥚 Build a real ranch and breed something worth selling.</li>
+          <li>🏪 Trade it on the Bazaar for what it's actually worth.</li>
           <li>🎰 Spend your hard-earned Orbs on the current banner rotation.</li>
           <li>❄️ Forge the Arctis set and hunt its signature frozen Pokémon.</li>
         </ul>
         <p>Every system is now connected, creating a more rewarding endgame where time spent playing translates directly into progression — not just more coins.</p>
+        <p><strong>See you on August 1.</strong> ❄️</p>
       </div>
 
       <div class="fp-cta reveal">
@@ -668,7 +915,7 @@
     <p class="footer-dim">Not affiliated with Mojang, Nintendo, or The Pokémon Company.</p>
   </footer>
 
-  <script src="data.js?v=202607250730"></script>
-  <script src="app.js?v=202607250730"></script>
+  <script src="data.js?v=202607301659"></script>
+  <script src="app.js?v=202607301659"></script>
 </body>
 </html>

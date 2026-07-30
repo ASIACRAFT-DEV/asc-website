@@ -220,7 +220,7 @@ const FEATURES = {
     name: 'Battle Tower',
     short: 'Battle Tower',
     accent: 'ember',
-    tag: '/bts2',
+    tag: '/bt',
     category: 'Battling',
     featured: true,
     blurb:
@@ -246,7 +246,7 @@ const FEATURES = {
       {
         title: 'Unlock more slots',
         body:
-          'New team slots open at floors 10, 25 and 50, up to 6 — each lets you draft another Pokémon out of your PC from the /bts2 menu.',
+          'New team slots open at floors 10, 25 and 50, up to 6 — each lets you draft another Pokémon out of your PC from the /bt menu.',
       },
       {
         title: 'Push through floor decay',
@@ -260,9 +260,9 @@ const FEATURES = {
       },
     ],
     commands: [
-      { cmd: '/bts2', desc: 'Open Battle Tower S2 — draft a team and start a roguelike climb' },
-      { cmd: '/bts2 battle', desc: 'Fight the next floor of your run (alias /bts2 next)' },
-      { cmd: '/bts2 forfeit', desc: 'Abandon your current run' },
+      { cmd: '/bt', desc: 'Open Battle Tower S2 — draft a team and start a roguelike climb' },
+      { cmd: '/bt battle', desc: 'Fight the next floor of your run (alias /bt next)' },
+      { cmd: '/bt forfeit', desc: 'Abandon your current run' },
     ],
     notes: [
       'Checkpoints save every floor — closing the menu or disconnecting won’t waste your choice or send you back floors.',
@@ -469,14 +469,14 @@ const FEATURES = {
     category: 'Progression',
     featured: true,
     blurb:
-      'Thirteen grinding skills across gathering, combat and utility. Every action you take levels a skill, stacks your Power Level and earns milestone coins and rank titles.',
+      'Sixteen grinding skills across gathering, combat, utility and Pokémon. Every action levels a skill, stacks your Power Level, and unlocks perks, achievements and rank titles.',
     intro:
-      'Skills brings classic McMMO-style progression to Cobble Asia. Just play the game — mine, chop, fish, fight, tame Pokémon, take a fall — and the matching skill levels on its own. There is nothing to activate: your Power Level is the sum of all thirteen skills and quietly grows the more you play.',
+      'Skills brings classic McMMO-style progression to Cobble Asia. Just play the game — mine, chop, fish, fight, catch, battle, breed, take a fall — and the matching skill levels on its own. There is nothing to activate: your Power Level is the sum of all sixteen skills and quietly grows the more you play.',
     how: [
       {
-        title: 'Level thirteen skills',
+        title: 'Level sixteen skills',
         body:
-          'Five gathering skills (Mining, Woodcutting, Excavation, Herbalism, Fishing), four combat skills (Swords, Axes, Unarmed, Archery) and four utility skills (Taming from catching Pokémon, Acrobatics from surviving falls, Repair from anvils, Alchemy from brewing). Each climbs from 0 all the way to 1000.',
+          'Five gathering skills (Mining, Woodcutting, Excavation, Herbalism, Fishing), four combat skills (Swords, Axes, Unarmed, Archery), four utility skills (Acrobatics from surviving falls, Repair from anvils, Alchemy from brewing) and a Pokémon category — Taming from catching, Battling from winning, Breeding from eggs. Each climbs from 0 all the way to 1000.',
       },
       {
         title: 'Watch your Power Level climb',
@@ -484,14 +484,19 @@ const FEATURES = {
           'Your Power Level is the sum of every skill level. It shows up when players hover your name in chat, so a high Power Level is a visible flex — no command needed to prove you put in the hours.',
       },
       {
+        title: 'Unlock perks as you level',
+        body:
+          'Perks scale with skill level: double drops while gathering, bonus melee damage in combat, dodging fall damage through Acrobatics, and bonus coins on fishing, catching, battling, breeding, repairing and brewing. Shiny and legendary catches pay multiplied XP.',
+      },
+      {
         title: 'Earn tier titles',
         body:
           'Every skill passes through Novice, Apprentice (25), Adept (50), Expert (75) and Master (100) — so hitting 100 in Mining makes you a Master Miner. Titles never spam chat; they surface on your name hover and in the /skills menu. The whole server is notified every 50 levels and when someone earns a new title.',
       },
       {
-        title: 'Collect milestone coins',
+        title: 'Chase achievements',
         body:
-          'Every 10 levels in a skill pays out a coin milestone, so steady grinding is steadily rewarded on top of whatever you were already doing to earn the XP.',
+          'Every skill has its own Lv 25/50/100/250/500/1000 achievement ladder, plus a Power Level ladder and two big ones: Renaissance for getting every skill to Lv 50, and Grandmaster for every skill at Lv 100.',
       },
       {
         title: 'Climb the leaderboard',
@@ -501,11 +506,12 @@ const FEATURES = {
     ],
     commands: [
       { cmd: '/skills', desc: 'Open the skills menu — see every skill, its level and your Power Level (also /mcmmo)' },
+      { cmd: '/skills achievements', desc: 'Browse every skill achievement ladder and what you’ve unlocked' },
     ],
     notes: [
-      'There are no passive combat perks at launch — skills are pure progression, titles and bragging rights.',
       'Placed blocks don’t grant gathering XP, so you can’t farm a skill by breaking what you just placed.',
-      'PvP kills don’t grant combat XP — only fighting mobs does.',
+      'PvP kills don’t grant combat XP — only fighting mobs does, and PvP is excluded from the bonus-damage perk.',
+      'Milestone coins pay out every 10 levels in a skill.',
     ],
   },
 
@@ -791,42 +797,160 @@ const FEATURES = {
     category: 'Economy',
     featured: true,
     blurb:
-      'Cast a rod, reel in rarity- and size-scaled catches, and sell them for molla. Scheduled tournaments a few times a day and a Mystery Tide event where rare water legendaries lurk in one hidden biome — event-only.',
+      'Every cast reels in a Pokémon. Claim it to your party or release it for coins, chase 0.5% Alphas for Orbs, and compete in tournaments every two hours — plus the weekend Mystery Wormhole.',
     intro:
-      'Fishing is a full income loop you can do anywhere there is water. Every reel-in rolls a custom catch with its own rarity and a randomized weight and length — bigger fish are worth more. Catches go into your virtual Fish Bag (never clutters your inventory, never lost), and you cash them in for molla whenever you like.',
+      'Season 2 fishing catches Pokémon, not fish. Cast anywhere there is water and every reel-in rolls a water or coastal species at a random level and size, filed into your Fish Bag. From there it’s your call: claim it for real, or release it for coins. It’s a genuine second way to build a collection that has nothing to do with walking around in the grass.',
     how: [
       {
         title: 'Cast & reel',
         body:
-          'Use any vanilla fishing rod near water. Each catch rolls a rarity from Trash up through Common, Uncommon, Rare, Epic, Legendary and Mythic, plus a random size. The closer a fish is to its species record size, the more it sells for. Junk catches (Old Boot, Rusty Can, Cracked iPhone) are the gag tier.',
+          'Use a fishing rod near water. Each catch rolls a rarity from Trash up through Common, Uncommon, Rare, Epic, Legendary and Mythic, along with a species, a level and a size — and the Pokémon you get is scaled to the size you rolled. Junk catches (Old Boot, Rusty Can, Cracked iPhone) are still the gag tier.',
       },
       {
-        title: 'Bag, sell & codex',
+        title: 'Claim it or release it',
         body:
-          'Open /fish for the hub or /fish bag for your paginated Fish Bag — click any fish to sell it, or Sell All in one go. Your Codex tracks first-catches and record sizes per species, and /fish top ranks the server by total earnings, biggest catch, and most fish caught.',
+          'Open /fish for the hub or /fish bag for your catches. Left-click a catch to CLAIM it — the Pokémon goes to your party or PC for real. Right-click to RELEASE it and take coins instead. Your Codex tracks first-catches and records, and /fish top ranks the server by earnings, biggest catch and total caught.',
       },
       {
-        title: 'Scheduled tournaments',
+        title: 'Hunt Alphas for Orbs',
         body:
-          'A few times a day, on a fixed schedule (default 02:00, 07:00, 14:00 and 19:00 server time), a rotating tournament runs — Most Fish, Biggest Fish, Smallest Fish, Longest Fish, Shortest Fish, Total Weight, Most Valuable, and Most iPhones. The top 3 split a molla prize pool. Check live standings any time from the hub.',
+          'Uncommon-and-above catches have a 0.5% chance to surface as an Alpha — announced to the whole server. Each one pays 1 Orb, capped at 5 per week; past the cap you still keep the Alpha, it just pays coins instead. Alphas and shinies ignore your bag limit, so a full bag will never throw one away.',
       },
       {
-        title: 'Mystery Tide',
+        title: 'Tournaments every two hours',
         body:
-          'On the same schedule, the Mystery Tide stirs. Rare water legendaries and mythicals (Kyogre, Palkia, Suicune, Lugia, Manaphy and more) can only be fished up during this window — and only from one secret biome. The event names a shortlist of candidate waters but just one is correct, and it gives no hints at all: fishing the wrong biome stays completely silent, so you’re gambling on where to cast.',
+          'A rotating tournament runs every two clock hours — Most Caught, Biggest, Smallest, Longest, Shortest, Total Weight, Most Valuable, and Most iPhones. The top 3 split a coin prize pool, and you can check live standings any time from the hub.',
+      },
+      {
+        title: 'The Mystery Wormhole',
+        body:
+          'On weekends the Mystery Wormhole opens for an hour at a random announced time. It names one biome and one featured legendary — fish there and the Legendary and Mythic tiers unlock at double rate, alongside the permanent guardian legends. Outside a tournament or a wormhole, those tiers don’t bite at all.',
       },
     ],
     commands: [
-      { cmd: '/fish', desc: 'Open the fishing hub (bag, sell, codex, leaderboard, event status)' },
-      { cmd: '/fish bag', desc: 'Open your Fish Bag — click a fish to sell it' },
-      { cmd: '/fish sell', desc: 'Sell your entire bag for molla' },
+      { cmd: '/fish', desc: 'Open the fishing hub (bag, claims, codex, leaderboard, event status)' },
+      { cmd: '/fish bag', desc: 'Open your Fish Bag — left-click to claim, right-click to release' },
+      { cmd: '/fish claim <slot>', desc: 'Claim a specific catch to your party or PC' },
+      { cmd: '/fish orbs', desc: 'Check your Alpha Orb payouts and weekly cap' },
+      { cmd: '/fish wormhole', desc: 'See the current or next Mystery Wormhole — biome, featured legend, odds' },
       { cmd: '/fish top', desc: 'Fishing leaderboards (value, biggest, count)' },
     ],
     notes: [
-      'Legendary and Mythic fish only bite during a live tournament window — you can’t farm them around the clock.',
-      'The legendary catches in the Mystery Tide are intentionally ultra-rare — and only obtainable during the event.',
+      'Legendary and Mythic tiers only bite during a live tournament or Mystery Wormhole — you can’t farm them around the clock.',
+      'The Alpha Orb payout is capped at 5 per week; Alphas past the cap still get caught and still pay coins.',
       'Auto-fishing is detected and throttled: macro-regular casts earn worthless junk until you fish like a human.',
+      'The Cobblemon Poké Rod spawns its own encounters and doesn’t file catches here — use a normal rod for fishing.',
       'Alias: /ascfish.',
+    ],
+  },
+
+  breeding: {
+    name: 'Breeding & Ranches',
+    short: 'Breeding',
+    accent: 'frost',
+    tag: '/ascbreed',
+    category: 'Pokémon',
+    featured: true,
+    blurb:
+      'Turn any Cobblemon pasture into a ranch, then build the environment around it to match your parents’ types. Walk your eggs to hatch, with full mainline inheritance — and Ditto × Ditto for a random species.',
+    intro:
+      'Season 2 breeding is an in-house ASC system built around one idea: where you breed matters. A ranch is only as good as the pen you build around it, so a serious breeder is someone who invested in the terrain — not someone who parked two Pokémon in a box and walked away.',
+    how: [
+      {
+        title: 'Any pasture is a ranch',
+        body:
+          'Place a Cobblemon pasture and right-click it — that’s your ranch, no special block to craft. Assign two parents from your party and both appear beside it, roaming inside the pen. You can run up to 3 active ranches at once; check them with /ascbreed info.',
+      },
+      {
+        title: 'Build the right environment',
+        body:
+          'The ranch scans the blocks around it and scores how well the terrain suits your parents’ types — campfires and magma for Fire, packed ice for Ice, iron blocks for Steel, emerald for Dragon/Ghost/Psychic, and so on. A block only counts if its type matches one of the parents (and Ditto counts as Normal), and only the highest block in each column counts. Environment strength directly sets your egg timer, so a bad pen produces nothing. The screen re-scans live as you build.',
+      },
+      {
+        title: 'Walk your eggs to hatch',
+        body:
+          'Eggs are real items and they hatch the mainline way — carry one and walk. Better IVs mean more steps, so a great egg makes you earn it. Hover the egg and it tells you exactly what’s inside before it cracks: IVs, nature, ability, egg moves, size, shiny, and steps remaining. A parent with Flame Body, Magma Armor or Steam Engine halves the walk.',
+      },
+      {
+        title: 'Full mainline inheritance',
+        body:
+          'Destiny Knot passes 5 IVs, power items pin a specific stat, Everstone passes the nature and regional form, and the Masuda Method still boosts shiny odds. Egg moves come from the father or a benched parent, Poké Ball is inherited, and babies can inherit a parent’s size. Light Ball on a parent gives your bred Pichu Volt Tackle, and a Mirror Herb teaches an egg move between incompatible parents. Manaphy breeds Phione, Nidoran and Volbeat/Illumise roll correctly, and baby forms hatch as babies.',
+      },
+      {
+        title: 'Ditto × Ditto',
+        body:
+          'The mainline forbids it — we don’t. Two Dittos in a ranch produce a completely random species, with IVs, nature, size and ball still inherited from the pair. Legendaries and other restricted tiers are excluded. It’s a deliberate gacha sink for your spare Dittos.',
+      },
+      {
+        title: 'Hourglasses & the Shiny Charm',
+        body:
+          'Kuro’s Hourglasses skip the timer: Copper 10%, Silver 25%, Gold gives an instant egg and bypasses the environment entirely, Platinum an instant egg with 5 perfect IVs, and Diamond an instant flawless 6×31. The Shiny Charm is a held item that triples that ranch’s shiny odds and stacks with Masuda — but it takes the held slot, so it competes with Destiny Knot.',
+      },
+    ],
+    commands: [
+      { cmd: '/ascbreed', desc: 'Breeding help and your ranch overview' },
+      { cmd: '/ascbreed info', desc: 'See your active ranches and how many you have left' },
+      { cmd: '/unbreed', desc: 'Lock a Pokémon so it can never produce eggs (only the Original Trainer can undo it)' },
+    ],
+    notes: [
+      'An egg can only hatch with a Hidden Ability if a parent actually has one — and Ditto never passes its own.',
+      'Environment blocks only count if their type matches a parent, so a Fire × Ditto pair needs both Fire and Normal blocks.',
+      'Range upgrades grow the pen from 9×9 up to 15×15, and are refunded if the ranch is broken.',
+    ],
+  },
+
+  bazaar: {
+    name: 'Shop & the Bazaar',
+    short: 'Bazaar',
+    accent: 'amber',
+    tag: '/shop · /bazaar',
+    category: 'Economy',
+    featured: true,
+    blurb:
+      'Two markets, on purpose. /shop is the server store with prices that move on demand; /bazaar is a full player-driven order book — and it’s where things are actually worth money.',
+    intro:
+      'Season 2 splits buying and selling. The server shop still stocks everything, but its buyback is deliberately terrible — 2% of buy price. If you want real money for your goods you sell them to other players on the Bazaar, a proper crossing order book with escrow, limit orders and a live price ladder.',
+    how: [
+      {
+        title: '/shop — the Cobble Bazaar',
+        body:
+          'The server store’s prices move with demand. The more an item gets bought, the higher its buy price climbs; selling into the shop relieves that pressure and pushes it back down. Prices never fall below base value and buy always stays above sell, so there is no money printer. Tiles show the live price with a ▲ / ▼ / ◈ trend tag.',
+      },
+      {
+        title: 'Shop buyback is only 2%',
+        body:
+          'Selling to the shop returns 2% of an item’s buy price. That is intentional — the shop is a dump bin for junk you don’t want to list. Anything with real value belongs on the Bazaar.',
+      },
+      {
+        title: '/bazaar — instant buy & instant sell',
+        body:
+          'Take the best price sitting on the book right now. Every /shop item is tradeable, priced per single item, with a readable buy/sell ladder so you can see the depth before you commit.',
+      },
+      {
+        title: 'Place your own orders',
+        body:
+          'Create a Buy Order or a Sell Offer at your own price. Anything that crosses fills immediately; the rest rests on the book waiting for someone to take it. Trades execute at the resting order’s price, so being early on the book pays.',
+      },
+      {
+        title: 'Escrow & Claim All',
+        body:
+          'Orders are escrowed up front — your coins or items are held the moment you place them, so a fill is always honoured. If your order fills while you’re offline, the payout waits for you in Claim All. Cancelling refunds whatever is left.',
+      },
+      {
+        title: 'A 1% tax that burns',
+        body:
+          'A 1% tax comes out of seller proceeds and is destroyed, not paid to anyone. It is one of the server’s permanent coin sinks and part of what keeps the Season 2 economy from inflating.',
+      },
+    ],
+    commands: [
+      { cmd: '/shop', desc: 'Open the server shop — live demand-based pricing' },
+      { cmd: '/bazaar', desc: 'Open the player order book (alias /baz)' },
+      { cmd: '/baz', desc: 'Same thing, fewer letters — Orders tab tracks, claims and cancels your own' },
+    ],
+    notes: [
+      'Books start empty — players make the liquidity, so early Season 2 is a seller’s market.',
+      'Some items are permanently unsellable (Dynamax consumables, for one) and stay blocked in both markets.',
+      'Orbs are buy-only — you can’t sell them back, or that would be a money printer.',
     ],
   },
 
@@ -1046,8 +1170,8 @@ const FEATURES = {
 // Display order + grouping on the landing page
 const FEATURE_ORDER = [
   'arctis', 'solforge', 'crates', 'cosmetics', 'transform', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
-  'dungeons', 'safari', 'hunts', 'fishing', 'archaeology', 'bingo', 'pvp', 'clans',
-  'jobs', 'casino', 'playtime', 'progression',
+  'dungeons', 'safari', 'hunts', 'fishing', 'breeding', 'archaeology', 'bingo', 'pvp', 'clans',
+  'jobs', 'bazaar', 'skills', 'casino', 'playtime', 'progression',
 ];
 
 // Full mod toolbox (landing page mod grid)
@@ -1055,10 +1179,12 @@ const MODS = [
   { name: 'Area Zero', cmd: '/az' },
   { name: 'Battle Pass', cmd: '/bp' },
   { name: 'Battle Tower', cmd: '/bt' },
+  { name: 'Breeding & Ranches', cmd: '/ascbreed' },
   { name: 'Catch Combos', cmd: '/combo' },
   { name: 'Chest Shop', cmd: '/chestshop' },
   { name: 'Claim Blocks', cmd: '/ascclaim' },
   { name: 'Clans', cmd: '/clans · /c' },
+  { name: 'Client UI', cmd: '(required — in the modpack)' },
   { name: 'Cosmetics', cmd: '/cosmetics' },
   { name: 'Crates & Banners', cmd: '/crates · /summon' },
   { name: 'Dungeons', cmd: '/dungeon' },
@@ -1073,15 +1199,18 @@ const MODS = [
   { name: 'Levels', cmd: '/lvl' },
   { name: 'Mail', cmd: '/mail' },
   { name: 'NPCs', cmd: '/npc' },
+  { name: 'Pokédex Research', cmd: '/research' },
   { name: 'Pokeditor', cmd: '/pokeditor' },
   { name: 'PokeWiki', cmd: '/pwiki' },
   { name: 'PvP Ranked', cmd: '/pvp' },
   { name: 'Raid Boss', cmd: '/raid' },
   { name: 'Ranks', cmd: '/ranks' },
   { name: 'Safari', cmd: '/safari' },
+  { name: 'Skills', cmd: '/skills' },
+  { name: 'Starter Questline', cmd: '/quest' },
   { name: 'Training Grounds', cmd: '/tg' },
   { name: 'Transform', cmd: '/transform' },
-  { name: 'Voting', cmd: '/vote' },
+  { name: 'Voting', cmd: '/vote · /voteparty' },
   { name: 'World Tweaks', cmd: '/worldtweaks' },
 ];
 
@@ -1095,10 +1224,14 @@ const COMMANDS = [
     items: [
       { cmd: '/register <password>', desc: 'Register your account on first join (offline-mode auth)' },
       { cmd: '/login <password>', desc: 'Log in when you join' },
-      { cmd: '/spawn', desc: 'Teleport to server spawn' },
+      { cmd: '/quest', desc: 'Your Starter Questline — nine steps that walk you through the server (alias /starter)' },
+      { cmd: '/spawn', desc: 'Teleport to Dragonforstborn, the Season 2 spawn city' },
+      { cmd: '/hub', desc: 'Teleport to the old lobby hub' },
       { cmd: '/sethome <name>', desc: 'Set a home you can teleport back to' },
       { cmd: '/home [name]', desc: 'Teleport to one of your homes' },
-      { cmd: '/rtp', desc: 'Random-teleport into the wild to explore & catch' },
+      { cmd: '/rtp', desc: 'Open the biome picker — every biome on the map and how much of it it covers' },
+      { cmd: '/rtp <biome>', desc: 'Random-teleport into a specific biome, e.g. /rtp cherry_grove' },
+      { cmd: '/rtp random', desc: 'Random-teleport into any eligible biome' },
       { cmd: '/warp <name>', desc: 'Travel to a named server warp' },
       { cmd: '/tpa <player>', desc: 'Request to teleport to another player' },
       { cmd: '/back', desc: 'Return to your previous location' },
@@ -1117,7 +1250,12 @@ const COMMANDS = [
       { cmd: '/safari', desc: 'Enter the Umera Safari reserve' },
       { cmd: '/pwiki <species>', desc: 'Look up a Pokémon’s spawn & info' },
       { cmd: '/pokeditor', desc: 'Edit/inspect your Pokémon (where permitted)' },
-      { cmd: '/legend', desc: 'Legendary spawn info' },
+      { cmd: '/research', desc: 'Pokédex Research Quests — 931 quests across Gen 1–9 (also /ascdex)' },
+      { cmd: '/legend', desc: 'Your personal Legend bar — how full it is and what fills it' },
+      { cmd: '/legend roll', desc: 'Spend a full bar on the two-roll Legendary roulette (alias /legend spin)' },
+      { cmd: '/ascbreed', desc: 'Breeding help — right-click any Cobblemon pasture to make it a ranch' },
+      { cmd: '/ascbreed info', desc: 'Your active ranches and how many you have left' },
+      { cmd: '/unbreed', desc: 'Lock a Pokémon so it can never be bred (Original Trainer only to undo)' },
       { cmd: '/gts', desc: 'Global Trade System' },
       { cmd: '/pc', desc: 'Open your Cobblemon PC' },
     ],
@@ -1125,9 +1263,9 @@ const COMMANDS = [
   {
     group: 'Battling & Competition',
     items: [
-      { cmd: '/bts2', desc: 'Battle Tower — roguelike climb: draft a team, ascend, shop every few floors' },
-      { cmd: '/bts2 battle', desc: 'Fight the next floor of your run (alias /bts2 next)' },
-      { cmd: '/bts2 forfeit', desc: 'Abandon your Battle Tower run' },
+      { cmd: '/bt', desc: 'Battle Tower — roguelike climb: draft a team, ascend, shop every few floors' },
+      { cmd: '/bt battle', desc: 'Fight the next floor of your run (alias /bt next)' },
+      { cmd: '/bt forfeit', desc: 'Abandon your Battle Tower run' },
       { cmd: '/scout', desc: 'Battle-Scout — see the opponent’s revealed team mid-fight (alias /ascscout)' },
       { cmd: '/gym', desc: 'Challenge the eight gym leaders and the Elite Four' },
       { cmd: '/pvp', desc: 'PvP hub — ranked Ball tiers & Master Tier' },
@@ -1142,15 +1280,20 @@ const COMMANDS = [
   {
     group: 'Economy & Gambling',
     items: [
-      { cmd: '/jobs', desc: 'Browse and join paying jobs' },
-      { cmd: '/job rank', desc: 'Your per-job rank & perks (Novice → Master)' },
+      { cmd: '/jobs', desc: 'Job hub — JOBS and MY QUESTS tabs' },
+      { cmd: '/job quests', desc: 'Print your accepted quests, progress and this rotation’s board' },
+      { cmd: '/job tier', desc: 'Your per-job tier — Apprentice → Journeyman → Master (alias /job rank)' },
+      { cmd: '/shop', desc: 'Server shop — live demand-based pricing (buyback is only 2%)' },
+      { cmd: '/bazaar', desc: 'Player order book — instant buy/sell or place your own orders (alias /baz)' },
       { cmd: '/chestshop', desc: 'Chest-shop system' },
       { cmd: '/gem convert <n>', desc: 'Convert coins into Gems (100M coins = 1 Gem)' },
       { cmd: '/gem shop', desc: 'Open the SolForge Black Market (alias /blackmarket, /bm)' },
       { cmd: '/effects', desc: 'Buy a temporary status-effect buff (alias /buff)' },
-      { cmd: '/fish', desc: 'Fishing hub — catch & sell fish for molla (alias /ascfish)' },
-      { cmd: '/fish bag', desc: 'Open your Fish Bag; click a fish to sell it' },
-      { cmd: '/fish sell', desc: 'Sell your whole Fish Bag at once' },
+      { cmd: '/fish', desc: 'Fishing hub — every cast reels in a Pokémon (alias /ascfish)' },
+      { cmd: '/fish bag', desc: 'Your catches — left-click to claim, right-click to release for coins' },
+      { cmd: '/fish claim <slot>', desc: 'Claim a catch to your party or PC' },
+      { cmd: '/fish orbs', desc: 'Your Alpha Orb payouts and weekly cap' },
+      { cmd: '/fish wormhole', desc: 'Current or next Mystery Wormhole — biome, featured legend, odds' },
       { cmd: '/fish top', desc: 'Fishing leaderboards (value, biggest, count)' },
       { cmd: '/casino', desc: 'Casino hub' },
       { cmd: '/coinflip <amount> <player>', desc: 'PvP coinflip wager (alias /cf)' },
@@ -1159,6 +1302,7 @@ const COMMANDS = [
       { cmd: '/keyspin', desc: 'Lucky Key Spin — spend 100k for a crate key (alias /lucky)' },
       { cmd: '/keyspin free', desc: 'Claim your free daily Lucky Key Spin' },
       { cmd: '/vote', desc: 'Vote links + streak rewards' },
+      { cmd: '/voteparty', desc: 'Vote Party progress — fill it and the wheel picks someone for a free Legendary' },
     ],
   },
   {
@@ -1167,15 +1311,18 @@ const COMMANDS = [
       { cmd: '/crates', desc: 'Warp to the crate area — right-click a crate with its key to open it' },
       { cmd: '/ascc list', desc: 'List every key crate and its odds (preview with /ascc preview <crate>)' },
       { cmd: '/summon', desc: 'Open the gacha banner-select GUI (aliases /banner, /gamble)' },
+      { cmd: '/ascsummon history', desc: 'Wish History — every pull you’ve made and how far you are from pity' },
       { cmd: '/forge', desc: 'Open the Forge — craft & enchant gear and armor sets' },
-      { cmd: '/gear', desc: 'SolForge catalog — pieces, passives, how to get' },
-      { cmd: '/gear upgrade', desc: 'Spend Solar Shards to level held gear' },
+      { cmd: '/gear', desc: 'Seasonal gear catalog — Arctis and legacy SolForge pieces, passives, how to get' },
+      { cmd: '/gear upgrade', desc: 'Spend seasonal shards to level held gear' },
     ],
   },
   {
     group: 'Progression',
     items: [
-      { cmd: '/bp', desc: 'Seasonal Battle Pass' },
+      { cmd: '/bp', desc: 'Seasonal Battle Pass — Orbs, Seasonal Essence and the Lv 100 Shiny Legendary Spin' },
+      { cmd: '/skills', desc: 'Sixteen grinding skills, perks and your Power Level (also /mcmmo)' },
+      { cmd: '/skills achievements', desc: 'Every skill achievement ladder and what you’ve unlocked' },
       { cmd: '/passive', desc: 'Buy & manage permanent passives' },
       { cmd: '/ranks', desc: 'Rank progression & perks' },
       { cmd: '/regiondex', desc: 'Per-region Pokédex completion & milestone rewards' },
@@ -1229,46 +1376,46 @@ const COMMANDS = [
 // =====================================================================
 const GUIDE = [
   {
-    title: 'Connect & log in',
+    title: 'Get the modpack & log in',
     body:
-      'Grab the modpack from our Discord, launch Minecraft 1.21.1 (Fabric), and add the server: <b>play.cobbleasia.net</b>. On your first join you’ll register an account — type <code>/register &lt;password&gt;</code>, and use <code>/login &lt;password&gt;</code> each time you join after that. Keep your password safe; staff can reset it if needed.',
+      'Grab the <b>CobbleAsia modpack</b> from our Discord — it is <b>required</b> to join, since Season 2 runs on a custom interface. Launch Minecraft 1.21.1 (Fabric) and add the server: <b>play.cobbleasia.net</b>. On your first join you’ll register an account — type <code>/register &lt;password&gt;</code>, and use <code>/login &lt;password&gt;</code> each time after that. Keep your password safe; staff can reset it if needed.',
     cmds: ['/register <password>', '/login <password>'],
   },
   {
-    title: 'Choose your starter',
+    title: 'Follow the Starter Questline',
     body:
-      'When you spawn in, pick your starter Pokémon and take your first steps. Have a look around spawn — there are NPCs, warps and signs pointing you to everything the server offers.',
-    cmds: [],
+      'Season 2 starts you on a nine-step questline that teaches the server by making you play it — craft a Poké Ball, catch something, spend your first <b>Orb</b> on the Starter Banner for a guaranteed Pikachu, claim some land, take a job, collect a paycheck and buy something. Open it any time with <code>/quest</code>. It never blocks you from doing anything else, so veterans can blitz it.',
+    cmds: ['/quest'],
   },
   {
     title: 'Set a home & learn to travel',
     body:
-      'Set a home base with <code>/sethome</code> so you can always get back. Use <code>/spawn</code> to return to spawn, <code>/rtp</code> to teleport into the wild to explore and catch, and <code>/warp</code> to reach key destinations. <code>/back</code> returns you to where you just were.',
-    cmds: ['/sethome home', '/home', '/rtp', '/warp'],
+      'Set a home base with <code>/sethome</code> so you can always get back. <code>/spawn</code> returns you to Dragonforstborn, the Season 2 spawn city, and <code>/hub</code> reaches the old lobby. <code>/rtp</code> is now <b>per-biome</b> — open it for the picker or type <code>/rtp desert</code> to land somewhere specific. <code>/back</code> returns you to where you just were.',
+    cmds: ['/sethome home', '/home', '/rtp', '/hub'],
   },
   {
     title: 'Catch Pokémon & start a Hunt',
     body:
-      'Go catch! Then open <code>/hunt</code> for tiered catch-bounties that pay big coins, and roll a <code>/bingo</code> card for bonus rewards. These are the best way to earn early — every catch can count toward something.',
-    cmds: ['/hunt', '/ghunt', '/bingo'],
+      'Go catch! Then open <code>/hunt</code> for tiered catch-bounties that pay coins, roll a <code>/bingo</code> card for bonus rewards, and start working <code>/research</code> — every species in Gen 1–9 has its own Pokédex quest. Every catch counts toward something.',
+    cmds: ['/hunt', '/bingo', '/research'],
   },
   {
-    title: 'Make money with Jobs',
+    title: 'Make money with Jobs & the Bazaar',
     body:
-      'Open <code>/jobs</code> and join the roles that fit how you play — mining, fishing, catching and more pay you coins as you go. Sell extras at player chest shops with <code>/chestshop</code>, or trade Pokémon globally on the <code>/gts</code>. Don’t forget to <code>/vote</code> daily for free rewards.',
-    cmds: ['/jobs', '/chestshop', '/vote'],
+      'Open <code>/jobs</code> and take the roles that fit how you play. You complete job quests, then claim your <b>Paycheck</b> from that job’s NPC — check the <b>MY QUESTS</b> tab to see what you’re on. Sell your goods to other players on <code>/bazaar</code>, the player order book, since <code>/shop</code> only buys back at 2%. Don’t forget to <code>/vote</code> daily.',
+    cmds: ['/jobs', '/bazaar', '/vote'],
   },
   {
     title: 'Battle & progress',
     body:
-      'Test yourself: challenge the eight gyms with <code>/gym</code>, climb the <code>/bt</code> Battle Tower, and join raids with <code>/raid</code>. Level your account, climb <code>/ranks</code>, and work the seasonal <code>/bp</code> Battle Pass for steady rewards.',
-    cmds: ['/gym', '/bt', '/bp', '/ranks'],
+      'Test yourself: challenge the eight gyms with <code>/gym</code>, climb the <code>/bt</code> Battle Tower, and join raids with <code>/raid</code>. Level your account, climb <code>/ranks</code>, level your sixteen <code>/skills</code>, and work the seasonal <code>/bp</code> Battle Pass for steady rewards.',
+    cmds: ['/gym', '/bt', '/bp', '/skills'],
   },
   {
-    title: 'Spend & gear up',
+    title: 'Spend, gear up & breed',
     body:
-      'Put your coins to work. Pull on gacha banners with <code>/summon</code>, forge the seasonal SolForge set and check it with <code>/gear</code>, and buy permanent account upgrades with <code>/passive</code>. The more you play, the stronger your account gets — for good.',
-    cmds: ['/summon', '/gear', '/passive'],
+      'Put your earnings to work. Spend <b>Orbs</b> on gacha banners with <code>/summon</code>, forge the seasonal <b>Arctis</b> set and check it with <code>/gear</code>, and buy permanent account upgrades with <code>/passive</code>. Right-click a Cobblemon pasture to start a breeding ranch — see <code>/ascbreed</code>. The more you play, the stronger your account gets, for good.',
+    cmds: ['/summon', '/gear', '/passive', '/ascbreed'],
   },
   {
     title: 'Join the community',
@@ -1283,16 +1430,22 @@ const GUIDE = [
 // =====================================================================
 const NEWS = [
   {
-    tag: 'Schedule',
-    title: 'Season 2 Schedule — Season 1 ends July 26, launch August 9',
-    body: 'The full timeline is locked. Season 1’s last day is July 26. The server goes offline July 27–31 for maintenance and Season 2 prep, then the Open Beta (OBT) runs August 1–6 — everyone welcome, with boosted testing rates and all beta progress wiped before release. Bug fixes land August 7–8, and Season 2 officially launches August 9.',
-    link: 'patchnotes.html',
+    tag: 'Open Beta',
+    title: 'The Arctis Open Beta opens August 1 — everyone’s invited',
+    body: 'The Season 2 world is built. A brand-new map is generated and pre-loaded, every system on the Season 2 list is finished and installed, and the doors open August 1. Beta progress is wiped before the official launch on August 9, so come break things. You’ll need the CobbleAsia modpack from Discord — the client mod is now required to join.',
+    link: 'guide.html',
   },
   {
-    tag: 'Event',
-    title: 'END OF THE WORLD — Season 1 ends July 26, 2026',
-    body: 'The Season of the First Sun is going out with a bang. The END OF THE WORLD event is live until the season closes on July 26, 2026 — every banner unlocked, Unstable Global Energy surging and hourly fishing. Say your goodbyes, then see everything coming in Season 2.',
+    tag: 'Season 2',
+    title: 'Season 1 is over — the map has been wiped',
+    body: 'Season 1 closed on July 26 and the world has been fully reset: a fresh seed, a single ±5000 overworld, a new frozen spawn city called Dragonforstborn, and per-biome /rtp to get you anywhere in it. Your donator rank and Season Vault carried over — everything else starts clean.',
     link: 'guide.html',
+  },
+  {
+    tag: 'Schedule',
+    title: 'Season 2 Schedule — Open Beta August 1, launch August 9',
+    body: 'The timeline: the Open Beta (OBT) runs August 1–6, everyone welcome, with boosted testing rates and all beta progress wiped before release. Bug fixes land August 7–8, and Season 2 officially launches August 9.',
+    link: 'patchnotes.html',
   },
 ];
 
@@ -1301,6 +1454,26 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-07-30',
+    tag: 'Season 2',
+    title: 'Season 2 is built — everything landing for the Open Beta',
+    changes: [
+      { type: 'new', text: '<strong>One world, one border.</strong> Season 2 runs on a single freshly-generated overworld capped at <strong>10,000 × 10,000</strong> — 5,000 blocks out from spawn in every direction — and every chunk inside it is <strong>pre-generated</strong>, so exploring doesn\'t lag and nobody walks into raw terrain. The new spawn city is <strong>Dragonforstborn</strong>; <code>/spawn</code> takes you there and <code>/hub</code> still gets you to the old lobby.' },
+      { type: 'improved', text: '<strong><code>/rtp</code> is now per-biome.</strong> It no longer picks a world — it picks a biome. Open <code>/rtp</code> for the picker (it shows every biome on this map and how much of the world it covers), or type it straight: <code>/rtp cherry_grove</code>, <code>/rtp desert</code>, <code>/rtp random</code>. Every trip is a genuinely random spot inside that biome, not the nearest one everybody else got. Oceans and cave-only biomes are excluded so you never land swimming or buried.' },
+      { type: 'new', text: '<strong>A nine-step Starter Questline.</strong> New trainers now get walked through the server by playing it — craft a ball, catch something, spend your first Orb on the Starter Banner, claim land, take a job, collect a paycheck, buy something. Open it any time with <code>/quest</code>.' },
+      { type: 'new', text: '<strong>Real menus at last.</strong> Over 20 mods have been rebuilt on a proper custom interface — actual panels, tabs, progress bars and animated reels instead of chests full of item icons. Banner pulls, the Battle Pass Shiny Spin, the Legend roulette and the Vote Party wheel all animate properly now. This renders through our client mod, which ships in the modpack and is <strong>required to join</strong>.' },
+      { type: 'new', text: '<strong>Breeding has been rebuilt from scratch</strong> as an in-house ASC system. Right-click any <strong>Cobblemon pasture</strong> to turn it into a ranch, assign two parents, then build the environment around it — the blocks you place have to match your parents\' <strong>types</strong>, Pixelmon-style, and environment strength sets your egg speed. Eggs are items you <strong>walk to hatch</strong>, and hovering one shows its IVs, nature, ability, egg moves and size before it cracks. Full mainline inheritance (Destiny Knot, power items, Everstone, Masuda, egg moves, ball, size), Kuro\'s Hourglasses to skip the timer, a Shiny Charm held item, and <strong>Ditto × Ditto for a completely random species</strong>. <code>/ascbreed</code>' },
+      { type: 'new', text: '<strong>Fishing 2.0 — you reel in Pokémon now.</strong> Every cast pulls up a water or coastal species: left-click to claim it to your party or PC, right-click to release it for coins. <strong>Alphas</strong> surface at 0.5% on uncommon-and-up, get announced server-wide and pay <strong>1 Orb</strong> (5/week cap). Tournaments run every two hours, and the <strong>Mystery Wormhole</strong> opens on weekends with double rare rates in one announced biome. <code>/fish</code>' },
+      { type: 'new', text: '<strong>Vote Party.</strong> Server votes now build toward a party — when it fires, every online trainer\'s name goes on a roulette, the whole server watches it spin, and whoever it lands on gets a <strong>guaranteed Legendary spawn</strong>. Just be online. <code>/voteparty</code>' },
+      { type: 'new', text: '<strong>Wish History</strong> is live on the banners. Every pull you\'ve ever made is recorded — see your full log, what you got, and exactly how far you are from pity. The rotation countdown is now live-ticking too. <code>/ascsummon history</code>' },
+      { type: 'improved', text: '<strong><code>/bazaar</code> is where you sell now.</strong> The player order book is open: instant buy/sell, or place your own buy orders and sell offers and wait for someone to cross them. Orders are escrowed so fills are always honoured, and payouts wait for you in Claim All if you\'re offline. In exchange, <strong><code>/shop</code> buyback dropped to 2%</strong> — the shop is a dump bin, players are the market.' },
+      { type: 'improved', text: '<strong>Jobs: you can finally see your quests.</strong> <code>/jobs</code> now opens with <strong>JOBS</strong> and <strong>MY QUESTS</strong> tabs — accepted quests with progress bars, what\'s claimable, and this rotation\'s board for every job you\'re in. <code>/job quests</code> prints the same in chat. Accepting and claiming still happen at the NPC.' },
+      { type: 'improved', text: '<strong>Coin faucets cut about 60% across the board</strong> — jobs, fishing, hunts, the global hunt, Area Zero and raid bosses, contracts, bingo, daily login, playtime and the Solar Pass. Donator <strong>kit coin payouts</strong> were scaled to match, but the keys, Cores, candy and balls in every paid kit are untouched. The <strong>free kit ladder got buffed instead</strong> — about 50% more items, since free kits pay in gear rather than coins. Competitive payouts (gyms, PvP ladder, dungeons), voting and the casino are all unchanged.' },
+      { type: 'improved', text: '<strong>The Legend bar is a manual two-roll roulette.</strong> Nothing fires on its own any more — fill your bar, then pull the trigger yourself with <code>/legend roll</code>. Roll one is a <strong>25% chance</strong> at Fate; hit it and roll two spins across every Legendary eligible where you\'re standing. Miss and the wheel stops there.' },
+      { type: 'fixed', text: 'The Battle Tower command is <code>/bt</code> (or <code>/ascbt</code>) — the old dev-era <code>/bts2</code> literal has been retired now that there\'s only one tower.' },
+    ],
+  },
   {
     date: '2026-07-25',
     tag: 'Legendaries',

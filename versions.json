@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-30T08:08:29.715Z",
+  "generatedAt": "2026-07-30T13:28:06.171Z",
   "count": 39,
   "mods": [
     {
@@ -15,7 +15,7 @@
     {
       "repo": "asc-clans",
       "name": "ASC Clans",
-      "version": "1.26.0"
+      "version": "1.26.1"
     },
     {
       "repo": "asc-cobsave",
@@ -50,12 +50,12 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.4.1"
+      "version": "2.5.0"
     },
     {
       "repo": "asc-mcmmo",
       "name": "ASC McMMO",
-      "version": "2.1.0"
+      "version": "2.2.0"
     },
     {
       "repo": "asc-pokeditor",
@@ -70,7 +70,7 @@
     {
       "repo": "asc-tutorial",
       "name": "ASC Tutorial",
-      "version": "3.1.0"
+      "version": "3.2.0"
     },
     {
       "repo": "asc-voting",
@@ -85,7 +85,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.44.0"
+      "version": "3.46.0"
     },
     {
       "repo": "asc-battlepass",
@@ -95,7 +95,7 @@
     {
       "repo": "asc-breeding",
       "name": "CobbleAsia Breeding",
-      "version": "1.11.0"
+      "version": "1.12.0"
     },
     {
       "repo": "asc-chestshop",
@@ -115,17 +115,17 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.66.0"
+      "version": "2.68.0"
     },
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "1.96.1"
+      "version": "2.1.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "7.125.0"
+      "version": "8.1.0"
     },
     {
       "repo": "asc-forge",
@@ -170,7 +170,7 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.42.0"
+      "version": "2.42.1"
     },
     {
       "repo": "asc-raidboss",
@@ -180,7 +180,7 @@
     {
       "repo": "asc-ranks",
       "name": "CobbleAsia Ranks",
-      "version": "1.35.0"
+      "version": "1.35.1"
     },
     {
       "repo": "asc-safari",
@@ -195,7 +195,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.23.0"
+      "version": "1.24.0"
     }
   ]
 }

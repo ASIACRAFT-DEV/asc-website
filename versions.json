@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T08:35:03.595Z",
+  "generatedAt": "2026-07-31T13:41:34.195Z",
   "count": 39,
   "mods": [
     {
@@ -40,17 +40,17 @@
     {
       "repo": "asc-fishing",
       "name": "ASC Fishing",
-      "version": "2.1.0"
+      "version": "2.1.1"
     },
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "1.29.0"
+      "version": "1.29.1"
     },
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.6.0"
+      "version": "2.6.1"
     },
     {
       "repo": "asc-mcmmo",
@@ -70,7 +70,7 @@
     {
       "repo": "asc-tutorial",
       "name": "ASC Tutorial",
-      "version": "3.2.0"
+      "version": "3.2.1"
     },
     {
       "repo": "asc-voting",
@@ -125,7 +125,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "8.3.0"
+      "version": "8.4.0"
     },
     {
       "repo": "asc-forge",
@@ -180,7 +180,7 @@
     {
       "repo": "asc-ranks",
       "name": "CobbleAsia Ranks",
-      "version": "1.35.1"
+      "version": "1.35.2"
     },
     {
       "repo": "asc-safari",
@@ -195,7 +195,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.24.0"
+      "version": "1.25.0"
     }
   ]
 }

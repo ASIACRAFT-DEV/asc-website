@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T01:54:59.050Z",
+  "generatedAt": "2026-07-31T08:35:03.595Z",
   "count": 39,
   "mods": [
     {
@@ -30,7 +30,7 @@
     {
       "repo": "asc-dexquest",
       "name": "ASC Dex Quests",
-      "version": "1.2.0"
+      "version": "1.2.1"
     },
     {
       "repo": "asc-discord",
@@ -50,7 +50,7 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.5.0"
+      "version": "2.6.0"
     },
     {
       "repo": "asc-mcmmo",
@@ -115,22 +115,22 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.68.0"
+      "version": "2.69.0"
     },
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "2.2.0"
+      "version": "2.3.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "8.1.0"
+      "version": "8.3.0"
     },
     {
       "repo": "asc-forge",
       "name": "CobbleAsia Forge",
-      "version": "2.56.0"
+      "version": "2.57.0"
     },
     {
       "repo": "asc-gts",
@@ -160,7 +160,7 @@
     {
       "repo": "asc-npcs",
       "name": "CobbleAsia NPCs",
-      "version": "2.12.0"
+      "version": "2.12.1"
     },
     {
       "repo": "asc-pokewiki",
@@ -170,12 +170,12 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.42.1"
+      "version": "2.43.0"
     },
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.51.0"
+      "version": "4.53.0"
     },
     {
       "repo": "asc-ranks",

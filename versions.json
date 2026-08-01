@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-31T19:08:55.065Z",
+  "generatedAt": "2026-08-01T01:55:34.794Z",
   "count": 39,
   "mods": [
     {
@@ -15,7 +15,7 @@
     {
       "repo": "asc-clans",
       "name": "ASC Clans",
-      "version": "1.26.1"
+      "version": "1.27.0"
     },
     {
       "repo": "asc-cobsave",
@@ -50,7 +50,7 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.6.1"
+      "version": "2.8.0"
     },
     {
       "repo": "asc-mcmmo",
@@ -70,7 +70,7 @@
     {
       "repo": "asc-tutorial",
       "name": "ASC Tutorial",
-      "version": "3.2.1"
+      "version": "3.5.0"
     },
     {
       "repo": "asc-voting",
@@ -90,7 +90,7 @@
     {
       "repo": "asc-battlepass",
       "name": "CobbleAsia BattlePass",
-      "version": "2.23.0"
+      "version": "2.24.0"
     },
     {
       "repo": "asc-breeding",
@@ -105,7 +105,7 @@
     {
       "repo": "asc-clientui",
       "name": "CobbleAsia Client UI",
-      "version": "1.13.0"
+      "version": "1.14.0"
     },
     {
       "repo": "asc-cosmetics",
@@ -115,7 +115,7 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.69.0"
+      "version": "2.72.0"
     },
     {
       "repo": "asc-dungeons",
@@ -125,7 +125,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "8.5.0"
+      "version": "9.3.0"
     },
     {
       "repo": "asc-forge",
@@ -160,7 +160,7 @@
     {
       "repo": "asc-npcs",
       "name": "CobbleAsia NPCs",
-      "version": "2.12.1"
+      "version": "2.12.2"
     },
     {
       "repo": "asc-pokewiki",
@@ -170,17 +170,17 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.43.0"
+      "version": "2.44.0"
     },
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.53.0"
+      "version": "4.54.0"
     },
     {
       "repo": "asc-ranks",
       "name": "CobbleAsia Ranks",
-      "version": "1.36.0"
+      "version": "1.38.0"
     },
     {
       "repo": "asc-safari",

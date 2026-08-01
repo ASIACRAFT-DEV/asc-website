@@ -103,7 +103,8 @@
               <li><a href="#s2-pvp"><span class="mark">✓</span><span>PvP Ranked Revamp<span class="lbl-sub">Ball tiers + Master Tier</span></span></a></li>
               <li><a href="#s2-breeding"><span class="mark">✓</span><span>Breeding Rebuilt<span class="lbl-sub">ASC Ranch + walk-to-hatch eggs</span></span></a></li>
               <li><a href="#s2-fishing"><span class="mark">✓</span><span>Fishing 2.0<span class="lbl-sub">you reel in Pokémon now</span></span></a></li>
-              <li><a href="#s2-voteparty"><span class="mark">✓</span><span>Vote Party &amp; Skills<span class="lbl-sub">community wheel + 16 grind skills</span></span></a></li>
+              <li><a href="#s2-voteparty"><span class="mark">✓</span><span>Vote Party &amp; Skills<span class="lbl-sub">community wheel + 15 grind skills</span></span></a></li>
+              <li><a href="#s2-attributes"><span class="mark">✓</span><span>Attributes &amp; Item Gates<span class="lbl-sub">where attribute points come from</span></span></a></li>
             </ul>
           </div>
 
@@ -869,13 +870,65 @@
           <li><code>/vote</code> still pays its own streak rewards on top, unchanged from Season 1</li>
         </ul>
 
-        <div class="s2-sub">Skills — 16 of them</div>
-        <p>Everything you do levels something. Sixteen skills across gathering, combat, utility and <strong>Pokémon</strong> — including <strong>Battling</strong> and <strong>Breeding</strong> — each climbing to Lv 1000, all summing into a single <strong>Power Level</strong> that shows on your name in chat.</p>
+        <div class="s2-sub">Skills — 15 of them</div>
+        <p>Everything you do levels something. Fifteen skills across gathering, combat, utility and <strong>Pokémon</strong> — including <strong>Battling</strong> and <strong>Breeding</strong> — each climbing to Lv 1000, all summing into a single <strong>Power Level</strong> that shows on your name in chat.</p>
         <ul class="s2-list">
           <li><strong>Perks</strong> scale with level — double drops while gathering, bonus melee damage, dodging fall damage, and bonus coins on fishing, catching, battling and breeding</li>
           <li><strong>Achievements</strong> for every skill ladder, plus <em>Renaissance</em> (all skills Lv 50) and <em>Grandmaster</em> (all skills Lv 100)</li>
           <li>Tier titles from Novice up to <strong>Master</strong> — surfaced on your name hover, never spammed in chat</li>
           <li>Power Level is a full leaderboard category on <code>/lb</code></li>
+        </ul>
+      </div>
+
+      <!-- ATTRIBUTES & ITEM GATES -->
+      <div class="s2-block reveal" id="s2-attributes">
+        <h2 class="s2-h">✦ Attributes &amp; Item Gates</h2>
+        <div class="guide-cmds"><code>/profile</code><code>/skills points</code><code>/skills req</code></div>
+
+        <p>Five attributes sit on top of your skills — <strong>Strength</strong>, <strong>Dexterity</strong>, <strong>Vitality</strong>, <strong>Wisdom</strong> and <strong>Intellect</strong>. Each goes up to <strong>20</strong>, each carries a passive, and some of the better gear won't work until the matching attribute is high enough. Open <code>/profile</code> to spend points and see exactly what you've unlocked.</p>
+
+        <div class="s2-sub">Where attribute points come from</div>
+        <p><strong>You earn points by levelling. They never drop, and they can't be bought.</strong> There is no crate, no quest and no rank that hands them out — two ladders you're already climbing pay them automatically, and they pay retroactively, so everything you levelled before the system existed already counted.</p>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Source</th><th>Rate</th><th>How you raise it</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Power Level</strong></td><td>1 point per <strong>25</strong></td><td>Your 15 skill levels added up. Every ore, log, catch, battle and hatched egg pushes it — <code>/skills</code> shows the lot.</td></tr>
+              <tr><td><strong>Account Level</strong></td><td>1 point per <strong>3</strong></td><td>Your <code>/level</code>. Each <strong>Prestige Star</strong> counts as 50 levels, so prestiging never costs you points.</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <ul class="s2-list">
+          <li>Both ladders pay <em>at the same time</em> — they're added, not picked between</li>
+          <li><strong>100 points</strong> is the lifetime cap, which is exactly enough to max all five attributes</li>
+          <li><code>/skills points</code> tells you your current numbers and <strong>how many more skill levels or account levels until the next point</strong></li>
+          <li>Changed your mind? <strong>Respec</strong> refunds every spent point for <strong>25,000 coins</strong></li>
+        </ul>
+        <div class="s2-callout">
+          <p>Worked example: Power Level 137 and account level 8 → 137 ÷ 25 = <strong>5</strong> points, plus 8 ÷ 3 = <strong>2</strong> points, for <strong>7 earned</strong>. Thirteen more skill levels, or one more account level, buys the next one.</p>
+        </div>
+
+        <div class="s2-sub">What the passives do</div>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Attribute</th><th>Per point</th><th>Gates</th></tr></thead>
+            <tbody>
+              <tr><td>💪 <strong>Strength</strong></td><td>+0.25 attack damage</td><td>Diamond &amp; netherite tools and weapons</td></tr>
+              <tr><td>🏹 <strong>Dexterity</strong></td><td>+2% attack speed</td><td>Bow 4, ender pearl 6, crossbow 8, trident 12, elytra 14</td></tr>
+              <tr><td>❤ <strong>Vitality</strong></td><td>+0.5 max health</td><td>Diamond armour 10, netherite armour 16</td></tr>
+              <tr><td>📖 <strong>Wisdom</strong></td><td>+0.25 luck</td><td>Grindstone 2, anvil 4, brewing stand 6, enchanting table &amp; ender chest 8, smithing table &amp; respawn anchor 10, conduit 12, beacon 14</td></tr>
+              <tr><td>🧠 <strong>Intellect</strong></td><td>+1% skill XP</td><td>Redstone &amp; automation — needs Intellect <em>and</em> Wisdom at <strong>20</strong></td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="s2-sub">How the gates actually work</div>
+        <ul class="s2-list">
+          <li><strong>Use is gated, not ownership.</strong> You can craft, trade, carry and store anything — a gated item simply won't swing, mine, place or stay equipped until you qualify</li>
+          <li><strong>Wood, stone, gold and iron gear is free</strong> — tools and armour are only gated at diamond and netherite, so nothing you make in your first hours is locked</li>
+          <li><strong>Nothing Pokémon-related is ever gated</strong> — Poké Balls, TMs, Mega Showdown items, ASC crate keys and Forge relic gear all bypass the system completely</li>
+          <li>Holding a gated item never stops you opening doors, chests or anything else</li>
+          <li><code>/skills req</code> tells you what the item in your hand needs, and whether you clear it</li>
         </ul>
       </div>
 

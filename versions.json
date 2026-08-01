@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-01T01:55:34.794Z",
+  "generatedAt": "2026-08-01T08:04:14.195Z",
   "count": 39,
   "mods": [
     {
@@ -30,7 +30,7 @@
     {
       "repo": "asc-dexquest",
       "name": "ASC Dex Quests",
-      "version": "1.2.1"
+      "version": "1.2.2"
     },
     {
       "repo": "asc-discord",
@@ -50,12 +50,12 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.8.0"
+      "version": "2.9.0"
     },
     {
       "repo": "asc-mcmmo",
       "name": "ASC McMMO",
-      "version": "2.2.0"
+      "version": "2.3.0"
     },
     {
       "repo": "asc-pokeditor",
@@ -70,7 +70,7 @@
     {
       "repo": "asc-tutorial",
       "name": "ASC Tutorial",
-      "version": "3.5.0"
+      "version": "3.6.0"
     },
     {
       "repo": "asc-voting",
@@ -125,7 +125,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.3.0"
+      "version": "9.6.0"
     },
     {
       "repo": "asc-forge",
@@ -135,7 +135,7 @@
     {
       "repo": "asc-gts",
       "name": "CobbleAsia GTS",
-      "version": "2.12.0"
+      "version": "2.12.1"
     },
     {
       "repo": "asc-leaderboard",
@@ -175,7 +175,7 @@
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.54.0"
+      "version": "4.55.0"
     },
     {
       "repo": "asc-ranks",

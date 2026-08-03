@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T09:22:39.318Z",
+  "generatedAt": "2026-08-03T14:16:53.380Z",
   "count": 39,
   "mods": [
     {
@@ -50,7 +50,7 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.11.0"
+      "version": "2.12.0"
     },
     {
       "repo": "asc-mcmmo",
@@ -120,12 +120,12 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "2.10.0"
+      "version": "2.13.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.12.1"
+      "version": "9.15.0"
     },
     {
       "repo": "asc-forge",
@@ -185,7 +185,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.12.1"
+      "version": "3.13.0"
     },
     {
       "repo": "asc-transform",
@@ -195,7 +195,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.25.0"
+      "version": "1.26.0"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-03T19:19:39.503Z",
+  "generatedAt": "2026-08-04T01:29:35.315Z",
   "count": 39,
   "mods": [
     {
@@ -15,7 +15,7 @@
     {
       "repo": "asc-clans",
       "name": "ASC Clans",
-      "version": "1.27.1"
+      "version": "1.28.0"
     },
     {
       "repo": "asc-cobsave",
@@ -55,7 +55,7 @@
     {
       "repo": "asc-mcmmo",
       "name": "ASC McMMO",
-      "version": "2.5.1"
+      "version": "2.6.0"
     },
     {
       "repo": "asc-pokeditor",
@@ -75,7 +75,7 @@
     {
       "repo": "asc-voting",
       "name": "ASC Voting",
-      "version": "1.6.0"
+      "version": "1.7.0"
     },
     {
       "repo": "asc-areazero",
@@ -120,12 +120,12 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "2.13.0"
+      "version": "2.14.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.15.0"
+      "version": "9.16.0"
     },
     {
       "repo": "asc-forge",
@@ -175,7 +175,7 @@
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.56.0"
+      "version": "4.57.0"
     },
     {
       "repo": "asc-ranks",
@@ -185,7 +185,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.13.0"
+      "version": "3.14.0"
     },
     {
       "repo": "asc-transform",

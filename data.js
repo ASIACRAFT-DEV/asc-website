@@ -21,7 +21,7 @@ const FEATURES = {
     category: 'Seasonal',
     featured: true,
     blurb:
-      'The Season 2 seasonal set — frost-forged gear with icy passives, a Domain of Arctis set bonus, and eight signature frozen Pokémon. Open Beta August 1, full launch August 9.',
+      'The Season 2 seasonal set — frost-forged gear with icy passives, a Domain of Arctis set bonus, and eight signature frozen Pokémon. Season 2 launches August 8.',
     intro:
       'Arctis is Season 2: an Eternal Winter of frost-forged armor, weapons and tools, each with a passive you level from I to Overmax (VI). Complete the set for the server-wide Domain of Arctis bonus, and hunt the eight signature Arctis Pokémon led by Kyurem and Dialga. The full gear and roster breakdown lives on the Forge page.',
     how: [
@@ -36,7 +36,7 @@ const FEATURES = {
       { cmd: '/ascforge upgrade', desc: 'Spend Frozen Shards to level the piece in your hand (I → VI)' },
     ],
     notes: [
-      'Arctis arrives with Season 2 — Open Beta August 1, official launch August 9.',
+      'Arctis arrives with Season 2 — the Open Beta is finished; official launch is August 8.',
       'SolForge stays as a Season 1 legacy set — you keep it and can still play it.',
       'Every Arctis piece has infinite durability.',
       'Full gear + roster breakdown on the Forge page.',
@@ -1430,22 +1430,22 @@ const GUIDE = [
 // =====================================================================
 const NEWS = [
   {
-    tag: 'Open Beta',
-    title: 'The Arctis Open Beta opens August 1 — everyone’s invited',
-    body: 'The Season 2 world is built. A brand-new map is generated and pre-loaded, every system on the Season 2 list is finished and installed, and the doors open August 1. Beta progress is wiped before the official launch on August 9, so come break things. You’ll need the CobbleAsia modpack from Discord — the client mod is now required to join.',
-    link: 'guide.html',
-  },
-  {
     tag: 'Season 2',
-    title: 'Season 1 is over — the map has been wiped',
-    body: 'Season 1 closed on July 26 and the world has been fully reset: a fresh seed, a single ±5000 overworld, a new frozen spawn city called Dragonforstborn, and per-biome /rtp to get you anywhere in it. Your donator rank and Season Vault carried over — everything else starts clean.',
+    title: 'Season 2 launches August 8 — one day earlier than planned',
+    body: 'The Open Beta did its job, so we’re not sitting on the fixes: Arctis goes live on <strong>August 8</strong> instead of August 9. Last call for the beta is today — the wipe lands <strong>August 6</strong>, and everything after that is the real season.',
     link: 'guide.html',
   },
   {
-    tag: 'Schedule',
-    title: 'Season 2 Schedule — Open Beta August 1, launch August 9',
-    body: 'The timeline: the Open Beta (OBT) runs August 1–6, everyone welcome, with boosted testing rates and all beta progress wiped before release. Bug fixes land August 7–8, and Season 2 officially launches August 9.',
+    tag: 'Open Beta',
+    title: 'The Open Beta is finished — thank you for breaking things',
+    body: 'Five days, dozens of reports and well over a hundred fixes across every major system: dungeons, Safari, raid bosses, the Forge, jobs, breeding, fishing, crates, GTS and the Bazaar. Everything you reported has been triaged and the important stuff is already patched. See the patch notes for the full list.',
     link: 'patchnotes.html',
+  },
+  {
+    tag: 'Wipe',
+    title: 'Beta progress is wiped on August 6 — as promised',
+    body: 'Everything earned during the Open Beta is reset before launch: coins, Orbs, Pokémon, gear, levels and land claims all go back to zero, so nobody starts Season 2 ahead. Your donator rank and Season Vault are untouched. Log in fresh on August 8.',
+    link: 'guide.html',
   },
 ];
 
@@ -1454,6 +1454,43 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-08-05',
+    tag: 'Schedule',
+    title: 'The Open Beta is done — Season 2 launches August 8',
+    changes: [
+      { type: 'new', text: '🏁 <strong>The Open Beta is finished.</strong> Five days, dozens of reports, and well over a hundred fixes across every major system. Thank you to everyone who logged in, pushed on things and wrote it up — the list below is your list.' },
+      { type: 'new', text: '🎮 <strong>Today is the last day of the beta.</strong> The server is still open — play it out.' },
+      { type: 'new', text: '🧹 <strong>The wipe lands August 6</strong>, exactly as promised at the start of the beta. Coins, Orbs, Pokémon, gear, levels and land claims all reset so nobody starts the season ahead. Your <strong>donator rank</strong> and <strong>Season Vault</strong> are untouched.' },
+      { type: 'new', text: '🚀 <strong>Season 2 officially launches August 8</strong> — one day earlier than the original August 9 date. The beta gave us what we needed, so there\'s no reason to make you wait. Bring the CobbleAsia modpack; the client mod is required to join.' },
+    ],
+  },
+  {
+    date: '2026-08-05',
+    tag: 'Open Beta',
+    title: 'Open Beta bug sweep — everything you reported, fixed for launch',
+    changes: [
+      { type: 'fixed', text: '<strong>A dupe exploit is closed.</strong> A Cobblemon dupe doing the rounds on YouTube desyncs the PC and trade systems so one Pokémon ends up in two slots, then sells the copies on repeat. Both cash-out paths — <code>/gts</code> listings and trades — now run an integrity check and refuse anything that fails it. Nothing you legitimately own is affected.' },
+      { type: 'fixed', text: '<strong>Area Zero deaths were free.</strong> You could die to a Paradox boss, <code>/back</code> straight to your body with all your gear, and keep hitting the boss while still respawn-invulnerable — chip-killing anything with no armor. <code>/back</code> no longer returns you into Area Zero, and the spawn grace now drops the moment you attack.' },
+      { type: 'fixed', text: '<strong>Raid bosses were spawning in the survival world</strong> — including a level 100 Kyurem in the open, and one inside a clan\'s private claim that anyone could <code>/ascraid join</code> to teleport into. Raids are Safari-only again, on every spawn path, including the clan raid boss. Defeating a boss also stopped reporting your damage as "1".' },
+      { type: 'fixed', text: '<strong>Safari was eating your bosses.</strong> One <code>/endbattle</code> locked you out of every safari boss until the next restart; totem bosses, Alphas and Dynamax raids spawned underground about half the time; and leaving Safari could strand you on a bedrock pillar in the middle of nowhere. All three fixed, plus every region in the Safari screen draws its own block again instead of plain grass.' },
+      { type: 'fixed', text: '<strong>Dungeons: the boss is mandatory again.</strong> A castle could be cleared without ever entering it. Being ejected from a locked area could also drop you <em>under</em> the dungeon, and SolForge tiles in <code>/dungeon shop</code> rendered as blank paper. Boss chambers now handle multiple parties properly, too — the kill credits the party that did the most damage instead of one group claiming the room.' },
+      { type: 'fixed', text: '<strong>Crate rewards could vanish.</strong> If the server stopped during the reveal animation, the key was consumed and nothing came out — the spin now survives a restart. Bonus Vote Keys from PokéHunt turn-ins silently failed to deliver, crate previews showed obtainable rewards at 0%, and the Poké Spin could roll Paradox Pokémon it was never meant to.' },
+      { type: 'fixed', text: '<strong><code>/summon</code> never worked for anyone but staff</strong> — vanilla Minecraft owns that command name, so the banner alias could never fire for a normal player. Every menu, hint and reward message now points at <code>/ascsummon</code>, which is the one that actually works.' },
+      { type: 'fixed', text: '<strong>GTS: paid listings that delivered nothing</strong> are fixed, and non-Pokémon listings show their real item icon instead of a cardboard box.' },
+      { type: 'fixed', text: '<strong><code>/shop</code> was selling two tiles literally named "Air"</strong> — one for 2,500 Tokens, one for 500,000 Coins. Gone. <code>/vault</code> also stopped refusing enchanted items, splicers, raid pouches and enchanted books it could store perfectly well.' },
+      { type: 'fixed', text: '<strong>The starter questline hard-stopped at 10/11.</strong> "Claim your first paycheck" pointed at a command that can no longer pay, so nobody could finish it — the step now tracks the real Job NPC claim, and the questline explains what your job actually counts as work. Running <code>/asctut start</code> again after finishing also paid the whole thing out a second time; it can only pay once now.' },
+      { type: 'fixed', text: '<strong>Jobs quests were paying for the wrong things.</strong> Fisher dailies and weeklies counted any catch at all, not just Poké Rod catches. Job quest payouts were also raised to <strong>25,000 per daily</strong> and <strong>125,000 per weekly</strong> — a full day of quests was worth less than a single crate key.' },
+      { type: 'fixed', text: '<strong>Pokédex research quests paid nothing.</strong> Every research reward since launch announced a coin payout and moved no money. They pay now.' },
+      { type: 'fixed', text: '<strong>Vote parties sat banked.</strong> When the player who arrived to clear the minimum-player gate joined, the check counted one player short and the party waited for another vote. It fires on the join now, and a party waiting on players says so in chat instead of failing silently.' },
+      { type: 'fixed', text: '<strong>The forge bench is a real screen.</strong> <code>/forge</code> was the last menu still running on an old chest GUI — you now pick the item to upgrade out of your inventory instead of dragging it into a slot.' },
+      { type: 'fixed', text: '<strong>Skills: two real problems.</strong> You could fly an elytra without meeting the Dexterity gate, and Vitality was priced in half-hearts — "+2.0 max health" grew your bar by exactly one heart. Both corrected.' },
+      { type: 'fixed', text: '<strong>The dungeon HUD and sidebar never painted</strong>, and long objective lines ran off the right edge of the screen. Both were client-side and are fixed in the modpack\'s client mod — <strong>update your pack before launch</strong>. Custom screens also draw the correct custom-model icons now instead of falling back to base items.' },
+      { type: 'fixed', text: '<strong>Battle Tower:</strong> the 60,000-Token Legendary Core was handing over a plain Nether Star, and a doubles run got stuck when you were down to your last Pokémon.' },
+      { type: 'fixed', text: '<strong>Odds and ends:</strong> level grinder Pokémon leaked into the open world; NPCs stared due east instead of at players; the clan passives panel was unreadable; the <code>/legend</code> menu had a Recycler button that only printed an error; releasing a fishing catch could take the fish and pay nothing.' },
+      { type: 'improved', text: '<strong>The Season 2 coin nerf is back in place.</strong> The wipe regenerated several config files from their pre-nerf defaults, so jobs, raid bosses and the Solar Pass spent the first days of the beta paying full Season 1 rates. All of it is re-applied in code, so it survives the next wipe too.' },
+    ],
+  },
   {
     date: '2026-07-30',
     tag: 'Season 2',

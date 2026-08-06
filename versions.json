@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-06T01:43:07.293Z",
+  "generatedAt": "2026-08-06T08:15:59.542Z",
   "count": 39,
   "mods": [
     {
@@ -50,7 +50,7 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.12.0"
+      "version": "2.13.0"
     },
     {
       "repo": "asc-mcmmo",
@@ -70,7 +70,7 @@
     {
       "repo": "asc-tutorial",
       "name": "ASC Tutorial",
-      "version": "3.8.0"
+      "version": "4.0.0"
     },
     {
       "repo": "asc-voting",
@@ -85,7 +85,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.49.0"
+      "version": "3.49.1"
     },
     {
       "repo": "asc-battlepass",
@@ -105,7 +105,7 @@
     {
       "repo": "asc-clientui",
       "name": "CobbleAsia Client UI",
-      "version": "1.19.0"
+      "version": "1.25.0"
     },
     {
       "repo": "asc-cosmetics",
@@ -115,17 +115,17 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.76.0"
+      "version": "2.77.0"
     },
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "3.6.1"
+      "version": "3.7.1"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.27.0"
+      "version": "9.34.0"
     },
     {
       "repo": "asc-forge",
@@ -170,17 +170,17 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.44.0"
+      "version": "2.44.1"
     },
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.57.0"
+      "version": "4.58.0"
     },
     {
       "repo": "asc-ranks",
       "name": "CobbleAsia Ranks",
-      "version": "1.38.0"
+      "version": "1.40.0"
     },
     {
       "repo": "asc-safari",

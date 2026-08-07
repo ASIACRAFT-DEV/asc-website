@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-07T12:41:03.819Z",
+  "generatedAt": "2026-08-07T18:40:11.534Z",
   "count": 39,
   "mods": [
     {
@@ -70,17 +70,17 @@
     {
       "repo": "asc-tutorial",
       "name": "ASC Tutorial",
-      "version": "4.1.0"
+      "version": "4.2.0"
     },
     {
       "repo": "asc-voting",
       "name": "ASC Voting",
-      "version": "1.7.0"
+      "version": "1.9.0"
     },
     {
       "repo": "asc-areazero",
       "name": "CobbleAsia Area Zero",
-      "version": "2.14.1"
+      "version": "2.15.0"
     },
     {
       "repo": "asc-battletower",
@@ -95,7 +95,7 @@
     {
       "repo": "asc-breeding",
       "name": "CobbleAsia Breeding",
-      "version": "1.12.0"
+      "version": "1.14.0"
     },
     {
       "repo": "asc-chestshop",
@@ -115,7 +115,7 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.80.0"
+      "version": "2.81.0"
     },
     {
       "repo": "asc-dungeons",
@@ -125,12 +125,12 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.42.0"
+      "version": "9.45.0"
     },
     {
       "repo": "asc-forge",
       "name": "CobbleAsia Forge",
-      "version": "2.60.0"
+      "version": "2.61.0"
     },
     {
       "repo": "asc-gts",
@@ -150,7 +150,7 @@
     {
       "repo": "asc-levels",
       "name": "CobbleAsia Levels",
-      "version": "1.10.0"
+      "version": "1.11.0"
     },
     {
       "repo": "asc-mail",

@@ -6,7 +6,7 @@
 
 const SERVER = {
   ip: 'play.cobbleasia.net',
-  discord: 'https://discord.gg/qB3ExYsUAH',
+  discord: 'https://discord.gg/cobbleasia',
   mc: '1.21.1',
   cobblemon: '1.7.3',
 };

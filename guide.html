@@ -226,16 +226,18 @@
           <li>All the themed destinations (Safari, Area Zero, dungeons, event worlds) are still their own separate spaces</li>
         </ul>
 
-        <div class="s2-sub">/rtp is now per-biome</div>
-        <p>Random teleport no longer picks a world — it picks a <strong>biome</strong>. Open <code>/rtp</code> for the biome picker or type it straight out:</p>
+        <div class="s2-sub">/rtp — pick a world, then a biome</div>
+        <p>Random teleport opens on a <strong>world picker</strong>, then a <strong>biome picker</strong>. Two destinations are open: <strong>Resource</strong>, the pre-generated world you hunt and mine in, and <strong>Build</strong>, the world you settle in. You can skip straight past either level:</p>
         <div class="s2-callout">
-          <code>/rtp cherry_grove</code> &nbsp;·&nbsp; <code>/rtp desert</code> &nbsp;·&nbsp; <code>/rtp random</code>
+          <code>/rtp</code> &nbsp;·&nbsp; <code>/rtp resource cherry_grove</code> &nbsp;·&nbsp; <code>/rtp build</code> &nbsp;·&nbsp; <code>/rtp desert</code>
         </div>
         <ul class="s2-list">
-          <li>The picker shows every biome that exists on this map and <strong>how much of the world</strong> it covers</li>
-          <li>Every trip is a genuinely random spot inside that biome — not the one nearest corner everybody else got sent to</li>
+          <li><strong>Resource</strong> keeps the biome picker — it shows every biome on the map and <strong>how much of the world</strong> it covers</li>
+          <li><strong>Build</strong> is a classic random scatter, so there is no biome list to wait on</li>
+          <li>Every trip is a genuinely random spot — not the one nearest corner everybody else got sent to</li>
           <li>Oceans and cave-only biomes are excluded, so you never land swimming or buried</li>
-          <li>One flat cooldown for everyone, no matter where you go</li>
+          <li>Cooldowns are counted <strong>per world</strong>, so a trip out to Resource never locks you out of Build</li>
+          <li>Typing a bare biome name still works exactly as the beta taught you — it targets Resource</li>
         </ul>
         <p>Hunting a specific Pokémon? Look up its biome with <code>/pwiki &lt;species&gt;</code>, then <code>/rtp</code> straight there.</p>
 
@@ -316,7 +318,7 @@
               <tr><td>Battle Pass — premium</td><td>+10 → 25 at Lv 15/45/70/90</td><td>+70 / season</td></tr>
               <tr><td>Area Zero bosses</td><td>1 Alpha · 2 Paradox · 3 Legendary</td><td>per event</td></tr>
               <tr><td>Dungeon clears</td><td>scales with difficulty</td><td>10 / week</td></tr>
-              <tr><td>Battle Tower in-run shop</td><td>250 BT Tokens each</td><td>10 / week</td></tr>
+              <tr><td>Battle Tower in-run shop</td><td>250 Tokens each</td><td>10 / week</td></tr>
               <tr><td>Warzone shop</td><td>400 Warzone Points each</td><td>10 / week</td></tr>
               <tr><td>Fishing up an Alpha</td><td>1 per Alpha</td><td>5 / week</td></tr>
               <tr><td>Buying with coins</td><td>50,000 coins each</td><td>15 / day</td></tr>
@@ -516,6 +518,20 @@
           <li>Players have to <strong>find it within the Safari zone</strong></li>
           <li>The Safari is now <strong>completely free to enter</strong> — no coin gate. With Raid Bosses, <strong>Dynamax/Gigantamax raids</strong> and <strong>Raid Dens</strong> all living out here, the Safari is open-access hunting ground for everyone</li>
         </ul>
+
+        <div class="s2-sub">A raid's star rating is now its level</div>
+        <p>Every boss used to be Lv 100 no matter its tier, so the stars told you how <em>long</em> a raid would take but not how hard it would hit. Now the rating is the level:</p>
+        <div class="s2-callout">
+          ★ Common <strong>50</strong> &nbsp;·&nbsp; ★★ Uncommon <strong>60</strong> &nbsp;·&nbsp; ★★★ Rare <strong>70</strong> &nbsp;·&nbsp; ★★★★ Epic <strong>80</strong> &nbsp;·&nbsp; ★★★★★ Legendary <strong>90</strong> &nbsp;·&nbsp; ★★★★★★ Mythic <strong>100</strong>
+        </div>
+        <ul class="s2-list">
+          <li>A lower tier is both <strong>softer on offence and faster to chew through</strong>, so the low stars are now a genuine on-ramp</li>
+          <li><strong>Mythic is exactly as it is today</strong> — nothing at the top got easier</li>
+          <li>Rewards, shared HP pools and timers are unchanged. Level is the only number that moved</li>
+        </ul>
+
+        <div class="s2-sub">Damage credit rewards damage, not stalling</div>
+        <p>Contribution decides who gets paid, and it could be gamed: padding a fight out with weak moves scored higher than a fast, focused knockout. Three separate faults all pushed that way and all three are fixed — a chip move no longer buys the type bonus, winning outright no longer hands you a free extra bar of credit, and dragging a fight past a few turns now costs you. <strong>A clean 2HKO is unchanged; a 12-turn stall no longer beats it.</strong></p>
       </div>
 
       <!-- POKEDEX RESEARCH QUESTS -->
@@ -554,16 +570,26 @@
         <ul class="s2-list">
           <li><code>/legend</code> as the old shared system is <strong>scrapped</strong>, and Global Energy is now <strong>hidden</strong></li>
           <li><code>/legend</code> is now <strong>per-player</strong> — everyone has their own Legend bar</li>
-          <li>The roll is <strong>manual</strong>. Nothing fires automatically: when your bar is full, you pull the trigger yourself with <code>/legend roll</code></li>
-          <li>After that roll, your Legend chance resets back to <strong>0%</strong> — win or lose</li>
+          <li>The roll is <strong>manual</strong>. Nothing fires automatically: you pull the trigger yourself with <code>/legend roll</code></li>
+          <li>After that roll, your Legend bar resets back to <strong>0%</strong> — win or lose</li>
           <li><strong>Box legendaries are out of the wild pool</strong> — Kyurem, Rayquaza, Mewtwo, Zacian, Koraidon and the rest can't be rolled</li>
         </ul>
 
-        <div class="s2-sub">The two-roll roulette</div>
-        <p>Pulling the trigger plays out as an animated wheel with two stages:</p>
+        <div class="s2-sub">A full bar is guaranteed — a partial one is a gamble</div>
+        <p>Your fill <em>is</em> your odds. Reach <strong>100%</strong> and a Legendary <strong>will</strong> spawn for you — there is no chance roll left to lose. You no longer have to wait for 100% if you don't want to: from <strong>20%</strong> up you can spend the bar early and gamble on it.</p>
+        <div class="s2-callout">
+          <code>20% → 4%</code> &nbsp;·&nbsp; <code>50% → 25%</code> &nbsp;·&nbsp; <code>75% → 56%</code> &nbsp;·&nbsp; <code>100% → guaranteed</code>
+        </div>
         <ul class="s2-list">
-          <li><strong>Roll one — Fate.</strong> A <strong>25% chance</strong> to succeed. Miss it and the wheel stops there</li>
-          <li><strong>Roll two — the Roster.</strong> Hit it, and the wheel spins again across every Legendary eligible where you're standing, landing on the one that spawns for you</li>
+          <li>The curve bends on purpose — an early spin is the <strong>worse</strong> bet, which is what makes waiting worth something</li>
+          <li><strong>The whole bar is spent either way</strong>, win or lose, whatever it held. That is the price of impatience</li>
+          <li>Below 100% the wheel is built at your real odds, and a miss tells you exactly what you played</li>
+        </ul>
+
+        <div class="s2-sub">The roulette</div>
+        <ul class="s2-list">
+          <li><strong>Fate.</strong> An animated wheel at the odds your bar earned. A guaranteed spin <strong>skips this stage entirely</strong> — no suspense theatre when the answer is already yes</li>
+          <li><strong>The Roster.</strong> The wheel spins across every Legendary eligible where you're standing, landing on the one that spawns for you</li>
         </ul>
 
         <div class="s2-sub">Filling your Legend bar</div>
@@ -619,7 +645,7 @@
         <ul class="s2-list">
           <li><strong>❤ Heal Party</strong> — restore HP, status and PP on your surviving Pokémon. <em>Does not revive downed Pokémon.</em></li>
           <li><strong>🔄 Swap</strong> — one switch: retire a downed Pokémon and bring a fresh one in from your PC, at full health. This is the <em>only</em> way to recover from a death.</li>
-          <li><strong>🛒 Open Shop</strong> — spend the BT Tokens you've earned climbing.</li>
+          <li><strong>🛒 Open Shop</strong> — spend the Tokens you've earned climbing.</li>
         </ul>
 
         <div class="s2-sub">Quality of Life</div>
@@ -671,6 +697,25 @@
           <li>Requires <strong>8 Gym Badges</strong> to challenge</li>
         </ul>
         <p>Player Gym Leaders were a fun idea, but participation remained very low. Gym Badges will now play a much larger role in progression.</p>
+
+        <div class="s2-sub">The ladder is the Kanto eight</div>
+        <p>The 18-type ladder is gone. Season 2 runs the <strong>Generation 1 roster</strong> — same eight types, same order, each awarding its canonical badge:</p>
+        <div class="s2-callout">
+          🪨 Rock · 💧 Water · ⚡ Electric · 🌿 Grass · ☠ Poison · ✨ Psychic · 🔥 Fire · ⛰ Ground
+        </div>
+        <ul class="s2-list">
+          <li><strong>Challenge them in any order</strong> — there is no unlock chain</li>
+          <li>Four are Singles and four are Doubles, so no one team style clears the ladder</li>
+          <li><strong>Every seat starts Season 2 vacant.</strong> Nobody carries a gym over from the beta — all eight are up for grabs</li>
+          <li>The roster follows the banner calendar: Gen 1 owns the opening month, and the ladder changes region as the calendar turns</li>
+        </ul>
+
+        <div class="s2-sub">Badges now gate your Rank</div>
+        <p>Badges are no longer just a trophy for the Elite Four — <strong>rank-ups require them</strong>:</p>
+        <div class="s2-callout">
+          Trainer <strong>1</strong> · Ace <strong>2</strong> · Ranger <strong>3</strong> · Veteran <strong>4</strong> · Elite <strong>5</strong> · Professor <strong>6</strong> · Master <strong>all 8</strong>
+        </div>
+        <p>The count is <strong>lifetime</strong>, so the monthly gym reset can never un-earn a rank you already reached.</p>
       </div>
 
       <!-- CLANS -->

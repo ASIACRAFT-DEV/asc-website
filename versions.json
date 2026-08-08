@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-08T12:27:40.994Z",
+  "generatedAt": "2026-08-08T18:22:45.834Z",
   "count": 39,
   "mods": [
     {
@@ -40,7 +40,7 @@
     {
       "repo": "asc-fishing",
       "name": "ASC Fishing",
-      "version": "2.2.0"
+      "version": "2.3.0"
     },
     {
       "repo": "asc-gyms",
@@ -50,7 +50,7 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.15.0"
+      "version": "2.16.0"
     },
     {
       "repo": "asc-mcmmo",
@@ -125,7 +125,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.57.0"
+      "version": "9.58.0"
     },
     {
       "repo": "asc-forge",

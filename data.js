@@ -21,7 +21,7 @@ const FEATURES = {
     category: 'Seasonal',
     featured: true,
     blurb:
-      'The Season 2 seasonal set — frost-forged gear with icy passives, a Domain of Arctis set bonus, and eight signature frozen Pokémon. Season 2 launches August 8.',
+      'The Season 2 seasonal set — frost-forged gear with icy passives, a Domain of Arctis set bonus, and eight signature frozen Pokémon. Live now with Season 2.',
     intro:
       'Arctis is Season 2: an Eternal Winter of frost-forged armor, weapons and tools, each with a passive you level from I to Overmax (VI). Complete the set for the server-wide Domain of Arctis bonus, and hunt the eight signature Arctis Pokémon led by Kyurem and Dialga. The full gear and roster breakdown lives on the Forge page.',
     how: [
@@ -36,7 +36,7 @@ const FEATURES = {
       { cmd: '/ascforge upgrade', desc: 'Spend Frozen Shards to level the piece in your hand (I → VI)' },
     ],
     notes: [
-      'Arctis arrives with Season 2 — the Open Beta is finished; official launch is August 8.',
+      'Arctis is live with Season 2 — launched August 8, straight out of the Open Beta.',
       'SolForge stays as a Season 1 legacy set — you keep it and can still play it.',
       'Every Arctis piece has infinite durability.',
       'Full gear + roster breakdown on the Forge page.',
@@ -1431,8 +1431,8 @@ const GUIDE = [
 const NEWS = [
   {
     tag: 'Season 2',
-    title: 'Season 2 launches August 8 — one day earlier than planned',
-    body: 'The Open Beta did its job, so we’re not sitting on the fixes: Arctis goes live on <strong>August 8</strong> instead of August 9. Last call for the beta is today — the wipe lands <strong>August 6</strong>, and everything after that is the real season.',
+    title: 'Season 2 — Arctis is live',
+    body: 'The gates are open. <strong>Arctis launched August 8</strong> on a fresh, pre-generated world with a new spawn city, rebuilt breeding, Pokémon fishing, the player Bazaar and a whole new interface. Everyone starts from zero — grab the CobbleAsia modpack from Discord and jump in.',
     link: 'guide.html',
   },
   {
@@ -1443,8 +1443,8 @@ const NEWS = [
   },
   {
     tag: 'Wipe',
-    title: 'Beta progress is wiped on August 6 — as promised',
-    body: 'Everything earned during the Open Beta is reset before launch: coins, Orbs, Pokémon, gear, levels and land claims all go back to zero, so nobody starts Season 2 ahead. Your donator rank and Season Vault are untouched. Log in fresh on August 8.',
+    title: 'Beta progress was wiped on August 6 — as promised',
+    body: 'Everything earned during the Open Beta was reset before launch: coins, Orbs, Pokémon, gear, levels and land claims all went back to zero, so nobody started Season 2 ahead. Donator ranks and Season Vault contents were untouched.',
     link: 'guide.html',
   },
 ];
@@ -1454,6 +1454,17 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-08-08',
+    tag: 'Season 2',
+    title: 'Season 2 — Arctis is live',
+    changes: [
+      { type: 'new', text: '❄️ <strong>Arctis has begun.</strong> The Age of Eternal Winter is open to everyone on a fresh, pre-generated world with a new spawn city. Every account starts from zero — coins, Orbs, Pokémon, gear, levels and claims. Your <strong>donator rank</strong> and <strong>Season Vault</strong> carried over untouched.' },
+      { type: 'new', text: '🖥️ <strong>The CobbleAsia modpack is required to join.</strong> Season 2 runs on a custom interface and the client mod ships in the pack — grab it from Discord before you connect. First join asks you to <code>/register &lt;password&gt;</code>, then <code>/login &lt;password&gt;</code> each time after.' },
+      { type: 'new', text: '⚒️ <strong>Arctis is the season\'s Forge set</strong> — frost-forged gear with icy passives and the Domain of Arctis set bonus, plus eight signature frozen Pokémon led by Kyurem and Dialga. SolForge becomes a legacy set: keep it and play it, but no new keys or shards.' },
+      { type: 'improved', text: '🩹 <strong>Everything the Open Beta turned up has been patched</strong> — well over a hundred fixes across dungeons, Safari, raid bosses, the Forge, jobs, breeding, fishing, crates, GTS and the Bazaar. Thank you to everyone who reported.' },
+    ],
+  },
   {
     date: '2026-08-05',
     tag: 'Schedule',

@@ -1,11 +1,11 @@
 {
-  "generatedAt": "2026-08-08T00:55:30.787Z",
+  "generatedAt": "2026-08-08T02:07:32.817Z",
   "count": 39,
   "mods": [
     {
       "repo": "asc-catchcombo",
       "name": "ASC Catch Combos",
-      "version": "1.2.0"
+      "version": "1.3.0"
     },
     {
       "repo": "asc-claimblocks",
@@ -40,22 +40,22 @@
     {
       "repo": "asc-fishing",
       "name": "ASC Fishing",
-      "version": "2.1.1"
+      "version": "2.2.0"
     },
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "2.5.1"
+      "version": "2.6.0"
     },
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.13.0"
+      "version": "2.14.0"
     },
     {
       "repo": "asc-mcmmo",
       "name": "ASC McMMO",
-      "version": "2.6.0"
+      "version": "2.8.0"
     },
     {
       "repo": "asc-pokeditor",
@@ -120,7 +120,7 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "3.10.1"
+      "version": "3.11.0"
     },
     {
       "repo": "asc-essentials",
@@ -135,7 +135,7 @@
     {
       "repo": "asc-gts",
       "name": "CobbleAsia GTS",
-      "version": "2.13.0"
+      "version": "2.14.0"
     },
     {
       "repo": "asc-leaderboard",
@@ -170,7 +170,7 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.44.1"
+      "version": "2.45.0"
     },
     {
       "repo": "asc-raidboss",
@@ -185,7 +185,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.15.0"
+      "version": "3.16.0"
     },
     {
       "repo": "asc-transform",

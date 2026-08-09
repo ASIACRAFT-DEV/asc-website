@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T06:38:54.881Z",
+  "generatedAt": "2026-08-09T12:29:28.070Z",
   "count": 39,
   "mods": [
     {
@@ -55,7 +55,7 @@
     {
       "repo": "asc-mcmmo",
       "name": "ASC McMMO",
-      "version": "2.8.0"
+      "version": "2.9.0"
     },
     {
       "repo": "asc-pokeditor",
@@ -125,7 +125,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.65.0"
+      "version": "9.66.0"
     },
     {
       "repo": "asc-forge",

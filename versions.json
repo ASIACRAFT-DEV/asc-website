@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-09T18:25:39.430Z",
+  "generatedAt": "2026-08-10T01:00:35.999Z",
   "count": 39,
   "mods": [
     {
@@ -55,7 +55,7 @@
     {
       "repo": "asc-mcmmo",
       "name": "ASC McMMO",
-      "version": "2.9.0"
+      "version": "2.11.0"
     },
     {
       "repo": "asc-pokeditor",
@@ -95,7 +95,7 @@
     {
       "repo": "asc-breeding",
       "name": "CobbleAsia Breeding",
-      "version": "1.15.0"
+      "version": "1.16.0"
     },
     {
       "repo": "asc-chestshop",
@@ -125,7 +125,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.66.0"
+      "version": "9.68.0"
     },
     {
       "repo": "asc-forge",
@@ -170,7 +170,7 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.46.0"
+      "version": "2.47.0"
     },
     {
       "repo": "asc-raidboss",

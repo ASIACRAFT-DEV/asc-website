@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-10T07:11:23.298Z",
+  "generatedAt": "2026-08-10T12:44:57.246Z",
   "count": 39,
   "mods": [
     {
@@ -45,7 +45,7 @@
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "2.8.0"
+      "version": "2.10.0"
     },
     {
       "repo": "asc-jobs",
@@ -70,7 +70,7 @@
     {
       "repo": "asc-tutorial",
       "name": "ASC Tutorial",
-      "version": "4.4.1"
+      "version": "4.5.0"
     },
     {
       "repo": "asc-voting",
@@ -110,12 +110,12 @@
     {
       "repo": "asc-cosmetics",
       "name": "CobbleAsia Cosmetics",
-      "version": "0.7.0"
+      "version": "0.8.0"
     },
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.82.0"
+      "version": "2.83.1"
     },
     {
       "repo": "asc-dungeons",

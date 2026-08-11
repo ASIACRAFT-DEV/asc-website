@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/brand-frost.png" />
-  <link rel="stylesheet" href="styles.css?v=202608081006" />
+  <link rel="stylesheet" href="styles.css?v=202608111739" />
 </head>
 <body>
   <header class="nav">
@@ -84,7 +84,7 @@
             </div>
             <ul class="s2-check">
               <li><a href="#s2-arctis"><span class="mark">✓</span><span>Arctis — Season 2 Set<span class="lbl-sub">frozen gear + 8 signature Pokémon</span></span></a></li>
-              <li><a href="#s2-world"><span class="mark">✓</span><span>One World, One Border<span class="lbl-sub">fresh map, ±5000 border, per-biome /rtp</span></span></a></li>
+              <li><a href="#s2-world"><span class="mark">✓</span><span>The World &amp; the Border<span class="lbl-sub">fresh map, ±20,000 border, per-biome /rtp</span></span></a></li>
               <li><a href="#s2-starter"><span class="mark">✓</span><span>Starter Questline<span class="lbl-sub">9 guided first steps — /quest</span></span></a></li>
               <li><a href="#s2-ui"><span class="mark">✓</span><span>Custom Interface<span class="lbl-sub">real screens, not chest menus</span></span></a></li>
               <li><a href="#s2-banner"><span class="mark">✓</span><span>Banner &amp; Summon Revamp<span class="lbl-sub">Orbs currency + Gen 1–9 banners, 250 pity</span></span></a></li>
@@ -214,30 +214,31 @@
 
       <!-- ONE WORLD, ONE BORDER -->
       <div class="s2-block reveal" id="s2-world">
-        <h2 class="s2-h">🗺️ One World, One Border</h2>
+        <h2 class="s2-h">🗺️ The World &amp; the Border</h2>
         <div class="guide-cmds"><code>/rtp</code><code>/spawn</code><code>/hub</code></div>
-        <p>Season 1 sprawled across a handful of overworlds. Season 2 is <strong>one map</strong> — freshly generated on a brand-new seed, fully <strong>pre-generated</strong> before you arrive, and fenced in on purpose so the world stays a place instead of an empty frontier.</p>
+        <p>Season 1 sprawled across a handful of overworlds. Season 2 is <strong>one home map</strong> — freshly generated on a brand-new seed, <strong>pre-generated</strong> before you arrive, and fenced in on purpose so the world stays a place instead of an empty frontier. A separate <strong>Resource</strong> world takes the mining and hunting, so the world you build in doesn't end up strip-mined.</p>
 
-        <div class="s2-sub">A finite, fully-loaded map</div>
+        <div class="s2-sub">A finite, pre-generated map</div>
         <ul class="s2-list">
-          <li>The overworld is capped at a <strong>10,000 × 10,000</strong> square — 5,000 blocks in every direction from spawn</li>
-          <li>Every chunk inside that border is <strong>pre-generated</strong>, so exploring doesn't lag the server and nobody walks into unloaded terrain</li>
-          <li>A smaller world means you'll actually run into other trainers — bases, shops and clan territory all sit within reach</li>
+          <li>The overworld border sits at <strong>±20,000 blocks</strong> from spawn — big enough to disappear into, fenced so the world stays a place instead of an endless frontier</li>
+          <li>The region you'll actually be dropped into is <strong>pre-generated</strong>, so exploring doesn't lag the server and <code>/rtp</code> never strands you in raw terrain</li>
+          <li>You'll actually run into other trainers — bases, shops and clan territory all sit within reach</li>
           <li>All the themed destinations (Safari, Area Zero, dungeons, event worlds) are still their own separate spaces</li>
         </ul>
 
         <div class="s2-sub">/rtp — pick a world, then a biome</div>
-        <p>Random teleport opens on a <strong>world picker</strong>, then a <strong>biome picker</strong>. Two destinations are open: <strong>Resource</strong>, the pre-generated world you hunt and mine in, and <strong>Build</strong>, the world you settle in. You can skip straight past either level:</p>
+        <p>Random teleport opens on a <strong>world picker</strong>, then a <strong>biome picker</strong>. Two destinations are open: <strong>Build</strong>, the permanent world you settle and claim in, and <strong>Resource</strong>, the freshly-generated wild you strip-mine and hunt in. You can skip straight past either level:</p>
         <div class="s2-callout">
           <code>/rtp</code> &nbsp;·&nbsp; <code>/rtp resource cherry_grove</code> &nbsp;·&nbsp; <code>/rtp build</code> &nbsp;·&nbsp; <code>/rtp desert</code>
         </div>
         <ul class="s2-list">
-          <li><strong>Resource</strong> keeps the biome picker — it shows every biome on the map and <strong>how much of the world</strong> it covers</li>
-          <li><strong>Build</strong> is a classic random scatter, so there is no biome list to wait on</li>
+          <li><strong>Both worlds have the biome picker</strong> — it lists every biome found in that world and <strong>how much of it</strong> they cover, so you can see what's actually common before you go</li>
+          <li><strong>Build</strong> is the permanent one: homes and claims live here, and it reaches much further out</li>
+          <li><strong>Resource</strong> is the disposable one — structures and raid dens on a first-come basis, in a tighter ring so you're never walking for ten minutes to find ore</li>
           <li>Every trip is a genuinely random spot — not the one nearest corner everybody else got sent to</li>
           <li>Oceans and cave-only biomes are excluded, so you never land swimming or buried</li>
           <li>Cooldowns are counted <strong>per world</strong>, so a trip out to Resource never locks you out of Build</li>
-          <li>Typing a bare biome name still works exactly as the beta taught you — it targets Resource</li>
+          <li>Typing a bare biome name still works exactly as the beta taught you</li>
         </ul>
         <p>Hunting a specific Pokémon? Look up its biome with <code>/pwiki &lt;species&gt;</code>, then <code>/rtp</code> straight there.</p>
 
@@ -958,11 +959,26 @@
           <table class="s2-table">
             <thead><tr><th>Attribute</th><th>Per point</th><th>Gates</th></tr></thead>
             <tbody>
-              <tr><td>💪 <strong>Strength</strong></td><td>+0.25 attack damage</td><td>Diamond &amp; netherite tools and weapons</td></tr>
-              <tr><td>🏹 <strong>Dexterity</strong></td><td>+2% attack speed</td><td>Bow 4, ender pearl 6, crossbow 8, trident 12, elytra 14</td></tr>
-              <tr><td>❤ <strong>Vitality</strong></td><td>+0.5 max health</td><td>Diamond armour 10, netherite armour 16</td></tr>
-              <tr><td>📖 <strong>Wisdom</strong></td><td>+0.25 luck</td><td>Grindstone 2, anvil 4, brewing stand 6, enchanting table &amp; ender chest 8, smithing table &amp; respawn anchor 10, conduit 12, beacon 14</td></tr>
-              <tr><td>🧠 <strong>Intellect</strong></td><td>+1% skill XP</td><td>Redstone &amp; automation — needs Intellect <em>and</em> Wisdom at <strong>20</strong></td></tr>
+              <tr><td>💪 <strong>Strength</strong></td><td>+0.25 attack damage</td><td>Netherite only — shovel &amp; hoe 12, pickaxe 14, sword &amp; axe 16. Plus shield 2, mace 18</td></tr>
+              <tr><td>🏹 <strong>Dexterity</strong></td><td>+2% attack speed</td><td>Bow 4, ender pearl &amp; wind charge 6, crossbow 8, trident 12, elytra 14</td></tr>
+              <tr><td>❤ <strong>Vitality</strong></td><td>+0.5 max health</td><td>Netherite armour 16 — every other tier is free</td></tr>
+              <tr><td>📖 <strong>Wisdom</strong></td><td>+0.25 luck</td><td>Grindstone 2, anvil 4, smithing table &amp; respawn anchor 10, conduit 12, beacon 14</td></tr>
+              <tr><td>🧠 <strong>Intellect</strong></td><td>+1% skill XP</td><td>A redstone ladder — see below</td></tr>
+            </tbody>
+          </table>
+        </div>
+
+        <div class="s2-sub">The redstone ladder</div>
+        <p>Redstone used to sit behind a single wall at Intellect <strong>and</strong> Wisdom 20, which meant no redstone at all until you were nearly capped. It's a ladder now, and only TNT still asks for both maxed.</p>
+        <div class="s2-table-wrap">
+          <table class="s2-table">
+            <thead><tr><th>Needs</th><th>Unlocks</th></tr></thead>
+            <tbody>
+              <tr><td><strong>Intellect 6</strong></td><td>Inert parts and transport — lever, tripwire hook, note block, redstone lamp, target, daylight detector, lightning rod, rail, minecart, chest &amp; furnace minecart, slime, honey</td></tr>
+              <tr><td><strong>Intellect 10</strong></td><td>Wiring — redstone dust, torch and block, repeater, comparator, powered / detector / activator rail</td></tr>
+              <tr><td><strong>Intellect 14</strong></td><td>Machines — piston, sticky piston, observer, dispenser, dropper, hopper minecart, sculk sensors</td></tr>
+              <tr><td><strong>Intellect 16 + Wisdom 12</strong></td><td>Crafter</td></tr>
+              <tr><td><strong>Both maxed (20 / 20)</strong></td><td>TNT, TNT minecart and the lectern</td></tr>
             </tbody>
           </table>
         </div>
@@ -970,7 +986,7 @@
         <div class="s2-sub">How the gates actually work</div>
         <ul class="s2-list">
           <li><strong>Use is gated, not ownership.</strong> You can craft, trade, carry and store anything — a gated item simply won't swing, mine, place or stay equipped until you qualify</li>
-          <li><strong>Wood, stone, gold and iron gear is free</strong> — tools and armour are only gated at diamond and netherite, so nothing you make in your first hours is locked</li>
+          <li><strong>Everything up to and including diamond is free.</strong> Wood, stone, gold, iron and diamond gear are all ungated — <strong>netherite is the only gated tier</strong>, so nothing you make in your first days is locked. <strong>Hoppers, brewing stands, enchanting tables and ender chests</strong> aren't gated either</li>
           <li><strong>Nothing Pokémon-related is ever gated</strong> — Poké Balls, TMs, Mega Showdown items, ASC crate keys and Forge relic gear all bypass the system completely</li>
           <li>Holding a gated item never stops you opening doors, chests or anything else</li>
           <li><code>/skills req</code> tells you what the item in your hand needs, and whether you clear it</li>
@@ -1013,7 +1029,7 @@
     <p class="footer-dim">Not affiliated with Mojang, Nintendo, or The Pokémon Company.</p>
   </footer>
 
-  <script src="data.js?v=202608081006"></script>
-  <script src="app.js?v=202608081006"></script>
+  <script src="data.js?v=202608111739"></script>
+  <script src="app.js?v=202608111739"></script>
 </body>
 </html>

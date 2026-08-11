@@ -14,6 +14,19 @@ const GLOW = {
   crimson: 'rgba(255,77,77,.4)',
 };
 
+// --- Sticky offset ---
+// The filter bars on commands.html / patchnotes.html sit directly under the
+// sticky nav. Measuring beats a hardcoded number: the nav wraps to two rows on
+// narrow screens, and a stale offset leaves a gap or hides the search field.
+(function syncNavHeight() {
+  const nav = document.querySelector('.nav');
+  if (!nav) return;
+  const set = () => document.documentElement.style.setProperty('--nav-h', nav.offsetHeight + 'px');
+  set();
+  if ('ResizeObserver' in window) new ResizeObserver(set).observe(nav);
+  else window.addEventListener('resize', set);
+})();
+
 // --- Discord links ---
 document.querySelectorAll('.js-discord').forEach((a) => {
   a.setAttribute('href', SERVER.discord);

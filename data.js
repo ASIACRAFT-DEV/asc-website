@@ -469,14 +469,14 @@ const FEATURES = {
     category: 'Progression',
     featured: true,
     blurb:
-      'Sixteen grinding skills across gathering, combat, utility and Pokémon. Every action levels a skill, stacks your Power Level, and unlocks perks, achievements and rank titles.',
+      'Fifteen grinding skills across gathering, combat, utility and Pokémon. Every action levels a skill, stacks your Power Level, and unlocks perks, achievements and rank titles.',
     intro:
-      'Skills brings classic McMMO-style progression to Cobble Asia. Just play the game — mine, chop, fish, fight, catch, battle, breed, take a fall — and the matching skill levels on its own. There is nothing to activate: your Power Level is the sum of all sixteen skills and quietly grows the more you play.',
+      'Skills brings classic McMMO-style progression to Cobble Asia. Just play the game — mine, chop, fish, fight, catch, battle, breed, take a fall — and the matching skill levels on its own. There is nothing to activate: your Power Level is the sum of all fifteen skills and quietly grows the more you play.',
     how: [
       {
-        title: 'Level sixteen skills',
+        title: 'Level fifteen skills',
         body:
-          'Five gathering skills (Mining, Woodcutting, Excavation, Herbalism, Fishing), four combat skills (Swords, Axes, Unarmed, Archery), four utility skills (Acrobatics from surviving falls, Repair from anvils, Alchemy from brewing) and a Pokémon category — Taming from catching, Battling from winning, Breeding from eggs. Each climbs from 0 all the way to 1000.',
+          'Five gathering skills (Mining, Woodcutting, Excavation, Herbalism, Fishing), four combat skills (Swords, Axes, Unarmed, Archery), three utility skills (Acrobatics from surviving falls, Repair from anvils, Alchemy from brewing) and a Pokémon category — Taming from catching, Battling from winning, Breeding from eggs. Each climbs from 0 all the way to 1000.',
       },
       {
         title: 'Watch your Power Level climb',
@@ -1186,7 +1186,7 @@ const MODS = [
   { name: 'Clans', cmd: '/clans · /c' },
   { name: 'Client UI', cmd: '(required — in the modpack)' },
   { name: 'Cosmetics', cmd: '/cosmetics' },
-  { name: 'Crates & Banners', cmd: '/crates · /summon' },
+  { name: 'Crates & Banners', cmd: '/ascc · /ascsummon' },
   { name: 'Dungeons', cmd: '/dungeon' },
   { name: 'Essentials', cmd: '/ess' },
   { name: 'Fishing', cmd: '/fish' },
@@ -1252,11 +1252,12 @@ const COMMANDS = [
       { cmd: '/pokeditor', desc: 'Edit/inspect your Pokémon (where permitted)' },
       { cmd: '/research', desc: 'Pokédex Research Quests — 931 quests across Gen 1–9 (also /ascdex)' },
       { cmd: '/legend', desc: 'Your personal Legend bar — how full it is and what fills it' },
-      { cmd: '/legend roll', desc: 'Spend a full bar on the two-roll Legendary roulette (alias /legend spin)' },
+      { cmd: '/legend roll', desc: 'Spend your bar on the Legendary roulette — a full bar is guaranteed, from 20% up it\'s a gamble (alias /legend spin)' },
       { cmd: '/ascbreed', desc: 'Breeding help — right-click any Cobblemon pasture to make it a ranch' },
       { cmd: '/ascbreed info', desc: 'Your active ranches and how many you have left' },
       { cmd: '/unbreed', desc: 'Lock a Pokémon so it can never be bred (Original Trainer only to undo)' },
       { cmd: '/gts', desc: 'Global Trade System' },
+      { cmd: '/wondertrade', desc: 'Throw a Pokémon into the pool and get a random one back (alias /wt)' },
       { cmd: '/pc', desc: 'Open your Cobblemon PC' },
     ],
   },
@@ -1283,7 +1284,7 @@ const COMMANDS = [
       { cmd: '/jobs', desc: 'Job hub — JOBS and MY QUESTS tabs' },
       { cmd: '/job quests', desc: 'Print your accepted quests, progress and this rotation’s board' },
       { cmd: '/job tier', desc: 'Your per-job tier — Apprentice → Journeyman → Master (alias /job rank)' },
-      { cmd: '/shop', desc: 'Server shop — live demand-based pricing (buyback is only 2%)' },
+      { cmd: '/shop', desc: 'Server shop — search all 1,700 items from the landing screen (buyback is only 2%, and some listings are buy-only)' },
       { cmd: '/bazaar', desc: 'Player order book — instant buy/sell or place your own orders (alias /baz)' },
       { cmd: '/chestshop', desc: 'Chest-shop system' },
       { cmd: '/gem convert <n>', desc: 'Convert coins into Gems (100M coins = 1 Gem)' },
@@ -1310,7 +1311,7 @@ const COMMANDS = [
     items: [
       { cmd: '/crates', desc: 'Warp to the crate area — right-click a crate with its key to open it' },
       { cmd: '/ascc list', desc: 'List every key crate and its odds (preview with /ascc preview <crate>)' },
-      { cmd: '/summon', desc: 'Open the gacha banner-select GUI (aliases /banner, /gamble)' },
+      { cmd: '/ascsummon', desc: 'Open the gacha banner-select GUI (aliases /banner, /gamble — use these, not /summon, which vanilla Minecraft owns)' },
       { cmd: '/ascsummon history', desc: 'Wish History — every pull you’ve made and how far you are from pity' },
       { cmd: '/forge', desc: 'Open the Forge — craft & enchant gear and armor sets' },
       { cmd: '/gear', desc: 'Seasonal gear catalog — Arctis and legacy SolForge pieces, passives, how to get' },
@@ -1321,7 +1322,7 @@ const COMMANDS = [
     group: 'Progression',
     items: [
       { cmd: '/bp', desc: 'Seasonal Battle Pass — Orbs, Seasonal Essence and the Lv 100 Shiny Legendary Spin' },
-      { cmd: '/skills', desc: 'Sixteen grinding skills, perks and your Power Level (also /mcmmo)' },
+      { cmd: '/skills', desc: 'Fifteen grinding skills, perks and your Power Level (also /mcmmo)' },
       { cmd: '/skills achievements', desc: 'Every skill achievement ladder and what you’ve unlocked' },
       { cmd: '/passive', desc: 'Buy & manage permanent passives' },
       { cmd: '/ranks', desc: 'Rank progression & perks' },
@@ -1408,7 +1409,7 @@ const GUIDE = [
   {
     title: 'Battle & progress',
     body:
-      'Test yourself: challenge the eight gyms with <code>/gym</code>, climb the <code>/bt</code> Battle Tower, and join raids with <code>/raid</code>. Level your account, climb <code>/ranks</code>, level your sixteen <code>/skills</code>, and work the seasonal <code>/bp</code> Battle Pass for steady rewards.',
+      'Test yourself: challenge the eight gyms with <code>/gym</code>, climb the <code>/bt</code> Battle Tower, and join raids with <code>/raid</code>. Level your account, climb <code>/ranks</code>, level your fifteen <code>/skills</code>, and work the seasonal <code>/bp</code> Battle Pass for steady rewards.',
     cmds: ['/gym', '/bt', '/bp', '/skills'],
   },
   {
@@ -1442,10 +1443,10 @@ const NEWS = [
     link: 'patchnotes.html',
   },
   {
-    tag: 'Wipe',
-    title: 'Beta progress was wiped on August 6 — as promised',
-    body: 'Everything earned during the Open Beta was reset before launch: coins, Orbs, Pokémon, gear, levels and land claims all went back to zero, so nobody started Season 2 ahead. Donator ranks and Season Vault contents were untouched.',
-    link: 'guide.html',
+    tag: 'Patched',
+    title: 'Launch week — the first wave of fixes is in',
+    body: 'The crashes are fixed, <strong>early gyms stopped out-investing legal teams</strong>, and the skill gates opened up — hoppers, brewing stands, enchanting tables and every diamond tool are free, with netherite the only tier still gated. Plus the Fisher job, breeding rank credit, PvP Battle Pass credit and a searchable <code>/shop</code>.',
+    link: 'patchnotes.html',
   },
 ];
 
@@ -1454,6 +1455,28 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-08-11',
+    tag: 'Launch Week',
+    title: 'Launch week — the first wave of Season 2 fixes',
+    changes: [
+      { type: 'fixed', text: '🩹 <strong>The server crashes are fixed.</strong> Two separate things were freezing the server for a full minute at a time and getting it killed: <code>/rtp</code> waiting on terrain to generate, and a Pokémon being sent out in a battle doing the same thing. Both now check whether the ground is there instead of stopping the server until it is. If you lost anything to one of those crashes, open a ticket.' },
+      { type: 'improved', text: '⚔️ <strong>Early gyms stop out-investing a legal team.</strong> Gym seats 1 and 2 were fielding fully EV-trained, flawless-IV squads on Choice Bands at level 20 — a fair team simply could not match that. Those seats now drop their damage items, shed their EVs and cap IVs at 20. Species, levels and movesets are unchanged, and survivability items like Eviolite stay: an early gym should still beat a misplay, it just shouldn\'t one-shot you.' },
+      { type: 'improved', text: '🔓 <strong>Skill gates opened up.</strong> <strong>Hoppers, brewing stands, enchanting tables and ender chests are ungated entirely</strong> — basic things you need on day one shouldn\'t have a price. <strong>All diamond gear, armour and tools are ungated too</strong>; netherite is now the only gated tier. Redstone became a ladder instead of a wall (simple parts at Intellect 6, wiring at 10, pistons and observers at 14), with only TNT still needing both stats maxed.' },
+      { type: 'fixed', text: '🎣 <strong>The Fisher job counts the fishing this server actually has.</strong> Fisher quests were tracking a kind of catch Season 2 doesn\'t ship, so the job was unworkable — every cast now counts, and the quest text says what it counts. Note that the <strong>Poké Rod is not a starter item</strong>: it comes off casts at roughly 1 in 100, and it isn\'t in the shop.' },
+      { type: 'fixed', text: '🥚 <strong>Breeding: three real problems.</strong> Releasing a Pokémon from a pasture left its body standing there forever, which piled up. <strong>Hatching an egg now counts toward your rank</strong> and toward the <strong>Breeding skill</strong>, which had no source of XP at all — so the skill was unlevellable for everyone who tried.' },
+      { type: 'improved', text: '💰 <strong>"Buy-only" now actually means buy-only in <code>/shop</code>.</strong> Over a thousand catalogue entries that were never meant to be sold back — TMs, Z-crystals, mega rings, form items and the Orb exchange — were quietly paying out anyway, which made a few of them a money printer. They no longer pay. Sell those on <code>/bazaar</code>, where they\'re worth real value. A refused sale now tells you <em>which</em> rule refused it instead of one generic line.' },
+      { type: 'new', text: '🔍 <strong><code>/shop</code> is searchable from the front door.</strong> The only search used to live inside a category, so you had to guess which of the 21 boxes stocked the thing you wanted. The landing screen now has <strong>Search all items</strong> across the whole 1,700-item catalogue, and every result names the category it came from.' },
+      { type: 'fixed', text: '🧬 <strong>Hidden Abilities are pinned the moment you catch them</strong>, not at your next login. A HA Pokémon caught mid-session could be normalised back to its regular ability before the old repair ever got a chance to run — which is why HA mons "stopped being HA" overnight. ⚠️ This protects what you catch from now on; it can\'t restore ones already reverted, since the old ability was never recorded anywhere.' },
+      { type: 'fixed', text: '🏆 <strong>Every PvP win feeds the Battle Pass</strong>, not just Elite Four ladder bouts — ranked and casual wins were being dropped on the floor. Friendly duels also can\'t be started across dimensions any more, which used to strand both players.' },
+      { type: 'fixed', text: '📖 <strong><code>/pwiki</code> was promising something <code>/legend</code> never did.</strong> The Conditions block (time, weather, moon phase) describes <strong>natural spawns only</strong> — <code>/legend</code> rolls ignore all of it, which is why a "Time: noon" legendary could turn up at midnight. Legendary and Mythical entries now say so on the page.' },
+      { type: 'fixed', text: '🧭 <strong>The starter questline tells you where the Job Board is.</strong> Quest 4 asked you to take a job without saying where to do it, which is a hard stop if you don\'t already know the spawn city.' },
+      { type: 'improved', text: '❄️ <strong>Crates wear the season now.</strong> Every crate on the server was stuck wearing SolForge\'s chest and key — Arctis crates get their own frost art and ice gradient. Crate rewards also draw the <strong>real gear art</strong> in your pull history and previews instead of the plain base item, and command rewards no longer reveal as a blank name card.' },
+      { type: 'fixed', text: '✨ <strong>Cosmetics can\'t be bought while they\'re switched off.</strong> Particle cosmetics have been disabled server-wide since the beta, but the shop was still happily charging <strong>15–300 million coins</strong> for one — and rendering nothing for anybody. Buying is now blocked with an honest message, and no, this doesn\'t turn cosmetics back on yet.' },
+      { type: 'improved', text: '📜 <strong><code>/rules</code> carries the no-alt rule.</strong> One account per player; alt accounts are banned on sight. Sharing a connection with someone in your house? Open a ticket first and you\'ll be fine.' },
+      { type: 'fixed', text: '🎛️ <strong>Odds and ends.</strong> <code>/sidebar</code> can finally hide the CobbleAsia panel (it was only ever hiding the vanilla one behind it). The <strong>Legendary Core preview reaches everyone</strong> — players on chest menus used to shatter one blind with no idea what was in it.' },
+    ],
+  },
   {
     date: '2026-08-08',
     tag: 'Season 2',

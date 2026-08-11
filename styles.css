@@ -419,6 +419,72 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
 }
 .cmd-group-title::before { content: ''; width: 20px; height: 20px; background: url('assets/brand-frost.png') center/contain no-repeat; margin-right: 12px; }
 
+/* ---------- FILTER BAR (commands.html, patchnotes.html) ----------
+   Sticks under the nav so search stays reachable in a long list.
+   Offset matches the nav's rendered height. */
+.filter-bar {
+  position: sticky; top: var(--nav-h, 61px); z-index: 20;
+  background: rgba(248, 251, 254, 0.94);
+  backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--line);
+  margin: -14px -24px 34px; padding: 18px 24px 14px;
+}
+.filter-field {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--paper); border: 1px solid var(--line-2); border-radius: 11px;
+  padding: 0 14px; transition: border-color .15s, box-shadow .15s;
+}
+.filter-field:focus-within { border-color: var(--gold); box-shadow: 0 0 0 3px rgba(20, 137, 176, 0.13); }
+.filter-icon { color: var(--ink-3); font-size: 19px; line-height: 1; flex: none; }
+.filter-input {
+  flex: 1; min-width: 0; border: 0; outline: 0; background: transparent;
+  font-family: var(--font-body); font-size: 15.5px; color: var(--ink);
+  padding: 13px 0;
+}
+.filter-input::placeholder { color: var(--ink-3); }
+.filter-input::-webkit-search-cancel-button { display: none; }
+.filter-clear {
+  flex: none; border: 0; background: transparent; cursor: pointer;
+  color: var(--ink-3); font-size: 21px; line-height: 1; padding: 4px 2px;
+}
+.filter-clear:hover { color: var(--gold-deep); }
+
+.filter-chips { display: flex; flex-wrap: wrap; gap: 7px; margin-top: 12px; }
+.chip {
+  font-family: var(--font-body); font-size: 13px; font-weight: 600; cursor: pointer;
+  color: var(--ink-2); background: var(--paper); border: 1px solid var(--line);
+  border-radius: 999px; padding: 6px 13px;
+  transition: border-color .15s, color .15s, background .15s;
+}
+.chip:hover { border-color: var(--line-2); color: var(--gold-deep); }
+.chip.is-on { background: var(--gold-bg); border-color: var(--gold); color: var(--gold-deep); }
+
+.filter-count {
+  font-family: var(--font-mono); font-size: 12.5px; color: var(--ink-3);
+  margin-top: 11px; letter-spacing: .01em;
+}
+
+.cmd-row mark, .chg-text mark {
+  background: var(--gold-bg); color: var(--gold-deep);
+  border-radius: 3px; padding: 0 2px;
+}
+
+.filter-empty {
+  text-align: center; padding: 54px 24px; color: var(--ink-2);
+  background: var(--paper); border: 1px dashed var(--line-2); border-radius: var(--radius);
+}
+.filter-empty p { margin-bottom: 8px; }
+.filter-empty p:last-child { margin-bottom: 0; font-size: 14.5px; color: var(--ink-3); }
+.filter-empty code { color: var(--gold-deep); }
+
+.filter-more { text-align: center; padding: 8px 0 20px; }
+.filter-more[hidden] { display: none; }
+
+@media (max-width: 680px) {
+  .filter-bar { margin: -10px -20px 26px; padding: 14px 20px 12px; }
+  .filter-input { font-size: 16px; } /* 16px stops iOS zooming the page on focus */
+}
+
 /* command chips inside guide steps */
 .guide-cmds { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 14px; }
 .guide-cmds code { font-size: 13px; color: var(--gold-deep); background: var(--gold-bg); padding: 6px 12px; border-radius: 7px; }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T01:06:36.757Z",
+  "generatedAt": "2026-08-12T07:09:11.325Z",
   "count": 39,
   "mods": [
     {
@@ -45,7 +45,7 @@
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "2.10.0"
+      "version": "2.11.1"
     },
     {
       "repo": "asc-jobs",
@@ -55,7 +55,7 @@
     {
       "repo": "asc-mcmmo",
       "name": "ASC McMMO",
-      "version": "2.11.0"
+      "version": "2.11.1"
     },
     {
       "repo": "asc-pokeditor",
@@ -95,7 +95,7 @@
     {
       "repo": "asc-breeding",
       "name": "CobbleAsia Breeding",
-      "version": "1.18.0"
+      "version": "1.18.1"
     },
     {
       "repo": "asc-chestshop",
@@ -125,7 +125,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.70.2"
+      "version": "9.71.1"
     },
     {
       "repo": "asc-forge",
@@ -135,7 +135,7 @@
     {
       "repo": "asc-gts",
       "name": "CobbleAsia GTS",
-      "version": "2.14.0"
+      "version": "2.15.0"
     },
     {
       "repo": "asc-leaderboard",
@@ -165,7 +165,7 @@
     {
       "repo": "asc-pokewiki",
       "name": "CobbleAsia PokéWiki",
-      "version": "1.21.0"
+      "version": "1.22.0"
     },
     {
       "repo": "asc-pvp",
@@ -175,7 +175,7 @@
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.61.0"
+      "version": "4.64.0"
     },
     {
       "repo": "asc-ranks",

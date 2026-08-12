@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-12T12:44:47.436Z",
+  "generatedAt": "2026-08-12T18:48:19.475Z",
   "count": 39,
   "mods": [
     {
@@ -115,7 +115,7 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.84.1"
+      "version": "2.86.0"
     },
     {
       "repo": "asc-dungeons",

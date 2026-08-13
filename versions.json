@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-13T01:08:16.986Z",
+  "generatedAt": "2026-08-13T07:13:00.952Z",
   "count": 39,
   "mods": [
     {
@@ -125,17 +125,17 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.71.1"
+      "version": "9.72.1"
     },
     {
       "repo": "asc-forge",
       "name": "CobbleAsia Forge",
-      "version": "2.61.0"
+      "version": "2.61.1"
     },
     {
       "repo": "asc-gts",
       "name": "CobbleAsia GTS",
-      "version": "2.15.0"
+      "version": "3.1.0"
     },
     {
       "repo": "asc-leaderboard",
@@ -150,7 +150,7 @@
     {
       "repo": "asc-levels",
       "name": "CobbleAsia Levels",
-      "version": "1.11.0"
+      "version": "1.11.1"
     },
     {
       "repo": "asc-mail",
@@ -165,12 +165,12 @@
     {
       "repo": "asc-pokewiki",
       "name": "CobbleAsia PokéWiki",
-      "version": "1.22.0"
+      "version": "1.22.1"
     },
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.48.0"
+      "version": "2.49.0"
     },
     {
       "repo": "asc-raidboss",
@@ -195,7 +195,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.29.0"
+      "version": "1.31.0"
     }
   ]
 }

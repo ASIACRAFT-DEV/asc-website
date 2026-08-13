@@ -2729,6 +2729,24 @@ const TEAM = [
     ],
   },
   {
+    group: 'Content Creators',
+    members: [
+      { name: 'Athyyy', role: 'Content Creator' },
+      { name: 'Clao', role: 'Content Creator' },
+    ],
+  },
+  {
+    group: 'S1 Zeniths',
+    members: [
+      { name: 'Slaaaine', role: 'S1 Zenith', avatar: 'assets/team/slaaaine.png', motto: 'BingBong not bingbonging.' },
+      { name: 'EttLel', role: 'S1 Zenith', avatar: 'assets/team/ettlel.jpg', motto: 'Panda Lover' },
+      { name: 'RicKKK', role: 'S1 Zenith', avatar: 'assets/team/rickkk.png', motto: 'Always one ping away.' },
+      { name: 'Zandurrrrrr', role: 'S1 Zenith', avatar: 'assets/team/zandurr.png',
+        motto: "I stalk myself on the internet just to see what you'll find." },
+      { name: 'McNuggetRice', role: 'S1 Zenith', avatar: 'assets/team/mcnugget.jpg', motto: 'una' },
+    ],
+  },
+  {
     group: 'Inactive Staff',
     members: [
       { name: 'Crysthamyr', role: 'Former Head Admin', avatar: 'assets/team/crys.jpg', motto: "that's just my fly client." },

@@ -1219,6 +1219,9 @@ const FEATURES = {
 
 // Display order + grouping on the landing page
 const FEATURE_ORDER = [
+  // ⏸ 'creation' is deliberately NOT listed while the Creation arena is unarmed on live — the
+  // page at feature.html?f=creation is written and reachable, it just isn't advertised on the
+  // landing grid yet. Add 'creation' back after 'arctis' once `/ascraid creation arena` is run.
   'arctis', 'solforge', 'crates', 'cosmetics', 'transform', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
   'dungeons', 'safari', 'hunts', 'fishing', 'breeding', 'archaeology', 'bingo', 'pvp', 'clans',
   'jobs', 'bazaar', 'skills', 'casino', 'playtime', 'progression',
@@ -1307,6 +1310,8 @@ const COMMANDS = [
       { cmd: '/ascbreed info', desc: 'Your active ranches and how many you have left' },
       { cmd: '/unbreed', desc: 'Lock a Pokémon so it can never be bred (Original Trainer only to undo)' },
       { cmd: '/gts', desc: 'Global Trade System' },
+      { cmd: '/safetrade <player>', desc: 'Direct trade with a countdown and a ready-reset — changing your offer un-readies both sides (alias /trade, or shift + right-click a player)' },
+      { cmd: '/tradehelp', desc: 'The checklist for trading with someone you don\'t know' },
       { cmd: '/wondertrade', desc: 'Throw a Pokémon into the pool and get a random one back (alias /wt)' },
       { cmd: '/pc', desc: 'Open your Cobblemon PC' },
     ],
@@ -1321,6 +1326,8 @@ const COMMANDS = [
       { cmd: '/gym', desc: 'Challenge the eight gym leaders and the Elite Four' },
       { cmd: '/pvp', desc: 'PvP hub — ranked Ball tiers & Master Tier' },
       { cmd: '/raid', desc: 'Raid boss info & encounters' },
+      // ⏸ HOLD — restore alongside the Creation Chain news/patch-note items once the arena is armed.
+      // { cmd: '/ascraid chain', desc: 'Creation Chain progress — every lake guardian you own and whether it can still imprint' },
       { cmd: '/az', desc: 'Area Zero combat zone' },
       { cmd: '/dungeon', desc: 'Enter seasonal dungeons' },
       { cmd: '/dungeon setbonus', desc: 'Preview your party’s type Set Bonuses' },
@@ -1337,7 +1344,6 @@ const COMMANDS = [
       { cmd: '/shop', desc: 'Server shop — search all 1,700 items from the landing screen (buyback is only 2%, and some listings are buy-only)' },
       { cmd: '/bazaar', desc: 'Player order book — instant buy/sell or place your own orders (alias /baz)' },
       { cmd: '/chestshop', desc: 'Chest-shop system' },
-      { cmd: '/gem convert <n>', desc: 'Convert coins into Gems (100M coins = 1 Gem)' },
       { cmd: '/gem shop', desc: 'Open the SolForge Black Market (alias /blackmarket, /bm)' },
       { cmd: '/effects', desc: 'Buy a temporary status-effect buff (alias /buff)' },
       { cmd: '/fish', desc: 'Fishing hub — every cast reels in a Pokémon (alias /ascfish)' },
@@ -1392,6 +1398,9 @@ const COMMANDS = [
       { cmd: '/ec', desc: 'Open your ender chest' },
       { cmd: '/vault', desc: 'Personal item vault that persists across deaths (alias /pv)' },
       { cmd: '/msg <player>', desc: 'Private message a player (reply with /r)' },
+      { cmd: '/bal <player>', desc: 'Check anyone\'s balances — works on offline players, so you can check before you trust' },
+      { cmd: '/playtime check <player>', desc: 'Anyone\'s active playtime (AFK stripped out) and account age — also works offline' },
+      { cmd: '/marry <player>', desc: 'Propose to another player — /marry accept|deny|status, and /divorce' },
       { cmd: '/worldtweaks', desc: 'World tweaks & auth utilities' },
     ],
   },
@@ -1480,23 +1489,28 @@ const GUIDE = [
 //  SERVER NEWS (landing hub). Newest first. Link points to a feature page.
 // =====================================================================
 const NEWS = [
+  // ⏸ HOLD — "The Creation Chain" news item is written and ready below, but the arena is not
+  // armed on live (world/asc-raidboss/spawnpoints.json is []), so every summon is refused.
+  // Restore this item AND the 'creation' patch-note entry once staff have run
+  // `/ascraid creation arena`. The feature page (FEATURES.creation) stays published either way —
+  // it documents the system without telling anyone to go and use it right now.
+  // {
+  //   tag: 'New Event',
+  //   title: 'The Creation Chain — a second road to the box legends',
+  //   body: 'Imprint your own <strong>Uxie, Mesprit and Azelf</strong> onto Nether Stars, forge the <strong>Red Chain</strong>, and summon <strong>Dialga, Palkia or Giratina</strong> as a Mythic raid the whole server can fight — and actually catch. Clear all three and a spare Chain becomes the <strong>Azure Flute</strong> for Arceus.',
+  //   link: 'feature.html?f=creation',
+  // },
+  {
+    tag: 'Patched',
+    title: 'Raids, the Warzone fence and a trade you can trust',
+    body: 'A single stale spawn pad had been <strong>silently stopping every raid on the server</strong> — fixed. The Warzone finally has a border, the ranked ladder stopped booking wins as losses, the Forge stopped duplicating armour, and <strong>/safetrade</strong> brings a scam-proof way to trade with a stranger.',
+    link: 'patchnotes.html',
+  },
   {
     tag: 'Season 2',
     title: 'Season 2 — Arctis is live',
     body: 'The gates are open. <strong>Arctis launched August 8</strong> on a fresh, pre-generated world with a new spawn city, rebuilt breeding, Pokémon fishing, the player Bazaar and a whole new interface. Everyone starts from zero — grab the CobbleAsia modpack from Discord and jump in.',
     link: 'guide.html',
-  },
-  {
-    tag: 'Open Beta',
-    title: 'The Open Beta is finished — thank you for breaking things',
-    body: 'Five days, dozens of reports and well over a hundred fixes across every major system: dungeons, Safari, raid bosses, the Forge, jobs, breeding, fishing, crates, GTS and the Bazaar. Everything you reported has been triaged and the important stuff is already patched. See the patch notes for the full list.',
-    link: 'patchnotes.html',
-  },
-  {
-    tag: 'Patched',
-    title: 'Launch week — the first wave of fixes is in',
-    body: 'The crashes are fixed, <strong>early gyms stopped out-investing legal teams</strong>, and the skill gates opened up — hoppers, brewing stands, enchanting tables and every diamond tool are free, with netherite the only tier still gated. Plus the Fisher job, breeding rank credit, PvP Battle Pass credit and a searchable <code>/shop</code>.',
-    link: 'patchnotes.html',
   },
 ];
 
@@ -1505,6 +1519,40 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-08-14',
+    tag: 'Patched',
+    title: 'A raid outage, a ladder that booked wins as losses, and a trade you can trust',
+    changes: [
+      // ⏸ HOLD — the Creation Chain item is written and ready, but the arena is not armed on live
+      // (world/asc-raidboss/spawnpoints.json is []), so every summon is refused. Un-comment this
+      // AND the NEWS item above once staff have run `/ascraid creation arena`.
+      // { type: 'new', text: '⛓ <strong>The Creation Chain — a second road to the box legends.</strong> Right-click your own <strong>Uxie, Mesprit and Azelf</strong> with a plain Nether Star to imprint them, fuse the three Charged Stars into the <strong>Red Chain</strong>, and summon <strong>Dialga, Palkia or Giratina</strong> as a Mythic raid at the Spear Pillar. Beat it and it is <strong>genuinely catchable</strong> for 60 seconds at level 85 — anyone who did 1% of the damage may throw, first ball wins. Clear all three and a spare Chain shift-right-clicks into the <strong>Azure Flute</strong> for Arceus. One Chain per player per week; one imprint per guardian, forever; and guardians must be <strong>self-caught</strong> — a traded one is refused, so check <code>/ascraid chain</code> before you go hunting stars. <a href="feature.html?f=creation">Full walkthrough here.</a>' },
+
+      { type: 'fixed', text: '🐲 <strong>One stale spawn pad was silently stopping every raid on the server.</strong> The countdown kept announcing "next raid in ~5 minutes" and nothing ever appeared — for three hours, until players worked out something was wrong before we did. The server had exactly one configured raid pad, in a world raids aren\'t allowed to use any more — and correctly refusing that pad made the auto-spawner give up for the whole cycle instead of falling through to the Safari it should have used. A pad we can\'t use is now skipped rather than treated as the only option. <strong>Thank you to the players who kept saying "the raid never came" instead of assuming they\'d missed it</strong> — that\'s what got it found.' },
+      { type: 'fixed', text: '🎁 <strong>Raid participation rewards were paying out a random subset every clear.</strong> Each reward on the participation list was rolled separately, so you\'d get some and not others — and because the coin payout is a single line on that list, it read as "the money specifically didn\'t pay" and looked intermittent rather than broken. It wasn\'t intermittent, it was rolling. <strong>Every participation reward now simply pays</strong> once you\'re past the 2% damage threshold. This was meant to have been fixed back in June; the fix was live in the code and switched off in the config the entire time.' },
+      { type: 'improved', text: '⚔️ <strong>Joining a raid no longer makes the break window harder.</strong> The damage goal was measured against the boss\'s scaled HP, which grows with the number of participants — so every extra body that wasn\'t dealing damage raised the bar for everyone who was, and a full raid could be strictly harder to break than a party of three. The goal is now fixed at spawn and means the same thing at 15 players as at 3.' },
+      { type: 'fixed', text: '🏆 <strong>The ranked ladder was booking some wins as losses.</strong> When a battle ended without Cobblemon reporting a winner, the watchdog assumed you\'d dodged — so a won bout whose result went missing was recorded as a defeat, which cost the win, the entry fee <strong>and</strong> a 48-hour cooldown on that seat. It now scores from what it actually watched happen: if the AI\'s side was wiped, that\'s a win. Bouts that die within a minute of starting are read as a broken battle rather than a dodge. Genuinely walking out of a real fight still counts as a loss.' },
+      { type: 'fixed', text: '🥊 <strong>Gym battles stop freezing.</strong> Across four days of logs, <strong>74 of 146 gym battles</strong> stalled or wedged outright. Singles gym battles have been moved off the trainer-battle engine that was hanging them. A gym leader\'s team also no longer stays standing in the world when you disconnect mid-fight.' },
+      { type: 'fixed', text: '⚡ <strong>Whitney\'s Normal gym was fielding Zeraora and Magnezone.</strong> Two Electric-types on the Normal seat, against an authored roster of six Normal-types. It had been half-edited at some point, which made every safety net read it as a deliberate staff roster and protect it — through every restart and every rotation. The authored six are back. All eight seats were checked; only that one was wrong.' },
+      { type: 'fixed', text: '🛡️ <strong>The Forge could duplicate the item you were forging.</strong> Picking an item in the forge screen and then relogging handed you a second copy — repeatable on demand, once per relog. There was a second door too: with a pick still live, opening the fallback chest menu rendered your item as a real takeable stack, and confirming there never consumed the original. Both are closed. <strong>If you have gear you know came from this, hand it in — we would much rather sort it out with you than find it later.</strong>' },
+      { type: 'new', text: '🤝 <strong><code>/safetrade</code> — direct trades that can\'t be switched at the last second.</strong> Both sides put up what they\'re offering, both press ready, and <strong>changing anything resets both readies</strong>, so nothing can be swapped out after you\'ve agreed. There\'s a countdown, a disconnect cancels it, and the swap is atomic — it either happens completely or not at all. Also on <code>shift + right-click</code> a player, with <code>/trade</code> as an alias. <code>/tradehelp</code> has the checklist.' },
+      { type: 'new', text: '🔍 <strong>Two commands for checking who you\'re dealing with.</strong> <code>/playtime check &lt;player&gt;</code> and <code>/bal &lt;player&gt;</code> both work on <strong>offline players</strong> — which is the case that matters, since the account you\'re asked to trust often isn\'t the one standing in front of you. Playtime reports active time with AFK stripped out, plus account age. Neither is staff-only: a scam-prevention tool you have to ask staff to run for you prevents nothing.' },
+      { type: 'improved', text: '💎 <strong>Gems are purchase-only now.</strong> <code>/gem convert</code> (coins → Gems) and <code>/convert gems tokens</code> are both retired. The price on the coin route was steep enough that few people used it, which is exactly why it was easy to forget it was there — and it meant the premium economy had a coin-funded back door standing open the whole time. Gems now come from the store and from deliberate grants only. Both commands still answer and explain themselves rather than reading as "unknown command". <strong>Gem-bought content can\'t be traded or listed</strong>, which is the rule this makes real.' },
+      { type: 'improved', text: '🎁 <strong>Seasonal crates are gear crates, and every key now pays.</strong> The SolForge and Arctis crates were handing out filler roughly 94% of the time. They\'ve been rebuilt on a flat table — <strong>2% a Level V Relic Piece, 68% seasonal gear, 30% a seasonal bonus item</strong> — so a specific Level V piece goes from about 1 in 2,400 keys to <strong>1 in 650</strong>, and any Level V piece to 1 in 50. The Pokémon moved to the Seasonal Pokémon Crate, and the four game-warping dex modifiers came out entirely.' },
+      { type: 'fixed', text: '💰 <strong>Skills had stopped paying coins entirely.</strong> Every mcMMO payout had been failing silently since the last restart — you simply weren\'t paid, and nothing told you, because the failure only ever appeared in the server log. Fixed, and we\'ve swept the other five mods that share the same plumbing.' },
+      { type: 'fixed', text: '🥚 <strong>Two ranches side by side were deleting each other\'s Pokémon.</strong> Each ranch clears stray display Pokémon near it, but it only recognised its own two — so ranches built in a row sat killing and respawning each other\'s parents every five seconds, which looked like duplication and was genuinely laggy. An <strong>empty</strong> pasture was the worst case: it recognises nothing, so one unused ranch could wipe every occupied one within twelve blocks. Verified on live before and after — 7 of 22 stocked ranches were affected, every one of them in a cluster.' },
+      { type: 'fixed', text: '🧭 <strong>A failed teleport now tells you the thing that actually works.</strong> One player spent four minutes stuck in the Safari because every <code>/spawn</code> put him straight back, while the message told him to report it to staff. The fix was a single relog the whole time. When a teleport fails this specific way it now says so.' },
+      { type: 'improved', text: '🚧 <strong>The Warzone finally has a fence.</strong> Crossing the boundary used to just print "You left the Warzone" and let you keep going — straight off the edge into raw terrain, and out of any fight you were tagged into. You now get bounced back inside. Leaving properly by <code>/spawn</code>, <code>/home</code> or a warp still works exactly as before.' },
+      { type: 'improved', text: '🚫 <strong>Repels now stop random wild encounters.</strong> Repels and the new roadside encounters were two systems that had never been introduced to each other, so a Max Repel — up to 50,000 coins — did nothing about the thing most players bought it for. It does now.' },
+      { type: 'fixed', text: '🛒 <strong>The skills shop stopped selling ten items the server refuses to place.</strong> Ten of the fourteen blocks on the anti-lag blocklist were also sold as Intellect unlocks, so players were grinding for, and paying for, things that could never be put down.' },
+      { type: 'fixed', text: '📖 <strong><code>/pwiki</code> was quietly answering for the wrong form.</strong> Asking for <code>Landorus-Therian</code> got you Incarnate\'s page — including its hidden ability, which is a different ability. <strong>115 forms in the dex have a hidden ability that differs from their base form</strong>, and types and stats diverge too. The page now tells you when it has fallen back to the base species.' },
+      { type: 'fixed', text: '🗝️ <strong>Vote Keys pulled from the Origin crate wouldn\'t open the Vote crate.</strong> Two spellings of the same crate name disagreed, so a key minted inside the Origin crate was inert in your hand with nothing explaining why. Any key you\'re still holding works now.' },
+      { type: 'fixed', text: '💳 <strong>Store purchases can no longer be delivered twice — or lost.</strong> Roughly 4% of our calls to the store were timing out on connect, and a failed delivery confirmation meant the next check re-ran the purchase: a duplicate rank or Legendary Core. Every completed donation is now written to a ledger before it can be re-run, and dropped connections retry instead of giving up.' },
+      { type: 'improved', text: '🛡️ <strong>Clan raid bosses, twice over.</strong> A clan whose raid turn collided with the public rotation silently forfeited and waited a full six hours for another chance — it now retries in five minutes with that clan still first in line. And the server now hears about it: everyone gets a line naming the clan and its colour, with <strong>no coordinates and no way to warp in</strong>. It\'s a "look what they\'re dealing with", not an invitation.' },
+      { type: 'fixed', text: '🧰 <strong>Odds and ends.</strong> An item on your cursor survives a teleport instead of vanishing. A single Trial Chamber vault was stopping an entire chunk from saving. Raid dens stopped paying Elemental Essence they were never meant to. A level-up save that failed no longer loses your data. Dropped Discord chat lines retry instead of disappearing. Banners with no featured art now showcase their own rewards instead of rendering blank, and the seasonal crate holograms spell their own names.' },
+    ],
+  },
   {
     date: '2026-08-11',
     tag: 'Launch Week',
@@ -2897,7 +2945,7 @@ const FAQ = [
       },
       {
         q: 'Can I get a box legendary from the Legend bar?',
-        a: 'No. <b>Box legendaries are not in the wild spawn pool</b> — Mewtwo, Lugia, Ho-Oh, Kyogre, Groudon, Rayquaza, Dialga, Palkia, Giratina, Reshiram, Zekrom, Kyurem, Xerneas, Yveltal, Solgaleo, Lunala, Necrozma, Zacian, Zamazenta, Eternatus, Calyrex, Koraidon and Miraidon can\'t be rolled from your Legend bar. Everything else legendary and mythical is fair game. Box legends have their own two routes: <b>Legendary Contracts</b> on the Contract Board, and the <b>Creation Chain</b> — see <a href="feature.html?f=creation">the Creation Chain</a>.',
+        a: 'No. <b>Box legendaries are not in the wild spawn pool</b> — Mewtwo, Lugia, Ho-Oh, Kyogre, Groudon, Rayquaza, Dialga, Palkia, Giratina, Reshiram, Zekrom, Kyurem, Xerneas, Yveltal, Solgaleo, Lunala, Necrozma, Zacian, Zamazenta, Eternatus, Calyrex, Koraidon and Miraidon can\'t be rolled from your Legend bar. Everything else legendary and mythical is fair game. Box legends have their own route: <b>Legendary Contracts</b> on the Contract Board.',
       },
       {
         q: 'What is /hunt?',

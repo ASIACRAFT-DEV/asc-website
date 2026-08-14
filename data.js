@@ -390,6 +390,56 @@ const FEATURES = {
     ],
   },
 
+  creation: {
+    name: 'The Creation Chain',
+    short: 'Creation Chain',
+    accent: 'violet',
+    tag: '/ascraid chain',
+    category: 'Battling',
+    featured: true,
+    blurb:
+      'Forge the Red Chain from the lake guardians to summon Dialga, Palkia and Giratina as catchable raid bosses — and Arceus as the capstone.',
+    intro:
+      'Box legendaries are locked out of the wild spawn pool and out of your Legend bar on purpose. The Creation Chain is the second road to them, built on the Pixelmon Red Chain: bring together the three lake guardians you caught yourself, forge a Chain, and summon a creation legend as a Mythic raid the whole server can fight. Beat it and it is genuinely catchable — no contract, no gamble on a roulette.',
+    how: [
+      {
+        title: 'Imprint the lake trio',
+        body:
+          'Send out your own Uxie, Mesprit or Azelf and right-click it with a plain Nether Star. The star becomes a Charged Star of Knowledge, Emotion or Willpower. You need one of each, so the real gate is owning all three guardians.',
+      },
+      {
+        title: 'Forge the Chain',
+        body:
+          'Right-click with all three Charged Stars to fuse them into the Creation Chain. You can forge one Chain every 7 days, and the cooldown is checked at the forge — never when you spend it, so you can never be left holding a Chain you can\'t use.',
+      },
+      {
+        title: 'Summon and fight',
+        body:
+          'Right-click the Chain to pick Dialga, Palkia or Giratina. It spawns as a Mythic raid boss at the Spear Pillar arena and the server can join in. Only one raid runs at a time server-wide — if one is already live your shatter is refused and your Chain is not consumed.',
+      },
+      {
+        title: 'Catch it',
+        body:
+          'On defeat the boss stays catchable for 60 seconds at level 85. Anyone who did at least 1% of the damage may throw a ball, and the first ball to land wins it. Nobody outside the raid can touch it.',
+      },
+      {
+        title: 'Call Arceus',
+        body:
+          'Clear all three creation legends — taking part is enough, you don\'t have to have caught them — and a spare Chain can be shift + right-clicked into the Azure Flute. That summons Arceus at level 90 under the same rules.',
+      },
+    ],
+    commands: [
+      { cmd: '/ascraid chain', desc: 'Your Creation Chain progress, plus every guardian in your party and PC and whether it can still imprint' },
+      { cmd: '/ascraid creation status', desc: 'Whether the arena is set and a summon is currently live' },
+    ],
+    notes: [
+      'One imprint per individual guardian, forever — three Uxie stars are still worth exactly one. A spent guardian gets a ⛓ on its nickname; renaming that off does not give the imprint back.',
+      'Guardians must be self-caught. A traded guardian — including anything bought off the GTS — is refused, because the trade restamps its Original Trainer. Run /ascraid chain to see which of yours will actually imprint before you go hunting for stars.',
+      'A Legendary Core is also a Nether Star, and it is refused explicitly, so an imprint can never eat one by accident.',
+      'The ordinary rotation Dialga, Palkia and Giratina raids are untouched and stay uncatchable — only a Chain summon is catchable.',
+    ],
+  },
+
   dungeons: {
     name: 'Seasonal Dungeons',
     short: 'Dungeons',
@@ -2691,8 +2741,8 @@ const TEAM = [
   {
     group: 'Admins',
     members: [
-      { name: 'SamsonTheManiac', role: 'Admin', avatar: 'assets/team/samson.png',
-        motto: "Life is like a mace — every rise comes with a fall, but if you don't take the shot you won't rise again." },
+      { name: 'SamsonTheManiac', role: 'Admin', avatar: 'assets/team/samson.jpg',
+        motto: 'Oh Great Cifera of Dolos, grant me a glimpse of your cunning beauty once more!' },
       { name: 'Raizuuuu', role: 'Admin', avatar: 'assets/team/raizu.jpg',
         motto: 'Behave or Crys will spank me.', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@ra1zuu' }] },
     ],
@@ -2707,16 +2757,19 @@ const TEAM = [
   {
     group: 'Moderators',
     members: [
-      { name: 'TheGreatJenish', role: 'Moderator' },
+      { name: 'TheGreatJenish', role: 'Moderator', avatar: 'assets/team/jenish.jpg',
+        motto: 'Either give up at the very beginning, or never give up.' },
       { name: 'Tadzuna', role: 'Moderator', avatar: 'assets/team/tadzuna.jpg',
         motto: "Ayoko sa mahal, gusto ko sa mura, kasi yung una ko'ng minahal, iba'ng lalake inuna" },
-      { name: 'LilCamo', role: 'Moderator' },
+      { name: 'LilCamo', role: 'Moderator', avatar: 'assets/team/lilcamo.jpg',
+        motto: 'All truly strong people are kind.' },
     ],
   },
   {
     group: 'Helpers',
     members: [
-      { name: 'DD1amond', role: 'Helper' },
+      { name: 'DD1amond', role: 'Helper', avatar: 'assets/team/diamond.png',
+        motto: 'I speak really well I think.' },
     ],
   },
   {
@@ -2733,6 +2786,7 @@ const TEAM = [
     members: [
       { name: 'Athyyy', role: 'Content Creator' },
       { name: 'Clao', role: 'Content Creator' },
+      { name: 'ElektroZax', role: 'Content Creator' },
     ],
   },
   {
@@ -2749,19 +2803,19 @@ const TEAM = [
   {
     group: 'Inactive Staff',
     members: [
-      { name: 'Crysthamyr', role: 'Former Head Admin', avatar: 'assets/team/crys.jpg', motto: "that's just my fly client." },
-      { name: 'Zeta', handle: 'justt_zeta', role: 'Former Core Management Staff', avatar: 'assets/team/zeta.png',
+      { name: 'Crysthamyr', role: 'Head Admin', avatar: 'assets/team/crys.jpg', motto: "that's just my fly client." },
+      { name: 'Zeta', handle: 'justt_zeta', role: 'Core Management Staff', avatar: 'assets/team/zeta.png',
         motto: 'You only live once.' },
-      { name: 'mAyHAmBLOOM', role: 'Former Admin', avatar: 'assets/team/mayham.png',
+      { name: 'mAyHAmBLOOM', role: 'Admin', avatar: 'assets/team/mayham.png',
         motto: 'Life is too short to do boring things.' },
-      { name: 'AmaxiHaku', role: 'Former Admin & Builder' },
-      { name: 'HitoriHachi', role: 'Former Admin & Builder', avatar: 'assets/team/hachi.jpg',
+      { name: 'AmaxiHaku', role: 'Admin & Builder' },
+      { name: 'HitoriHachi', role: 'Admin & Builder', avatar: 'assets/team/hachi.jpg',
         motto: 'Take life block by block till you build a masterpiece.', socials: [{ label: 'Twitch', url: 'https://twitch.tv/hitorihachi' }] },
-      { name: '__Vesper', role: 'Former Admin', avatar: 'assets/team/vesper.png', motto: "Don't pmo." },
-      { name: 'Prime_RN', role: 'Former Admin', avatar: 'assets/team/prime.png', motto: 'Fear me?' },
-      { name: 'EdsonCheah', role: 'Former Moderator', avatar: 'assets/team/edson.jpg', motto: "it's ok to not be ok" },
-      { name: 'OPaint', role: 'Former Moderator', avatar: 'assets/team/opaint.jpg', motto: 'a² + b² = c²' },
-      { name: 'DennnPham', role: 'Former Helper', avatar: 'assets/team/dennn.png', motto: 'Eat Sleep Hustle Repeat 🔁' },
+      { name: '__Vesper', role: 'Admin', avatar: 'assets/team/vesper.png', motto: "Don't pmo." },
+      { name: 'Prime_RN', role: 'Admin', avatar: 'assets/team/prime.png', motto: 'Fear me?' },
+      { name: 'EdsonCheah', role: 'Moderator', avatar: 'assets/team/edson.jpg', motto: "it's ok to not be ok" },
+      { name: 'OPaint', role: 'Moderator', avatar: 'assets/team/opaint.jpg', motto: 'a² + b² = c²' },
+      { name: 'DennnPham', role: 'Helper', avatar: 'assets/team/dennn.png', motto: 'Eat Sleep Hustle Repeat 🔁' },
     ],
   },
 ];
@@ -2831,7 +2885,7 @@ const FAQ = [
       },
       {
         q: 'How do legendary and mythical spawns work?',
-        a: 'Every player has their own <b>Legend bar</b> — open it with <code>/legend</code>. Playing fills it, and when it hits <b>100%</b> you roll a <b>25% chance</b> for a Legendary to spawn <b>for you</b>. Win or lose that roll, your bar resets to 0% and you start building again. The old shared server-wide Global Energy bar is gone — legendary hunting is personal now.',
+        a: 'Every player has their own <b>Legend bar</b> — open it with <code>/legend</code>. Playing fills it, and <b>a full bar is a guaranteed Legendary</b>: spend it with <code>/legend roll</code> and one spawns <b>for you</b>. You can also cash out early from around <b>20%</b> — that\'s a gamble at the odds your bar has earned (50% of the bar is roughly a 25% chance, 75% is roughly 56%), and win or lose it costs you the whole bar. Either way the bar resets to 0% and you start building again. The old shared server-wide Global Energy bar is gone — legendary hunting is personal now.',
       },
       {
         q: 'How do I fill my Legend bar?',
@@ -2843,7 +2897,7 @@ const FAQ = [
       },
       {
         q: 'Can I get a box legendary from the Legend bar?',
-        a: 'No. <b>Box legendaries are not in the wild spawn pool</b> — Mewtwo, Lugia, Ho-Oh, Kyogre, Groudon, Rayquaza, Dialga, Palkia, Giratina, Reshiram, Zekrom, Kyurem, Xerneas, Yveltal, Solgaleo, Lunala, Necrozma, Zacian, Zamazenta, Eternatus, Calyrex, Koraidon and Miraidon can\'t be rolled from your Legend bar. Everything else legendary and mythical is fair game.',
+        a: 'No. <b>Box legendaries are not in the wild spawn pool</b> — Mewtwo, Lugia, Ho-Oh, Kyogre, Groudon, Rayquaza, Dialga, Palkia, Giratina, Reshiram, Zekrom, Kyurem, Xerneas, Yveltal, Solgaleo, Lunala, Necrozma, Zacian, Zamazenta, Eternatus, Calyrex, Koraidon and Miraidon can\'t be rolled from your Legend bar. Everything else legendary and mythical is fair game. Box legends have their own two routes: <b>Legendary Contracts</b> on the Contract Board, and the <b>Creation Chain</b> — see <a href="feature.html?f=creation">the Creation Chain</a>.',
       },
       {
         q: 'What is /hunt?',
@@ -2868,7 +2922,7 @@ const FAQ = [
       },
       {
         q: 'What are gems and how do I use them?',
-        a: 'Gems are the server\'s <b>premium currency</b>, separate from coins. You earn them from the store and events, or convert coins into gems with <code>/gem convert</code> — the rate is steep on purpose, so gems stay rare. Spend them in the <b>SolForge Black Market</b> (<code>/gem shop</code> or <code>/bm</code>), a rotating shop of custom Pokémon and high-end gear.',
+        a: 'Gems are the server\'s <b>premium currency</b>, separate from coins. <b>They can no longer be bought with coins</b> — <code>/gem convert</code> and <code>/convert gems tokens</code> were both retired, so gems now enter play only through the store and deliberate server grants (the playtime ladder, the daily calendar, contracts and global hunts). That\'s what makes gem-priced content genuinely premium, and it\'s why <b>gem-bought Pokémon can\'t be traded or listed on the GTS</b>. Spend them in the <b>SolForge Black Market</b> (<code>/gem shop</code> or <code>/bm</code>), a rotating shop of custom Pokémon and high-end gear.',
       },
       {
         q: 'How does the Elite Four / ladder work?',
@@ -2905,7 +2959,11 @@ const FAQ = [
       },
       {
         q: 'Are alternate accounts (alts) allowed?',
-        a: 'Alts aren\'t banned, but running one is genuinely twice the work (double the dailies, jobs and tasks) for little real advantage, and staff keep an eye on abuse. Play how you like, but don\'t expect alts to be a shortcut.',
+        a: '<b>No — one account per player.</b> Alt accounts are banned on sight, and the server enforces it at the door: if your connection already has an account on it, a second, different account is <b>refused at join</b> automatically. <b>Genuinely sharing a connection</b> with someone in your house? <b>Open a ticket first</b> and staff will add you to the exempt list — do it before the second person tries to join, not after.',
+      },
+      {
+        q: 'I\'m being kicked at join and told my IP already has an account — am I IP banned?',
+        a: 'Almost certainly not. That kick is the <b>alt-account gate</b>, not a ban — your name is nowhere in the ban list, which is why asking staff to "unban" or pardon you does nothing. Two things trigger it: someone else in your house is already playing (open a ticket to get your connection exempted), or <b>you renamed yourself</b>. We run in offline mode, so a new name counts as a brand-new account, and your old one is the "alt" it\'s seeing. <b>The quickest fix for a rename is to change your name back to the one you first joined with</b> — that always gets you in. If you can\'t, open a ticket and staff will sort it out.',
       },
     ],
   },

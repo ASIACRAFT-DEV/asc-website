@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-16T00:42:47.587Z",
+  "generatedAt": "2026-08-16T06:23:38.367Z",
   "count": 39,
   "mods": [
     {
@@ -70,7 +70,7 @@
     {
       "repo": "asc-tutorial",
       "name": "ASC Tutorial",
-      "version": "4.5.0"
+      "version": "4.5.1"
     },
     {
       "repo": "asc-voting",
@@ -95,7 +95,7 @@
     {
       "repo": "asc-breeding",
       "name": "CobbleAsia Breeding",
-      "version": "1.19.0"
+      "version": "1.20.0"
     },
     {
       "repo": "asc-chestshop",
@@ -125,7 +125,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.77.0"
+      "version": "9.80.0"
     },
     {
       "repo": "asc-forge",
@@ -145,7 +145,7 @@
     {
       "repo": "asc-legendspawns",
       "name": "CobbleAsia Legend Spawns",
-      "version": "2.9.0"
+      "version": "2.10.0"
     },
     {
       "repo": "asc-levels",
@@ -185,7 +185,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.16.0"
+      "version": "3.17.0"
     },
     {
       "repo": "asc-transform",

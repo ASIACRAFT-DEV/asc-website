@@ -2811,6 +2811,8 @@ const TEAM = [
         motto: "Ayoko sa mahal, gusto ko sa mura, kasi yung una ko'ng minahal, iba'ng lalake inuna" },
       { name: 'LilCamo', role: 'Moderator', avatar: 'assets/team/lilcamo.jpg',
         motto: 'All truly strong people are kind.' },
+      { name: 'DennnPham', role: 'Moderator', avatar: 'assets/team/dennn.png',
+        motto: 'Eat Sleep Hustle Repeat 🔁' },
     ],
   },
   {
@@ -2863,7 +2865,6 @@ const TEAM = [
       { name: 'Prime_RN', role: 'Admin', avatar: 'assets/team/prime.png', motto: 'Fear me?' },
       { name: 'EdsonCheah', role: 'Moderator', avatar: 'assets/team/edson.jpg', motto: "it's ok to not be ok" },
       { name: 'OPaint', role: 'Moderator', avatar: 'assets/team/opaint.jpg', motto: 'a² + b² = c²' },
-      { name: 'DennnPham', role: 'Helper', avatar: 'assets/team/dennn.png', motto: 'Eat Sleep Hustle Repeat 🔁' },
     ],
   },
 ];

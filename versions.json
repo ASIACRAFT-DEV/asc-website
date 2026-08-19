@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-08-19T00:40:42.757Z",
-  "count": 39,
+  "generatedAt": "2026-08-19T06:26:37.821Z",
+  "count": 40,
   "mods": [
     {
       "repo": "asc-catchcombo",
@@ -50,17 +50,22 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.18.0"
+      "version": "2.19.0"
     },
     {
       "repo": "asc-mcmmo",
       "name": "ASC McMMO",
-      "version": "2.12.1"
+      "version": "2.13.0"
     },
     {
       "repo": "asc-pokeditor",
       "name": "ASC Pokeditor",
       "version": "1.11.0"
+    },
+    {
+      "repo": "asc-survey",
+      "name": "ASC Survey",
+      "version": "1.0.0"
     },
     {
       "repo": "asc-traininggrounds",
@@ -85,7 +90,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.54.1"
+      "version": "3.56.0"
     },
     {
       "repo": "asc-battlepass",
@@ -95,7 +100,7 @@
     {
       "repo": "asc-breeding",
       "name": "CobbleAsia Breeding",
-      "version": "1.21.0"
+      "version": "1.22.0"
     },
     {
       "repo": "asc-chestshop",
@@ -125,7 +130,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.87.0"
+      "version": "9.89.0"
     },
     {
       "repo": "asc-forge",
@@ -135,7 +140,7 @@
     {
       "repo": "asc-gts",
       "name": "CobbleAsia GTS",
-      "version": "3.1.1"
+      "version": "3.2.0"
     },
     {
       "repo": "asc-leaderboard",
@@ -185,7 +190,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.17.0"
+      "version": "3.18.0"
     },
     {
       "repo": "asc-transform",

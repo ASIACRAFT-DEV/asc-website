@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-19T12:24:57.528Z",
+  "generatedAt": "2026-08-19T18:19:42.060Z",
   "count": 40,
   "mods": [
     {
@@ -80,7 +80,7 @@
     {
       "repo": "asc-voting",
       "name": "ASC Voting",
-      "version": "1.9.0"
+      "version": "1.9.1"
     },
     {
       "repo": "asc-areazero",
@@ -130,7 +130,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.89.0"
+      "version": "9.89.1"
     },
     {
       "repo": "asc-forge",
@@ -160,7 +160,7 @@
     {
       "repo": "asc-mail",
       "name": "CobbleAsia Mail",
-      "version": "1.18.1"
+      "version": "1.19.0"
     },
     {
       "repo": "asc-npcs",

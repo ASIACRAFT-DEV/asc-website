@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-18T18:22:46.278Z",
+  "generatedAt": "2026-08-19T00:40:42.757Z",
   "count": 39,
   "mods": [
     {
@@ -45,7 +45,7 @@
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "2.13.1"
+      "version": "2.14.0"
     },
     {
       "repo": "asc-jobs",
@@ -60,7 +60,7 @@
     {
       "repo": "asc-pokeditor",
       "name": "ASC Pokeditor",
-      "version": "1.10.0"
+      "version": "1.11.0"
     },
     {
       "repo": "asc-traininggrounds",
@@ -125,12 +125,12 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.84.0"
+      "version": "9.87.0"
     },
     {
       "repo": "asc-forge",
       "name": "CobbleAsia Forge",
-      "version": "2.61.2"
+      "version": "2.62.0"
     },
     {
       "repo": "asc-gts",
@@ -145,7 +145,7 @@
     {
       "repo": "asc-legendspawns",
       "name": "CobbleAsia Legend Spawns",
-      "version": "2.10.0"
+      "version": "2.11.0"
     },
     {
       "repo": "asc-levels",
@@ -175,7 +175,7 @@
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.65.0"
+      "version": "4.66.0"
     },
     {
       "repo": "asc-ranks",

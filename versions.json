@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T12:27:36.486Z",
+  "generatedAt": "2026-08-20T18:23:55.528Z",
   "count": 40,
   "mods": [
     {
@@ -45,7 +45,7 @@
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "2.16.0"
+      "version": "2.17.0"
     },
     {
       "repo": "asc-jobs",
@@ -100,7 +100,7 @@
     {
       "repo": "asc-breeding",
       "name": "CobbleAsia Breeding",
-      "version": "1.23.0"
+      "version": "1.24.0"
     },
     {
       "repo": "asc-chestshop",

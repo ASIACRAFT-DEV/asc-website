@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-21T00:43:19.790Z",
+  "generatedAt": "2026-08-21T06:29:34.669Z",
   "count": 40,
   "mods": [
     {
@@ -100,7 +100,7 @@
     {
       "repo": "asc-breeding",
       "name": "CobbleAsia Breeding",
-      "version": "1.24.0"
+      "version": "1.25.1"
     },
     {
       "repo": "asc-chestshop",
@@ -125,12 +125,12 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "3.13.0"
+      "version": "3.13.1"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.91.0"
+      "version": "9.93.0"
     },
     {
       "repo": "asc-forge",
@@ -190,7 +190,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.18.1"
+      "version": "3.18.2"
     },
     {
       "repo": "asc-transform",

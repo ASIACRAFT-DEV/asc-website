@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-20T18:23:55.528Z",
+  "generatedAt": "2026-08-21T00:43:19.790Z",
   "count": 40,
   "mods": [
     {
@@ -45,7 +45,7 @@
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "2.17.0"
+      "version": "2.18.0"
     },
     {
       "repo": "asc-jobs",
@@ -55,7 +55,7 @@
     {
       "repo": "asc-mcmmo",
       "name": "ASC McMMO",
-      "version": "2.13.0"
+      "version": "2.13.1"
     },
     {
       "repo": "asc-pokeditor",
@@ -130,7 +130,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.90.0"
+      "version": "9.91.0"
     },
     {
       "repo": "asc-forge",
@@ -190,7 +190,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.18.0"
+      "version": "3.18.1"
     },
     {
       "repo": "asc-transform",
@@ -200,7 +200,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.31.0"
+      "version": "1.31.1"
     }
   ]
 }

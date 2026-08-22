@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T06:22:42.977Z",
+  "generatedAt": "2026-08-22T12:19:24.106Z",
   "count": 40,
   "mods": [
     {
@@ -45,7 +45,7 @@
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "2.18.0"
+      "version": "2.19.0"
     },
     {
       "repo": "asc-jobs",
@@ -100,7 +100,7 @@
     {
       "repo": "asc-breeding",
       "name": "CobbleAsia Breeding",
-      "version": "1.25.2"
+      "version": "1.25.3"
     },
     {
       "repo": "asc-chestshop",
@@ -180,7 +180,7 @@
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.67.0"
+      "version": "4.68.0"
     },
     {
       "repo": "asc-ranks",

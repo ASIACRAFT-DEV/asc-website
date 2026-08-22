@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-22T00:40:38.176Z",
+  "generatedAt": "2026-08-22T06:22:42.977Z",
   "count": 40,
   "mods": [
     {
@@ -85,7 +85,7 @@
     {
       "repo": "asc-areazero",
       "name": "CobbleAsia Area Zero",
-      "version": "2.15.0"
+      "version": "2.16.0"
     },
     {
       "repo": "asc-battletower",
@@ -130,7 +130,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.95.0"
+      "version": "9.97.0"
     },
     {
       "repo": "asc-forge",
@@ -190,7 +190,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.18.2"
+      "version": "3.18.3"
     },
     {
       "repo": "asc-transform",

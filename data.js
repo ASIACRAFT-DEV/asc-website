@@ -266,7 +266,7 @@ const FEATURES = {
     ],
     notes: [
       'Checkpoints save every floor — closing the menu or disconnecting won’t waste your choice or send you back floors.',
-      'Downed Pokémon can’t be revived — not by Heal Party, not from the Shop. The one Swap at a checkpoint is the only recovery.',
+      'A downed Pokémon is out of the run unless you buy it back: <strong>Revive</strong> is in the Tower Shop at 2.5× the price of a Full Heal, and brings back the one that has been down longest. Heal Party never revives, and the checkpoint Swap is still the free recovery.',
       'Draft carefully: you climb with 3–6 Pokémon, not a full team of 6.',
     ],
   },
@@ -303,13 +303,22 @@ const FEATURES = {
         body:
           'Paradox Pokémon aren’t catchable here — defeat them for Elemental DNA, the material you feed into Paradox Crafting. Encounters also have a chance to drop Orbs and IV Modifiers.',
       },
+      {
+        title: 'Carry the heat you earn',
+        body:
+          'Farming the zone is no longer quiet. <strong>10% of every boss payout you bank lands on your own head as a bounty</strong> — a 100k Paradox defeat prices you at 10,000, a 300k Legendary at 30,000 — and it scales with your damage share, because it is read off the coins you were actually paid. Wild alphas and paradoxes pay no coins, so they use a flat tier instead: alpha 5,000, paradox 10,000, legendary 20,000, stacking. Cross 5,000 and you are WANTED server-wide; it caps at 250,000, and it survives a logout, a restart and dying.',
+      },
     ],
     commands: [
       { cmd: '/az', desc: 'Area Zero info, HUD progress and status' },
+      { cmd: '/wanted', desc: 'The bounty board — who is carrying a pot and how big (alias /bounty)' },
+      { cmd: '/ascaz stats', desc: 'Your own alpha / paradox / legendary kill counts and hunt bounty' },
     ],
     notes: [
       'Elemental DNA from Area Zero powers Paradox Crafting — Paradox can no longer be caught from wild spawns.',
       'The Alpha catch is decided by Last Hit, so bring your best DPS.',
+      'Walk into the sphere carrying a bounty and the whole server is told, with your live board rank. Logging out does not clear it.',
+      '<code>/speed</code> above 1× is refused inside Area Zero, however you got in — the zone is meant to be crossed on foot.',
     ],
   },
 
@@ -336,17 +345,24 @@ const FEATURES = {
           'Gym Badges are the gate — you need all eight before the Elite Four will accept your challenge. They also weigh into your overall rank progression.',
       },
       {
+        title: 'Bring the team you actually play',
+        body:
+          'A gym seat has a level tier, and an over-levelled party used to be <em>refused at the door</em> — which meant keeping a second team that existed only for gyms. It now <strong>scales you down for the fight and puts you back exactly as you were afterwards</strong>. EVs, IVs, nature, ability, held item and moves all carry in untouched, so a trained Pokémon still beats an untrained one at the same level. It only scales down, never up. Legendaries and mythicals are banned from gym teams.',
+      },
+      {
         title: 'Challenge the Elite Four',
         body:
-          'One Elite Four, one format: NatDex OU. It’s the server’s championship test — down from the old 24 members across multiple formats to a single, focused climb.',
+          'One board, five seats: rank 1 is the <strong>Champion</strong>, ranks 2–5 are Elite 1 through 4, all in NatDex OU. Beat the holder and you take their seat — and while you hold it you are paid daily by mail, from 150,000 coins + 100 Tokens at Elite 4 up to 500,000 + 500 as Champion. Down from the old 24 members across six parallel ladders to a single, focused climb.',
       },
     ],
     commands: [
-      { cmd: '/gym', desc: 'Open the gym staircase, challenge leaders, and take on the Elite Four' },
+      { cmd: '/gym', desc: 'Open the gym staircase and challenge the eight leaders' },
+      { cmd: '/ladder', desc: 'The Elite Four board — Champion on top of Elite 1–4' },
     ],
     notes: [
       'One Elite Four in NatDex OU — the multi-format seat ladder and player Gym Leaders are retired in Season 2.',
-      'All 8 Gym Badges are required to challenge the Elite Four.',
+      'All 8 Gym Badges are required to take a ladder seat.',
+      'Fusions are banned on the ladder, a loss costs the title plus a 12-hour cooldown, and a seat decays back to its NPC if the holder stops defending it.',
     ],
   },
 
@@ -482,6 +498,11 @@ const FEATURES = {
           'A live dungeon sidebar — like Area Zero’s — shows your current objective, side-quest progress, every party member’s HP and remaining lives, and the boss HP bar during chamber fights, so the whole team always knows where the run stands.',
       },
       {
+        title: 'Find your way',
+        body:
+          'Every tracked objective renders an <strong>arrow relative to the way you are facing</strong> — walk forward, turn around — with an up/down cue, and a <strong>particle trail</strong> leaves you toward it once a second. A bare "95m" told a lost player nothing, and in the Solforge Nexus, whose bottom hall sits at y-49 and hub at y124, it had people walking into the wall directly beneath the target. Both run panels carry the full picture now, keys included — the key list previously only existed for players running the client mod.',
+      },
+      {
         title: 'Earn relic rewards',
         body:
           'Clearing pays coins and tokens scaled by difficulty, Pokédex reward tokens scaled by how many side-quests you finished, and always a SolForge Crate Key — with a chance at a random SolForge gear piece.',
@@ -504,6 +525,7 @@ const FEATURES = {
       { cmd: '/party', desc: 'Form a party for shared-lives dungeon runs' },
     ],
     notes: [
+      'The <strong>Solforge Nexus</strong> is the dungeon open right now — INSANE difficulty, 8 badges and Ace rank to enter, 3 boss-rush keys to reach the finale. More are being built.',
       'Higher ranks get more daily keys — up to five at the top tier.',
       'Side-quests are optional but directly scale your reward quality.',
       'Set Bonuses reward type-themed teams: six mons of one type is the strongest single bonus, but mixed dual-type squads can stack several at once.',
@@ -1219,10 +1241,10 @@ const FEATURES = {
 
 // Display order + grouping on the landing page
 const FEATURE_ORDER = [
-  // ⏸ 'creation' is deliberately NOT listed while the Creation arena is unarmed on live — the
-  // page at feature.html?f=creation is written and reachable, it just isn't advertised on the
-  // landing grid yet. Add 'creation' back after 'arctis' once `/ascraid creation arena` is run.
-  'arctis', 'solforge', 'crates', 'cosmetics', 'transform', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
+  // The Creation arena is armed on live (`spearpillar` @ multiworld:fspawn1, verified 2026-08-22),
+  // so 'creation' is advertised on the landing grid. Drop it back out if the pad is ever cleared —
+  // `world/asc-raidboss/spawnpoints.json` is the file to check.
+  'arctis', 'creation', 'solforge', 'crates', 'cosmetics', 'transform', 'fusions', 'battletower', 'areazero', 'gyms', 'raids',
   'dungeons', 'safari', 'hunts', 'fishing', 'breeding', 'archaeology', 'bingo', 'pvp', 'clans',
   'jobs', 'bazaar', 'skills', 'casino', 'playtime', 'progression',
 ];
@@ -1241,7 +1263,7 @@ const MODS = [
   { name: 'Cosmetics', cmd: '/cosmetics' },
   { name: 'Crates & Banners', cmd: '/ascc · /ascsummon' },
   { name: 'Dungeons', cmd: '/dungeon' },
-  { name: 'Essentials', cmd: '/ess' },
+  { name: 'Essentials', cmd: '/ess · /home · /tpa · /shop' },
   { name: 'Fishing', cmd: '/fish' },
   { name: 'Forge — Arctis & SolForge', cmd: '/gear' },
   { name: 'GTS', cmd: '/gts' },
@@ -1261,6 +1283,7 @@ const MODS = [
   { name: 'Safari', cmd: '/safari' },
   { name: 'Skills', cmd: '/skills' },
   { name: 'Starter Questline', cmd: '/quest' },
+  { name: 'Surveys', cmd: '/survey' },
   { name: 'Training Grounds', cmd: '/tg' },
   { name: 'Transform', cmd: '/transform' },
   { name: 'Voting', cmd: '/vote · /voteparty' },
@@ -1291,6 +1314,7 @@ const COMMANDS = [
       { cmd: '/kits', desc: 'Claim your starter kit and any kits you have access to' },
       { cmd: '/daily', desc: 'Claim your daily reward' },
       { cmd: '/playtime', desc: 'Claim playtime rewards — loot every 10h, bigger every 100h (alias /pt)' },
+      { cmd: '/survey', desc: 'Answer the running server survey — the Season 2 one pays a Ranch Upgrade, 2,000 Tokens and a Master Ball, once' },
     ],
   },
   {
@@ -1303,6 +1327,7 @@ const COMMANDS = [
       { cmd: '/safari', desc: 'Enter the Umera Safari reserve' },
       { cmd: '/pwiki <species>', desc: 'Look up a Pokémon’s spawn & info' },
       { cmd: '/pokeditor', desc: 'Edit/inspect your Pokémon (where permitted)' },
+      { cmd: '/pe unpin', desc: 'Clear a forced-aspect pin so form items (Meteorite, Gracidea…) work on a traded Pokémon again' },
       { cmd: '/research', desc: 'Pokédex Research Quests — 931 quests across Gen 1–9 (also /ascdex)' },
       { cmd: '/legend', desc: 'Your personal Legend bar — how full it is and what fills it' },
       { cmd: '/legend roll', desc: 'Spend your bar on the Legendary roulette — a full bar is guaranteed, from 20% up it\'s a gamble (alias /legend spin)' },
@@ -1313,6 +1338,7 @@ const COMMANDS = [
       { cmd: '/safetrade <player>', desc: 'Direct trade with a countdown and a ready-reset — changing your offer un-readies both sides (alias /trade, or shift + right-click a player)' },
       { cmd: '/tradehelp', desc: 'The checklist for trading with someone you don\'t know' },
       { cmd: '/wondertrade', desc: 'Throw a Pokémon into the pool and get a random one back (alias /wt)' },
+      { cmd: '/recycle', desc: 'Trade an unwanted Legendary or Mythical for banked recycle points or 3 Orbs' },
       { cmd: '/pc', desc: 'Open your Cobblemon PC' },
     ],
   },
@@ -1323,12 +1349,14 @@ const COMMANDS = [
       { cmd: '/bt battle', desc: 'Fight the next floor of your run (alias /bt next)' },
       { cmd: '/bt forfeit', desc: 'Abandon your Battle Tower run' },
       { cmd: '/scout', desc: 'Battle-Scout — see the opponent’s revealed team mid-fight (alias /ascscout)' },
-      { cmd: '/gym', desc: 'Challenge the eight gym leaders and the Elite Four' },
+      { cmd: '/gym', desc: 'Challenge the eight gym leaders — an over-tier party is scaled down for the fight, not turned away' },
+      { cmd: '/ladder', desc: 'The Elite Four — one board, Champion on top of Elite 1–4. Needs 8 badges; seats pay daily by mail' },
       { cmd: '/pvp', desc: 'PvP hub — ranked Ball tiers & Master Tier' },
+      { cmd: '/warzone', desc: 'Force-fight zone with a daily rotating format (alias /wz)' },
       { cmd: '/raid', desc: 'Raid boss info & encounters' },
-      // ⏸ HOLD — restore alongside the Creation Chain news/patch-note items once the arena is armed.
-      // { cmd: '/ascraid chain', desc: 'Creation Chain progress — every lake guardian you own and whether it can still imprint' },
-      { cmd: '/az', desc: 'Area Zero combat zone' },
+      { cmd: '/ascraid chain', desc: 'Creation Chain progress — every lake guardian you own and whether it can still imprint' },
+      { cmd: '/az', desc: 'Area Zero combat zone — bosses, the bounty board and the WANTED list' },
+      { cmd: '/wanted', desc: 'Who is carrying a bounty in Area Zero, and how big (alias /bounty)' },
       { cmd: '/dungeon', desc: 'Enter seasonal dungeons' },
       { cmd: '/dungeon setbonus', desc: 'Preview your party’s type Set Bonuses' },
       { cmd: '/party', desc: 'Party up for shared-lives dungeon runs' },
@@ -1468,14 +1496,14 @@ const GUIDE = [
   {
     title: 'Battle & progress',
     body:
-      'Test yourself: challenge the eight gyms with <code>/gym</code>, climb the <code>/bt</code> Battle Tower, and join raids with <code>/raid</code>. Level your account, climb <code>/ranks</code>, level your fifteen <code>/skills</code>, and work the seasonal <code>/bp</code> Battle Pass for steady rewards.',
+      'Test yourself: challenge the eight gyms with <code>/gym</code> — an over-levelled party is scaled down for the fight rather than refused — then take a seat on the <code>/ladder</code> Elite Four once you have all eight badges. Climb the <code>/bt</code> Battle Tower and join raids with <code>/raid</code>. Level your account, climb <code>/ranks</code>, level your fifteen <code>/skills</code>, and work the seasonal <code>/bp</code> Battle Pass for steady rewards.',
     cmds: ['/gym', '/bt', '/bp', '/skills'],
   },
   {
     title: 'Spend, gear up & breed',
     body:
-      'Put your earnings to work. Spend <b>Orbs</b> on gacha banners with <code>/summon</code>, forge the seasonal <b>Arctis</b> set and check it with <code>/gear</code>, and buy permanent account upgrades with <code>/passive</code>. Right-click a Cobblemon pasture to start a breeding ranch — see <code>/ascbreed</code>. The more you play, the stronger your account gets, for good.',
-    cmds: ['/summon', '/gear', '/passive', '/ascbreed'],
+      'Put your earnings to work. Spend <b>Orbs</b> on gacha banners with <code>/ascsummon</code> (<code>/summon</code> is vanilla Minecraft’s — it will not open the banners), forge the seasonal <b>Arctis</b> set and check it with <code>/gear</code>, and buy permanent account upgrades with <code>/passive</code>. Right-click a Cobblemon pasture to start a breeding ranch — see <code>/ascbreed</code>. The more you play, the stronger your account gets, for good.',
+    cmds: ['/ascsummon', '/gear', '/passive', '/ascbreed'],
   },
   {
     title: 'Join the community',
@@ -1490,16 +1518,22 @@ const GUIDE = [
 // =====================================================================
 const NEWS = [
   {
+    tag: 'New',
+    title: 'Nobody farms Area Zero quietly any more',
+    body: 'Clearing the zone used to be free and invisible. Now <strong>10% of every boss payout you bank lands on your own head as a bounty</strong> — cross 5,000 and you are WANTED server-wide, and walking into the sphere with a pot on you announces it to everyone. It survives a logout, so <code>/quit</code> is not the answer any more.',
+    link: 'feature.html?f=areazero',
+  },
+  {
+    tag: 'Patched',
+    title: 'Gyms scale to you, and the job board finally pays what it says',
+    body: 'Gyms no longer bounce an over-levelled party — they <strong>scale it down for the fight and put it back after</strong>. The job board had been advertising 25,000 and paying 10,000 all season; that is fixed <em>and</em> dailies went up to <strong>50,000</strong>. Plus a password with a symbol in it can finally be typed, a full inventory stops eating your mail, and a ball lost to a battle error comes back.',
+    link: 'patchnotes.html',
+  },
+  {
     tag: 'New Event',
     title: 'The Creation Chain — a second road to the box legends',
     body: 'The Spear Pillar is armed. Imprint your own <strong>Uxie, Mesprit and Azelf</strong> onto Nether Stars, forge the <strong>Red Chain</strong>, and summon <strong>Dialga, Palkia or Giratina</strong> as a Mythic raid the whole server can fight — and actually catch. Clear all three and a spare Chain becomes the <strong>Azure Flute</strong> for Arceus.',
     link: 'feature.html?f=creation',
-  },
-  {
-    tag: 'Patched',
-    title: 'Items that were doing nothing, and one Elite Four',
-    body: 'Ability Capsules and Patches turned out to be silent no-ops on the Pokémon you’d buy them for, a traded Deoxys could never change form again, and every prestige was crediting <strong>half a Star</strong>. All three are fixed. <code>/ladder</code> is now a single <strong>Elite Four with a Champion on top</strong>, the job boards got 63 new quests, and ranch slots are buyable.',
-    link: 'patchnotes.html',
   },
   {
     tag: 'Season 2',
@@ -1514,6 +1548,32 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-08-22',
+    tag: 'Patched',
+    title: 'Area Zero prices your head, gyms scale instead of refusing you, and the job board pays what it says',
+    changes: [
+      { type: 'new', text: '⚔️ <strong>Farming Area Zero now puts a price on your own head.</strong> Clearing the zone used to be free and completely invisible — you banked 50k–300k a boss and nobody ever knew you were in there. <strong>10% of every boss payout you bank now lands on you as a bounty</strong>: a 100k Paradox defeat prices you at <strong>10,000</strong>, a 300k Legendary at <strong>30,000</strong>. It is read off the coins you were actually paid, so it scales with your damage share and halves in BLUE mode along with the reward. Wild alphas and paradoxes pay no coins, so those use a flat tier instead — alpha 5,000, paradox 10,000, legendary 20,000, and an alpha legendary pays both. Cross <strong>5,000</strong> and you are WANTED server-wide; 25k, 50k, 100k and 250k each fire a “their price is climbing” broadcast, and it caps at <strong>250,000</strong>. <strong>It survives a logout and a restart</strong>, and dying to a boss or the environment does not wipe it — otherwise the answer to “someone put a price on me” would just be <code>/quit</code>. Walk into the sphere carrying a pot and the whole server is told, with your live board rank.' },
+      { type: 'improved', text: '🏅 <strong>Gyms scale your team down for the fight instead of turning you away at the door.</strong> Three separate suggestion threads in ten days landed on the same complaint: everything else on this server is played at Lv 100, so a cap that <em>rejects</em> an over-tier party forces you to build and carry a second team that exists only for gyms — and new players only found out when they got bounced. Every party member above the seat’s tier is now set to that level for the battle and <strong>put back exactly as it was afterwards</strong>. EVs, IVs, nature, ability, held item and moves all carry in untouched, so a trained mon still beats an untrained one at the same level — the cap is on <em>level</em>, not on investment. It only ever scales <strong>down</strong>: a mon below the tier is left alone rather than handed free levels. It applies to player-held gyms on both sides too. ⚠️ <strong>Legendaries and mythicals are now banned from gym teams</strong> — leave them in the PC or the challenge is refused.' },
+      { type: 'fixed', text: '💼 <strong>The job board has been advertising 25,000 and paying 10,000 all season.</strong> A payout multiplier of <strong>0.4</strong> was applied when you claimed a quest, and every screen that shows you a quest rendered the reward <em>without</em> it — so the board overstated its own payout by <strong>2.5×</strong> for the entire season, and the “jobs cap at 75k/day” figure everyone was quoting was really 30k. Quest claims no longer take the multiplier, and the rewards are tuned directly instead so the board and the paycheck cannot drift apart again. <strong>And they went up:</strong> a daily now pays <strong>50,000</strong> (was 25,000) and a weekly <strong>150,000</strong> (was 125,000) across all 99 quests, still scaled by your job tier — so a Master daily pays 80k. A full 3-daily board is <strong>150,000/day</strong> at Apprentice, against the 30,000 that was actually landing before.' },
+      { type: 'fixed', text: '🏆 <strong>A Battle Tower run interrupted by a disconnect could permanently destroy a Pokémon.</strong> Not misplace it into the PC — destroy it. It happened twice on live, and the log recorded it as “kept for retry” both times, which is why it read as a storage hiccup rather than a loss. The restore now runs on the server thread it is supposed to, and a run that cannot hand your team back holds it rather than dropping it. <strong>If you lost a Pokémon to an interrupted run, open a ticket</strong> — we would much rather sort it out with you.' },
+      { type: 'fixed', text: '🔑 <strong>A password with a symbol in it could never be typed.</strong> <code>/login</code>, <code>/register</code> and <code>/changepassword</code> only ever accepted letters, digits and <code>_ . + -</code>. Anything else — <code>Pass@123</code>, an exclamation mark, a <code>!</code> or a <code>#</code> — stopped parsing at the symbol and <strong>the command never ran at all</strong>. Nothing reached the server log either, because the failure happens before the command is dispatched, so from our side there was simply no evidence: two tickets of players stuck at spawn were triaged as a wifi problem. All three commands now accept <strong>every character</strong>, and a password with a <em>space</em> in it is refused with a message that says so. No existing account is affected — <code>/register</code> had the same limit, so a symbol password could never have been set in the first place.' },
+      { type: 'fixed', text: '🎯 <strong>A ball lost to a battle error is now given back.</strong> When you throw a ball, the capture is written to the battle engine — and if the battle has already been torn down by the time that write lands, the ball is gone, the Pokémon is not caught, and nothing tells you why. Four players hit it on a single boot. The exact ball you threw is now <strong>returned to your inventory with a message</strong> saying the throw was lost before it reached the engine. To be straight with you: <strong>this is compensation, not a cure</strong> — the teardown ordering behind it is Cobblemon’s and we cannot reorder it, so the bug still happens; it just stops costing you anything.' },
+      { type: 'fixed', text: '📬 <strong>A full inventory was eating your mail.</strong> Claiming a reward with no room decoded the payload, marked the mail claimed, and then failed to give you the items — so the mail was gone and so were the rewards. A claim that cannot fit is now <strong>blocked before anything is consumed</strong>, and tells you to make room.' },
+      { type: 'fixed', text: '🎁 <strong>Every raid reward was lost if you disconnected mid-raid — and the log said “delivered”.</strong> Rewards for a player who had dropped were queued for their return, and the queue was drained at a point in the join sequence that ran before the player was ready to receive anything. It reported success and delivered nothing, which is why this went unnoticed for two months. Pending rewards now wait until you are properly in the world.' },
+      { type: 'fixed', text: '🌿 <strong>Bloom of Helios was an infinite crop faucet.</strong> The set’s harvest AOE was re-triggering itself — each replanted crop counted as a new harvest, which fired the AOE again — so one swing could cascade into <strong>36 procs</strong>, bounded only by how fast you could click. It was also destroying tall crops rather than harvesting them. Both closed.' },
+      { type: 'fixed', text: '🏝 <strong>The Safari was deleting encounters nobody was standing next to.</strong> The cleanup sweep asked the world for each encounter and treated “not loaded right now” as “despawned”, so walking away from a spawn far enough for its chunk to unload marked it for deletion — including <strong>special encounters you had beaten but not yet been paid for</strong>. The sweep now checks whether the chunk is actually loaded before it decides anything is gone. We went back through the logs afterwards: every sweep since had only ever removed encounters nobody had engaged, so <strong>nothing was owed to anyone</strong>.' },
+      { type: 'fixed', text: '🥚 <strong>Four separate breeding bugs, one of which stopped eggs hatching entirely.</strong> A species whose display name carries punctuation — <strong>Mime Jr.</strong>, <strong>Farfetch’d</strong>, <strong>Type: Null</strong> — produced an egg that retried forever and never hatched, because the name was stored with the punctuation and the lookup that reads it back <em>throws</em> rather than returning empty, which took every fallback below it out of reach. Separately, a <strong>regional-form baby was rolling its base form’s abilities and egg moves</strong> — an Alolan Vulpix could hatch with a Kantonian ability — and the 80/60% pass chances made it read as bad luck for months. Breaking a ranch also destroyed unspent <strong>Skip Hourglass</strong> time; it now hands the hourglasses back. And the ranch tells you when the egg is due, on both the panel and the chest menu.' },
+      { type: 'new', text: '🧭 <strong>Dungeons tell you which way, not just how far.</strong> A tracker that says <code>95m</code> tells a lost player nothing about whether to turn around — and in the Solforge Nexus, whose bottom hall is at y-49 and hub at y124, a flat distance had people walking into the wall directly beneath the target. Every tracked objective now renders an <strong>arrow relative to where you are facing</strong>, with an up/down cue, and a <strong>particle trail</strong> leaves you toward it once a second. The keys block also only ever existed on one of the two run panels, so <strong>players without the client mod never saw it at all</strong> — both surfaces now carry everything. Boss-rush runs are also finishable again: the miniboss key could never be earned, and the finale could be walked straight into.' },
+      { type: 'new', text: '📋 <strong><code>/survey</code> — tell us what Season 2 actually feels like, and get paid for it.</strong> 22 questions covering the reset, progression pace, the economy, what you have actually tried, stability, and where we should aim next. It pays <strong>1 Ranch Upgrade + 2,000 Tokens + 1 Master Ball</strong>, once per account. One question a screen, a Back button and a review page before you commit — nothing is submitted until you say so.' },
+      { type: 'new', text: '♻️ <strong><code>/recycle</code> is back, and its value table maintains itself now.</strong> Recycle an unwanted Legendary or Mythical for either banked points or <strong>3 Orbs</strong>, chosen per Pokémon. The old table had not just gone stale — it had <em>inverted</em>: it was built from a Season 1 census, and Mew and Hoopa, now the two most-owned legendaries on the server, were still priced as rarities at <strong>8×</strong> their real worth (Virizion was 12× off). It now re-derives itself weekly from the live population using percentile bands, so it can never rot across a wipe again.' },
+      { type: 'fixed', text: '🔄 <strong>A Pokémon stuck as a Mega, an Ultra Burst or a Dynamax size can fix itself.</strong> A battle that ended badly could leave a mon permanently transformed, or pinned at Dynamax scale — and the key that was meant to restore its size was reading the very value that had been poisoned, so using it re-applied the bug. Both are now repaired on login. Species and regional forms are untouched — there is no such thing as a legitimately permanent Mega. If a traded Pokémon still refuses to change form, <code>/pe unpin</code> clears the pin that is blocking it.' },
+      { type: 'improved', text: '🧠 <strong>The observer is ungated, and a refusal now names every requirement you are missing.</strong> The observer was sitting on the machine rung after the redstone ladder was halved, and it is the one piece there that ticks nothing on its own — it is out entirely. The current ladder is <strong>Intellect 3</strong> for levers, rails and inert parts, <strong>6</strong> for dust, repeaters and comparators, <strong>9</strong> for pistons, dispensers and droppers, <strong>12</strong> for the Crafter, with TNT alone still asking for both Intellect and Wisdom at 20. And a gate on two attributes used to admit to only one, so you would raise the stat it named and be refused again — it now lists <strong>every</strong> unmet requirement with your current level in each.' },
+      { type: 'fixed', text: '🧪 <strong>Alchemy was paying for taking a potion out, not for brewing one.</strong> The XP hook fired on any removal from a brewing stand’s potion slots — so placing a potion in and pulling it straight back out paid full brew XP, repeatably, which also walked straight past the attribute gates. Alchemy now settles against brews the stand actually completed.' },
+      { type: 'fixed', text: '🤝 <strong>The anti-scam trade ledger was recording nothing.</strong> Every Pokémon that moved through the GTS or a <code>/safetrade</code> was being written to the log as an empty record, so the audit trail that exists precisely for “they took my mon” disputes had no mon in it. Trades themselves always worked; it was the record that was blank. Fixed, and the same fault was swept out of <code>/pokegift</code> and <code>/pokeconvert</code>.' },
+      { type: 'fixed', text: '🧰 <strong>Odds and ends.</strong> Catching a raid-den boss now credits your <code>/legend</code> bar — dens hand the Pokémon over without ever firing a capture, so every den catch was invisible to it. <code>/speed</code> above 1× is now refused <em>inside</em> Area Zero rather than only reset at the warp, so walking, <code>/tpa</code>-ing or respawning in no longer smuggles a boost past the gate. A raid boss with a three-move awakening phase now uses three moves rather than three plus whatever it already knew. And the vote party wheel no longer snatches away a screen you already had open — it skips you and leaves the link in chat instead.' },
+    ],
+  },
   {
     date: '2026-08-18',
     tag: 'Patched',
@@ -2952,7 +3012,7 @@ const FAQ = [
       },
       {
         q: 'How do I fill my Legend bar?',
-        a: 'Mainly <b>Daily and Weekly Quests</b> (<code>/bp</code>), <b>PvP wins</b> (<code>/pvp</code>), and defeating <b>Alpha and Paradox</b> Pokémon — Area Zero is the densest source. <b>Jobs</b> claims help a little, and catching, training, PokéHunts, Bingo and Battle Tower all still chip in. Every activity has a <b>cap</b> on how much of the bar it can fill, so no single grind gets you there — you reach 100% by playing across the server. Skip an activity for a day and its energy slowly decays.',
+        a: 'Mainly <b>Daily and Weekly Quests</b> (<code>/bp</code>), <b>PvP wins</b> (<code>/pvp</code>), and defeating <b>Alpha and Paradox</b> Pokémon <b>in battle</b>. <b>Jobs</b> claims help a little, and catching (raid-den catches included), training, PokéHunts, Bingo and Battle Tower all still chip in. Every activity has a <b>cap</b> on how much of the bar it can fill — Alphas &amp; Paradox pays 100 a defeat and caps at 600, i.e. six a day — and there is a daily earning budget on top, so no single grind gets you there. If a kill pays nothing, <code>/legend</code> now tells you <b>which</b> limit stopped it. Skip an activity for a day and its energy slowly decays. ⚠️ <b>Area Zero is a known gap:</b> its alphas and paradoxes die to direct damage rather than in a Cobblemon battle, so those kills currently pay coins and bounty but no Legend energy. A fix is built and goes live with the next server update.',
       },
       {
         q: 'My Legend bar is full but nothing happened — why?',
@@ -2973,7 +3033,7 @@ const FAQ = [
     items: [
       {
         q: 'How do I make money fast?',
-        a: 'The strongest steady income is <code>/hunt</code> (personal bounties pay 75k–750k by tier) and <code>/ghunt</code> (global hunts up to 1,000,000). On top of that: join <code>/jobs</code> to get paid for mining/fishing/catching, beat <code>/gym</code> leaders and clear <code>/dungeon</code> runs, <code>/vote</code> daily for rewards, and sell to other players via <code>/chestshop</code> and <code>/gts</code>.',
+        a: 'The strongest steady income is <code>/hunt</code> (personal bounties pay 75k–750k by tier) and <code>/ghunt</code> (global hunts up to 1,000,000). <code>/jobs</code> is now right behind them: a full 3-daily board pays <b>150,000 a day</b> at Apprentice and more at higher tiers, claimed from that job’s NPC. On top of that: beat <code>/gym</code> leaders, farm Area Zero bosses with <code>/az</code> (50k–300k a boss — though 10% of it goes on your own head as a bounty), <code>/vote</code> daily, and sell to other players on the <code>/bazaar</code> order book or via <code>/chestshop</code> and <code>/gts</code>. <code>/shop</code> only buys back at 2%, so it is a last resort.',
       },
       {
         q: 'How do I get EXP / level up my Pokémon?',
@@ -2989,11 +3049,15 @@ const FAQ = [
       },
       {
         q: 'How does the Elite Four / ladder work?',
-        a: 'The <code>/ladder</code> is a four-seat PvP ladder per format (singles & doubles), E1 (top) down to E4. You pay a coin fee to challenge a seat, and that fee goes <b>straight to the player currently holding it</b>. Beat them and you take the seat; while you hold it you earn daily passive income by mail. Lose and you only lose the title, plus a 12-hour cooldown. <b>Fusions are banned</b> on the ladder.',
+        a: '<code>/ladder</code> is <b>one board</b>: rank 1 is the <b>Champion</b>, ranks 2–5 are <b>Elite 1 through 4</b>. It used to be six parallel ladders across three formats and two styles — twenty-four seats, twenty-three of which had never been held by a player — so it was collapsed into a single throne room. You need <b>all 8 gym badges</b> to take a seat, beating the holder takes it from them, and while you hold it you are paid <b>daily by mail</b>: Champion 500,000 coins + 500 Tokens, down to Elite 4 at 150,000 + 100. Lose and you keep everything except the title, plus a <b>12-hour cooldown</b> on challenging again (buyable off for 200,000 if you are impatient). <b>Fusions are banned</b>, and a seat decays back to its NPC if the holder stops showing up. Challenge fees are currently switched <b>off</b> — when they are on, the fee goes straight to the player holding the seat.',
+      },
+      {
+        q: 'My team is Lv 100 — can I still challenge a gym?',
+        a: 'Yes. Gyms used to <b>refuse</b> an over-tier party at the door, which meant building a second team that existed only for gyms. They now <b>scale you down for the fight and put you back exactly as you were afterwards</b> — EVs, IVs, nature, ability, held item and moves all carry in untouched, so a trained Pokémon still beats an untrained one at the same level. It only ever scales <b>down</b>: a Pokémon below the seat’s tier is left alone, not handed free levels. <b>Legendaries and mythicals are banned from gym teams</b> — leave them in the PC or the challenge is refused.',
       },
       {
         q: 'What PvP is there besides the ladder?',
-        a: 'Three systems, each different. <code>/ladder</code> is the <b>Elite Four</b> — take and hold one of four seats for daily passive income. <code>/pvp queue &lt;singles|doubles&gt;</code> enters the <b>Poké Ball League</b>, a ranked seasonal ladder where you climb tiers for rewards. <code>/warzone</code> (<code>/wz</code>) is a <b>force-fight zone</b> with a daily rotating battle format. Type <code>/pvp</code> for the hub.',
+        a: 'Three systems, each different. <code>/ladder</code> is the <b>Elite Four</b> — take and hold one of five seats (Champion, then Elite 1–4) for daily passive income. <code>/pvp queue &lt;singles|doubles&gt;</code> enters the <b>Poké Ball League</b>, a ranked seasonal ladder where you climb tiers for rewards. <code>/warzone</code> (<code>/wz</code>) is a <b>force-fight zone</b> with a daily rotating battle format. Type <code>/pvp</code> for the hub.',
       },
       {
         q: 'Why is there a countdown/delay when I teleport?',
@@ -3018,7 +3082,7 @@ const FAQ = [
       },
       {
         q: 'Will the server ever wipe or reset?',
-        a: 'No wipe is planned. The server is past its early launch and your progress is here to stay — any future change of that kind would be announced well in advance.',
+        a: 'Not within a season. Cobble Asia runs in <b>seasons</b>, and a new season is the one thing that resets the map — <b>Season 2 (Arctis) started on August 8, 2026</b>, so everything you earn now is safe for the rest of it. When a season does turn over it is announced <b>well in advance</b>, and the things that carried across the last one carried for a reason: <b>donator ranks and Season Vault contents were never touched by the Season 1 wipe</b>, and legacy SolForge gear is still playable today.',
       },
       {
         q: 'Are alternate accounts (alts) allowed?',

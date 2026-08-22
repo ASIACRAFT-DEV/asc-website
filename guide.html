@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/brand-frost.png" />
-  <link rel="stylesheet" href="styles.css?v=202608182023" />
+  <link rel="stylesheet" href="styles.css?v=202608222145" />
 </head>
 <body>
   <header class="nav">
@@ -601,7 +601,8 @@
           <li>Minor <strong>Jobs</strong> activity still helps — but it's no longer the main driver</li>
           <li>Catching, training, PokéHunts, Bingo and Battle Tower all still chip in</li>
         </ul>
-        <p>Every activity has a cap on how much it can contribute, so no single grind fills the bar — you reach 100% by playing across the server.</p>
+        <p>Every activity has a cap on how much it can contribute, so no single grind fills the bar — you reach 100% by playing across the server. Alphas &amp; Paradox pays 100 a defeat and caps at 600, i.e. six a day, and there's a daily earning budget across everything on top. Neither used to say a word when it stopped paying, which is indistinguishable from a broken counter — <code>/legend</code> now names <strong>which</strong> limit blocked a gain, and the two clear differently: a daily budget resets at midnight, a capped category only frees up when you spend the bar.</p>
+        <p>⚠️ <strong>Area Zero is a known gap.</strong> Its alphas and paradoxes die to direct damage rather than in a Cobblemon battle, so those kills currently pay coins and bounty but no Legend energy. A fix is built and goes live with the next server update.</p>
 
         <div class="s2-sub">Where you stand matters</div>
         <p>The roll respects the same spawn conditions <code>/pwiki</code> lists — biome, time of day and weather. If nothing is eligible where you're standing, your full bar is <strong>held, not spent</strong>: you'll be told to move somewhere a Legendary can actually appear, and you lose nothing.</p>
@@ -622,7 +623,7 @@
         <div class="s2-sub">Survival Mechanics — It's a Nuzlocke</div>
         <ul class="s2-list">
           <li>You <strong>draft 3 Pokémon</strong> from your party to start the run. The rest of your party is kept safe in your <strong>PC</strong> for the duration, and handed straight back when the run ends.</li>
-          <li><strong>If a Pokémon goes down, it's out for the entire run.</strong> No revives — not from a heal, not from the Shop. Choose your leads carefully.</li>
+          <li><strong>If a Pokémon goes down, it's out for the rest of the run unless you pay to bring it back.</strong> <strong>Revive</strong> is in the Tower Shop at <strong>2.5&times; the price of a Full Heal</strong>, scaled to your floor and prestige, and it restores the Pokémon that has been down the longest. Choose your leads carefully — buying a death back is meant to hurt.</li>
           <li><strong>No healing between floors.</strong> HP, status <em>and</em> PP all carry from floor to floor, so you can't top up with <code>/pokeheal</code>, a potion or a healer — you have to bring a real team, not one OP move.</li>
           <li>New team slots unlock at <strong>floors 10, 25 and 50</strong> (up to 6). Each one lets you draft an extra Pokémon <strong>out of your PC</strong> from the <code>/bt</code> menu.</li>
         </ul>
@@ -646,13 +647,14 @@
         <ul class="s2-list">
           <li><strong>❤ Heal Party</strong> — restore HP, status and PP on your surviving Pokémon. <em>Does not revive downed Pokémon.</em></li>
           <li><strong>🔄 Swap</strong> — one switch: retire a downed Pokémon and bring a fresh one in from your PC, at full health. This is the <em>only</em> way to recover from a death.</li>
-          <li><strong>🛒 Open Shop</strong> — spend the Tokens you've earned climbing.</li>
+          <li><strong>🛒 Open Shop</strong> — spend the Tokens you've earned climbing. This is where <strong>Revive</strong> lives, alongside heals and items.</li>
         </ul>
 
         <div class="s2-sub">Quality of Life</div>
         <ul class="s2-list">
           <li>Checkpoints are now saved every floor</li>
-          <li>Disconnecting no longer sends you back several floors</li>
+          <li>Disconnecting no longer sends you back several floors — and a run interrupted by a disconnect can no longer lose a Pokémon</li>
+          <li>The draft and swap pickers have a <strong>🔍 Search</strong> box, so pulling three Pokémon out of a full PC no longer means paging through hundreds</li>
         </ul>
 
         <div class="s2-sub">Balance Changes</div>
@@ -693,9 +695,11 @@
 
         <div class="s2-sub">Changes</div>
         <ul class="s2-list">
-          <li>One Elite Four</li>
+          <li><strong>One board, five seats</strong> — rank 1 is the <strong>Champion</strong>, ranks 2&ndash;5 are Elite 1 through 4. Beat the holder and you take their seat</li>
           <li><strong>NatDex OU</strong> format</li>
           <li>Requires <strong>8 Gym Badges</strong> to challenge</li>
+          <li>Holding a seat pays you <strong>daily by mail</strong> — Champion 500,000 coins + 500 Tokens, down to Elite 4 at 150,000 + 100</li>
+          <li><strong>Fusions are banned</strong>, a loss costs the title and a 12-hour cooldown, and a seat decays back to its NPC if the holder stops defending it</li>
         </ul>
         <p>Player Gym Leaders were a fun idea, but participation remained very low. Gym Badges will now play a much larger role in progression.</p>
 
@@ -706,6 +710,7 @@
         </div>
         <ul class="s2-list">
           <li><strong>Challenge them in any order</strong> — there is no unlock chain</li>
+          <li><strong>An over-levelled party is scaled down for the fight, not turned away</strong> — EVs, IVs, nature, ability, held item and moves all carry in as they are, and everything is restored afterwards. Legendaries and mythicals are banned from gym teams</li>
           <li>Four are Singles and four are Doubles, so no one team style clears the ladder</li>
           <li><strong>Every seat starts Season 2 vacant.</strong> Nobody carries a gym over from the beta — all eight are up for grabs</li>
           <li>The roster follows the banner calendar: Gen 1 owns the opening month, and the ladder changes region as the calendar turns</li>
@@ -969,15 +974,16 @@
         </div>
 
         <div class="s2-sub">The redstone ladder</div>
-        <p>Redstone used to sit behind a single wall at Intellect <strong>and</strong> Wisdom 20, which meant no redstone at all until you were nearly capped. It's a ladder now, and only TNT still asks for both maxed.</p>
+        <p>Redstone used to sit behind a single wall at Intellect <strong>and</strong> Wisdom 20, which meant no redstone at all until you were nearly capped. It's a ladder now, and only TNT still asks for both maxed. The rungs were <strong>halved</strong> after we measured the old numbers against the live save: of the 166 players with skill data, 8 could reach the old machine rung at all and exactly one had it. A gate one player in 166 can open is not pacing.</p>
         <div class="s2-table-wrap">
           <table class="s2-table">
             <thead><tr><th>Needs</th><th>Unlocks</th></tr></thead>
             <tbody>
-              <tr><td><strong>Intellect 6</strong></td><td>Inert parts and transport — lever, tripwire hook, note block, redstone lamp, target, daylight detector, lightning rod, rail, minecart, chest &amp; furnace minecart, slime, honey</td></tr>
-              <tr><td><strong>Intellect 10</strong></td><td>Wiring — redstone dust, torch and block, repeater, comparator, powered / detector / activator rail</td></tr>
-              <tr><td><strong>Intellect 14</strong></td><td>Machines — piston, sticky piston, observer, dispenser, dropper, hopper minecart, sculk sensors</td></tr>
-              <tr><td><strong>Intellect 16 + Wisdom 12</strong></td><td>Crafter</td></tr>
+              <tr><td><strong>Free</strong></td><td><strong>Observer</strong> — ungated entirely, along with the hopper. Neither ticks anything on its own</td></tr>
+              <tr><td><strong>Intellect 3</strong></td><td>Inert parts and transport — lever, tripwire hook, note block, redstone lamp, target, daylight detector, lightning rod, copper bulb, rail, minecart, chest &amp; furnace minecart, slime, honey</td></tr>
+              <tr><td><strong>Intellect 6</strong></td><td>Wiring — redstone dust, torch and block, repeater, comparator, powered / detector / activator rail</td></tr>
+              <tr><td><strong>Intellect 9</strong></td><td>Machines — piston, sticky piston, dispenser, dropper, hopper minecart, sculk sensors</td></tr>
+              <tr><td><strong>Intellect 12</strong></td><td>Crafter</td></tr>
               <tr><td><strong>Both maxed (20 / 20)</strong></td><td>TNT, TNT minecart and the lectern</td></tr>
             </tbody>
           </table>
@@ -989,7 +995,7 @@
           <li><strong>Everything up to and including diamond is free.</strong> Wood, stone, gold, iron and diamond gear are all ungated — <strong>netherite is the only gated tier</strong>, so nothing you make in your first days is locked. <strong>Hoppers, brewing stands, enchanting tables and ender chests</strong> aren't gated either</li>
           <li><strong>Nothing Pokémon-related is ever gated</strong> — Poké Balls, TMs, Mega Showdown items, ASC crate keys and Forge relic gear all bypass the system completely</li>
           <li>Holding a gated item never stops you opening doors, chests or anything else</li>
-          <li><code>/skills req</code> tells you what the item in your hand needs, and whether you clear it</li>
+          <li><code>/skills req</code> tells you what the item in your hand needs, and whether you clear it. A refusal lists <strong>every</strong> unmet requirement with your current level in each — a gate on two attributes used to name only one, so you'd raise that stat and get refused again</li>
         </ul>
       </div>
 
@@ -1029,7 +1035,7 @@
     <p class="footer-dim">Not affiliated with Mojang, Nintendo, or The Pokémon Company.</p>
   </footer>
 
-  <script src="data.js?v=202608182023"></script>
-  <script src="app.js?v=202608182023"></script>
+  <script src="data.js?v=202608222145"></script>
+  <script src="app.js?v=202608222145"></script>
 </body>
 </html>

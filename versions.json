@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-23T06:24:06.131Z",
+  "generatedAt": "2026-08-23T12:19:58.332Z",
   "count": 40,
   "mods": [
     {
@@ -45,7 +45,7 @@
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "2.22.0"
+      "version": "2.24.0"
     },
     {
       "repo": "asc-jobs",
@@ -130,7 +130,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "9.99.0"
+      "version": "10.1.0"
     },
     {
       "repo": "asc-forge",
@@ -150,7 +150,7 @@
     {
       "repo": "asc-legendspawns",
       "name": "CobbleAsia Legend Spawns",
-      "version": "2.12.0"
+      "version": "2.12.1"
     },
     {
       "repo": "asc-levels",
@@ -200,7 +200,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.32.0"
+      "version": "1.33.0"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-24T18:25:39.514Z",
+  "generatedAt": "2026-08-25T00:41:41.842Z",
   "count": 40,
   "mods": [
     {
@@ -10,7 +10,7 @@
     {
       "repo": "asc-claimblocks",
       "name": "ASC Claim Blocks",
-      "version": "1.1.0"
+      "version": "1.2.0"
     },
     {
       "repo": "asc-clans",
@@ -45,7 +45,7 @@
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "2.25.0"
+      "version": "2.27.0"
     },
     {
       "repo": "asc-jobs",
@@ -90,7 +90,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.58.0"
+      "version": "3.59.0"
     },
     {
       "repo": "asc-battlepass",
@@ -125,12 +125,12 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "3.19.0"
+      "version": "3.21.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.3.0"
+      "version": "10.7.0"
     },
     {
       "repo": "asc-forge",
@@ -180,7 +180,7 @@
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.68.1"
+      "version": "4.69.0"
     },
     {
       "repo": "asc-ranks",
@@ -200,7 +200,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.35.0"
+      "version": "1.36.0"
     }
   ]
 }

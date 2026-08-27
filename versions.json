@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-27T05:49:17.544Z",
+  "generatedAt": "2026-08-27T17:06:38.694Z",
   "count": 40,
   "mods": [
     {
@@ -125,12 +125,12 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "3.21.0"
+      "version": "3.23.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.11.0"
+      "version": "10.12.0"
     },
     {
       "repo": "asc-forge",
@@ -150,7 +150,7 @@
     {
       "repo": "asc-legendspawns",
       "name": "CobbleAsia Legend Spawns",
-      "version": "2.12.1"
+      "version": "2.13.0"
     },
     {
       "repo": "asc-levels",

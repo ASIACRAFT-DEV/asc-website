@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-26T19:38:57.028Z",
+  "generatedAt": "2026-08-27T05:49:17.544Z",
   "count": 40,
   "mods": [
     {
@@ -15,7 +15,7 @@
     {
       "repo": "asc-clans",
       "name": "ASC Clans",
-      "version": "1.30.0"
+      "version": "1.31.0"
     },
     {
       "repo": "asc-cobsave",
@@ -45,7 +45,7 @@
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "2.30.0"
+      "version": "2.31.0"
     },
     {
       "repo": "asc-jobs",
@@ -90,7 +90,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.59.0"
+      "version": "3.60.0"
     },
     {
       "repo": "asc-battlepass",
@@ -130,7 +130,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.9.0"
+      "version": "10.11.0"
     },
     {
       "repo": "asc-forge",

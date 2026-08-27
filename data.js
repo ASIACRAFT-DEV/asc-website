@@ -263,6 +263,7 @@ const FEATURES = {
       { cmd: '/bt', desc: 'Open Battle Tower S2 — draft a team and start a roguelike climb' },
       { cmd: '/bt battle', desc: 'Fight the next floor of your run (alias /bt next)' },
       { cmd: '/bt forfeit', desc: 'Abandon your current run' },
+      { cmd: '/ascbt unstuck', desc: 'Free a wedged floor battle and keep your run — 90s minimum battle age' },
     ],
     notes: [
       'Checkpoints save every floor — closing the menu or disconnecting won’t waste your choice or send you back floors.',
@@ -308,6 +309,11 @@ const FEATURES = {
         body:
           'Farming the zone is no longer quiet. <strong>10% of every boss payout you bank lands on your own head as a bounty</strong> — a 100k Paradox defeat prices you at 10,000, a 300k Legendary at 30,000 — and it scales with your damage share, because it is read off the coins you were actually paid. Wild alphas and paradoxes pay no coins, so they use a flat tier instead: alpha 5,000, paradox 10,000, legendary 20,000, stacking. Cross 5,000 and you are WANTED server-wide; it caps at 250,000, and it survives a logout, a restart and dying.',
       },
+      {
+        title: 'Pack for a war of attrition',
+        body:
+          'Fights here are decided by whoever runs out of heals last, so what you carry in is capped: <strong>16 Golden Apples, 2 Enchanted Golden Apples, 2 Totems of Undying and 16 Ender Pearls</strong>. SolForge and Arctis armor stay legal — the set you paid for is not the thing being limited.',
+      },
     ],
     commands: [
       { cmd: '/az', desc: 'Area Zero info, HUD progress and status' },
@@ -319,6 +325,8 @@ const FEATURES = {
       'The Alpha catch is decided by Last Hit, so bring your best DPS.',
       'Walk into the sphere carrying a bounty and the whole server is told, with your live board rank. Logging out does not clear it.',
       '<code>/speed</code> above 1× is refused inside Area Zero, however you got in — the zone is meant to be crossed on foot.',
+      'Consumables are capped at the door: 16 Golden Apples, 2 Enchanted, 2 Totems, 16 Ender Pearls. Armor is not capped.',
+      'Alpha and Paradox kills in the sphere credit your <code>/legend</code> bar — they did not before 27 August, and could not have.',
     ],
   },
 
@@ -463,14 +471,19 @@ const FEATURES = {
     tag: '/dungeon · /party',
     category: 'Battling',
     blurb:
-      'Rank-scaled daily keys, puzzles, parkour, skill-check trainer battles, party runs with shared lives and a Shard shop. Clear dungeons for relics, fragments and prestige.',
+      'Three runs a week, puzzles, parkour, skill-check trainer battles, party runs with shared lives — and a Boss Rush other parties can invade. Clear dungeons for relics, fragments and prestige.',
     intro:
-      'Dungeons are instanced challenge runs with objectives, optional side-quests, and a layered reward economy. Entry is gated by keys you earn daily based on your rank — and you can take them on solo or as a party. Beyond combat, runs now chain puzzles, parkour and trainer skill-checks, all tracked on a live dungeon sidebar.',
+      'Dungeons are instanced challenge runs with objectives, optional side-quests, and a layered reward economy. Entry is a weekly budget — three runs for everyone, buyable back with Gems — and you can take them on solo or as a party. Beyond combat, runs chain puzzles, parkour and trainer skill-checks, all tracked on a live dungeon sidebar. In a Boss Rush dungeon, other parties can come in after you.',
     how: [
       {
-        title: 'Get your daily keys',
+        title: 'Spend your three runs a week',
         body:
-          'Each new day, your Dungeon Keys top up to an allowance based on your donator rank — up to five at the top tier.',
+          'Entry is a flat <strong>3 runs a week for everyone</strong> — no rank scaling and no daily top-up. Out of runs, Gems buy one back with <code>/dungeon attempts buy</code> at <strong>100 → 200 → 400</strong> Gems, up to three buy-backs a week. A bought run is extra allowance rather than a rubbed-out one, so the meter reads honestly: <code>2/3 used · +1 bought</code>. Check where you stand with <code>/dungeon attempts</code>.',
+      },
+      {
+        title: 'Know which dungeons are hostile',
+        body:
+          'Boss Rush dungeons can be <strong>PvP zones</strong>, and the <strong>Solforge Nexus is one</strong>. Another party can walk in and sabotage your run — that is the point of it. Both fighters have to be inside the same dungeon, so an arrow from outside still bounces. A PvP kill <strong>spends a dungeon life</strong> like any other death and your corpse stays owner-locked, so nobody loots the player they just killed: what you lose is the life and the time, not your kit. The entry banner says <code>⚔ PvP IS ENABLED HERE</code> before you start. <strong>Magma Palace is peaceful.</strong>',
       },
       {
         title: 'Run solo or as a party',
@@ -505,7 +518,12 @@ const FEATURES = {
       {
         title: 'Earn relic rewards',
         body:
-          'Clearing pays coins and tokens scaled by difficulty, Pokédex reward tokens scaled by how many side-quests you finished, and always a SolForge Crate Key — with a chance at a random SolForge gear piece.',
+          'Clearing pays coins and tokens scaled by difficulty, Pokédex reward tokens scaled by how many side-quests you finished, and a chance at a random SolForge gear part. <strong>Crate Keys no longer drop from a clear</strong> — they come off the weekly quest board instead, so key income no longer scales with how many runs you can cram in.',
+      },
+      {
+        title: 'Take the weekly board for your keys',
+        body:
+          'Two weekly objectives carry the whole SolForge Key supply: <strong>clear 1 dungeon → 1 Orb + 1 key</strong>, and <strong>clear all 3 → 3 Orbs + 2 keys</strong>. Three keys for a full week, the same whether you burn your runs in one night or spread them out. Keys earned while you are offline are banked rather than dropped.',
       },
       {
         title: 'Spend your Shards',
@@ -520,13 +538,16 @@ const FEATURES = {
     ],
     commands: [
       { cmd: '/dungeon', desc: 'Open the dungeon hub and enter runs (also /ascdun)' },
+      { cmd: '/dungeon attempts', desc: 'How many of your 3 weekly runs are left' },
+      { cmd: '/dungeon attempts buy', desc: 'Buy a run back with Gems — 100 → 200 → 400, three a week' },
       { cmd: '/dungeon shop', desc: 'Spend Shards in the Shard Shop' },
       { cmd: '/dungeon setbonus', desc: 'Preview the type Set Bonuses your party grants' },
       { cmd: '/party', desc: 'Form a party for shared-lives dungeon runs' },
     ],
     notes: [
-      'The <strong>Solforge Nexus</strong> is the dungeon open right now — INSANE difficulty, 8 badges and Ace rank to enter, 3 boss-rush keys to reach the finale. More are being built.',
-      'Higher ranks get more daily keys — up to five at the top tier.',
+      '<strong>Solforge Nexus</strong> — INSANE, 8 badges and Ace rank to enter, <strong>4 keys</strong> to reach the final chamber, and <strong>PvP is on</strong>.',
+      '<strong>Magma Palace</strong> — HARD, 4 keys, no PvP. <strong>Ender Palace</strong> is still being built.',
+      '<strong>3 runs a week for every rank.</strong> Gems buy up to three of them back, at 100 → 200 → 400.',
       'Side-quests are optional but directly scale your reward quality.',
       'Set Bonuses reward type-themed teams: six mons of one type is the strongest single bonus, but mixed dual-type squads can stack several at once.',
       'A single dungeon can chain reach → puzzle → parkour → trainer battle → boss as objectives or side-quests.',
@@ -661,9 +682,11 @@ const FEATURES = {
     commands: [
       { cmd: '/pvp', desc: 'Open the PvP hub — queue ranked and check your tier' },
       { cmd: '/pvp rank', desc: 'Check your ranked tier and progress' },
+      { cmd: '/pvp forfeit', desc: 'Concede the bout you are in — ranked, Elite Four and AI alike' },
     ],
     notes: [
       'Master Tier is capped at 10 players and re-evaluated every 24 hours by total wins.',
+      'Outside ranked, PvP is opt-in: Area Zero, a Boss Rush dungeon, or your own claim with <code>/ascclaim pvp on</code>.',
       'The old open-world Warzone is retired — clan-vs-clan combat is now Clan Wars.',
     ],
   },
@@ -1348,6 +1371,7 @@ const COMMANDS = [
       { cmd: '/bt', desc: 'Battle Tower — roguelike climb: draft a team, ascend, shop every few floors' },
       { cmd: '/bt battle', desc: 'Fight the next floor of your run (alias /bt next)' },
       { cmd: '/bt forfeit', desc: 'Abandon your Battle Tower run' },
+      { cmd: '/ascbt unstuck', desc: 'Free a wedged floor battle and keep your run — 90s minimum battle age' },
       { cmd: '/scout', desc: 'Battle-Scout — see the opponent’s revealed team mid-fight (alias /ascscout)' },
       { cmd: '/gym', desc: 'Challenge the eight gym leaders — an over-tier party is scaled down for the fight, not turned away' },
       { cmd: '/ladder', desc: 'The Elite Four — one board, Champion on top of Elite 1–4. Needs 8 badges; seats pay daily by mail' },
@@ -1358,6 +1382,8 @@ const COMMANDS = [
       { cmd: '/az', desc: 'Area Zero combat zone — bosses, the bounty board and the WANTED list' },
       { cmd: '/wanted', desc: 'Who is carrying a bounty in Area Zero, and how big (alias /bounty)' },
       { cmd: '/dungeon', desc: 'Enter seasonal dungeons' },
+      { cmd: '/dungeon attempts', desc: 'How many of your 3 weekly runs are left' },
+      { cmd: '/dungeon attempts buy', desc: 'Buy a run back with Gems — 100 → 200 → 400, three a week' },
       { cmd: '/dungeon setbonus', desc: 'Preview your party’s type Set Bonuses' },
       { cmd: '/party', desc: 'Party up for shared-lives dungeon runs' },
       { cmd: '/tg', desc: 'Training Grounds — EXP buffs' },
@@ -1442,6 +1468,7 @@ const COMMANDS = [
       { cmd: '/ascclaim transfer <player> <amt>', desc: 'Send claim blocks to another player' },
       { cmd: '/ascclaim voucher <amt>', desc: 'Turn blocks into a tradeable voucher (redeem with /ascclaim redeem)' },
       { cmd: '/ascclaim buy <amt>', desc: 'Buy extra claim blocks with coins' },
+      { cmd: '/ascclaim pvp on|off', desc: 'Switch PvP on inside your own claim — whole-claim, owner included' },
     ],
   },
   {
@@ -1519,27 +1546,27 @@ const GUIDE = [
 const NEWS = [
   {
     tag: 'New',
-    title: 'Nobody farms Area Zero quietly any more',
-    body: 'Clearing the zone used to be free and invisible. Now <strong>10% of every boss payout you bank lands on your own head as a bounty</strong> — cross 5,000 and you are WANTED server-wide, and walking into the sphere with a pot on you announces it to everyone. It survives a logout, so <code>/quit</code> is not the answer any more.',
-    link: 'feature.html?f=areazero',
+    title: 'Boss Rush is a PvP zone now — and dungeons are a weekly run',
+    body: 'Another party can walk into the Solforge Nexus and sabotage your run. A kill costs you a life, not your kit. And the daily key allowance is gone: <strong>everyone gets 3 runs a week</strong>, Gems buy one back, and SolForge Keys come off the <strong>weekly quest board</strong> instead of dropping on every clear. <strong>Magma Palace is open</strong> too — HARD, four keys, no PvP.',
+    link: 'feature.html?f=dungeons',
   },
   {
     tag: 'Patched',
-    title: 'Gyms scale to you, and the job board finally pays what it says',
-    body: 'Gyms no longer bounce an over-levelled party — they <strong>scale it down for the fight and put it back after</strong>. The job board had been advertising 25,000 and paying 10,000 all season; that is fixed <em>and</em> dailies went up to <strong>50,000</strong>. Plus a password with a symbol in it can finally be typed, a full inventory stops eating your mail, and a ball lost to a battle error comes back.',
+    title: 'The raid watchdog was cancelling fights you were winning',
+    body: 'In one ten-hour boot it force-cleared <strong>64 raid battles — and 57 of those players won within two minutes</strong> of being told their battle had timed out. It was reading the clock that says when the <em>last</em> battle ended. Fixed, along with a raid “-Def IV Candy” that was really a -HP candy.',
     link: 'patchnotes.html',
   },
   {
-    tag: 'New Event',
-    title: 'The Creation Chain — a second road to the box legends',
-    body: 'The Spear Pillar is armed. Imprint your own <strong>Uxie, Mesprit and Azelf</strong> onto Nether Stars, forge the <strong>Red Chain</strong>, and summon <strong>Dialga, Palkia or Giratina</strong> as a Mythic raid the whole server can fight — and actually catch. Clear all three and a spare Chain becomes the <strong>Azure Flute</strong> for Arceus.',
-    link: 'feature.html?f=creation',
+    tag: 'Changed',
+    title: 'SolForge stays in Area Zero — the heals get capped',
+    body: 'The ban lasted a day. The thread met in the middle and landed somewhere better: you now carry in at most <strong>16 Golden Apples, 2 Enchanted, 2 Totems and 16 Ender Pearls</strong>. Area Zero fights are decided by whoever runs out of heals last, so that is the thing worth capping — not a set people paid for. Both sides signed off on the numbers.',
+    link: 'feature.html?f=areazero',
   },
   {
-    tag: 'Season 2',
-    title: 'Season 2 — Arctis is live',
-    body: 'The gates are open. <strong>Arctis launched August 8</strong> on a fresh, pre-generated world with a new spawn city, rebuilt breeding, Pokémon fishing, the player Bazaar and a whole new interface. Everyone starts from zero — grab the CobbleAsia modpack from Discord and jump in.',
-    link: 'guide.html',
+    tag: 'Fixed',
+    title: 'Area Zero kills finally count toward /legend',
+    body: 'Killing Alphas and Paradox in the sphere credited the Legend bar with <strong>nothing</strong>, and structurally never could have — while the screen named Area Zero as “the densest source” for that exact category. Both kill routes credit it now. Raid-den catches also started counting for Battle Pass quests, Catch Combos and research tasks.',
+    link: 'patchnotes.html',
   },
 ];
 
@@ -1548,6 +1575,36 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-08-27',
+    tag: 'Patched',
+    title: 'Dungeons become a weekly run, Boss Rush turns hostile, and the raid watchdog stops cancelling fights you were winning',
+    changes: [
+      { type: 'new', text: '🏰 <strong>Dungeons are a weekly run now, not a daily grind.</strong> The rank-scaled daily key allowance is gone. Everyone — every rank — gets <strong>3 runs a week</strong>, and the daily sub-cap is switched off entirely, because with only three runs in a week it was a second refusal message for the same wall. Out of runs, <strong>Gems buy one back</strong> with <code>/dungeon attempts buy</code> at <strong>100 → 200 → 400</strong> Gems, up to 3 buy-backs a week. A bought run is added as extra allowance rather than rubbing out one you already used, so the meter stays honest: <code>2/3 used · +1 bought</code>. The Gems come out before the run goes in, so a failure can never mint a free one, and a buy is refused outright while you still have free runs left rather than quietly burning Gems on allowance you already had.' },
+      { type: 'new', text: '🔑 <strong>A clear no longer drops a SolForge Crate Key — the weekly quest board pays them instead.</strong> Key income used to scale with how many runs you could fit into a day, which at 3 runs a week with buy-backs on sale would have made crate keys indirectly purchasable with Gems. Two weekly objectives now carry the entire supply: <strong>clear 1 dungeon → 1 Orb + 1 key</strong>, <strong>clear all 3 → 3 Orbs + 2 keys</strong>. Three keys for a full week, and the same three whether you burn your runs in one night or spread them out. Grade still drives coins, tokens, loot and the SolForge <em>part</em> roll — it is only the crate key that moved. Keys earned while you are offline are banked, not dropped on the floor.' },
+      { type: 'new', text: '⚔️ <strong>Boss Rush is a PvP zone, and the Solforge Nexus is live with it on.</strong> Another party can walk into the dungeon and sabotage your run — that is the point of it. Both fighters have to be inside the same dungeon, so an arrow from outside the sphere still bounces and two adjacent dungeons never merge into one arena. A PvP kill <strong>spends a dungeon life</strong> like any other death, and your corpse stays owner-locked, so nobody loots the player they just killed: the sabotage is the lost life and the lost time, not your kit. <strong>Nobody finds out by dying</strong> — the entry banner prints <code>⚔ PvP IS ENABLED HERE</code> before the run starts and both dungeon browsers carry the warning on the tile. <strong>Magma Palace is peaceful</strong>; the Nexus is not.' },
+      { type: 'new', text: '🌋 <strong>Magma Palace is open.</strong> A second dungeon, <strong>HARD</strong> against the Nexus’s INSANE, four keys to the final chamber, and no PvP. Ender Palace is still being built.' },
+      { type: 'fixed', text: '🔒 <strong>The Solforge Nexus could never have had more than three keys, and one whole key type could never be earned.</strong> The slot range on every key command was hard-coded 1–3, so slots 4 and 5 were literally untypable — and no key could be satisfied by a <em>scripted</em> arena boss, because the seven authored bosses (Wraith, Colossus, Artificer…) reported their defeat down a path that never touched the key manager. A dungeon whose mid-run content <strong>is</strong> its gate bosses therefore had no way to turn one into a key. Both fixed: the Nexus now runs <strong>four keys before the final chamber</strong>, two of them from bosses. Five keys also overran the vanilla sidebar and pushed the <code>⛩ FINAL CHAMBER</code> row — the one line that tells you whether the run is finishable — off the bottom of the screen; the panel now squeezes cheapest-loss-first, and the chamber row and the key you are currently walking to always survive.' },
+      { type: 'improved', text: '🍎 <strong>SolForge armor stays legal in Area Zero. The consumables get capped instead.</strong> A ban shipped on the 24th and was pulled the same day: the suggestion thread met in the middle and it was not the ban. Area Zero fights are decided by whoever runs out of heals last — unbreakable armor was one way to never lose that race, but capping the heals attacks the race itself without taking a paid item away from the people who bought it. Carrying into the sphere is now capped at <strong>16 Golden Apples, 2 Enchanted Golden Apples, 2 Totems of Undying and 16 Ender Pearls</strong>. Both sides of that thread signed off on these numbers.' },
+      { type: 'fixed', text: '⚡ <strong>Killing Alphas and Paradox Pokémon in Area Zero credited nothing to <code>/legend</code> — and never could have.</strong> That category was granted from exactly one event, a Cobblemon battle victory, and <strong>Area Zero never produces one</strong>: ambient specials die as entity deaths from direct damage, and bosses die by having a shared HP pool drained. No battle is involved either way. The report came with its own proof — a Paradox kill that banked <strong>100,000 coins and 10,000 bounty in the same second, and zero Legend energy</strong>. Worse, the <code>/legend</code> screen named Area Zero as “the densest source” for that exact category. Both kill routes now credit the bar, the boss route carries its tier so an Alpha, a Paradox and a Legendary each land in the right category, and the screen’s copy is true rather than deleted.' },
+      { type: 'fixed', text: '🎁 <strong>Catching a raid-den boss counted for nothing across three more systems.</strong> Den catches did not advance a <strong>Battle Pass “catch N” quest</strong>, did not build a <strong>Catch Combo</strong> (so none of the extra shiny rolls the combo exists to grant), and did not credit a <strong>DexQuest research task</strong> — you could catch the exact target species in a den and watch the task sit at 0. The den mod hands the Pokémon straight into your party without ever firing the capture event everything downstream listens for, and two existing bridges for this problem covered neither. All three now credit through the same shared path a Poké Ball catch uses, so a den catch is worth exactly what a normal catch is worth — and no more, because the two entry points are mutually exclusive by construction.' },
+      { type: 'fixed', text: '🐉 <strong>The raid stall watchdog cancelled 57 battles that were about to be won.</strong> In a single ten-hour boot it force-cleared 64 raid battles, and <strong>57 of those players logged a win within two minutes</strong> — they were told “your battle timed out, use <code>/ascraid battle</code> to try again” in the middle of a fight they were winning, and re-queued out of it. The watchdog was asking “has this battle run too long?” of a field that records when the <em>previous</em> battle <em>ended</em>, so for a fight in progress it read either zero or a stale timestamp and went true within seconds of the first turn. It now reads a stamp written when the battle actually starts.' },
+      { type: 'fixed', text: '🍬 <strong>The “-Def IV Candy” from a raid was a -HP candy.</strong> Two rows of the reward table were paired wrong — the pairing English suggests rather than the one Cobblemon uses — so the chat line and the item disagreed on <code>brittle_candy</code> and <code>sickly_candy</code>. The other ten were checked one by one against the live Cobblemon jar and are correct. Fixing the table alone would have reached nobody, because those labels were already written into all <strong>41 live boss files</strong> and the stored value wins, so the labels are repaired in place at load — text only, never a command, a chance or an item, and any label an admin renamed by hand is left alone.' },
+      { type: 'new', text: '🏆 <strong><code>/ascbt unstuck</code> finally exists.</strong> It was described as working in three separate places in our own source and had <strong>never been registered as a command</strong>. That became urgent the moment <code>/endbattle</code> stopped handing out free floor re-rolls, because <code>/endbattle</code> was the only lever a wedged player had left — closing the exploit removed the recovery path. <code>/ascbt unstuck</code> force-ends the stuck battle and <strong>keeps your run</strong>: same floor, same party state. It is gated on the battle being at least <strong>90 seconds old</strong>, and that number is the whole anti-exploit — a genuine wedge lasts minutes, so it never obstructs a real one, while anyone farming re-rolls waits 90 seconds for a different trainer on the same floor carrying the same HP and PP. That is a worse deal than playing the floor.' },
+      { type: 'fixed', text: '🔁 <strong><code>/endbattle</code> was a free Battle Tower re-roll.</strong> Use it mid-fight and you could take a fresh trainer on the floor you were already on, indefinitely — one helper was dropping the in-battle flag without ending the run, and every guard enforcing the one-shot gauntlet rule was keyed on that same flag, so a single call disarmed all three. The log had been carrying it plainly: one boot showed <strong>92 floor battles, 46 of them inside fifteen minutes at three-to-five second intervals, and not one run-end line all boot</strong>, with the opponents jumping around instead of climbing. Leaving a floor battle now ends the run the way it always should have. <strong>Nothing is being clawed back from anyone who used it</strong> — it was a live command doing what it appeared to do.' },
+      { type: 'fixed', text: '🐄 <strong>The Ranch Upgrade has never once been visible in <code>/bt shop</code>.</strong> One character: the icon was registered under <code>ascbreeding:</code> and the item exists as <code>asc-breeding:</code>, with the hyphen. The lookup returned nothing, the entry was silently hidden from the shop on every boot, and so the thing a suggestion thread asked for was <strong>announced as shipped at 2,000 Tokens on the 18th and no player could ever see it</strong>. Nobody was short-changed — only the icon lookup was wrong — but there was no way to reach it. Fixed, with a migration, since the bad id was already written into the live shop file and would have outlived a corrected default forever.' },
+      { type: 'fixed', text: '🗳 <strong>Voting offline and logging in later lost the reward.</strong> Delivery emptied the queue and saved it to disk <em>before</em> paying out, and it ran at a point in the join sequence where the reward commands could not resolve the player yet — so the vote was consumed, the reward silently did nothing, and the failure was reported to a silenced source and never reached the log. That is why it went unreported for so long: from the server’s side it looked like a clean delivery. <strong>40+ banked votes were sitting in the queue</strong> when this was reported. Delivery now waits until you are properly in the world, retries a join that is still settling, and <strong>a vote is removed only once it has actually been paid</strong>. Votes cast under a site username that is not your exact IGN were filed somewhere you could never reach — <code>Tamashi</code> waiting for <code>Tamashi_Rei</code>, <code>tippearies67</code> for <code>tipperaries67</code> — and staff can now find and release those.' },
+      { type: 'fixed', text: '🧪 <strong>Every Repel bought from <code>/shop</code> was a plain glass bottle, and always had been.</strong> Buy one, get an empty bottle; right-click does nothing; <code>/repel</code> insists nothing is active. All three symptoms are one fault: a Repel’s entire identity is the data tag, name and lore written on top of a vanilla bottle, and the shop had stored all three tiers stripped of every one of them — byte-identical bare bottles. So <code>/repel</code> was correctly reporting an accurate absence, and the “bought air” guard could not catch it because the stack was not empty; only the identity on top was gone. It went unreported for weeks because a bottle that does nothing reads as user error. The shop now builds those three entries from code rather than depending on a file round-trip at all.' },
+      { type: 'fixed', text: '⛏ <strong>Mining’s Motherlode perk was a coin printer.</strong> It returned a copy of a block’s loot while you kept the original, on <em>any</em> pickaxe-mineable block — so every place-then-break cycle multiplied your stock. On cobblestone that is a curiosity; on a placeable block the shop buys back it is a compounding faucet. One player minted roughly <strong>1,061 Deoxys Meteorites in a single session — about 10.6M coins of fabricated value</strong>. Motherlode is now restricted to <strong>ores only</strong> (plus Ancient Debris, which carries no ore tag in vanilla and would otherwise have been an unannounced nerf to the main reason people level Mining). Timber, Archaeology and Green Thumb are unchanged.' },
+      { type: 'fixed', text: '🥊 <strong>There was no <code>/pvp</code> way out of an Elite Four battle.</strong> <code>/pvp forfeit</code> could not see a ladder bout at all — it searched the player-versus-player match list, and Elite Four, Champion and ranked ladder bouts live somewhere else entirely — so it answered “You’re not in a PvP battle” to someone plainly in one. Forfeit now covers ladder and AI bouts, and scores them with the same rules a disconnect uses rather than inventing new ones: a bout that never reached turn 1 is a genuine freeze and refunds the attempt, and a bout that was being played is a loss with the fee consumed.' },
+      { type: 'new', text: '🛡 <strong><code>/ascclaim pvp on</code> — switch PvP on inside your own claim.</strong> Area Zero was the only place two players could hit each other, which is no use at all for sparring or checking whether a piece of Forge gear does what it says. Stand in your claim, run it, and any two players <strong>both inside that claim</strong> can fight while the server stays PvP-off everywhere else. Two things worth knowing before you flip it: it is a <strong>whole-claim switch, not a per-player grant</strong> — it applies to you too, and it cannot be scoped to your Co-Owner group no matter what that line in the Flan config looks like — and only the claim owner can change it.' },
+      { type: 'fixed', text: '🐲 <strong>Rayevoir has been removed.</strong> The Rayquaza–Gardevoir fusion could Mega Evolve into a form with <strong>865 BST against Mega Rayquaza’s 780</strong>, while keeping Dragon/Fairy typing (no 4× Ice weakness, Fairy STAB) and a weather-lock ability — because to the game it <em>is</em> a Rayquaza, and nothing downstream re-checked the fusion. Both forms are now stripped at startup. <strong>Nothing is deleted from anyone’s box</strong>: a Pokémon carrying it resolves to an ordinary Rayquaza from that moment on.' },
+      { type: 'fixed', text: '🎒 <strong>Switching the event world on emptied the players who were already standing in it.</strong> Enabling the sandbox ran the code meant for a player <em>joining</em> it, which flushed the inventory they were carrying — ordinary main-world items, from before the sandbox existed — into an event profile, and the first time they walked out they arrived in the overworld empty-handed with their belongings sealed in a profile only visible from inside. Nothing was deleted at that point, but it is indistinguishable from deletion to the player, and the recovery made it worse: with people reporting mass loss, event profiles were hand-cleared, which destroyed exactly the items they were missing. Enabling now flushes what you are carrying to your <strong>normal</strong> inventory, hands you the event profile immediately, and <strong>tells you in the world what just happened</strong>. Separately, <code>/ascwt nocommand</code> had never blocked a single command — a world typed without its namespace could never match, while the list rendered the bad entry straight back so the blocklist read as active. Events were run believing <code>/fly</code>, <code>/tpa</code> and <code>/speed</code> were off. Fixed across all 21 world settings, with a one-shot repair for entries already on disk.' },
+      { type: 'fixed', text: '🏷 <strong>NPC nametag colours have been inert since they shipped.</strong> Two names were being set per NPC and the wrong one reached players, so colour codes rendered literally — <code>&amp;6Solis</code> rather than a gold <em>Solis</em> — and <code>/ascnpc setcolor</code>, including rainbow and the auto palette, has done nothing since v2.9.0. The feature read as working because an uncoloured nametag looks like a plain nametag.' },
+      { type: 'improved', text: '🔐 <strong>Staff can whitelist a player through the alt gate by name, not just by address.</strong> The old exemption pinned the address a player was last seen on, so it stopped working the moment their IP changed and re-blocked everyone in the household on the new lease — which is what three tickets on the same day were: <em>“my brother had got us both verified but our ip’s changed”</em>. The gate now takes a username, checks it at every login, survives a new address, can be set before that player has ever connected, and — unlike the address exemption — does not switch alt protection off for everyone else on the same line.' },
+      { type: 'improved', text: '🏅 <strong>Where we are with gym battles that refuse to start.</strong> Twelve releases went into this in five days and it is not closed, so rather than claim it is: the battle engine intermittently declines a gym battle, and both the decline and the recovery have now been instrumented end to end — the refusal names itself, a dead-on-arrival battle leaves evidence, and a parked dispatch is asked why it is parked. What the last boot proved is that the decline is <strong>transient</strong>, clearing on its own in 30 to 114 seconds, which means the immediate retry we shipped fires far too early to help. That is the next fix. In the meantime a gym that will not start is worth re-trying after a minute rather than repeatedly in the same breath. Two real fixes did land alongside the diagnosis: a challenger was being refused for one forme-changing ability while the leader was protected against five, and the ability gate now covers the same set on both sides.' },
+    ],
+  },
   {
     date: '2026-08-22',
     tag: 'Patched',

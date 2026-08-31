@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-08-31T02:24:11.828Z",
+  "generatedAt": "2026-08-31T12:10:38.439Z",
   "count": 40,
   "mods": [
     {
@@ -90,7 +90,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.62.0"
+      "version": "3.63.0"
     },
     {
       "repo": "asc-battlepass",
@@ -100,7 +100,7 @@
     {
       "repo": "asc-breeding",
       "name": "CobbleAsia Breeding",
-      "version": "1.28.0"
+      "version": "1.29.0"
     },
     {
       "repo": "asc-chestshop",
@@ -125,12 +125,12 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "3.26.0"
+      "version": "3.30.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.20.1"
+      "version": "10.23.0"
     },
     {
       "repo": "asc-forge",
@@ -175,12 +175,12 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.58.0"
+      "version": "2.60.0"
     },
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.69.0"
+      "version": "4.70.0"
     },
     {
       "repo": "asc-ranks",
@@ -190,7 +190,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.19.0"
+      "version": "3.21.0"
     },
     {
       "repo": "asc-transform",
@@ -200,7 +200,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.36.0"
+      "version": "1.37.0"
     }
   ]
 }

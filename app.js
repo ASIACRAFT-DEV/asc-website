@@ -131,6 +131,10 @@ if (newsGrid && typeof NEWS !== 'undefined') {
 const patchPreview = document.getElementById('patch-preview');
 if (patchPreview && typeof PATCHNOTES !== 'undefined') {
   const LABEL = { new: 'New', improved: 'Improved', fixed: 'Fixed' };
+  // The three cards sit in one grid row, so a 30-bullet entry beside a 15-bullet one
+  // stretches every card to the tallest and leaves the short ones half empty. Show a
+  // fixed number of changes, clamp each to two lines in CSS, and link out for the rest.
+  const PREVIEW_CHANGES = 4;
   const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
   const fmt = (iso) => {
     const [y, m, d] = (iso || '').split('-').map(Number);
@@ -146,6 +150,7 @@ if (patchPreview && typeof PATCHNOTES !== 'undefined') {
         <h3 class="patch-title">${p.title}</h3>
         <ul class="patch-changes">
           ${p.changes
+            .slice(0, PREVIEW_CHANGES)
             .map(
               (c) => `<li class="patch-change">
                 <span class="chg chg-${c.type}">${LABEL[c.type] || c.type}</span>
@@ -154,6 +159,13 @@ if (patchPreview && typeof PATCHNOTES !== 'undefined') {
             )
             .join('')}
         </ul>
+        ${
+          p.changes.length > PREVIEW_CHANGES
+            ? `<span class="patch-more">+${p.changes.length - PREVIEW_CHANGES} more ${
+                p.changes.length - PREVIEW_CHANGES === 1 ? 'change' : 'changes'
+              } →</span>`
+            : '<span class="patch-more">Read the full note →</span>'
+        }
       </a>`
     )
     .join('');

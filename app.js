@@ -125,6 +125,12 @@ if (newsGrid && typeof NEWS !== 'undefined') {
       <span class="news-more">Read more →</span>
     </a>`
   ).join('');
+
+  // Pick a column count that divides the card count, so the bottom row fills.
+  // Falls back to 3-up for a count that divides by neither (5, 7, ...).
+  const n = NEWS.length;
+  const cols = n % 3 === 0 ? 3 : n % 2 === 0 ? 2 : Math.min(n, 3);
+  newsGrid.style.setProperty('--news-cols', String(cols));
 }
 
 // --- Landing page: patch notes preview (latest 3) ---

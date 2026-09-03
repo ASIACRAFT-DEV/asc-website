@@ -149,7 +149,12 @@ h1, h2, h3, .brand, .section-title, .fp-title, .stat-num, .step-num, .eyebrow, .
 .hub-status.offline .dot { background: #d05a5a; }
 
 /* ---------- SERVER NEWS ---------- */
-.news-grid { display: grid; gap: 16px; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); }
+/* --news-cols is set by app.js from the number of cards, so the last row is never
+   left with a hole beside it: 4 cards render 2x2, 3 render three-up, 2 side by side.
+   auto-fill used to pick 3 columns at desktop and strand the 4th card on its own. */
+.news-grid { display: grid; gap: 16px; grid-template-columns: repeat(var(--news-cols, 3), minmax(0, 1fr)); }
+@media (max-width: 980px) { .news-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+@media (max-width: 640px) { .news-grid { grid-template-columns: 1fr; } }
 .news-card {
   display: flex; flex-direction: column; background: var(--paper);
   border: 1px solid var(--line); border-radius: var(--radius); padding: 26px; text-decoration: none; color: inherit;

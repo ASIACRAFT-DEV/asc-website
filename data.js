@@ -3053,8 +3053,6 @@ const TEAM = [
       { name: 'Prime_RN', role: 'Admin', avatar: 'assets/team/prime.png', motto: 'Fear me?' },
       { name: 'EdsonCheah', role: 'Moderator', avatar: 'assets/team/edson.jpg', motto: "it's ok to not be ok" },
       { name: 'OPaint', role: 'Moderator', avatar: 'assets/team/opaint.jpg', motto: 'a² + b² = c²' },
-      { name: 'ghostplays00', role: 'Developer', avatar: 'assets/team/ghostplays00.png',
-        motto: "You're impossible to underestimate." },
     ],
   },
 ];

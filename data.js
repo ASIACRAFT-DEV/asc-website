@@ -2985,8 +2985,6 @@ const TEAM = [
     members: [
       { name: 'TheGreatJenish', role: 'Head Moderator', avatar: 'assets/team/jenish.jpg',
         motto: 'Either give up at the very beginning, or never give up.' },
-      { name: 'tobiitobes', role: 'Moderator & Builder', avatar: 'assets/team/tobiitobes.png',
-        motto: 'Ecstasy with extra cheese.', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@tobiitobes' }] },
       { name: 'briiza', role: 'Moderator', avatar: 'assets/team/briiza.png',
         motto: 'Armor King >' },
       { name: 'Tadzuna', role: 'Moderator', avatar: 'assets/team/tadzuna.jpg',

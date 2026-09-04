@@ -2959,6 +2959,13 @@ const TEAM = [
     ],
   },
   {
+    group: 'Developer',
+    members: [
+      { name: 'ghostplays00', role: 'Developer', avatar: 'assets/team/ghostplays00.png',
+        motto: "You're impossible to underestimate." },
+    ],
+  },
+  {
     group: 'Head Admin',
     members: [
       { name: 'Yberuuuu', role: 'Head Admin', avatar: 'assets/team/yberu.png', motto: 'Ogerponnnn.' },
@@ -2983,8 +2990,12 @@ const TEAM = [
   {
     group: 'Moderators',
     members: [
-      { name: 'TheGreatJenish', role: 'Moderator', avatar: 'assets/team/jenish.jpg',
+      { name: 'TheGreatJenish', role: 'Head Moderator', avatar: 'assets/team/jenish.jpg',
         motto: 'Either give up at the very beginning, or never give up.' },
+      { name: 'tobiitobes', role: 'Moderator & Builder', avatar: 'assets/team/tobiitobes.png',
+        motto: 'Ecstasy with extra cheese.', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@tobiitobes' }] },
+      { name: 'briiza', role: 'Moderator', avatar: 'assets/team/briiza.png',
+        motto: 'Armor King >' },
       { name: 'Tadzuna', role: 'Moderator', avatar: 'assets/team/tadzuna.jpg',
         motto: "Ayoko sa mahal, gusto ko sa mura, kasi yung una ko'ng minahal, iba'ng lalake inuna" },
       { name: 'LilCamo', role: 'Moderator', avatar: 'assets/team/lilcamo.jpg',
@@ -2998,6 +3009,8 @@ const TEAM = [
     members: [
       { name: 'DD1amond', role: 'Helper', avatar: 'assets/team/diamond.png',
         motto: 'I speak really well I think.' },
+      { name: 'thunderwarlord', role: 'Helper', avatar: 'assets/team/thunder.png',
+        motto: 'Be happy.' },
     ],
   },
   {
@@ -3005,15 +3018,19 @@ const TEAM = [
     members: [
       { name: '_Lutris', role: 'Builder', avatar: 'assets/team/lutris.png',
         motto: 'I love mountains, they teach me to keep climbing.', socials: [{ label: 'YouTube', url: 'https://www.youtube.com/@lutris-35' }] },
+      { name: 'BnanakinSkyWalkr', role: 'Builder', avatar: 'assets/team/bnanakin.png',
+        motto: 'Live life as you wish.' },
       { name: 'Zesty_Leemon', role: 'Builder', avatar: 'assets/team/leemon.png',
         motto: 'Hotter than Salem 1962.', socials: [{ label: 'Instagram', url: 'https://www.instagram.com/sprucefruits' }] },
     ],
   },
   {
-    group: 'Content Creators',
+    group: 'Media Directors',
     members: [
-      { name: 'Athyyy', role: 'Content Creator' },
-      { name: 'Clao', role: 'Content Creator' },
+      { name: 'Athyyyyy', role: 'Media Director', avatar: 'assets/team/athy.png',
+        motto: 'What is life?', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@athy_25' }, { label: 'Twitch', url: 'https://www.twitch.tv/athyyy015' }] },
+      { name: 'claooo', role: 'Media Director', avatar: 'assets/team/clao.png',
+        motto: 'All in.', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@ca1oooo' }, { label: 'Twitch', url: 'https://www.twitch.tv/calooloowa' }] },
       { name: 'ElektroZax', role: 'Content Creator' },
     ],
   },

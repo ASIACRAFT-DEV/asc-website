@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-07T01:56:18.554Z",
+  "generatedAt": "2026-09-07T11:03:28.937Z",
   "count": 40,
   "mods": [
     {
@@ -90,7 +90,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.63.0"
+      "version": "3.65.0"
     },
     {
       "repo": "asc-battlepass",
@@ -135,7 +135,7 @@
     {
       "repo": "asc-forge",
       "name": "CobbleAsia Forge",
-      "version": "2.63.1"
+      "version": "2.63.2"
     },
     {
       "repo": "asc-gts",

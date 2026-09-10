@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-09T20:12:37.564Z",
+  "generatedAt": "2026-09-10T02:09:22.365Z",
   "count": 40,
   "mods": [
     {
@@ -90,7 +90,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.65.0"
+      "version": "3.66.1"
     },
     {
       "repo": "asc-battlepass",
@@ -125,12 +125,12 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "3.39.1"
+      "version": "3.40.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.45.0"
+      "version": "10.45.1"
     },
     {
       "repo": "asc-forge",
@@ -190,7 +190,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.21.0"
+      "version": "3.21.1"
     },
     {
       "repo": "asc-transform",

@@ -1,8 +1,14 @@
 name: Sync mod versions
 
 # Regenerates versions.json from the asc-* mod repos and commits it when
-# anything changed. That commit lands on main and triggers deploy.yml, so
-# the live site picks up new versions automatically.
+# anything changed.
+#
+# 🔴 That commit does NOT trigger deploy.yml on its own. A push made with the
+# default GITHUB_TOKEN is deliberately excluded from triggering other
+# workflows (GitHub's recursion guard), so between 2026-09-04 and 2026-09-12
+# 34 sync commits landed on main and the live site never rebuilt once — it
+# served a versions.json generated 2026-09-03 while the repo copy was current.
+# The deploy is therefore dispatched explicitly at the end of this job.
 on:
   schedule:
     - cron: '0 */6 * * *'   # every 6 hours
@@ -12,6 +18,7 @@ on:
 
 permissions:
   contents: write
+  actions: write              # required to dispatch deploy.yml below
 
 concurrency:
   group: sync-versions
@@ -34,13 +41,23 @@ jobs:
         run: node scripts/sync-versions.mjs
 
       - name: Commit if changed
+        id: commit
         run: |
           if git diff --quiet -- versions.json; then
             echo "No version changes."
+            echo "changed=false" >> "$GITHUB_OUTPUT"
           else
             git config user.name "asc-version-bot"
             git config user.email "github-actions[bot]@users.noreply.github.com"
             git add versions.json
             git commit -m "chore: sync live mod versions"
             git push
+            echo "changed=true" >> "$GITHUB_OUTPUT"
           fi
+
+      # See the header note: the commit above cannot trigger deploy.yml itself.
+      - name: Deploy the site
+        if: steps.commit.outputs.changed == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh workflow run deploy.yml --ref main

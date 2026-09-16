@@ -1,6 +1,6 @@
 {
-  "generatedAt": "2026-09-16T02:25:15.332Z",
-  "count": 40,
+  "generatedAt": "2026-09-16T10:30:21.297Z",
+  "count": 41,
   "mods": [
     {
       "repo": "asc-catchcombo",
@@ -16,6 +16,11 @@
       "repo": "asc-clans",
       "name": "ASC Clans",
       "version": "1.31.0"
+    },
+    {
+      "repo": "asc-classes",
+      "name": "ASC Classes",
+      "version": "0.1.0"
     },
     {
       "repo": "asc-cobsave",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-19T02:17:32.439Z",
+  "generatedAt": "2026-09-19T09:57:59.305Z",
   "count": 41,
   "mods": [
     {
@@ -135,7 +135,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.53.0"
+      "version": "10.54.0"
     },
     {
       "repo": "asc-forge",
@@ -205,7 +205,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.41.1"
+      "version": "1.42.0"
     }
   ]
 }

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-22T02:27:48.030Z",
+  "generatedAt": "2026-09-22T10:36:02.071Z",
   "count": 41,
   "mods": [
     {
@@ -205,7 +205,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.42.0"
+      "version": "1.43.0"
     }
   ]
 }

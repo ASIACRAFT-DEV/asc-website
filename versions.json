@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-21T21:25:08.309Z",
+  "generatedAt": "2026-09-22T02:27:48.030Z",
   "count": 41,
   "mods": [
     {
@@ -20,7 +20,7 @@
     {
       "repo": "asc-classes",
       "name": "ASC Classes",
-      "version": "0.1.0"
+      "version": "0.2.0"
     },
     {
       "repo": "asc-cobsave",
@@ -105,7 +105,7 @@
     {
       "repo": "asc-breeding",
       "name": "CobbleAsia Breeding",
-      "version": "1.33.0"
+      "version": "1.33.1"
     },
     {
       "repo": "asc-chestshop",
@@ -135,7 +135,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.57.2"
+      "version": "10.57.3"
     },
     {
       "repo": "asc-forge",
@@ -180,7 +180,7 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.66.2"
+      "version": "2.67.1"
     },
     {
       "repo": "asc-raidboss",

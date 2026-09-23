@@ -1553,26 +1553,26 @@ const GUIDE = [
 const NEWS = [
   {
     tag: 'New',
-    title: 'Cobblemon 1.8 is live — and you need the new client pack',
-    body: 'The server runs <strong>Cobblemon 1.8.0</strong>. A client still on the old 1.7.3 pack is refused at the door, so grab <strong>CobbleAsia S2 pack 2.1.0</strong> from Discord first. 1.8 brings alpha Pokémon that lead herds and adapt to your party, naturally generating fossils and a lot of new species. <strong>One casualty:</strong> 1.8 deleted 46 of its own advancements, so your Cobblemon advancement progress was reset — that one is not recoverable.',
+    title: 'Crythian Garchomp reworked — Undying Predator and Wyrm’s Malice',
+    body: 'indigo’s rework is live: <strong>Dragon/Ghost, 97/130/74/105/74/120</strong>, a new Hidden Ability that can’t flinch and can’t have its stats lowered, and a new signature move that can paralyze or confuse. Swords Dance, Dragon Dance, Outrage and Shadow Sneak are gone. Existing Garchomps were moved onto the new ability automatically.',
+    link: 'patchnotes.html',
+  },
+  {
+    tag: 'Improved',
+    title: 'The Warzone closes its escape routes',
+    body: 'Entry protection is <strong>30 seconds</strong>, no elytra near a player who can be tagged, no ranged player damage, no pearling out, and an illegal team now counts as a <strong>forfeit loss</strong> instead of a free exit. Den spawns are announced to the whole server.',
     link: 'patchnotes.html',
   },
   {
     tag: 'New',
-    title: 'The dungeon reward boxes finally have loot in them',
-    body: 'A clear pays a <strong>box you choose</strong> — free, 200k, 400k or the 900k SolForge Reliquary on a fast clear — and the three paid tiers were shipped with <em>empty</em> prize tables. Thirteen independent lines each are now in: coins, Tokens, Bottle Caps, Nature Modifiers, HA Tokens, SolForge armour and a SolForge Key. The Reliquary’s speed gate also moved <strong>600 → 900 seconds</strong>, because only one clear in six ever came in under ten minutes.',
-    link: 'feature.html?f=dungeons',
-  },
-  {
-    tag: 'New',
-    title: 'Voting has a pity ladder, and your past votes already count',
-    body: '<strong>100 / 200 / 300 votes</strong> pay Vote, Origin and Legacy keys on a rising scale, up to 500,000 coins — and a Legendary Spin at <strong>10%</strong>, <strong>25%</strong>, then <strong>guaranteed</strong> at 300, which resets the ladder. Every voter was seeded from their lifetime total the day it shipped, so seventeen players collected on the spot.',
+    title: 'Nexus Pokémon Crate, and banner pity cut to 100',
+    body: 'Every Nexus pull is a <strong>Lv.100 custom</strong> with at least three perfect IVs, plus a separate 0.1% Aurelion roll. Banner hard pity dropped from <strong>250 to 100</strong>, lower still for players who have already won 5★s — and counters were not reset.',
     link: 'feature.html?f=crates',
   },
   {
-    tag: 'Fixed',
-    title: 'Wonder Trade could hand out an Aurelion — both halves are closed',
-    body: 'The pool filtered on Cobblemon’s own legendary flags, which our custom species don’t carry, so <strong>all eleven customs</strong> — Aurelion, the seven SolForge forms, the three Crythian — could be generated and handed to anyone. Nothing stopped you <em>depositing</em> one either, which walked straight around the Gems-only lock those species carry on the GTS. Rerolled out of the pool, and refused at the deposit screen.',
+    tag: 'New',
+    title: 'Cobblemon 1.8 is live — and you need the new client pack',
+    body: 'The server runs <strong>Cobblemon 1.8.0</strong>. A client still on the old 1.7.3 pack is refused at the door, so grab <strong>CobbleAsia S2 pack 2.1.0</strong> from Discord first.',
     link: 'patchnotes.html',
   },
 ];
@@ -1582,6 +1582,34 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-09-23',
+    tag: 'Patched',
+    title: 'Crythian Garchomp is reworked, the Warzone stops being escapable, and a raid can no longer end your Battle Tower run',
+    changes: [
+      { type: 'new', text: '🐉 <strong>Crythian Garchomp has been reworked</strong> to indigo’s spec. It is <strong>Dragon/Ghost with 97 / 130 / 74 / 105 / 74 / 120</strong>. Its new Hidden Ability, <strong>Undying Predator</strong>, stops it flinching and stops its stats being lowered — by its own moves or anyone else’s — and says so when it blocks a drop. Its new signature move, <strong>Wyrm’s Malice</strong>, is a 90-power, 100% accurate physical Dragon contact move with a 30% chance to paralyze <em>or</em> confuse. Swords Dance, Dragon Dance, Outrage and Shadow Sneak are gone; Close Combat, Shadow Ball, Will-O-Wisp, Taunt, Stealth Rock, Destiny Bond and a spread of coverage were added. Crythian Gible and Gabite lost Outrage, Swords Dance and Shadow Sneak too, so they can’t be taught early and carried through evolution. <strong>Every Garchomp you already owned on Graveborne or Shadow Tag was switched to Undying Predator for you.</strong>' },
+      { type: 'improved', text: '⚔️ <strong>The Warzone closes its escape routes.</strong> Asked for by slaine6729, darkseverin, thegreatjenish and ViganEmpanada. Entry protection is <strong>30 seconds</strong> (was 60) and you can’t glide while it runs; after that, gliding is stopped within <strong>30 blocks</strong> of any player who can be tagged, in both directions. Bows, tridents and thrown potions no longer hurt players — the zone is settled by battles only. A team that goes illegal mid-visit is no longer an exit: being tagged with one is a <strong>forfeit loss</strong>, and a catch that would break your team is sent to your PC instead. Ender pearls can’t carry you out of the zone, the usual teleport commands are blocked inside it, and UB and raid den spawns are announced to the whole server.' },
+      { type: 'improved', text: '☠️ <strong>Area Zero: you can leave again if nobody is chasing you.</strong> <code>/home</code>, <code>/sethome</code>, <code>/back</code> and clan home stay blocked inside the zone at all times. Outside combat, <code>/spawn</code>, <code>/warp</code> and the rest work; while you’re combat-tagged, every command is still blocked. Ender pearls work inside Area Zero again — the only one that’s stopped is a pearl that would carry a <em>tagged</em> player out.' },
+      { type: 'improved', text: '🏰 <strong>Dungeons.</strong> The <strong>SolForge Reliquary now needs a flawless run</strong> — under 15 minutes <em>and</em> no party deaths — and if you miss it, it tells you which half. The <strong>Twins</strong> now each hunt a different player and re-pick every 8 seconds instead of stacking on one person. A party queue is cancelled for everyone if the leader leaves or disconnects, so a run can no longer start with half the party (thegreatjenish, calooloowa). Magma Palace <strong>Warden cores</strong> could form under the floor, out of reach; they now always form at your level (ra1zuuu). And in a party, <strong>Class</strong> damage bonuses shrink when several of you share a class — 67% each for two, 50% for three, 40% for four. Mixed parties and non-damage bonuses are untouched.' },
+      { type: 'improved', text: '🎰 <strong>Crates.</strong> Every Nexus Pokémon Crate reward — Aurelion and the five Arctis customs included — now has <strong>at least three perfect IVs</strong>. Server-wide pull announcements match the crate: Nexus is rainbow, Arctis is ice-blue. And the <strong>Nature Modifier</strong> turns up about half as often in SolForge and Arctis keys, which cuts one of the most common filler pulls (gkrv_tamilan).' },
+      { type: 'improved', text: '💰 <strong>Manaphy and Phione</strong> can be recycled again, <strong>for points only</strong> (0.1 each, no Orbs), and they can no longer be bred at a ranch — eggs you already have still hatch. <strong>Mint serials</strong> now cover <strong>Aurelion, SolForge Rayquaza and SolForge Marshadow</strong>; your Pokémon picks up its serial the first time you flex it in chat (de4th6767). <code>/rename</code> and <code>/nick</code> can now colour every letter all the way to 32 — a hidden raw-length cap used to stop per-letter colour at about 16 (k.kairyy). Clan chat, ally chat and whispers each have their own colour now.' },
+      { type: 'improved', text: '📋 <strong>Battle Pass:</strong> the daily <em>Turn In 5 Job Quests</em> is now <strong>3</strong>, and the weekly 20 is now <strong>15</strong>. A free player can only turn in three job quests a day, so on most days the old daily could not be finished — and missing it cost that day’s commission Orbs (k.kairyy).' },
+      { type: 'fixed', text: '⚡ <strong>A raid ending could kill whatever other battle you were in.</strong> Reported by de4th6767, whose floor-52 Battle Tower run ended the moment a raid he had left closed. The raid cleanup now leaves non-raid battles alone. Also fixed: the <strong>forge</strong> refused to raise an enchant you already had (gkrv_tamilan); a <strong>Basculin</strong> bred from white-striped parents lost its stripes, so Basculegion was unreachable (samsonmaniac); a Pokémon traded through the <strong>GTS</strong> could get stuck in its current form; ranch display Pokémon could be battled; and a jailed player who reconnected could not <code>/login</code>.' },
+      { type: 'fixed', text: '🧊 <strong>Stuck battles.</strong> Frozen gym battles get a stronger automatic recovery; a frozen Battle Tower fight now tells you so instead of leaving you staring at it (kasper6854); and an Elite Four forfeit is reported as a forfeit, not a disconnect (gkrv_tamilan).' },
+      { type: 'fixed', text: '🔒 <strong>Account security.</strong> Five wrong passwords within ten minutes now disconnects you and locks the account for a while, new passwords need at least <strong>6 characters</strong>, and a gap that let someone act on an account before logging in has been closed. Please never share your password. 🧑‍🌾 Separately: <strong>villager breeding is off by staff decision</strong>, not a bug — villager farming still works.' },
+    ],
+  },
+  {
+    date: '2026-09-17',
+    tag: 'Crates',
+    title: 'The Nexus Pokémon Crate arrives, banner pity drops to 100, and Classes come to the dungeons',
+    changes: [
+      { type: 'new', text: '🌈 <strong>The Nexus Pokémon Crate</strong> is at <code>/warp crates</code>. Every pull is a custom Pokémon at <strong>Lv.100</strong>: 80% a SolForge or Arctis custom, 16% a shiny one, 3.5% a Nexus legendary (SolForge Rayquaza, SolForge Marshadow, Arctis Ho-Oh, Arctis Lugia) and 0.5% a shiny one — plus a separate <strong>0.1% Aurelion</strong> roll on top of every pull. One key is one pull, with flat odds and no pity. Keys are on the store.' },
+      { type: 'improved', text: '🎯 <strong>Banner hard pity: 250 → 100</strong> on every banner-type crate, and lower still once you’ve won 5★s (100 / 92 / 80 / 68 / 56 after 0 / 1 / 3 / 5 / 8+ wins). Counters were <strong>not</strong> reset, so anyone already past 100 got the guaranteed 5★ on their next pull. The five Arctis customs joined the Arctis crate’s Grand Prize pool, and a crate key sent while you were offline now goes to <code>/mail</code> instead of vanishing.' },
+      { type: 'new', text: '⚔️ <strong>Classes</strong> — <code>/class</code>. Pick one of 12 across four roles; each gives stat bonuses and three abilities cast from the Grimoire you get on picking. Classes only work inside dungeons. The dungeon reward boxes also got vj._.’s full loot table, and the Reliquary gate moved from 10 to 15 minutes.' },
+      { type: 'fixed', text: '🛠️ Beating an <strong>NPC gym leader</strong> now counts for the Battle Pass “Beat Gym Leaders” quest (zenisdead_, kasper6854, darkseverin, slaine6729). A stuck gym battle no longer kills <strong>Mega Evolution</strong> for the rest of the day (ynot4210, calooloowa). Typed Hidden Powers are off <code>/pe</code> because they vanished after one battle (thegreatjenish). An Ability Patch on a Pokémon that already has its Hidden Ability now warns you first (kasper6854). Buying with Tokens in <code>/shop</code> asks you to confirm (_318k), and SolForge and Arctis Pokémon have a <strong>2-Gem minimum</strong> on the GTS.' },
+    ],
+  },
   {
     date: '2026-09-15',
     tag: 'Patched',

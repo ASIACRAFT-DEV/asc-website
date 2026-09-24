@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-09-24T02:17:01.697Z",
+  "generatedAt": "2026-09-24T10:45:42.092Z",
   "count": 41,
   "mods": [
     {
@@ -65,7 +65,7 @@
     {
       "repo": "asc-pokeditor",
       "name": "ASC Pokeditor",
-      "version": "1.12.2"
+      "version": "1.12.3"
     },
     {
       "repo": "asc-survey",

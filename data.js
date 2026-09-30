@@ -1553,6 +1553,12 @@ const GUIDE = [
 const NEWS = [
   {
     tag: 'New',
+    title: 'Sell a whole box at once with /sell',
+    body: 'Put your items in the <code>/sell</code> box and close it. Everything the shop buys is sold at the <strong>normal /shop price</strong>, and everything else comes back to you. Also this week: you can <code>/spawn</code> out of the Warzone when you’re not in a battle, and trades keep your <strong>PP Ups</strong>.',
+    link: 'patchnotes.html',
+  },
+  {
+    tag: 'New',
     title: 'Crythian Garchomp reworked — Undying Predator and Wyrm’s Malice',
     body: 'indigo’s rework is live: <strong>Dragon/Ghost, 97/130/74/105/74/120</strong>, a new Hidden Ability that can’t flinch and can’t have its stats lowered, and a new signature move that can paralyze or confuse. Swords Dance, Dragon Dance, Outrage and Shadow Sneak are gone. Existing Garchomps were moved onto the new ability automatically.',
     link: 'patchnotes.html',
@@ -1569,12 +1575,6 @@ const NEWS = [
     body: 'Every Nexus pull is a <strong>Lv.100 custom</strong> with at least three perfect IVs, plus a separate 0.1% Aurelion roll. Banner hard pity dropped from <strong>250 to 100</strong>, lower still for players who have already won 5★s — and counters were not reset.',
     link: 'feature.html?f=crates',
   },
-  {
-    tag: 'New',
-    title: 'Cobblemon 1.8 is live — and you need the new client pack',
-    body: 'The server runs <strong>Cobblemon 1.8.0</strong>. A client still on the old 1.7.3 pack is refused at the door, so grab <strong>CobbleAsia S2 pack 2.1.0</strong> from Discord first.',
-    link: 'patchnotes.html',
-  },
 ];
 
 // =====================================================================
@@ -1582,6 +1582,22 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-09-30',
+    tag: 'Patched',
+    title: 'A /sell box, a way out of the Warzone, and trades that keep your PP Ups',
+    changes: [
+      { type: 'new', text: '💰 <strong>New <code>/sell</code> box.</strong> Suggested by de4th6767. It opens a 27-slot box like <code>/trash</code>. When you close it, everything the shop buys is sold at the normal <code>/shop</code> price, and anything it doesn’t buy comes back to your inventory. If an item is listed in more than one shop category, you get the best price. Items sold in bundles only sell in whole bundles, and the leftovers come back. You get a receipt in chat.' },
+      { type: 'improved', text: '⚔️ <strong>You can leave the Warzone again.</strong> Reported by _318k. Walking to the edge pushed you back and told you to teleport out, but every teleport inside the zone was blocked, so there was no way out. Now <code>/spawn</code>, <code>/warp</code>, <code>/rtp</code>, <code>/tpa</code> and <code>/safari</code> work inside the Warzone <strong>as long as you’re not in a battle</strong>. Finish the battle first, or <code>/pvp forfeit</code> a PvP one. <code>/home</code>, <code>/sethome</code>, <code>/back</code> and clan home stay blocked at all times, the same as in Area Zero.' },
+      { type: 'improved', text: '🪢 <strong>Warzone battle leash.</strong> Suggested by slaine6729. While you’re in any battle inside the Warzone, you can’t move more than <strong>16 blocks</strong> away from where the battle started. If you step past that, you’re put back inside the line. You can still move around within the 16 blocks, so you aren’t a sitting target. Walking away in the middle of a fight was being used as an escape, and it could leave the battle stuck.' },
+      { type: 'improved', text: '👑 <strong>Elite Four: an elite who forfeits now loses the seat.</strong> If the defending elite forfeits after the battle starts, the challenger wins: they take the seat and get their stake back, and the elite takes the loss and the cooldown. A disconnect still counts the way it did before, and a forfeit before turn 1 still cancels the bout with a refund (gkrv_tamilan).' },
+      { type: 'improved', text: '💤 <strong>AFK kick applies to everyone, and <code>/afk</code> is gone.</strong> After 10 minutes idle you’re disconnected, whatever your rank, and you get a warning at 5 minutes. Players who are jailed or in a Cobblemon battle aren’t kicked.' },
+      { type: 'fixed', text: '🔁 <strong>Trading no longer wipes PP Ups.</strong> Reported by de4th6767. Every hand-over (SafeTrade, GTS purchases, inbox claims, taking a Pokémon back out of your own offer) reset raised PP to normal. PP Ups and PP Max now carry over. PP that was already lost can’t be restored.' },
+      { type: 'fixed', text: '✨ <strong>Event moves from <code>/pe</code> are no longer deleted.</strong> Reported by _318k. An event move, such as Eruption on Heatran, disappeared the first time the Pokémon Terastallized, Mega Evolved, used a Z-Move, Dynamaxed or changed form. Event moves are kept now. Moves that were cut from a species on purpose (for example Outrage on the Crythian line) are still removed, and moves already lost can’t be restored.' },
+      { type: 'fixed', text: '🏰 <strong>Dungeons.</strong> Leaving a run and resuming it through <code>/dungeon</code> used to restart the run clock, so a resumed run could show a clear time that was far too fast (thegreatjenish). A resumed run now keeps its original start time, and the clock keeps counting while you’re logged out. Also, dungeon death bodies could get stuck in the world with no way to remove them. Right-clicking an empty one now removes it (ra1zuuu).' },
+      { type: 'fixed', text: '🧊 <strong>Gyms:</strong> a gym battle that recovered from a freeze could be cancelled at its next normal pause (calooloowa). Fixed. <strong>Battle Tower:</strong> if your party comes back short after a run, the message now names the missing Pokémon. It also says that trading one away during the run is allowed, so a trade no longer looks like a loss. <strong>Titles:</strong> the fishing titles <strong>Alpha Angler</strong> and <strong>Alpha Hunter</strong> now appear in <code>/titles</code> and count toward your collection. You don’t need to earn them again (017lapis).' },
+    ],
+  },
   {
     date: '2026-09-23',
     tag: 'Patched',

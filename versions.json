@@ -1,16 +1,16 @@
 {
-  "generatedAt": "2026-10-01T03:09:25.014Z",
+  "generatedAt": "2026-10-01T12:04:48.898Z",
   "count": 41,
   "mods": [
     {
       "repo": "asc-catchcombo",
       "name": "ASC Catch Combos",
-      "version": "1.4.0"
+      "version": "1.4.1"
     },
     {
       "repo": "asc-claimblocks",
       "name": "ASC Claim Blocks",
-      "version": "1.2.0"
+      "version": "1.2.1"
     },
     {
       "repo": "asc-clans",
@@ -35,7 +35,7 @@
     {
       "repo": "asc-dexquest",
       "name": "ASC Dex Quests",
-      "version": "1.6.0"
+      "version": "1.6.1"
     },
     {
       "repo": "asc-discord",
@@ -45,27 +45,27 @@
     {
       "repo": "asc-fishing",
       "name": "ASC Fishing",
-      "version": "2.3.0"
+      "version": "2.3.1"
     },
     {
       "repo": "asc-gyms",
       "name": "ASC Gyms",
-      "version": "2.35.3"
+      "version": "2.35.4"
     },
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.20.0"
+      "version": "2.20.1"
     },
     {
       "repo": "asc-mcmmo",
       "name": "ASC McMMO",
-      "version": "2.15.1"
+      "version": "2.15.2"
     },
     {
       "repo": "asc-pokeditor",
       "name": "ASC Pokeditor",
-      "version": "1.12.3"
+      "version": "1.12.4"
     },
     {
       "repo": "asc-survey",
@@ -75,7 +75,7 @@
     {
       "repo": "asc-traininggrounds",
       "name": "ASC Training Grounds",
-      "version": "1.6.0"
+      "version": "1.6.1"
     },
     {
       "repo": "asc-tutorial",
@@ -95,7 +95,7 @@
     {
       "repo": "asc-battletower",
       "name": "CobbleAsia Battle Tower",
-      "version": "3.66.4"
+      "version": "3.66.5"
     },
     {
       "repo": "asc-battlepass",
@@ -105,7 +105,7 @@
     {
       "repo": "asc-breeding",
       "name": "CobbleAsia Breeding",
-      "version": "1.33.1"
+      "version": "1.33.2"
     },
     {
       "repo": "asc-chestshop",
@@ -120,17 +120,17 @@
     {
       "repo": "asc-cosmetics",
       "name": "CobbleAsia Cosmetics",
-      "version": "0.8.0"
+      "version": "0.8.1"
     },
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.92.2"
+      "version": "2.92.3"
     },
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "3.46.6"
+      "version": "3.46.7"
     },
     {
       "repo": "asc-essentials",
@@ -150,7 +150,7 @@
     {
       "repo": "asc-leaderboard",
       "name": "CobbleAsia Leaderboard",
-      "version": "1.14.0"
+      "version": "1.14.1"
     },
     {
       "repo": "asc-legendspawns",
@@ -180,7 +180,7 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.70.0"
+      "version": "2.70.1"
     },
     {
       "repo": "asc-raidboss",
@@ -190,7 +190,7 @@
     {
       "repo": "asc-ranks",
       "name": "CobbleAsia Ranks",
-      "version": "1.41.1"
+      "version": "1.41.2"
     },
     {
       "repo": "asc-safari",
@@ -205,7 +205,7 @@
     {
       "repo": "asc-worldtweaks",
       "name": "CobbleAsia World Tweaks",
-      "version": "1.43.0"
+      "version": "1.43.1"
     }
   ]
 }

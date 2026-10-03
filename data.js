@@ -8,7 +8,7 @@ const SERVER = {
   ip: 'play.cobbleasia.net',
   discord: 'https://discord.gg/qB3ExYsUAH',
   mc: '1.21.1',
-  cobblemon: '1.8.0',
+  cobblemon: '1.8.1',
 };
 
 // accent keys map to CSS gradients defined in styles.css (--g-solar etc.)
@@ -1553,6 +1553,12 @@ const GUIDE = [
 const NEWS = [
   {
     tag: 'New',
+    title: 'Maintenance done: Legend Hunt, Frost Build-Up, Arctis Battle Pass and Cobblemon 1.8.1',
+    body: 'A <strong>Legend Seeker</strong> now hides at spawn every 3 hours: the first to finish its quest and turn it in wins a <strong>Wishing Star</strong>. Frost builds up in <strong>Area Zero and Dungeons</strong>, the <strong>Arctis</strong> Battle Pass season has started, PvP was soft-reset, and <strong>every banner is open at once</strong>. You need <strong>pack 2.2.0</strong> to join.',
+    link: 'patchnotes.html',
+  },
+  {
+    tag: 'New',
     title: 'Sell a whole box at once with /sell',
     body: 'Put your items in the <code>/sell</code> box and close it. Everything the shop buys is sold at the <strong>normal /shop price</strong>, and everything else comes back to you. Also this week: you can <code>/spawn</code> out of the Warzone when you’re not in a battle, and trades keep your <strong>PP Ups</strong>.',
     link: 'patchnotes.html',
@@ -1569,12 +1575,6 @@ const NEWS = [
     body: 'Entry protection is <strong>30 seconds</strong>, no elytra near a player who can be tagged, no ranged player damage, no pearling out, and an illegal team now counts as a <strong>forfeit loss</strong> instead of a free exit. Den spawns are announced to the whole server.',
     link: 'patchnotes.html',
   },
-  {
-    tag: 'New',
-    title: 'Nexus Pokémon Crate, and banner pity cut to 100',
-    body: 'Every Nexus pull is a <strong>Lv.100 custom</strong> with at least three perfect IVs, plus a separate 0.1% Aurelion roll. Banner hard pity dropped from <strong>250 to 100</strong>, lower still for players who have already won 5★s — and counters were not reset.',
-    link: 'feature.html?f=crates',
-  },
 ];
 
 // =====================================================================
@@ -1582,6 +1582,21 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-10-03',
+    tag: 'Maintenance',
+    title: 'Legend Hunt, Frost Build-Up, the Arctis Battle Pass, a PvP reset and Cobblemon 1.8.1',
+    changes: [
+      { type: 'new', text: '📦 <strong>Cobblemon 1.8.1 — you need pack 2.2.0.</strong> The server runs Cobblemon 1.8.1 with updated add-ons (Mega Showdown 1.2.0, Raid Dens 0.12.1, Complete Cobblemon Collection 2.21). A client on pack 2.1.0 can’t join. Get 2.2.0 from <b>#how-to-install</b> on Discord and empty your <code>mods</code> folder first. The pack adds <strong>Xaero’s Minimap and World Map</strong> (entity radar and cave mode are turned off on the server), <strong>JEI</strong>, ModernFix, FerriteCore, Mouse Tweaks and AppleSkin, and drops MoreCosmetics.' },
+      { type: 'new', text: '🌟 <strong>Legend Hunt.</strong> Every 3 hours (10:00, 13:00, 16:00, 19:00, 22:00, 01:00, 04:00 and 07:00 GMT+8, when at least 3 players are online) one of the NPCs at <code>/spawn</code> becomes the <strong>Legend Seeker</strong> and starts glowing. Everyone online gets the same quest: catch or defeat a number of Pokémon, sometimes of a given type. Finish it, then right-click the Legend Seeker to turn it in. The <strong>first player to turn in wins a ✦ Wishing Star ✦</strong>, and everyone who turns in after that gets a runner-up prize. Right-click the Wishing Star to choose a Legendary that can spawn in your current biome. It only works for you and expires after 7 days. A hunt lasts 30 minutes, a boss bar tracks your progress, and <code>/legend hunt</code> shows the quest at any time. Sneak and right-click the Legend Seeker to use that NPC as normal.' },
+      { type: 'new', text: '❄️ <strong>Frost Build-Up in Area Zero and Dungeons.</strong> Frost builds the longer you stay inside Area Zero or a dungeon, reaching full in about 10 minutes. At full frost you get Slowness and Mining Fatigue until you leave and thaw out. A full <strong>Arctis</strong> set makes you immune, and a full <strong>SolForge</strong> set makes it build half as fast. A boss bar shows your meter. Dying clears it, and logging out doesn’t.' },
+      { type: 'new', text: '🎟️ <strong>Battle Pass: the Arctis season.</strong> A new season has started and everyone’s Battle Pass progress has been reset, <strong>including Premium passes</strong>. The <strong>free track got a big buff</strong>: more Orbs, Essence, Master Balls, Rare Candy and Ultra Balls, plus Nexus Keys, a Shiny Eevee, Rotom, Froakie, Charmander, IV Bottle Caps, a Hidden Ability Token, a Shiny Modifier and a Shiny Mythical Modifier.' },
+      { type: 'improved', text: '⚔️ <strong>PvP reset.</strong> Ratings were soft-reset: they’re halved toward the default, wins and losses are cleared, and <strong>everyone starts back at Poké Ball tier</strong> for the new 90-day Arctis Season. The top 3 now stand in the Hall of Fame (<code>/warp halloffame</code>). Rewards for players who reached Masterball tier will be announced on Discord. The solo-queue <strong>NPC trainers were rotated</strong> too: 12 brand-new AI teams across OU, Ubers and AG.' },
+      { type: 'improved', text: '🎰 <strong>Every banner is open at once.</strong> Hard pity starts at <strong>250</strong> and gets shorter the more 5★s you’ve won (230, 200, 170, then 140). <strong>Capturing Radiance:</strong> lose the 50/50 twice in a row and your next 50/50 is a guaranteed win.' },
+      { type: 'improved', text: '🌍 <strong>Resource World reset</strong> with a brand-new seed. Old builds and claims there are gone.' },
+      { type: 'improved', text: '💤 <strong>AFK kick raised from 10 to 30 minutes.</strong> Entity clears now also remove thrown <strong>ender pearls and wind charges</strong>.' },
+    ],
+  },
   {
     date: '2026-09-30',
     tag: 'Patched',
@@ -2951,26 +2966,26 @@ const CREDITS = [
   {
     group: 'Cobblemon & Add-ons',
     items: [
-      { name: 'Cobblemon', ver: '1.8.0+1.21.1', by: 'Cobblemon Team', url: 'https://modrinth.com/mod/cobblemon' },
-      { name: 'Mega Showdown', ver: '1.1.2+1.8', url: 'https://modrinth.com/mod/mega-showdown' },
+      { name: 'Cobblemon', ver: '1.8.1+1.21.1', by: 'Cobblemon Team', url: 'https://modrinth.com/mod/cobblemon' },
+      { name: 'Mega Showdown', ver: '1.2.0+1.8.1', url: 'https://modrinth.com/mod/mega-showdown' },
       { name: 'Starlight Fusion', ver: '1.8.0', url: 'https://modrinth.com/datapack/starlightfusion' },
       { name: 'ZA Mega Pack (zamega)', ver: '1.8.1+1.8' },
       { name: "Horret's Extended Mega", ver: '1.7.7' },
-      { name: 'TMCraft', ver: '1.4.19+1.8.0' },
+      { name: 'TMCraft', ver: '1.4.19+1.8.1' },
       { name: 'PokéBlocks', ver: '1.5.0' },
       { name: 'CobbleNav', ver: '2.4.1', by: 'gatekeep06', url: 'https://modrinth.com/mod/cobblemon-pokenav' },
       { name: 'More Cobblemon Tweaks', ver: '1.3.4', url: 'https://modrinth.com/mod/more-cobblemon-tweaks' },
-      { name: 'Cobblemon Raid Dens', ver: '0.12.0', url: 'https://modrinth.com/mod/cobblemon-raid-dens' },
+      { name: 'Cobblemon Raid Dens', ver: '0.12.1', url: 'https://modrinth.com/mod/cobblemon-raid-dens' },
       { name: 'CobbleFurnies', ver: '1.2' },
       { name: 'Cobblemon No Fullness', ver: '1.0.0' },
       { name: 'Cobblemon Size Variation', ver: '1.4.0' },
       { name: 'Cobblemon Journey Mounts', ver: '1.7.2' },
       { name: 'Cobblemon EXP All', ver: '0.0.1' },
       { name: 'Capture XP', ver: '1.3.0' },
-      { name: 'TIM Core', ver: '1.32.0' },
+      { name: 'TIM Core', ver: '1.33.2' },
       { name: 'Catch Indicator', ver: '3.0' },
-      { name: 'Complete Cobblemon Collection — Myths & Legends Compat', ver: '2.1.0' },
-      { name: 'Safe Pastures', ver: '1.1.1' },
+      { name: 'Complete Cobblemon Collection — Myths & Legends Compat', ver: '2.21' },
+      { name: 'Safe Pastures', ver: '1.1.2' },
       { name: 'CobbleOptimizer', ver: '5.0.0' },
     ],
   },
@@ -3000,10 +3015,10 @@ const CREDITS = [
       { name: 'Flan', ver: '1.12.6', by: 'Flemmli97', url: 'https://modrinth.com/mod/flan' },
       { name: 'WorldEdit', ver: '7.3.8', by: 'EngineHub', url: 'https://modrinth.com/plugin/worldedit' },
       { name: 'Chunky', ver: '1.4.23', by: 'pop4959', url: 'https://modrinth.com/mod/chunky' },
+      { name: "Xaero's Minimap", ver: '26.5.0', by: 'xaero96', url: 'https://modrinth.com/mod/xaeros-minimap' },
       { name: 'Multiworld', ver: '1.13.1' },
       { name: 'Simple Voice Chat', ver: '2.6.21', by: 'henkelmax', url: 'https://modrinth.com/mod/simple-voice-chat' },
       { name: 'Emotecraft', ver: '2.4.12', url: 'https://modrinth.com/mod/emotecraft' },
-      { name: 'MoreCosmetics', ver: '1.2' },
       { name: 'Ledger', ver: '1.3.5', url: 'https://modrinth.com/mod/ledger' },
       { name: 'Styled Chat', ver: '2.6.1', by: 'Patbox', url: 'https://modrinth.com/mod/styled-chat' },
       { name: 'Chat Notify', ver: '2.6.9' },
@@ -3043,7 +3058,7 @@ const CREDITS = [
       { name: 'Polymer', ver: '0.9.19', by: 'Patbox', url: 'https://modrinth.com/mod/polymer' },
       { name: 'Athena', ver: '4.0.3', url: 'https://modrinth.com/mod/athena' },
       { name: 'Resourceful Lib', ver: '3.0.12', url: 'https://modrinth.com/mod/resourceful-lib' },
-      { name: 'RCT API + RCT Mod', ver: '0.16.0-beta / 0.19.0-beta' },
+      { name: 'RCT API + RCT Mod', ver: '0.16.1-beta / 0.19.2-beta' },
       { name: 'Placeholder API', ver: '2.4.2', by: 'Patbox', url: 'https://modrinth.com/mod/placeholder-api' },
       { name: 'Forge Config API Port', ver: '21.1.6', url: 'https://modrinth.com/mod/forge-config-api-port' },
       { name: 'Iceberg', ver: '1.3.2' },

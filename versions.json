@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-03T10:49:45.063Z",
+  "generatedAt": "2026-10-03T15:25:41.596Z",
   "count": 41,
   "mods": [
     {
@@ -105,7 +105,7 @@
     {
       "repo": "asc-battlepass",
       "name": "CobbleAsia BattlePass",
-      "version": "2.29.0"
+      "version": "2.30.0"
     },
     {
       "repo": "asc-breeding",
@@ -140,7 +140,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.64.0"
+      "version": "10.65.0"
     },
     {
       "repo": "asc-forge",

@@ -1552,6 +1552,12 @@ const GUIDE = [
 // =====================================================================
 const NEWS = [
   {
+    tag: 'Improved',
+    title: 'Legend Hunts every 6 hours, and Global Energy surges wait for 150%',
+    body: 'Legend Hunts now run at <strong>10:00, 16:00, 22:00 and 04:00 GMT+8</strong> for 45 minutes. Global Energy surges only start at <strong>150%</strong>, so Tier 2 and Tier 3 Cores are reachable, and a full <strong>/legend bar</strong> now counts most in the free draw. Bottle Caps also work on stats you used <strong>IV candies</strong> on.',
+    link: 'patchnotes.html',
+  },
+  {
     tag: 'New',
     title: 'Maintenance done: Legend Hunt, Frost Build-Up, Arctis Battle Pass and Cobblemon 1.8.1',
     body: 'A <strong>Legend Seeker</strong> now hides at spawn every 3 hours: the first to finish its quest and turn it in wins a <strong>Wishing Star</strong>. Frost builds up in <strong>Area Zero and Dungeons</strong>, the <strong>Arctis</strong> Battle Pass season has started, PvP was soft-reset, and <strong>every banner is open at once</strong>. You need <strong>pack 2.2.0</strong> to join.',
@@ -1582,6 +1588,20 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-10-08',
+    tag: 'Patched',
+    title: 'Global Energy surges wait for 150%, Bottle Caps beat IV candies, and Legend Hunts every 6 hours',
+    changes: [
+      { type: 'improved', text: '🌟 <strong>Legend Hunt: new schedule.</strong> Hunts now run every <strong>6 hours</strong> and last <strong>45 minutes</strong>: 10:00, 16:00, 22:00 and 04:00 GMT+8, when at least 3 players are online. <code>/legend hunt</code> shows the next one. Wishing Stars can no longer pick <strong>Arceus</strong>.' },
+      { type: 'improved', text: '⚡ <strong>Global Energy surges wait until 150%.</strong> From 150%, each surge roll (every 10 minutes) has a 10% chance, rising to a sure thing at 200%, so Tier 2 and Tier 3 Legendary Cores can actually be reached. In the free draw, <strong>your /legend bar now counts most</strong>: the energy you added still helps, but a full bar matters far more. <strong>Losing with a full /legend bar builds pity</strong>: each draw you lose with a full bar raises your odds in the next one, until you win.' },
+      { type: 'fixed', text: '🧢 <strong>Bottle Caps now beat IV candies.</strong> Reported by tobi03981. Bottle Caps, IV Boosts and Perfect IV Modifiers now also work on stats you used IV candies (Mighty Candy and the rest) on. Before, the candy value stayed in charge and the stat kept battling low. <strong>If a capped stat still battles low, use one cap on it again.</strong> The <code>[p]</code> chat preview now shows Bottle Cap IVs correctly too (kasper6854).' },
+      { type: 'improved', text: '🎟️ <strong>Battle Pass: unused weekly XP carries over</strong> into the next week, up to one extra week (at most 20,000 XP in a single week). Suggested by k.kairyy.' },
+      { type: 'improved', text: '👑 <strong>Rank perks.</strong> <strong>Professor</strong> and <strong>Master</strong> now get <code>/echest</code> for their own ender chest, and <strong>Master</strong> pays 25% less for <code>/passive</code> flight: 750,000 coins for 24 hours. Suggested by k.kairyy and kasper6854.' },
+      { type: 'fixed', text: '🔧 <strong>Fixes.</strong> Effects from a shoulder Pokémon (like Minior’s Slow Falling) now end when it leaves your shoulder, even after a relog. Mega Swampert, Aggron, Sceptile, Gengar, Kangaskhan, Slowbro, Manectric and Altaria got updated models: rejoin and accept the resource pack. Black Market: the Mega Crate key now delivers a MegaCrate I key, and the Uncommon Crate key, which took gems and gave nothing, has been removed.' },
+      { type: 'fixed', text: '🕗 <strong>After the 8:11 PM GMT+8 restart on Oct 8.</strong> A <strong>Clodsire</strong> parent hatches <strong>Paldean Wooper</strong>, and the same goes for Obstagoon, Perrserker, Sirfetch’d, Cursola, Runerigus, Overqwil and Sneasler (samsonmaniac). The dungeon reward-box chooser ignores clicks for its first 1.5 seconds, so a stray click can’t buy the wrong box (shimmy_sam). On a leaderboard tie, whoever reached the value first ranks higher (k.kairyy).' },
+    ],
+  },
   {
     date: '2026-10-03',
     tag: 'Maintenance',

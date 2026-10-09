@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-08T22:39:49.598Z",
+  "generatedAt": "2026-10-09T03:42:36.110Z",
   "count": 41,
   "mods": [
     {
@@ -155,7 +155,7 @@
     {
       "repo": "asc-leaderboard",
       "name": "CobbleAsia Leaderboard",
-      "version": "1.15.0"
+      "version": "1.16.0"
     },
     {
       "repo": "asc-levels",

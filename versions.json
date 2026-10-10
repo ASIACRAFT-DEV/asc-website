@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-09T22:01:09.998Z",
+  "generatedAt": "2026-10-10T03:24:37.050Z",
   "count": 41,
   "mods": [
     {
@@ -195,7 +195,7 @@
     {
       "repo": "asc-safari",
       "name": "CobbleAsia Safari",
-      "version": "3.21.1"
+      "version": "3.22.0"
     },
     {
       "repo": "asc-transform",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-10T20:53:30.133Z",
+  "generatedAt": "2026-10-11T02:57:55.551Z",
   "count": 41,
   "mods": [
     {
@@ -60,7 +60,7 @@
     {
       "repo": "asc-legendspawns",
       "name": "ASC Legend Spawns",
-      "version": "2.20.0"
+      "version": "2.20.1"
     },
     {
       "repo": "asc-mcmmo",
@@ -140,7 +140,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.67.0"
+      "version": "10.67.1"
     },
     {
       "repo": "asc-forge",

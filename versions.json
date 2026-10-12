@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-11T21:14:42.881Z",
+  "generatedAt": "2026-10-12T03:21:14.025Z",
   "count": 41,
   "mods": [
     {
@@ -55,7 +55,7 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.20.1"
+      "version": "2.21.0"
     },
     {
       "repo": "asc-legendspawns",
@@ -135,12 +135,12 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "3.48.0"
+      "version": "3.48.1"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.67.2"
+      "version": "10.68.1"
     },
     {
       "repo": "asc-forge",
@@ -180,7 +180,7 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.71.0"
+      "version": "2.72.1"
     },
     {
       "repo": "asc-raidboss",

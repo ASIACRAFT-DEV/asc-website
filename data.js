@@ -1553,6 +1553,12 @@ const GUIDE = [
 const NEWS = [
   {
     tag: 'Improved',
+    title: 'Dungeon run limits hold all week, Slayer hunts wild Pokémon, and a bigger Legend Hunt runner-up prize',
+    body: 'Each dungeon now gives <strong>2 free runs per week</strong> that no longer come back after a restart. Slayer quests count <strong>wild Pokémon you knock out</strong>, Legend Hunt runners-up get <strong>25,000 coins</strong>, and there’s a new <strong>Best Tower Run</strong> leaderboard.',
+    link: 'patchnotes.html',
+  },
+  {
+    tag: 'Improved',
     title: 'Legend Hunts every 6 hours, and Global Energy surges wait for 150%',
     body: 'Legend Hunts now run at <strong>10:00, 16:00, 22:00 and 04:00 GMT+8</strong> for 45 minutes. Global Energy surges only start at <strong>150%</strong>, so Tier 2 and Tier 3 Cores are reachable, and a full <strong>/legend bar</strong> now counts most in the free draw. Bottle Caps also work on stats you used <strong>IV candies</strong> on.',
     link: 'patchnotes.html',
@@ -1588,6 +1594,31 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-10-15',
+    tag: 'Patched',
+    title: 'Dungeon limits hold all week, Slayer hunts wild Pokémon, and a 25,000-coin Legend Hunt runner-up prize',
+    changes: [
+      { type: 'fixed', text: '🏰 <strong>Dungeons: the 2-runs-per-dungeon limit holds all week.</strong> Reported by thegreatjenish. Each dungeon gives you <strong>2 free runs per week</strong>, resetting on <strong>Monday at 8:00 AM GMT+8</strong> (00:00 UTC). Until now a server restart handed both runs back, so it looked like runs reset with every restart. Your <strong>weekly total never changed</strong>: a restart only let you spend all of it in one dungeon. Bought runs still work in any dungeon.' },
+      { type: 'improved', text: '🌟 <strong>Legend Hunt: bigger runner-up prize.</strong> Suggested by _318k. Everyone who turns in after the winner now gets <strong>25,000 coins</strong> (was 2,500), and the message says what you got (shimmy_sam).' },
+      { type: 'improved', text: '⚔️ <strong>Jobs: Slayer hunts wild Pokémon.</strong> Slayer quests needed vanilla monsters, which don’t spawn on the server. They now count <strong>wild Pokémon you knock out</strong>, in battle or in dungeons, often of a set type (for example “Defeat 24 wild Poison-type Pokémon”). Rewards are unchanged, and quests you already accepted switch over and keep their progress. Catches and trainer battles don’t count.' },
+      { type: 'new', text: '🏆 <strong>New leaderboard: Best Tower Run.</strong> Suggested by rtd111. It ranks the most Battle Tower floors cleared in <strong>one run</strong>, the same number <code>/ranks</code> shows as “Best Single Run”. The Tower Floors board is still the lifetime total.' },
+      { type: 'fixed', text: '🛡️ <strong>Warzone: a Bounty Shield always protects your Pokémon.</strong> Reported by zandurr. A Bounty Shield charge now stops a mon-steal even when you have under 50 WP. Before, it was only checked when a WP bounty was due.' },
+      { type: 'improved', text: '🌀 <strong>Area Zero: small bosses are easier to hit.</strong> Reported by shimmy_sam and samsonmaniac. Most small legendaries and Paradox bosses (like Mew or Iron Bundle) now spawn about 2 blocks tall or bigger, so they don’t hide in tall grass. A caught one goes back to its normal size.' },
+      { type: 'fixed', text: '⚡ <strong>Wild Mega shouts point from where you are.</strong> Reported by shimmy_sam. The “head north-west” hint was measured from the map centre. It’s now your own direction to the Mega, or “it’s right around you” when it’s close.' },
+      { type: 'improved', text: '🛒 <strong>Shop and entity clears.</strong> <strong>Spider Eye</strong> (3,500), <strong>Ink Sac</strong> (3,500) and <strong>Fermented Spider Eye</strong> (4,500) are in <code>/shop</code> under Collectors (.arthurwayne). Entity clears no longer delete dropped <strong>SolForge and Arctis armour</strong>, netherite gear, tridents, bows, crossbows, shields, fishing rods, maces or elytra (shimmy_sam).' },
+      { type: 'fixed', text: '🔧 <strong>Fixes.</strong> A Hidden Ability Token on a fusion (like Necrozma and Metagross) no longer resets to the normal ability (__ephermal). Breaking a Wishing Star Crystal no longer gives XP, and it still drops the item (meir8039). In gyms, beating a new leader in a seat you’ve already won now says which badge you already hold: badges belong to the gym seat, leaders rotate, and the coins are a one-time first-clear bonus per seat (seven1boy). New chunks no longer spawn vanilla animals, and animals from spawn eggs no longer vanish. PvP NPC trainers in a regional form, like Galarian Slowking, keep their intended ability.' },
+      { type: 'improved', text: '🕗 <strong>After the 8:11 PM GMT+8 restart on Oct 15.</strong> <code>/home</code>, <code>/sethome</code> and <code>/delhome</code> suggest your home names as you type (shimmy_sam).' },
+    ],
+  },
+  {
+    date: '2026-10-10',
+    tag: 'New',
+    title: 'Cameras: take photos and hang them on your walls (pack 2.3.0)',
+    changes: [
+      { type: 'new', text: '📸 <strong>Exposure film cameras.</strong> You need <strong>client pack 2.3.0 or newer</strong> to join. Get it from <b>#how-to-install</b> on Discord. Craft a <strong>Camera</strong> (iron ingots, a glass pane, a lever and a button) and a film roll, load the roll (sneak and use the camera to open its slots), then look through the viewfinder and shoot. Develop a full roll in a crafting grid: black and white film with a water bottle, colour film with an Awkward, a Thick and a Mundane potion. Print photos at a <strong>Lightroom</strong> (planks, an iron trapdoor and a redstone torch), then hang them in a <strong>Photograph Frame</strong> or keep them in an <strong>Album</strong>. JEI shows every recipe.' },
+    ],
+  },
   {
     date: '2026-10-08',
     tag: 'Patched',
@@ -3036,6 +3067,7 @@ const CREDITS = [
       { name: 'WorldEdit', ver: '7.3.8', by: 'EngineHub', url: 'https://modrinth.com/plugin/worldedit' },
       { name: 'Chunky', ver: '1.4.23', by: 'pop4959', url: 'https://modrinth.com/mod/chunky' },
       { name: "Xaero's Minimap", ver: '26.5.0', by: 'xaero96', url: 'https://modrinth.com/mod/xaeros-minimap' },
+      { name: 'Exposure', ver: '1.9.19', by: 'mortuusars', url: 'https://modrinth.com/mod/exposure' },
       { name: 'Multiworld', ver: '1.13.1' },
       { name: 'Simple Voice Chat', ver: '2.6.21', by: 'henkelmax', url: 'https://modrinth.com/mod/simple-voice-chat' },
       { name: 'Emotecraft', ver: '2.4.12', url: 'https://modrinth.com/mod/emotecraft' },

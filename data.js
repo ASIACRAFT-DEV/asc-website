@@ -1553,6 +1553,12 @@ const GUIDE = [
 const NEWS = [
   {
     tag: 'Improved',
+    title: 'Fair hits in Nexus Breakout, bigger playtime rewards, and Wishing Stars pick a tier',
+    body: 'Breakout hits now land <strong>once every 0.6 seconds</strong> per player, so timing beats spam-clicking, and donors get a <strong>discount on caches</strong>. Playtime pays up to <strong>105,000 coins every 10 hours</strong> plus Master Balls and tokens every 100 hours, and a Wishing Star lets you pick <strong>Tier 1 or Tier 2</strong>.',
+    link: 'patchnotes.html',
+  },
+  {
+    tag: 'Improved',
     title: 'Dungeon run limits hold all week, Slayer hunts wild Pokémon, and a bigger Legend Hunt runner-up prize',
     body: 'Each dungeon now gives <strong>2 free runs per week</strong> that no longer come back after a restart. Slayer quests count <strong>wild Pokémon you knock out</strong>, Legend Hunt runners-up get <strong>25,000 coins</strong>, and there’s a new <strong>Best Tower Run</strong> leaderboard.',
     link: 'patchnotes.html',
@@ -1594,6 +1600,49 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-10-21',
+    tag: 'Patched',
+    title: 'Fair hits in Nexus Breakout, bigger playtime rewards, and Wishing Stars pick a tier',
+    changes: [
+      { type: 'improved', text: '⚔️ <strong>Nexus Breakout: timing beats spam-clicking.</strong> Suggested by elvernet and samsonmaniac. Each player can damage each Breakout Pokémon <strong>once every 0.6 seconds</strong>, so well-timed swings do as much as spam. Clicking more than <strong>16 times a second for 2 seconds</strong> makes your hits count for nothing for 15 seconds, and getting caught <strong>3 times in one run</strong> loses that run’s cache and rank prize. Every 30 seconds the chat shows everyone’s damage and clicks per second.' },
+      { type: 'new', text: '💎 <strong>Donor discount on Breakout caches.</strong> You pay less by your rank’s reward boost: Pilgrim 3%, Explorer 10%, Seeker 15%, Guardian 30%, Protector 40%, Warden 45%, Sovereign 50% (a Sovereign pays 450,000 for a Nexus Reliquary). Open yours with <code>/breakout cache</code>.' },
+      { type: 'improved', text: '⏱️ <strong>Bigger playtime rewards.</strong> Suggested by _lilcamo. <strong>Every 10 hours:</strong> 8 Great Balls and 15,000 coins for each day of playtime you have (day 1 = your first 24 hours), up to <strong>105,000</strong> from day 7 on. <strong>Every 100 hours:</strong> 150,000 coins and 100 Tokens for each 100 hours (up to 600,000 coins and 400 Tokens at 400 h) and a Vote Key, plus 1 Master Ball and an IV Singler at 100 h, 2 Master Balls and an IV Doubler at 200 h, 3 Master Balls and a Hidden Ability Token at 300 h, and 4 Master Balls and a Perfect IV Token at 400 h. See <code>/playtime</code>.' },
+      { type: 'improved', text: '🌟 <strong>Wishing Star: pick a tier.</strong> Right-click your Wishing Star and choose <strong>Tier 1 · Common</strong> or <strong>Tier 2 · Rare</strong>. A random Legendary of that tier that can appear where you’re standing answers. Hover a button to see which ones can.' },
+      { type: 'improved', text: '⚡ <strong>Global Energy surges wait for 170%</strong> (was 150%), still becoming a sure thing at 200%.' },
+      { type: 'fixed', text: '🍪 <strong>Poké Snacks no longer attract Legendaries,</strong> Mythicals, Ultra Beasts or Paradox Pokémon. Reported by _lilcamo and samsonmaniac. Other snack spawns are unchanged.' },
+      { type: 'improved', text: '🌀 <strong>Leaving Area Zero takes 10 seconds</strong> for everyone (<code>/spawn</code>, <code>/home</code>, <code>/warp</code>…). Rank warmup reductions don’t apply there.' },
+      { type: 'improved', text: '🛡️ <strong>Singles banlist updated</strong> (ladder and Warzone Singles days), in line with NatDex OU: Gouging Fire, Roaring Moon, Baxcalibur, Sneasler, Dracovish, Genesect (all forms) and Ogerpon-Hearthflame, plus Blastoisinite and Alakazite. Doubles is unchanged. Reported by darkseverin and kasper6854.' },
+      { type: 'fixed', text: '🗡️ <strong>Zacian and Zamazenta can learn Behemoth Blade / Behemoth Bash.</strong> Reported by kasper6854. Both are now in their move list.' },
+      { type: 'improved', text: '🏝️ <strong>Safari Expedition shows its reward:</strong> 64 Ultra Balls and 8 Rare Candy, plus one of 4 Love Balls, 4 Dream Balls or 8 Fast Balls, once per day (shimmy_sam).' },
+      { type: 'improved', text: '🏆 <strong>Leaderboards and entity clears.</strong> Boards hide players who haven’t logged in for 7 days, until they come back. Entity clears no longer remove wild shiny Pokémon or dropped shulker boxes (shimmy_sam).' },
+      { type: 'fixed', text: '🔧 <strong>Fixes.</strong> Starting your own battle while spectating someone else’s stops the spectating, so the two battles no longer mix on your screen (thegreatjenish). <code>/raid</code> should autofill again, and <code>/sethome</code> no longer suggests names you already use (shimmy_sam). Trial Spawners in the Safari stay off: they were handing out rewards without a fight (ehud38).' },
+    ],
+  },
+  {
+    date: '2026-10-18',
+    tag: 'Patched',
+    title: 'Breakout bosses stay in the arena, Dungeon Keys work at the weekly limit, and Breach IV',
+    changes: [
+      { type: 'fixed', text: '⚔️ <strong>Nexus Breakout: the boss stays in the arena.</strong> Sent-out Pokémon pushed Arctis Lugia out of the arena and the run was called off. Now any invader that leaves the arena is put straight back at the portal with the HP it had (elvernet). Join at <code>/warp contracts</code>.' },
+      { type: 'improved', text: '🗝️ <strong>Dungeon Keys work at the weekly limit.</strong> Already ran a dungeon 2/2 this week? A Dungeon Key in your inventory gets you in anyway. The key pays for the run and your free runs for the other dungeons stay. In a party, each member pays their own way (.arthurwayne).' },
+      { type: 'improved', text: '🛡️ <strong>Flutter Mane banned in Singles</strong> (ladder and Warzone Singles days), in line with NatDex OU. Doubles is unchanged (darkseverin).' },
+      { type: 'new', text: '🔨 <strong>Breach IV in /forge.</strong> Maces can get Breach IV for 55,000 coins: hits ignore 60% of the target’s armor. A mace takes Breach or Density, not both (thanoskight).' },
+      { type: 'fixed', text: '🌸 <strong>Mega Floette</strong> (Eternal Flower) shows its Mega model. If yours doesn’t, rejoin and accept the server resource pack (elvernet).' },
+    ],
+  },
+  {
+    date: '2026-10-17',
+    tag: 'Patched',
+    title: 'Swords work in Nexus Breakout, /daily resets at 8 AM, and PvP wins need a real battle',
+    changes: [
+      { type: 'fixed', text: '⚔️ <strong>Nexus Breakout: swords work.</strong> Only arrows did damage in the arena before. Breakout runs at 1 PM and 10 PM GMT+8 when 5+ players are online: join at <code>/warp contracts</code>, and after a win open your reward with <code>/breakout cache</code>.' },
+      { type: 'improved', text: '📅 <strong>/daily resets at 8:00 AM GMT+8</strong> (00:00 UTC) every day, and reminds you every 15 minutes until you claim it (shimmy_sam).' },
+      { type: 'fixed', text: '🏰 <strong>Dungeons: a fresh run starts at the entrance.</strong> An old checkpoint from an unfinished run could drop you in alone past your party (.arthurwayne).' },
+      { type: 'fixed', text: '🏆 <strong>PvP wins need a real battle.</strong> A win counts only from turn 3, and at most 3 wins per opponent per day (calooloowa).' },
+      { type: 'new', text: '🛒 <strong>Ghast Tear</strong> is in <code>/shop</code> under Collectors for 4,500 (.arthurwayne).' },
+    ],
+  },
   {
     date: '2026-10-15',
     tag: 'Patched',

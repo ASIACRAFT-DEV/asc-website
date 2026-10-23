@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-22T20:59:04.228Z",
+  "generatedAt": "2026-10-23T02:35:15.804Z",
   "count": 41,
   "mods": [
     {
@@ -20,7 +20,7 @@
     {
       "repo": "asc-classes",
       "name": "ASC Classes",
-      "version": "0.2.0"
+      "version": "0.3.0"
     },
     {
       "repo": "asc-cobsave",
@@ -185,7 +185,7 @@
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.73.0"
+      "version": "4.74.0"
     },
     {
       "repo": "asc-ranks",

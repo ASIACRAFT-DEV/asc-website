@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T02:21:25.831Z",
+  "generatedAt": "2026-10-25T10:24:40.435Z",
   "count": 41,
   "mods": [
     {
@@ -35,7 +35,7 @@
     {
       "repo": "asc-dexquest",
       "name": "ASC Dex Quests",
-      "version": "1.7.0"
+      "version": "1.8.0"
     },
     {
       "repo": "asc-discord",
@@ -60,7 +60,7 @@
     {
       "repo": "asc-legendspawns",
       "name": "ASC Legend Spawns",
-      "version": "2.21.1"
+      "version": "2.22.0"
     },
     {
       "repo": "asc-mcmmo",

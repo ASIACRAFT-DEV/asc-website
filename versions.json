@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-26T11:53:30.066Z",
+  "generatedAt": "2026-10-26T17:55:58.719Z",
   "count": 41,
   "mods": [
     {
@@ -85,7 +85,7 @@
     {
       "repo": "asc-tutorial",
       "name": "ASC Tutorial",
-      "version": "4.6.2"
+      "version": "4.6.3"
     },
     {
       "repo": "asc-voting",
@@ -130,7 +130,7 @@
     {
       "repo": "asc-crates",
       "name": "CobbleAsia Crates",
-      "version": "2.93.2"
+      "version": "2.93.3"
     },
     {
       "repo": "asc-dungeons",
@@ -140,7 +140,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.73.0"
+      "version": "10.74.0"
     },
     {
       "repo": "asc-forge",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-25T20:09:32.041Z",
+  "generatedAt": "2026-10-26T02:21:37.206Z",
   "count": 41,
   "mods": [
     {
@@ -35,7 +35,7 @@
     {
       "repo": "asc-dexquest",
       "name": "ASC Dex Quests",
-      "version": "1.8.0"
+      "version": "1.9.0"
     },
     {
       "repo": "asc-discord",
@@ -135,12 +135,12 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "3.48.5"
+      "version": "3.49.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.72.0"
+      "version": "10.73.0"
     },
     {
       "repo": "asc-forge",

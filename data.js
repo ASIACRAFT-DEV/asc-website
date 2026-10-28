@@ -1553,6 +1553,12 @@ const GUIDE = [
 const NEWS = [
   {
     tag: 'Improved',
+    title: 'Raid bonus rolls pay out, beaten dungeon bosses stay down, and no more lost Pokémon on a full PC',
+    body: 'Raid clear bonus rolls now pay <strong>coins, Rare Candy or a Vote Key</strong>. A dungeon boss you beat <strong>stays beaten for the rest of the run</strong>. Pulls and Battle Pass Pokémon <strong>wait for a free slot</strong> instead of vanishing when your party and PC are full.',
+    link: 'patchnotes.html',
+  },
+  {
+    tag: 'Improved',
     title: 'Fair hits in Nexus Breakout, bigger playtime rewards, and Wishing Stars pick a tier',
     body: 'Breakout hits now land <strong>once every 0.6 seconds</strong> per player, so timing beats spam-clicking, and donors get a <strong>discount on caches</strong>. Playtime pays up to <strong>105,000 coins every 10 hours</strong> plus Master Balls and tokens every 100 hours, and a Wishing Star lets you pick <strong>Tier 1 or Tier 2</strong>.',
     link: 'patchnotes.html',
@@ -1600,6 +1606,27 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-10-28',
+    tag: 'Patched',
+    title: 'Raid bonus rolls pay out, beaten dungeon bosses stay down, and no more lost Pokémon on a full PC',
+    changes: [
+      { type: 'fixed', text: '🔥 <strong>Raid clear bonus rolls pay out.</strong> A Gold (4 min), Silver (7 min) or Bronze (10 min) clear gives everyone +3, +2 or +1 bonus rolls, and each roll is now one of <strong>10,000 coins, 5 Rare Candy or a Vote Crate Key</strong>. Before, the rolls paid nothing (vabhavji).' },
+      { type: 'fixed', text: '🏰 <strong>Dungeons: a boss you beat stays beaten.</strong> Leaving a cleared room and coming back no longer brings its boss or chamber back for the same run (shimmy_sam). Dungeon mobs also spawn only at floor level now, so none appear in pockets under the floor: that’s what led players into the void in Magma Palace (.arthurwayne, aviral68).' },
+      { type: 'fixed', text: '🎁 <strong>No more lost Pokémon on a full PC.</strong> A banner or summon pull that can give a Pokémon, and a Battle Pass Pokémon reward, now stop <strong>before anything is spent or claimed</strong> when your party and PC are full. Free a slot and try again (k.kairyy, huniezard).' },
+      { type: 'improved', text: '💼 <strong>Jobs: daily quests.</strong> In one day (resets 8 AM GMT+8 / 00:00 UTC) you can do job quests from as many <strong>different jobs as you have job slots</strong>. Switching jobs still follows the pay cycle as before.' },
+      { type: 'improved', text: '📖 <strong>/dex counts Pokémon you’re the original trainer of.</strong> Traded Pokémon (trades, Wonder Trade, GTS) no longer add new species, per the staff ruling on dex trading. Your own catches count as always. Opening <code>/dex</code> re-scans your party and PC.' },
+      { type: 'new', text: '⚔️ <strong>Nexus Breakout.</strong> Class skills work in the arena during a run (darkseverin). Runs are at <strong>1 PM and 11:30 PM GMT+8</strong> (05:00 and 15:30 UTC) when 5+ players are online, moved off the Legend Hunt (atom). Each wave has 10 Pokémon plus 1 per player (ra1zuuu). Join at <code>/warp contracts</code>.' },
+      { type: 'improved', text: '🏆 <strong>Ladder: the elite disconnecting isn’t your loss.</strong> If the elite drops mid-battle, the challenger gets no loss and no cooldown, and the fee is refunded (thunderwarlord).' },
+      { type: 'new', text: '🔎 <strong>/research &lt;pokemon&gt;</strong> opens the research board with that Pokémon first, and the board has a <strong>Not Started</strong> filter (.arthurwayne, shimmy_sam, huniezard).' },
+      { type: 'new', text: '🏷️ <strong>Titles show how to get them.</strong> <code>/titles</code> has a “How to get” line for each title we could fill in (.arthurwayne).' },
+      { type: 'improved', text: '🌟 <strong>Legend Hunt:</strong> Pokémon spawned by a Poké Snack no longer count toward the hunt (calooloowa).' },
+      { type: 'fixed', text: '🛒 <strong>Black Market:</strong> the Shady Dealer in the spawn hub opens the shop when the merchant is in town. It used to say you weren’t at the merchant (atom).' },
+      { type: 'improved', text: '🌌 <strong>Legendaries can spawn in the End again,</strong> at a reduced rate. They were off there while Poké Snacks were being fixed.' },
+      { type: 'improved', text: '🐉 <strong>Riding:</strong> fast mounts are snapped back for “moving too quickly” far less often.' },
+      { type: 'fixed', text: '🔧 <strong>Fixes.</strong> Ending a gym battle with <code>/endbattle</code> gives your team its real levels back within seconds, and it doesn’t count as a loss. The tutorial points you to the <strong>Build World</strong> to settle (Resource World is for gathering) (athy_015). A server crash on Oct 26 caused by the tutorial is fixed.' },
+    ],
+  },
   {
     date: '2026-10-21',
     tag: 'Patched',

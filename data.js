@@ -1552,6 +1552,12 @@ const GUIDE = [
 // =====================================================================
 const NEWS = [
   {
+    tag: 'New',
+    title: 'Maintenance done: fresh Nether, End and Resource World, Halloween Slots and Global Power Levels',
+    body: 'The <strong>Nether, End and Resource World</strong> are reset (new Resource seed, the Ender Dragon is back) and your homes land you somewhere safe. Try the new <strong>Halloween Slots</strong> in the <code>/casino</code>, check your <strong>Global Power Level</strong> with <code>/power</code>, and pull for <strong>14 new Nexus skins</strong>.',
+    link: 'patchnotes.html',
+  },
+  {
     tag: 'Improved',
     title: 'Raid bonus rolls pay out, beaten dungeon bosses stay down, and no more lost Pokémon on a full PC',
     body: 'Raid clear bonus rolls now pay <strong>coins, Rare Candy or a Vote Key</strong>. A dungeon boss you beat <strong>stays beaten for the rest of the run</strong>. Pulls and Battle Pass Pokémon <strong>wait for a free slot</strong> instead of vanishing when your party and PC are full.',
@@ -1606,6 +1612,26 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-10-31',
+    tag: 'Maintenance',
+    title: 'Maintenance done: fresh Nether, End and Resource World, Halloween Slots and Global Power Levels',
+    changes: [
+      { type: 'new', text: '🌍 <strong>World reset.</strong> The <strong>Nether, End and Resource World</strong> are fresh, and the Resource World has a <strong>new seed</strong>. The <strong>Build World is untouched</strong>. <strong>The Ender Dragon is back</strong> for a new fight. Claims in the reset worlds are gone, but your <strong>homes are kept</strong>: <code>/home</code> lands you on the nearest safe spot, or asks you to set a new home if there’s no ground there.' },
+      { type: 'new', text: '🎰 <strong>Halloween Slots in the <code>/casino</code>.</strong> Two machines: <strong>Slots 5×3</strong> (5 lines) and <strong>Slots 5×5</strong> (10 lines), bets from 1k to 1M. A <strong>Wild</strong> on reels 2–4 lands as ×2, ×3 or ×5 and multiplies its line. <strong>Soul Lantern</strong> free spins (5×3: 3+ for 8/12/20 spins · 5×5: 4+ for 15/20/30 spins), every free-spin win ×2. Four shared jackpots, <strong>Grand · Major · Minor · Mini</strong>: a bigger bet wins a bigger share of the pool, and Grand adds a Legendary Core and a Nexus key.' },
+      { type: 'new', text: '🏆 <strong>Slots boards and titles.</strong> New <code>/lb</code> boards <strong>Slots: Money Won</strong> and <strong>Slots: Money Lost</strong>, and four titles: ✦ <strong>High Roller</strong> (won 10M) · ≋ <strong>Whale</strong> (won 100M) · ♦ <strong>House Favourite</strong> (lost 10M) · ☠ <strong>Broke Legend</strong> (lost 100M).' },
+      { type: 'new', text: '⚡ <strong>Global Power Levels.</strong> Your score counts every Legendary, Mythical, Ultra Beast, Pseudo-legendary, Box Legend and ASC custom (SolForge, Arctis, Crythian, Aurelion) in your <strong>party and PC</strong>, with more points for IVs, EVs, a Hidden Ability and shiny. Use <code>/power</code>, <code>/power top</code> or <code>/power &lt;player&gt;</code>, see the <strong>Global Power Level</strong> board on <code>/lb</code>, or hover a name in chat. The Top 3 change daily at <strong>8:30 AM GMT+8</strong> (00:30 UTC): 👑 <strong>Sovereign of Legends</strong> · <strong>Mythic Ascendant</strong> · <strong>Celestial Warden</strong>. Make the Top 3 once and you keep <strong>[Former Elite]</strong> for good. Trading a Pokémon away lowers your score.' },
+      { type: 'new', text: '✨ <strong>14 new Nexus Crate skins.</strong> Cosmetic only: same Pokémon, same stats. Every Nexus key has a <strong>20% Nexus Skin</strong> and <strong>4% Shiny Nexus Skin</strong> chance: Goomy, Sliggoo and Goodra Variants · Zoroark Variant · Rageon · Luxeon · Crysteon · Beelzeon · Venomeon · Fossileon, designed by kyuubi0330, plus the <strong>Hollow Night</strong> set: Jack-O’-Hound · Will-O’-Wisp Ninetales · Hex Witch Gardevoir · Vampire Umbreon. See them as statues at <strong>/spawn</strong>.' },
+      { type: 'new', text: '💼 <strong>More job slots by rank.</strong> <strong>Veteran</strong> gives +1 job slot and <strong>Professor</strong> +2, on top of donor slots (up to 5).' },
+      { type: 'new', text: '📖 <strong><code>/dex missing</code></strong> lists how many species you’re missing in each region; <code>/dex missing &lt;region&gt;</code> lists them by number (k.kairyy).' },
+      { type: 'improved', text: '⚔️ <strong>Warzone: no more catch-and-run.</strong> Leaving the Warzone takes <strong>10 seconds</strong> for everyone (no rank shortcut) and stops if a battle starts, and you can’t catch Pokémon during your <strong>entry protection</strong> (kasper6854). Paid wins between the same two players now count <strong>both ways together</strong> (2 per 6 hours).' },
+      { type: 'improved', text: '🎒 <strong>No bag items in Warzone and ladder battles.</strong> Potions, Revives and other bag items can’t be used in those battles (kasper6854).' },
+      { type: 'improved', text: '🚫 <strong>Banlist.</strong> <strong>Terapagos</strong> and the ability <strong>Shadow Tag</strong> are banned in Doubles, matching National Dex Doubles. The ladder’s NPC elites no longer use banned Pokémon (kasper6854).' },
+      { type: 'improved', text: '🍪 <strong>Poké Snacks.</strong> The <strong>4 snacks within 16 blocks</strong> rule now applies to placed snacks: a 5th won’t place, and a snack with 4 others nearby attracts nothing. Snack spawns also can’t be <strong>Radiant</strong> and don’t trigger SolForge or Arctis set effects (carno4lyfe). Radiant Pokémon you already have are untouched.' },
+      { type: 'improved', text: '📜 <strong><code>/rules</code> is rewritten.</strong> Give it a read.' },
+      { type: 'fixed', text: '🔧 <strong>Fixes.</strong> Spawn no longer gets stuck in endless rain. The class <strong>Grimoire</strong> no longer looks gone from your hand after a cast (shimmy_sam).' },
+    ],
+  },
   {
     date: '2026-10-28',
     tag: 'Patched',

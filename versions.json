@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-10-30T21:48:16.305Z",
+  "generatedAt": "2026-10-31T03:19:32.550Z",
   "count": 41,
   "mods": [
     {
@@ -20,7 +20,7 @@
     {
       "repo": "asc-classes",
       "name": "ASC Classes",
-      "version": "0.3.0"
+      "version": "0.3.1"
     },
     {
       "repo": "asc-cobsave",
@@ -55,7 +55,7 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.22.0"
+      "version": "2.23.0"
     },
     {
       "repo": "asc-legendspawns",
@@ -140,7 +140,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.76.0"
+      "version": "10.80.0"
     },
     {
       "repo": "asc-forge",
@@ -155,7 +155,7 @@
     {
       "repo": "asc-leaderboard",
       "name": "CobbleAsia Leaderboard",
-      "version": "1.17.0"
+      "version": "1.19.0"
     },
     {
       "repo": "asc-levels",
@@ -190,7 +190,7 @@
     {
       "repo": "asc-ranks",
       "name": "CobbleAsia Ranks",
-      "version": "1.44.0"
+      "version": "1.45.1"
     },
     {
       "repo": "asc-safari",

@@ -1553,6 +1553,12 @@ const GUIDE = [
 const NEWS = [
   {
     tag: 'New',
+    title: 'Roulette and Baccarat open at the Casino',
+    body: 'Two new tables at <code>/warp casino</code>: single-zero <strong>Roulette</strong> and <strong>Baccarat</strong>, chips from 1,000 to 1,000,000. Also: Warzone pair wins now pay twice per 24 hours, bred Pokémon no longer count for Global Power, and <code>/dex</code> counts crate and gift Pokémon the moment they arrive.',
+    link: 'patchnotes.html',
+  },
+  {
+    tag: 'New',
     title: 'Maintenance done: fresh Nether, End and Resource World, Halloween Slots and Global Power Levels',
     body: 'The <strong>Nether, End and Resource World</strong> are reset (new Resource seed, the Ender Dragon is back) and your homes land you somewhere safe. Try the new <strong>Halloween Slots</strong> in the <code>/casino</code>, check your <strong>Global Power Level</strong> with <code>/power</code>, and pull for <strong>14 new Nexus skins</strong>.',
     link: 'patchnotes.html',
@@ -1612,6 +1618,20 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-11-03',
+    tag: 'Casino',
+    title: 'Roulette and Baccarat open at the Casino',
+    changes: [
+      { type: 'new', text: '🎡 <strong>Roulette</strong> at <code>/warp casino</code>. Single zero (0–36). Bet on a <strong>number</strong> (pays 35 to 1), a <strong>dozen</strong> (2 to 1), or <strong>Red/Black · Odd/Even · 1–18/19–36</strong> (1 to 1), and spread chips over several bets in one spin. Chips from 1,000 to 1,000,000, up to 5,000,000 a spin.' },
+      { type: 'new', text: '🃏 <strong>Baccarat</strong> at <code>/warp casino</code>. Bet on <strong>Player</strong> (pays 1 to 1), <strong>Banker</strong> (0.95 to 1) or <strong>Tie</strong> (8 to 1). On a tie, Player and Banker bets come back to you. Same chips and 5,000,000 limit as Roulette.' },
+      { type: 'improved', text: '⚔️ <strong>Warzone.</strong> The same two players now get <strong>2 paid wins per 24 hours</strong> (was every 6 hours), counting wins both ways. Rematches still happen, they just don’t pay.' },
+      { type: 'improved', text: '⚡ <strong>Global Power.</strong> Pokémon you can breed no longer score: the <strong>Crythian Gible line</strong>, <strong>pseudo-legendaries</strong> and <strong>Phione</strong>. Manaphy still counts.' },
+      { type: 'improved', text: '📖 <strong><code>/dex</code></strong> counts Pokémon from crates, banners, gifts and eggs <strong>the moment they reach your party or PC</strong>, and evolving also registers the species it evolved from. A Pokémon with someone else’s OT still doesn’t count (carno4lyfe).' },
+      { type: 'fixed', text: '✨ <strong>Nexus skins survive evolution.</strong> Goomy Variant → Sliggoo → Goodra keep their skin. Skinned Crysteon and Fossileon Eevees can’t evolve for now, since there’s no evolved skin for them (darkseverin, huniezard).' },
+      { type: 'fixed', text: '🔧 <strong>Fixes.</strong> <strong>Shiny Mewtwo</strong> should no longer show up in pieces (the fix is in the server resource pack you get when you join). <strong>Battle Pass level 25</strong> now reads “2x IV Boost”, which is what it always gave (huniezard). If your game crashes when an <strong>Alolan Persian</strong> is nearby, accept the server resource pack when you join: it carries the fixed model.' },
+    ],
+  },
   {
     date: '2026-10-31',
     tag: 'Maintenance',

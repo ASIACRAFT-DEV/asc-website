@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-05T13:43:30.890Z",
+  "generatedAt": "2026-11-05T23:01:56.909Z",
   "count": 41,
   "mods": [
     {
@@ -145,7 +145,7 @@
     {
       "repo": "asc-forge",
       "name": "CobbleAsia Forge",
-      "version": "2.66.0"
+      "version": "2.67.0"
     },
     {
       "repo": "asc-gts",

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-06T13:27:41.803Z",
+  "generatedAt": "2026-11-06T22:31:55.150Z",
   "count": 41,
   "mods": [
     {
@@ -85,7 +85,7 @@
     {
       "repo": "asc-tutorial",
       "name": "ASC Tutorial",
-      "version": "4.6.4"
+      "version": "4.6.5"
     },
     {
       "repo": "asc-voting",
@@ -95,7 +95,7 @@
     {
       "repo": "asc-areazero",
       "name": "CobbleAsia Area Zero",
-      "version": "2.20.0"
+      "version": "2.21.0"
     },
     {
       "repo": "asc-battletower",
@@ -140,12 +140,12 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.87.0"
+      "version": "10.88.0"
     },
     {
       "repo": "asc-forge",
       "name": "CobbleAsia Forge",
-      "version": "2.67.0"
+      "version": "2.68.0"
     },
     {
       "repo": "asc-gts",
@@ -180,12 +180,12 @@
     {
       "repo": "asc-pvp",
       "name": "CobbleAsia PvP",
-      "version": "2.80.0"
+      "version": "2.81.0"
     },
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.75.0"
+      "version": "4.76.0"
     },
     {
       "repo": "asc-ranks",

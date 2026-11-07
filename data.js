@@ -1552,6 +1552,12 @@ const GUIDE = [
 // =====================================================================
 const NEWS = [
   {
+    tag: 'Update',
+    title: 'Hunts count toward ranks, raids need 5% damage, ladder disconnects count as forfeits',
+    body: 'Live after the 12:11 UTC restart on Nov 7. <code>/hunt</code> and <code>/ghunt</code> wins are now rank requirements (the rank you hold stays yours), raid rewards and raid rank credit need 5% of the damage, an Elite who disconnects mid-bout loses the seat, Area Zero skills skip spawn-immune players, and forge gear goes to <code>/mail</code> when your inventory is full.',
+    link: 'patchnotes.html',
+  },
+  {
     tag: 'New',
     title: 'Roulette and Baccarat open at the Casino',
     body: 'Two new tables at <code>/warp casino</code>: single-zero <strong>Roulette</strong> and <strong>Baccarat</strong>, chips from 1,000 to 1,000,000. Also: Warzone pair wins now pay twice per 24 hours, bred Pokémon no longer count for Global Power, and <code>/dex</code> counts crate and gift Pokémon the moment they arrive.',
@@ -1618,6 +1624,20 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-11-07',
+    tag: 'Update',
+    title: 'Hunts in rank progression, 5% raid bar, ladder disconnects, Area Zero fixes',
+    changes: [
+      { type: 'new', text: '🎯 <strong>Hunts count toward your rank.</strong> Finished <code>/hunt</code> hunts and <code>/ghunt</code> wins (first to claim) are now rank requirements: <strong>Ace</strong> 5 hunts · <strong>Ranger</strong> 15 + 1 Global Hunt · <strong>Veteran</strong> 35 + 3 · <strong>Elite</strong> 60 + 6 · <strong>Professor</strong> 100 + 12 · <strong>Master</strong> 175 + 25. Counting starts from this update, and the rank you already hold stays yours. Both counters show on <code>/ranks</code>.' },
+      { type: 'improved', text: '⚔️ <strong>Raids: deal at least 5% of the damage.</strong> Raid rewards now need 5% of the raid’s total damage (was 2%), and so do the raid counters on <code>/ranks</code> and clan Raid Wins, which used to count any damage (shimmy_sam, rtd111, _lilcamo).' },
+      { type: 'improved', text: '🏆 <strong>Ladder.</strong> An Elite or Champion who disconnects after the battle has started now loses like a forfeit: the challenger takes the seat and gets their stake back. A disconnect before the first turn is still a void (thegreatjenish).' },
+      { type: 'improved', text: '🌋 <strong>Area Zero.</strong> You can’t send out Pokémon while you’re in combat (30 seconds after a PvP hit); battles you’re already in work as normal (thegreatjenish).' },
+      { type: 'improved', text: '📬 <strong>Forge gear to <code>/mail</code>.</strong> SolForge and Arctis gear, shards and relics from caches, crates and staff gifts go to your <code>/mail</code> when your inventory is full, instead of dropping on the ground (shimmy_sam).' },
+      { type: 'fixed', text: '🌋 <strong>Area Zero spawn immunity.</strong> Area Zero skills, Thunderbolt included, no longer hit players who have spawn immunity, and being pushed or hit by a wind charge no longer cancels your <code>/hub</code> countdown while you’re immune (shimmy_sam, .arthurwayne).' },
+      { type: 'fixed', text: '🔧 <strong>Server crash.</strong> Fixed the crash that restarted the server on Nov 6, which could happen when a player left.' },
+    ],
+  },
   {
     date: '2026-11-03',
     tag: 'Casino',

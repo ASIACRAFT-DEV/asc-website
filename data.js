@@ -1553,6 +1553,12 @@ const GUIDE = [
 const NEWS = [
   {
     tag: 'Update',
+    title: 'Battle Tower freeze fixed, fairer raid HP, /pwiki weaknesses corrected',
+    body: 'Live after the 12:11 UTC restart on Nov 9 (8:11 PM GMT+8). Tower floor battles stop freezing on a heal glitch, raid bosses only gain HP from players who actually deal damage, the <code>/pwiki</code> weakness chart is fixed, <code>/pe</code> keeps the move it replaces, and opening <code>/lb</code> no longer freezes the server.',
+    link: 'patchnotes.html',
+  },
+  {
+    tag: 'Update',
     title: 'Hunts count toward ranks, raids need 5% damage, ladder disconnects count as forfeits',
     body: 'Live after the 12:11 UTC restart on Nov 7. <code>/hunt</code> and <code>/ghunt</code> wins are now rank requirements (the rank you hold stays yours), raid rewards and raid rank credit need 5% of the damage, an Elite who disconnects mid-bout loses the seat, Area Zero skills skip spawn-immune players, and forge gear goes to <code>/mail</code> when your inventory is full.',
     link: 'patchnotes.html',
@@ -1624,6 +1630,22 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-11-09',
+    tag: 'Update',
+    title: 'Battle Tower freezes, raid HP, /pwiki weaknesses, /pe moves, Area Zero and snack fixes',
+    changes: [
+      { type: 'fixed', text: '🗼 <strong>Battle Tower floors stop freezing.</strong> A glitch in some heal messages stopped the battle from ending, so the floor froze, and <code>/bt unstuck</code> brought back the same trainer, who froze again (mostly Fusion Cartel and SolForge Vanguard floors). The broken message is now skipped and the battle carries on. The same glitch could freeze other battles too, and that is fixed as well (shimmy_sam, BnanakinSkyWalkr).' },
+      { type: 'improved', text: '🗼 <strong>Battle Tower disconnects.</strong> You can survive one mid-battle disconnect <strong>per floor</strong> (it resets when you clear a floor), instead of one per run. You still get the same trainer back.' },
+      { type: 'improved', text: '⚔️ <strong>Raid boss HP counts fighters, not joiners.</strong> A player now adds extra boss HP only once they have dealt at least 1% of the boss’s HP, and their share comes off again if they disconnect. Joining and leaving no longer makes the boss tougher for everyone else. Rewards, damage share and the leaderboard work as before (shimmy_sam, .arthurwayne).' },
+      { type: 'fixed', text: '📖 <strong><code>/pwiki</code> weaknesses.</strong> 24 of the 324 type matchups were wrong, so some pages showed weaknesses or immunities that don’t exist. Garchomp, for example, showed immune to Fairy and Flying; it is now 2× weak to Fairy. Forms still show their base species’ types (.arthurwayne).' },
+      { type: 'fixed', text: '✏️ <strong><code>/pe</code> keeps the move it replaces.</strong> A move you replace or clear with <code>/pe</code> now goes to the Pokémon’s benched moves, so you can swap it back from the summary screen. Moves lost before this update can’t be restored (shimmy_sam).' },
+      { type: 'fixed', text: '🌋 <strong>Area Zero: one boss at a time.</strong> A boss still alive when the server restarted could come back afterwards next to the new one. Leftover bosses are now removed (shimmy_sam).' },
+      { type: 'fixed', text: '🍪 <strong>Poké Snack limit.</strong> The 4-snacks-within-16-blocks limit now also counts snacks placed on top of another snack, and Poké Cakes (shimmy_sam).' },
+      { type: 'fixed', text: '🏆 <strong><code>/lb</code> server freeze.</strong> Opening the leaderboard could freeze the whole server for about 30 seconds (it happened on Nov 8 and 3 players were disconnected). Fixed.' },
+      { type: 'fixed', text: '🐉 <strong>Archaludon (live now).</strong> Archaludon should now show in one piece with the current server resource pack. Accept the pack when you join (het7623).' },
+    ],
+  },
   {
     date: '2026-11-07',
     tag: 'Update',

@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-09T03:43:10.858Z",
+  "generatedAt": "2026-11-09T14:42:54.202Z",
   "count": 43,
   "mods": [
     {
@@ -75,7 +75,7 @@
     {
       "repo": "asc-pokeditor",
       "name": "ASC Pokeditor",
-      "version": "1.12.4"
+      "version": "1.12.5"
     },
     {
       "repo": "asc-contracts",
@@ -145,12 +145,12 @@
     {
       "repo": "asc-dungeons",
       "name": "CobbleAsia Dungeons",
-      "version": "3.49.0"
+      "version": "3.50.0"
     },
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.90.0"
+      "version": "10.91.0"
     },
     {
       "repo": "asc-forge",
@@ -185,7 +185,7 @@
     {
       "repo": "asc-pokewiki",
       "name": "CobbleAsia PokéWiki",
-      "version": "1.22.2"
+      "version": "1.22.3"
     },
     {
       "repo": "asc-pvp",
@@ -195,7 +195,7 @@
     {
       "repo": "asc-raidboss",
       "name": "CobbleAsia Raid Boss",
-      "version": "4.76.0"
+      "version": "4.77.0"
     },
     {
       "repo": "asc-ranks",

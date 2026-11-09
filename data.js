@@ -3306,6 +3306,9 @@ const TEAM = [
   {
     group: 'Admins',
     members: [
+      { name: 'Yberuuuu', role: 'Head Admin', avatar: 'assets/team/yberu.png', motto: 'Ogerponnnn.' },
+      { name: 'Zeta', handle: 'justt_zeta', role: 'Manager', avatar: 'assets/team/zeta.png',
+        motto: 'You only live once.' },
       { name: 'SamsonTheManiac', role: 'Admin', avatar: 'assets/team/samson.jpg',
         motto: 'Oh Great Cifera of Dolos, grant me a glimpse of your cunning beauty once more!' },
       { name: 'TheGreatJenish', role: 'Admin', avatar: 'assets/team/jenish.jpg',

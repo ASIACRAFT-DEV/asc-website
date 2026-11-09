@@ -3304,70 +3304,37 @@ const TEAM = [
     ],
   },
   {
-    group: 'Head Admin',
-    members: [
-      { name: 'Yberuuuu', role: 'Head Admin', avatar: 'assets/team/yberu.png', motto: 'Ogerponnnn.' },
-    ],
-  },
-  {
     group: 'Admins',
     members: [
       { name: 'SamsonTheManiac', role: 'Admin', avatar: 'assets/team/samson.jpg',
         motto: 'Oh Great Cifera of Dolos, grant me a glimpse of your cunning beauty once more!' },
-      { name: 'Raizuuuu', role: 'Admin', avatar: 'assets/team/raizu.jpg',
-        motto: 'Behave or Crys will spank me.', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@ra1zuu' }] },
-    ],
-  },
-  {
-    group: 'Event Manager',
-    members: [
-      { name: 'CallMeAtom', role: 'Event Manager', avatar: 'assets/team/atom.jpg',
+      { name: 'TheGreatJenish', role: 'Admin', avatar: 'assets/team/jenish.jpg',
+        motto: 'Either give up at the very beginning, or never give up.' },
+      { name: 'CallMeAtom', role: 'Admin', avatar: 'assets/team/atom.jpg',
         motto: "I've died before. It was boring, so I stood up." },
     ],
   },
   {
     group: 'Moderators',
     members: [
-      { name: 'TheGreatJenish', role: 'Head Moderator', avatar: 'assets/team/jenish.jpg',
-        motto: 'Either give up at the very beginning, or never give up.' },
-      { name: 'briiza', role: 'Moderator', avatar: 'assets/team/briiza.png',
-        motto: 'Armor King >' },
-      { name: 'Tadzuna', role: 'Moderator', avatar: 'assets/team/tadzuna.jpg',
-        motto: "Ayoko sa mahal, gusto ko sa mura, kasi yung una ko'ng minahal, iba'ng lalake inuna" },
-      { name: 'LilCamo', role: 'Moderator', avatar: 'assets/team/lilcamo.jpg',
+      { name: 'LilCamo', role: 'Head Moderator', avatar: 'assets/team/lilcamo.jpg',
         motto: 'All truly strong people are kind.' },
-      { name: 'DennnPham', role: 'Moderator', avatar: 'assets/team/dennn.png',
-        motto: 'Eat Sleep Hustle Repeat 🔁' },
-    ],
-  },
-  {
-    group: 'Helpers',
-    members: [
-      { name: 'DD1amond', role: 'Helper', avatar: 'assets/team/diamond.png',
-        motto: 'I speak really well I think.' },
-      { name: 'thunderwarlord', role: 'Helper', avatar: 'assets/team/thunder.png',
-        motto: 'Be happy.' },
-    ],
-  },
-  {
-    group: 'Builders',
-    members: [
-      { name: '_Lutris', role: 'Builder', avatar: 'assets/team/lutris.png',
-        motto: 'I love mountains, they teach me to keep climbing.', socials: [{ label: 'YouTube', url: 'https://www.youtube.com/@lutris-35' }] },
-      { name: 'BnanakinSkyWalkr', role: 'Builder', avatar: 'assets/team/bnanakin.png',
-        motto: 'Live life as you wish.' },
-      { name: 'Zesty_Leemon', role: 'Builder', avatar: 'assets/team/leemon.png',
-        motto: 'Hotter than Salem 1962.', socials: [{ label: 'Instagram', url: 'https://www.instagram.com/sprucefruits' }] },
-    ],
-  },
-  {
-    group: 'Media Directors',
-    members: [
-      { name: 'Athyyyyy', role: 'Media Director', avatar: 'assets/team/athy.png',
-        motto: 'What is life?', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@athy_25' }, { label: 'Twitch', url: 'https://www.twitch.tv/athyyy015' }] },
-      { name: 'claooo', role: 'Media Director', avatar: 'assets/team/clao.png',
+      { name: 'VJ', role: 'Moderator', avatar: 'assets/team/vj_drawing.png' },
+      { name: 'claooo', role: 'Moderator', avatar: 'assets/team/clao.png',
         motto: 'All in.', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@ca1oooo' }, { label: 'Twitch', url: 'https://www.twitch.tv/calooloowa' }] },
-      { name: 'ElektroZax', role: 'Content Creator' },
+      { name: 'Athyyyyy', role: 'Moderator', avatar: 'assets/team/athy.png',
+        motto: 'What is life?', socials: [{ label: 'TikTok', url: 'https://www.tiktok.com/@athy_25' }, { label: 'Twitch', url: 'https://www.twitch.tv/athyyy015' }] },
+      { name: 'thunderwarlord', role: 'Moderator', avatar: 'assets/team/thunder.png',
+        motto: 'Be happy.' },
+      { name: 'Skylermacy', role: 'Moderator' },
+      { name: 'iLLus1onOp', role: 'Moderator', avatar: 'assets/team/illus1on.png' },
+    ],
+  },
+  {
+    group: 'Head Builder',
+    members: [
+      { name: 'BnanakinSkyWalkr', handle: 'rtd111', role: 'Head Builder', avatar: 'assets/team/bnanakin.png',
+        motto: 'Live life as you wish.' },
     ],
   },
   {
@@ -3379,23 +3346,6 @@ const TEAM = [
       { name: 'Zandurrrrrr', role: 'S1 Zenith', avatar: 'assets/team/zandurr.png',
         motto: "I stalk myself on the internet just to see what you'll find." },
       { name: 'McNuggetRice', role: 'S1 Zenith', avatar: 'assets/team/mcnugget.jpg', motto: 'una' },
-    ],
-  },
-  {
-    group: 'Inactive Staff',
-    members: [
-      { name: 'Crysthamyr', role: 'Head Admin', avatar: 'assets/team/crys.jpg', motto: "that's just my fly client." },
-      { name: 'Zeta', handle: 'justt_zeta', role: 'Core Management Staff', avatar: 'assets/team/zeta.png',
-        motto: 'You only live once.' },
-      { name: 'mAyHAmBLOOM', role: 'Admin', avatar: 'assets/team/mayham.png',
-        motto: 'Life is too short to do boring things.' },
-      { name: 'AmaxiHaku', role: 'Admin & Builder' },
-      { name: 'HitoriHachi', role: 'Admin & Builder', avatar: 'assets/team/hachi.jpg',
-        motto: 'Take life block by block till you build a masterpiece.', socials: [{ label: 'Twitch', url: 'https://twitch.tv/hitorihachi' }] },
-      { name: '__Vesper', role: 'Admin', avatar: 'assets/team/vesper.png', motto: "Don't pmo." },
-      { name: 'Prime_RN', role: 'Admin', avatar: 'assets/team/prime.png', motto: 'Fear me?' },
-      { name: 'EdsonCheah', role: 'Moderator', avatar: 'assets/team/edson.jpg', motto: "it's ok to not be ok" },
-      { name: 'OPaint', role: 'Moderator', avatar: 'assets/team/opaint.jpg', motto: 'a² + b² = c²' },
     ],
   },
 ];

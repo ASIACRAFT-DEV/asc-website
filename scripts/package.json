@@ -1,0 +1,9 @@
+{
+  "name": "asc-website-build",
+  "private": true,
+  "type": "module",
+  "description": "Build step for the static site: pre-renders pages and writes features/*.html + sitemap.xml",
+  "devDependencies": {
+    "jsdom": "30.1.3"
+  }
+}

@@ -101,7 +101,7 @@ if (grid && typeof FEATURES !== 'undefined') {
     const badge = f.soon
       ? '<span class="fc-badge soon">Coming Soon</span>'
       : (f.featured ? '<span class="fc-badge">Featured</span>' : '');
-    return `<a class="feature-card reveal" href="feature.html?f=${id}">
+    return `<a class="feature-card reveal" href="features/${id}.html">
       ${badge}
       <div class="fc-cat">${f.category}</div>
       <h3>${f.short || f.name}</h3>

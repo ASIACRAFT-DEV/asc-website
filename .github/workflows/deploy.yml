@@ -24,11 +24,20 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/configure-pages@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 24
+      # Pre-renders every page's JS content into the HTML, writes
+      # features/<id>.html + sitemap.xml and adds canonical/OG tags,
+      # all into _site/ (the repo files are untouched). See the script header.
+      - name: Build static pages
+        run: |
+          npm ci --prefix scripts --no-audit --no-fund
+          node scripts/build-static.mjs _site
       - name: Upload site
         uses: actions/upload-pages-artifact@v3
         with:
-          # Repo root is the site (plain static HTML, no build step).
-          path: .
+          path: _site
       - name: Deploy
         id: deployment
         uses: actions/deploy-pages@v4

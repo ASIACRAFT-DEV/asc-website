@@ -1,12 +1,21 @@
 // =====================================================================
-//  feature.html renderer — reads ?f=<id> and builds the detail page.
+//  Feature detail renderer.
+//  Each feature has its own static page, features/<id>.html, generated at
+//  deploy time by scripts/build-static.mjs (which sets <body data-feature>
+//  and runs this file). In the browser, feature.html?f=<id> only forwards
+//  to that page so old links keep working.
 // =====================================================================
 
 (function () {
   const params = new URLSearchParams(location.search);
-  const id = params.get('f');
+  const id = document.body.dataset.feature || params.get('f');
   const root = document.getElementById('fp-root');
   const f = (typeof FEATURES !== 'undefined') && FEATURES[id];
+
+  if (f && !document.body.dataset.feature) {
+    location.replace(`features/${id}.html${location.hash}`);
+    return;
+  }
 
   if (!f) {
     root.innerHTML = `<section class="fp-hero"><div class="fp-hero-inner">
@@ -45,7 +54,7 @@
   // "more features" strip — everything except the current one
   const more = FEATURE_ORDER.filter((x) => x !== id).map((x) => {
     const o = FEATURES[x];
-    return `<a class="more-feat" href="feature.html?f=${x}">${o.short || o.name}</a>`;
+    return `<a class="more-feat" href="features/${x}.html">${o.short || o.name}</a>`;
   }).join('');
 
   root.innerHTML = `

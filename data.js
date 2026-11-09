@@ -3310,7 +3310,7 @@ const TEAM = [
       { name: 'Zeta', handle: 'justt_zeta', role: 'Manager', avatar: 'assets/team/zeta.png',
         motto: 'You only live once.' },
       { name: 'SamsonTheManiac', role: 'Admin', avatar: 'assets/team/samson.jpg',
-        motto: 'Oh Great Cifera of Dolos, grant me a glimpse of your cunning beauty once more!' },
+        motto: 'MiHoYo if you’re reading this by some miracle, I am on my hands and knees BEGGING you E6S5 my Cipher on NA 615786308 PLEASEEEEE CIFERA I NEED THIS' },
       { name: 'TheGreatJenish', role: 'Admin', avatar: 'assets/team/jenish.jpg',
         motto: 'Either give up at the very beginning, or never give up.' },
       { name: 'CallMeAtom', role: 'Admin', avatar: 'assets/team/atom.jpg',
@@ -3330,14 +3330,14 @@ const TEAM = [
       { name: 'thunderwarlord', role: 'Moderator', avatar: 'assets/team/thunder.png',
         motto: 'Be happy.' },
       { name: 'Skylermacy', role: 'Moderator' },
-      { name: 'iLLus1onOp', role: 'Moderator', avatar: 'assets/team/illus1on.png' },
+      { name: 'iLLus1onOp', role: 'Moderator', avatar: 'assets/team/illus1on.png', motto: 'Yum.' },
     ],
   },
   {
     group: 'Head Builder',
     members: [
       { name: 'BnanakinSkyWalkr', handle: 'rtd111', role: 'Head Builder', avatar: 'assets/team/bnanakin.png',
-        motto: 'Live life as you wish.' },
+        motto: 'I like Potatoes.' },
     ],
   },
 ];

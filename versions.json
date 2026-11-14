@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-14T12:43:40.096Z",
+  "generatedAt": "2026-11-14T21:49:13.469Z",
   "count": 43,
   "mods": [
     {
@@ -150,7 +150,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.92.3"
+      "version": "10.92.4"
     },
     {
       "repo": "asc-forge",

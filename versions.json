@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-16T14:19:05.254Z",
+  "generatedAt": "2026-11-17T01:18:20.430Z",
   "count": 43,
   "mods": [
     {
@@ -75,7 +75,7 @@
     {
       "repo": "asc-pokeditor",
       "name": "ASC Pokeditor",
-      "version": "1.12.5"
+      "version": "1.12.6"
     },
     {
       "repo": "asc-contracts",
@@ -150,7 +150,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.92.4"
+      "version": "10.92.5"
     },
     {
       "repo": "asc-forge",
@@ -200,7 +200,7 @@
     {
       "repo": "asc-ranks",
       "name": "CobbleAsia Ranks",
-      "version": "1.49.0"
+      "version": "1.49.1"
     },
     {
       "repo": "asc-safari",

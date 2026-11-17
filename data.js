@@ -1553,6 +1553,12 @@ const GUIDE = [
 const NEWS = [
   {
     tag: 'Update',
+    title: 'Nature Modifier fixed, fusions count in Global Power, Breakout invaders burn and slow',
+    body: 'Live now. Nature Modifiers and <code>/pe</code> nature changes work on Pokémon that had a Mint, fusions score as their own <strong>Fusion</strong> category on <code>/power</code> (best copy only), SolForge invaders burn and Arctis invaders slow in the Nexus Breakout, ranked battles get 45 minutes, and Roulette and Baccarat have their own <code>/lb</code> boards and a weekly limit.',
+    link: 'patchnotes.html',
+  },
+  {
+    tag: 'Update',
     title: 'Battle Tower freeze fixed, fairer raid HP, /pwiki weaknesses corrected',
     body: 'Live after the 12:11 UTC restart on Nov 9 (8:11 PM GMT+8). Tower floor battles stop freezing on a heal glitch, raid bosses only gain HP from players who actually deal damage, the <code>/pwiki</code> weakness chart is fixed, <code>/pe</code> keeps the move it replaces, and opening <code>/lb</code> no longer freezes the server.',
     link: 'patchnotes.html',
@@ -1630,6 +1636,25 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-11-18',
+    tag: 'Update',
+    title: 'Nature Modifier fix, fusions in Global Power, Breakout invaders burn and slow, casino caps',
+    changes: [
+      { type: 'fixed', text: '🌿 <strong>Nature Modifier and <code>/pe</code> natures work on Pokémon that had a Mint.</strong> A minted Pokémon uses the Mint’s nature, and changing its nature only changed the hidden one underneath, so nothing seemed to happen and the token or coins were spent. Changing the nature now removes the Mint too, so the nature you pick is the one the Pokémon uses. The Modifier won’t use your token if the Pokémon already has the nature you picked, and <code>/pe</code> now shows the nature the Pokémon actually uses (thegreatjenish, shimmy_sam).' },
+      { type: 'new', text: '⚡ <strong>Fusions count in Global Power.</strong> Fusions such as Miraiceus, Necgross, Darkzor, Queen Gardevoir and the -evoir fusions used to score as their base Pokémon, and some scored 0 as breedable. They now have their own <strong>Fusion</strong> category worth <strong>250 base</strong> (same as ASC customs) and show by name on <code>/power</code>. Each fusion form counts <strong>once</strong>: only your best copy scores (kasper6854, darkseverin).' },
+      { type: 'new', text: '🌌 <strong>Nexus Breakout invaders hit harder.</strong> A melee hit from a <strong>SolForge</strong> invader or boss sets you on fire for 3 seconds, and one from an <strong>Arctis</strong> invader or boss gives you Slowness I for 3 seconds (darkseverin).' },
+      { type: 'new', text: '🎡 <strong>Roulette and Baccarat boards.</strong> New <code>/lb</code> boards <strong>Roulette &amp; Baccarat: Money Won</strong> and <strong>Money Lost</strong>, counted per round like the slots boards (counting started Nov 10). <code>/casino stats</code> shows your own net, won and lost for each game (rtd111).' },
+      { type: 'improved', text: '🎰 <strong>Weekly table limit.</strong> You can stake up to <strong>500,000,000 coins a week</strong> on Roulette and Baccarat combined. The week resets every <strong>Monday at 8:00 AM GMT+8</strong> (00:00 UTC). Slots don’t count toward it.' },
+      { type: 'fixed', text: '💰 <strong>Coin balances no longer go negative.</strong> A balance that went past 2,147,483,647 coins flipped to about −2 billion. Balances now stop at 2,147,483,647, and anything past that is lost, so spend or send coins before you get close. The casino won’t start a round whose top payout would take you past it (_lilcamo).' },
+      { type: 'improved', text: '⚔️ <strong>Ranked battles get 45 minutes.</strong> The ranked ladder time limit is now <strong>45 minutes</strong> (was 20). If a battle reaches it, the player with more Pokémon and HP left wins (rtd111).' },
+      { type: 'improved', text: '🏰 <strong>No shopping mid-dungeon.</strong> <code>/shop</code>, <code>/bazaar</code>, <code>/kit</code> and <code>/kits</code> are blocked during a dungeon run, like teleports and <code>/home</code> already were (_lilcamo).' },
+      { type: 'new', text: '👥 <strong><code>/party info</code> shows classes.</strong> Each online party member’s class shows next to their name (shimmy_sam).' },
+      { type: 'improved', text: '🌋 <strong>Area Zero: staff follow the same PvP rules.</strong> A staff member’s hit in Area Zero now combat-tags both players like anyone else’s, and can’t hit a player who still has spawn immunity (thegreatjenish).' },
+      { type: 'fixed', text: '🎯 <strong>Hunt rewards show the candy’s name.</strong> The <code>/hunt</code> and <code>/ghunt</code> reward line said “+3× Air”. You always got the candies; the message now names them (shimmy_sam, .arthurwayne).' },
+      { type: 'new', text: '📜 <strong>Server rules on the website.</strong> The full rulebook is at <a href="rules.html">www.cobbleasia.net/rules.html</a> and in #📜┃rules.' },
+    ],
+  },
   {
     date: '2026-11-09',
     tag: 'Update',

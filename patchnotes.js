@@ -27,7 +27,7 @@
       <div class="filter-field">
         <span class="filter-icon" aria-hidden="true">⌕</span>
         <input id="pn-search" type="search" class="filter-input" autocomplete="off" spellcheck="false"
-               placeholder="Search ${TOTAL} updates — try &quot;breeding&quot;, &quot;crash&quot; or &quot;/shop&quot;"
+               placeholder="Search ${TOTAL} updates — ${SERVER.patchHint || 'try &quot;breeding&quot;, &quot;crash&quot; or &quot;/shop&quot;'}"
                aria-label="Search patch notes" />
         <button type="button" id="pn-clear" class="filter-clear" aria-label="Clear search" hidden>×</button>
       </div>

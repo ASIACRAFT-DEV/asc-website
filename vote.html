@@ -3,21 +3,21 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Vote — Cobble Asia &amp; RuneBlock</title>
-  <meta name="description" content="Vote for Cobble Asia and RuneBlock on the server lists. Cobble Asia voters earn vote crate keys, coins and daily streak bonuses." />
+  <title>Vote — Cobble Asia</title>
+  <meta name="description" content="Vote for Cobble Asia on the server lists and earn vote crate keys and coins in-game. Daily voting streaks give bonus rewards." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
   <link rel="icon" type="image/png" href="assets/brand-frost.png" />
-  <link rel="stylesheet" href="styles.css?v=202611181703" />
+  <link rel="stylesheet" href="styles.css?v=202611181728" />
 </head>
 <body>
   <header class="nav">
     <div class="nav-inner">
-      <a class="brand" href="index.html">Cobble<span class="brand-accent">Asia</span></a>
+      <a class="brand" href="cobblemon.html">Cobble<span class="brand-accent">Asia</span></a>
             <nav class="nav-links">
-        <a href="index.html#features">Features</a>
-        <a href="runeblock.html" class="nav-rb">RuneBlock</a>
+        <a href="cobblemon.html#features">Features</a>
+        <a href="index.html" class="nav-rb">Switch game</a>
         <a href="commands.html">Commands</a>
         <a href="https://store.cobbleasia.net" target="_blank" rel="noopener">Store</a>
         <a href="team.html">Team</a>
@@ -35,10 +35,15 @@
     <section class="fp-hero">
       <div class="fp-hero-glow"></div>
       <div class="fp-hero-inner">
-        <a class="back-link" href="index.html">← Back home</a>
+        <a class="back-link" href="cobblemon.html">← Back home</a>
         <span class="fp-cat">Support Us</span>
-        <h1 class="fp-title">Vote for your server</h1>
-        <p class="fp-blurb">Voting pushes us up the server lists and brings in new players. Pick your game mode below and vote on every site each day.</p>
+        <h1 class="fp-title">Vote for Cobble Asia</h1>
+        <p class="fp-blurb">Voting pushes us up the server lists and brings in new trainers — and you get rewarded for it. Vote on every site each day for keys, coins and streak bonuses.</p>
+        <div class="ip-chip ip-chip-lg">
+          <span class="ip-label">IP</span>
+          <code>play.cobbleasia.net</code>
+          <button class="copy-btn" data-copy="play.cobbleasia.net" aria-label="Copy server IP">Copy</button>
+        </div>
       </div>
     </section>
 
@@ -46,7 +51,7 @@
       <div id="vote-root"><!-- rendered by vote.js --></div>
 
       <div class="fp-cta reveal">
-        <p>Vote with the same name you use in-game so rewards reach you. On Cobble Asia, claim queued rewards with <a href="commands.html">/vote</a> if you voted while offline.</p>
+        <p>Vote with the same name you use in-game so rewards reach you. Rewards land via <a href="commands.html">/vote</a> — claim queued rewards there if you voted while offline.</p>
         <div class="cta-row center">
           <a class="btn btn-primary js-discord" href="#">Join the Discord →</a>
           <a class="btn btn-ghost" href="commands.html">All commands</a>
@@ -61,8 +66,8 @@
     <p class="footer-dim">Not affiliated with Mojang, Nintendo, or The Pokémon Company.</p>
   </footer>
 
-  <script src="data.js?v=202611181703"></script>
-  <script src="vote.js?v=202611181703"></script>
-  <script src="app.js?v=202611181703"></script>
+  <script src="data.js?v=202611181728"></script>
+  <script src="vote.js?v=202611181728"></script>
+  <script src="app.js?v=202611181728"></script>
 </body>
 </html>

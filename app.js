@@ -148,7 +148,7 @@ if (patchPreview && typeof PATCHNOTES !== 'undefined') {
   };
   patchPreview.innerHTML = PATCHNOTES.slice(0, 3)
     .map(
-      (p) => `<a class="patch-card" href="patchnotes.html">
+      (p) => `<a class="patch-card" href="${SERVER.patchnotes || 'patchnotes.html'}">
         <div class="patch-head">
           <span class="patch-tag">${p.tag}</span>
           <span class="patch-date">${fmt(p.date)}</span>

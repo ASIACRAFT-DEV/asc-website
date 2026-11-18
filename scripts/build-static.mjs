@@ -28,7 +28,7 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = resolve(ROOT, process.argv[2] || '_site');
 
 // Pages that are redirects or templates, not content.
-const SKIP_PAGES = new Set(['faq.html', 'feature.html']);
+const SKIP_PAGES = new Set(['faq.html', 'feature.html', 'rb-feature.html']);
 // Repo files that are not part of the site.
 const NOT_SITE = new Set(['.git', '.github', '.gitignore', 'scripts', 'node_modules', 'README.md', '_site']);
 
@@ -50,6 +50,14 @@ vm.runInContext(
   { filename: 'data.js' }
 );
 const { FEATURES, FEATURE_ORDER } = data;
+const rbData = {};
+vm.createContext(rbData);
+vm.runInContext(
+  readFileSync(join(OUT, 'rb-data.js'), 'utf8') + '\n;this.FEATURES = FEATURES; this.FEATURE_ORDER = FEATURE_ORDER;',
+  rbData,
+  { filename: 'rb-data.js' }
+);
+const isRuneBlock = (path) => /^(runeblock\.html|rb-|features\/rb-)/.test(path);
 
 // ---------------------------------------------------------------- helpers
 const isRelative = (u) => !!u && !/^([a-z][a-z0-9+.-]*:|\/\/|\/|#)/i.test(u);
@@ -121,6 +129,8 @@ async function render(file, { url, before } = {}) {
 function addHeadTags(doc, path) {
   const head = doc.head;
   const url = path === 'index.html' ? `${SITE}/` : `${SITE}/${path}`;
+  const rb = isRuneBlock(path);
+  const image = rb ? { path: 'assets/runeblock/hero.jpg', width: 1800, height: 918 } : OG_IMAGE;
   const title = doc.title;
   const desc = doc.querySelector('meta[name="description"]')?.getAttribute('content') || '';
   const add = (tag, attrs) => {
@@ -132,18 +142,18 @@ function addHeadTags(doc, path) {
     head.appendChild(el);
   };
   add('link', { rel: 'canonical', href: url });
-  add('meta', { property: 'og:site_name', content: 'Cobble Asia' });
+  add('meta', { property: 'og:site_name', content: rb ? 'RuneBlock' : 'Cobble Asia' });
   add('meta', { property: 'og:type', content: 'website' });
   add('meta', { property: 'og:title', content: title });
   add('meta', { property: 'og:description', content: desc });
   add('meta', { property: 'og:url', content: url });
-  add('meta', { property: 'og:image', content: `${SITE}/${OG_IMAGE.path}` });
-  add('meta', { property: 'og:image:width', content: String(OG_IMAGE.width) });
-  add('meta', { property: 'og:image:height', content: String(OG_IMAGE.height) });
+  add('meta', { property: 'og:image', content: `${SITE}/${image.path}` });
+  add('meta', { property: 'og:image:width', content: String(image.width) });
+  add('meta', { property: 'og:image:height', content: String(image.height) });
   add('meta', { name: 'twitter:card', content: 'summary_large_image' });
   add('meta', { name: 'twitter:title', content: title });
   add('meta', { name: 'twitter:description', content: desc });
-  add('meta', { name: 'twitter:image', content: `${SITE}/${OG_IMAGE.path}` });
+  add('meta', { name: 'twitter:image', content: `${SITE}/${image.path}` });
 }
 
 const write = (path, dom) => {
@@ -163,10 +173,14 @@ for (const file of pages) {
 }
 
 // ---------------------------------------------------------------- features
-for (const id of Object.keys(FEATURES)) {
-  const f = FEATURES[id];
+const SITES = [
+  { features: FEATURES, order: FEATURE_ORDER, template: 'feature.html', suffix: 'Cobble Asia Cobblemon Server' },
+  { features: rbData.FEATURES, order: rbData.FEATURE_ORDER, template: 'rb-feature.html', suffix: 'RuneBlock MMORPG' },
+];
+for (const { features, order, template, suffix } of SITES) for (const id of Object.keys(features)) {
+  const f = features[id];
   const path = `features/${id}.html`;
-  const dom = await render('feature.html', {
+  const dom = await render(template, {
     url: `${SITE}/${path}`,
     before: (doc) => { doc.body.dataset.feature = id; },
   });
@@ -177,7 +191,7 @@ for (const id of Object.keys(FEATURES)) {
   doc.querySelector('script[src^="feature.js"]')?.remove();
   doc.querySelector('meta[name="robots"]')?.remove();
 
-  doc.title = `${f.short || f.name} — Cobble Asia Cobblemon Server`;
+  doc.title = `${f.short || f.name} — ${suffix}`;
   let desc = plainText(f.blurb);
   if (desc.length < 110 && f.intro) desc = `${desc} ${plainText(f.intro)}`;
   doc.querySelector('meta[name="description"]').setAttribute('content', clip(desc));
@@ -191,7 +205,7 @@ for (const id of Object.keys(FEATURES)) {
   }
   addHeadTags(doc, path);
   write(path, dom);
-  if (FEATURE_ORDER.includes(id)) sitemap.push(path);
+  if (order.includes(id)) sitemap.push(path);
 }
 
 // ---------------------------------------------------------------- sitemap
@@ -202,4 +216,4 @@ writeFileSync(
     '\n</urlset>\n'
 );
 
-console.log(`Built ${OUT}: ${pages.length} pages pre-rendered, ${Object.keys(FEATURES).length} feature pages, ${sitemap.length} sitemap URLs`);
+console.log(`Built ${OUT}: ${pages.length} pages pre-rendered, ${Object.keys(FEATURES).length + Object.keys(rbData.FEATURES).length} feature pages, ${sitemap.length} sitemap URLs`);

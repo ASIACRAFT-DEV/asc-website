@@ -11,6 +11,7 @@
   const id = document.body.dataset.feature || params.get('f');
   const root = document.getElementById('fp-root');
   const f = (typeof FEATURES !== 'undefined') && FEATURES[id];
+  const HOME = SERVER.home || 'cobblemon.html';
 
   if (f && !document.body.dataset.feature) {
     location.replace(`features/${id}.html${location.hash}`);
@@ -19,14 +20,14 @@
 
   if (!f) {
     root.innerHTML = `<section class="fp-hero"><div class="fp-hero-inner">
-      <a class="back-link" href="index.html">← Back to all features</a>
+      <a class="back-link" href="${HOME}">← Back to all features</a>
       <h1 class="fp-title">Feature not found</h1>
       <p class="fp-blurb">That feature doesn't exist. Head back and pick one from the list.</p>
     </div></section>`;
     return;
   }
 
-  document.title = `${f.short || f.name} — Cobble Asia`;
+  document.title = `${f.short || f.name} — ${SERVER.name || 'Cobble Asia'}`;
 
   const grad = {
     solar: 'var(--g-solar)', ember: 'var(--g-ember)', amber: 'var(--g-amber)',
@@ -61,7 +62,7 @@
     <section class="fp-hero" style="--fp-glow:${glow}">
       <div class="fp-hero-glow"></div>
       <div class="fp-hero-inner">
-        <a class="back-link" href="index.html#features">← Back to all features</a>
+        <a class="back-link" href="${HOME}#features">← Back to all features</a>
         <span class="fp-cat">${f.category}</span>
         <h1 class="fp-title">${f.name}</h1>
         <p class="fp-blurb">${f.blurb}</p>

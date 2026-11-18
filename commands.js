@@ -26,7 +26,7 @@
       <div class="filter-field">
         <span class="filter-icon" aria-hidden="true">⌕</span>
         <input id="cmd-search" type="search" class="filter-input" autocomplete="off" spellcheck="false"
-               placeholder="Search ${TOTAL} commands — try &quot;home&quot;, &quot;shop&quot; or &quot;legend&quot;"
+               placeholder="Search ${TOTAL} commands — ${SERVER.commandHint || 'try &quot;home&quot;, &quot;shop&quot; or &quot;legend&quot;'}"
                aria-label="Search commands" />
         <button type="button" id="cmd-clear" class="filter-clear" aria-label="Clear search" hidden>×</button>
       </div>

@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>RuneBlock — Fantasy MMORPG in Minecraft</title>
+  <meta name="description" content="RuneBlock is a fantasy MMORPG built inside Minecraft 1.21.11. Choose from 5 classes and 14 subclasses, build your skill tree, clear the Nightmare Temple and hunt world bosses. Open Beta." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pixelify+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet" />
+  <link rel="icon" type="image/png" href="assets/brand-frost.png" />
+  <link rel="stylesheet" href="styles.css?v=202611181703" />
+</head>
+<body class="rb-page">
+  <header class="nav">
+    <div class="nav-inner">
+      <a class="brand" href="index.html">Cobble<span class="brand-accent">Asia</span></a>
+      <nav class="nav-links">
+        <a href="index.html#features">Features</a>
+        <a href="runeblock.html" class="nav-rb" aria-current="page">RuneBlock</a>
+        <a href="commands.html">Commands</a>
+        <a href="https://store.cobbleasia.net" target="_blank" rel="noopener">Store</a>
+        <a href="team.html">Team</a>
+        <a href="tutorial.html">Tutorial</a>
+        <a href="forge.html">Forge</a>
+        <a href="patchnotes.html">Patch Notes</a>
+        <a href="vote.html">Vote</a>
+        <a href="rules.html">Rules</a>
+        <a href="#" class="nav-cta js-discord">Discord</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="top">
+    <section class="rb-hero on-dark">
+      <div class="rb-hero-inner">
+        <p class="rb-eyebrow">Open Beta · Minecraft <span id="rb-mc"></span></p>
+        <h1 class="rb-title">RUNE<span>BLOCK</span></h1>
+        <p class="rb-tagline">A fantasy MMORPG built inside Minecraft. Pick a class, shape your skill tree, and fight through temples, raids and world bosses across the land of NEPTAR.</p>
+        <div class="hub-join">
+          <button class="btn btn-primary btn-lg" id="rb-copy">Play — copy IP</button>
+          <a class="btn btn-ghost btn-lg" href="#join">How to join</a>
+        </div>
+        <div class="hub-meta">
+          <span class="hub-status"><span class="dot"></span><span id="rb-player-count">checking status…</span></span>
+          <span class="hub-ip"><span class="ip-label">IP</span> <code id="rb-ip"></code></span>
+        </div>
+      </div>
+    </section>
+
+    <section class="rb-stats" aria-label="RuneBlock at a glance">
+      <div class="rb-stats-inner" id="rb-stats"><!-- rendered by runeblock.js --></div>
+    </section>
+
+    <section id="classes" class="section">
+      <div class="section-head reveal">
+        <span class="section-tag">Classes</span>
+        <h2 class="section-title">Find your calling</h2>
+        <p class="section-sub">Five classes, each branching into its own subclasses.</p>
+      </div>
+      <div class="rb-class-grid" id="rb-classes"><!-- rendered by runeblock.js --></div>
+    </section>
+
+    <section id="world" class="section rb-band">
+      <div class="section-head reveal">
+        <span class="section-tag">The adventure</span>
+        <h2 class="section-title">Built for the long hunt</h2>
+      </div>
+      <div class="rb-feature-grid" id="rb-features"><!-- rendered by runeblock.js --></div>
+    </section>
+
+    <section id="gallery" class="section">
+      <div class="section-head reveal">
+        <span class="section-tag">In game</span>
+        <h2 class="section-title">See it for yourself</h2>
+      </div>
+      <div class="rb-gallery reveal">
+        <figure>
+          <img src="assets/runeblock/hud.jpg" alt="A RuneBlock town plaza with the custom health, mana, skill and quest interface" width="1200" height="675" loading="lazy" />
+          <figcaption>A full MMO interface: health, mana, skills, compass and quest tracker.</figcaption>
+        </figure>
+        <figure>
+          <img src="assets/runeblock/skilltree.jpg" alt="The Warrior skill tree screen showing skill nodes and an ultimate" width="1200" height="675" loading="lazy" />
+          <figcaption>Spend skill points and Souls on skills, upgrades and ultimates.</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section id="join" class="section rb-band">
+      <div class="section-head reveal">
+        <span class="section-tag">Get started</span>
+        <h2 class="section-title">How to join</h2>
+        <p class="section-sub">RuneBlock needs its free client mod. Setup takes a few minutes.</p>
+      </div>
+      <ol class="rb-steps" id="rb-steps"><!-- rendered by runeblock.js --></ol>
+      <div class="cta-row center">
+        <a class="btn btn-primary" id="rb-client" target="_blank" rel="noopener">Download the client</a>
+        <a class="btn btn-ghost" href="vote.html#runeblock">Vote for RuneBlock</a>
+        <a class="btn btn-ghost js-discord" href="#">Join the Discord</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <p>RuneBlock — a fantasy MMORPG from the Cobble Asia team. Join us on <a class="js-discord" href="#">Discord</a>.</p>
+    <p style="margin-bottom:6px;"><a class="js-credits" href="credits.html">Credits</a></p>
+    <p class="footer-dim">Not affiliated with Mojang or Microsoft.</p>
+  </footer>
+
+  <script src="data.js?v=202611181703"></script>
+  <script src="runeblock.js?v=202611181703"></script>
+  <script src="app.js?v=202611181703"></script>
+</body>
+</html>

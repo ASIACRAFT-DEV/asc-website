@@ -1620,9 +1620,105 @@ const TEAM = [
         "avatar": "assets/team/indigopulse.jpg"
       },
       {
+        "name": "Velpecula",
+        "handle": "VelpeculaTheFox",
+        "role": "Owner",
+        "avatar": "assets/team/velpecula.gif"
+      },
+      {
         "name": "Ett",
         "role": "Game Master",
         "mc": "EttLel"
+      }
+    ]
+  },
+  {
+    "group": "CBT Testers",
+    "members": [
+      {
+        "name": "BnanakinSkyWalkr",
+        "role": "CBT",
+        "mc": "BnanakinSkyWalkr"
+      },
+      {
+        "name": "CallMeAtom",
+        "role": "CBT",
+        "mc": "CallMeAtom"
+      },
+      {
+        "name": "claooo",
+        "role": "CBT",
+        "mc": "claooo"
+      },
+      {
+        "name": "DarkSeverin",
+        "role": "CBT",
+        "mc": "DarkSeverin"
+      },
+      {
+        "name": "DennnPham",
+        "role": "CBT",
+        "mc": "DennnPham"
+      },
+      {
+        "name": "GKRV_Tamilan",
+        "role": "CBT",
+        "mc": "GKRV_Tamilan"
+      },
+      {
+        "name": "IllusionOp",
+        "role": "CBT",
+        "mc": "IllusionOp"
+      },
+      {
+        "name": "Karanx",
+        "role": "CBT",
+        "mc": "Karanx"
+      },
+      {
+        "name": "kujos1mc",
+        "role": "CBT",
+        "mc": "kujos1mc"
+      },
+      {
+        "name": "Rebas27",
+        "role": "CBT",
+        "mc": "Rebas27"
+      },
+      {
+        "name": "Rugas",
+        "role": "CBT",
+        "mc": "Rugas"
+      },
+      {
+        "name": "StillOrbit_09",
+        "role": "CBT",
+        "mc": "StillOrbit_09"
+      },
+      {
+        "name": "thanoskight",
+        "role": "CBT",
+        "mc": "thanoskight"
+      },
+      {
+        "name": "TheGreatJenish",
+        "role": "CBT",
+        "mc": "TheGreatJenish"
+      },
+      {
+        "name": "thunderwarlord",
+        "role": "CBT",
+        "mc": "thunderwarlord"
+      },
+      {
+        "name": "TomboyLoverz",
+        "role": "CBT",
+        "mc": "TomboyLoverz"
+      },
+      {
+        "name": "VJ1010",
+        "role": "CBT",
+        "mc": "VJ1010"
       }
     ]
   }

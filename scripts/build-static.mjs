@@ -28,7 +28,8 @@ const ROOT = resolve(dirname(fileURLToPath(import.meta.url)), '..');
 const OUT = resolve(ROOT, process.argv[2] || '_site');
 
 // Pages that are redirects or templates, not content.
-const SKIP_PAGES = new Set(['faq.html', 'feature.html', 'rb-feature.html']);
+// cobblemon.html forwards to / and games.html (the game picker) is noindex.
+const SKIP_PAGES = new Set(['faq.html', 'feature.html', 'rb-feature.html', 'cobblemon.html', 'games.html']);
 // Repo files that are not part of the site.
 const NOT_SITE = new Set(['.git', '.github', '.gitignore', 'scripts', 'node_modules', 'README.md', '_site']);
 

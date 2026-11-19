@@ -11,7 +11,7 @@
   const id = document.body.dataset.feature || params.get('f');
   const root = document.getElementById('fp-root');
   const f = (typeof FEATURES !== 'undefined') && FEATURES[id];
-  const HOME = SERVER.home || 'cobblemon.html';
+  const HOME = SERVER.home || 'index.html';
 
   if (f && !document.body.dataset.feature) {
     location.replace(`features/${id}.html${location.hash}`);

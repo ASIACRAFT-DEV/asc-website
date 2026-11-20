@@ -972,3 +972,10 @@ a.credit-row:hover .credit-link { color: var(--gold-deep); }
   .gate-card { padding: 72px 16px 26px; }
 }
 
+
+/* RuneBlock pixel logo (2026-11-20). PNGs are exact 2x/4x/8x texel scales: keep them pixelated. */
+.rb-page .brand-logo, .rb-page .rb-hero-logo, .gate-emblem { display: block; height: auto; image-rendering: pixelated; }
+.rb-page .brand-logo { width: 166px; max-width: 42vw; }
+.rb-page .hub-title { line-height: 0; }
+.rb-page .rb-hero-logo { width: min(268px, 66vw); margin: 0 auto; filter: drop-shadow(0 8px 0 rgba(0,0,0,.3)) drop-shadow(0 0 36px rgba(176, 124, 240, .35)); }
+.gate-emblem { width: 72px; margin-bottom: 14px; filter: drop-shadow(0 4px 12px rgba(0,0,0,.5)); }

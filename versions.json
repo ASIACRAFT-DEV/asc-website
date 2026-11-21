@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-20T23:29:34.587Z",
+  "generatedAt": "2026-11-21T04:50:11.013Z",
   "count": 43,
   "mods": [
     {
@@ -45,7 +45,7 @@
     {
       "repo": "asc-events",
       "name": "ASC Events",
-      "version": "1.4.3"
+      "version": "1.5.0"
     },
     {
       "repo": "asc-fishing",

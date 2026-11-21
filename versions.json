@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-21T04:50:11.013Z",
+  "generatedAt": "2026-11-21T13:54:46.670Z",
   "count": 43,
   "mods": [
     {
@@ -15,7 +15,7 @@
     {
       "repo": "asc-clans",
       "name": "ASC Clans",
-      "version": "1.34.0"
+      "version": "1.34.1"
     },
     {
       "repo": "asc-classes",
@@ -150,7 +150,7 @@
     {
       "repo": "asc-essentials",
       "name": "CobbleAsia Essentials",
-      "version": "10.92.7"
+      "version": "10.92.8"
     },
     {
       "repo": "asc-forge",

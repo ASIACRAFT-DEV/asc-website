@@ -1553,6 +1553,12 @@ const GUIDE = [
 const NEWS = [
   {
     tag: 'Update',
+    title: 'Christmas advent calendar, /dex counts the 1,025 standard Pokémon, no flying in the Breakout arena',
+    body: 'Live now. From <strong>Dec 1 to 25</strong> there’s a gift every day with <code>/advent</code>, your <code>/dex</code> % counts the <strong>1,025 standard Pokémon</strong> (seasonal ones get their own line), Trainer wins stop paying RP at <strong>Ultra Ball</strong>, flying is off over the Breakout arena during a run, and Area Zero bosses no longer vanish right after they spawn.',
+    link: 'patchnotes.html',
+  },
+  {
+    tag: 'Update',
     title: 'Nature Modifier fixed, fusions count in Global Power, Breakout invaders burn and slow',
     body: 'Live now. Nature Modifiers and <code>/pe</code> nature changes work on Pokémon that had a Mint, fusions score as their own <strong>Fusion</strong> category on <code>/power</code> (best copy only), SolForge invaders burn and Arctis invaders slow in the Nexus Breakout, ranked battles get 45 minutes, and Roulette and Baccarat have their own <code>/lb</code> boards and a weekly limit.',
     link: 'patchnotes.html',
@@ -1636,6 +1642,20 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-11-24',
+    tag: 'Update',
+    title: 'Christmas advent calendar, /dex counts standard Pokémon, Trainer RP at Ultra Ball, Breakout and Area Zero fixes',
+    changes: [
+      { type: 'new', text: '🎄 <strong>Christmas advent calendar (Dec 1–25).</strong> There’s a gift every day from <strong>Dec 1 to Dec 25</strong>. Play <strong>30 minutes</strong> that day, then open it with <code>/advent claim</code>; <code>/advent</code> shows today’s gift and your progress. Each gift can only be opened on its own day, and a new day starts at <strong>8:00 AM GMT+8</strong> (00:00 UTC). Gifts include Rare Candies, coins, Tokens, Vote, Origin, Legacy and Mega keys, Master Balls, flight time, and a <strong>Legendary Core and a Nexus Key on Christmas Day</strong> (vj._.).' },
+      { type: 'improved', text: '📖 <strong><code>/dex</code> % counts the 1,025 standard Pokémon.</strong> The dex tiers (Trainer 10% … Master 100%) now count the standard species #1–1025 you’ve registered, out of 1,025. Seasonal and custom Pokémon (Arctis, SolForge, Aurelion, Crythian) show on their own <strong>Seasonal</strong> line in <code>/dex</code> and no longer count toward the %, so Master no longer needs every seasonal legend. Tiers you already claimed stay claimed (carno4lyfe).' },
+      { type: 'improved', text: '🏆 <strong>Trainer (NPC) wins stop paying RP at Ultra Ball.</strong> Below Ultra Ball, Trainer battle wins pay RP and help you climb as before, including the win that takes you into Ultra Ball. Once you’re at Ultra Ball, Trainer wins give no RP, so you climb further by beating players. RP you already earned stays (kasper6854).' },
+      { type: 'improved', text: '🌌 <strong>No flying over the Breakout arena during a run.</strong> <code>/fly</code> and elytra stop working over the arena while a run is on, because flying players were pulling the boss into the air. You take no fall damage from being dropped, and flight comes back when you leave the arena or the run ends (diabloxn., kasper6854, shimmy_sam).' },
+      { type: 'fixed', text: '🌌 <strong>Breakout boss stays in the fight.</strong> A boss that stepped just past the arena edge while chasing someone at the rim was sent back to the portal, which reset the fight. It’s now moved back inside and the fight carries on.' },
+      { type: 'fixed', text: '🌋 <strong>Area Zero bosses stay put.</strong> A boss could disappear seconds after it spawned and turn up much later. Its area now stays loaded, and a boss that has already died or run out of time is no longer announced as a new spawn when it wakes up (shimmy_sam, .arthurwayne).' },
+      { type: 'fixed', text: '🪓 <strong>Piston-moved blocks (from the Nov 24 8:11 PM GMT+8 restart).</strong> A log moved by a piston no longer gives Solar Shards from the SolForge axe, and the same check now applies to job quests, levels and skills XP (_lilcamo).' },
+    ],
+  },
   {
     date: '2026-11-18',
     tag: 'Update',

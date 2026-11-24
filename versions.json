@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-23T16:51:55.167Z",
+  "generatedAt": "2026-11-24T03:37:32.182Z",
   "count": 43,
   "mods": [
     {
@@ -60,7 +60,7 @@
     {
       "repo": "asc-jobs",
       "name": "ASC Jobs",
-      "version": "2.23.0"
+      "version": "2.24.0"
     },
     {
       "repo": "asc-legendspawns",
@@ -70,7 +70,7 @@
     {
       "repo": "asc-mcmmo",
       "name": "ASC McMMO",
-      "version": "2.15.2"
+      "version": "2.16.0"
     },
     {
       "repo": "asc-pokeditor",
@@ -155,7 +155,7 @@
     {
       "repo": "asc-forge",
       "name": "CobbleAsia Forge",
-      "version": "2.68.0"
+      "version": "2.69.0"
     },
     {
       "repo": "asc-gts",
@@ -170,7 +170,7 @@
     {
       "repo": "asc-levels",
       "name": "CobbleAsia Levels",
-      "version": "1.12.0"
+      "version": "1.13.0"
     },
     {
       "repo": "asc-mail",

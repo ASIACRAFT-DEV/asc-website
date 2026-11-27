@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-11-27T01:17:28.845Z",
+  "generatedAt": "2026-11-27T15:50:48.777Z",
   "count": 43,
   "mods": [
     {
@@ -120,7 +120,7 @@
     {
       "repo": "asc-breeding",
       "name": "CobbleAsia Breeding",
-      "version": "1.34.1"
+      "version": "1.34.2"
     },
     {
       "repo": "asc-chestshop",

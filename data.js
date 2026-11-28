@@ -1552,6 +1552,12 @@ const GUIDE = [
 // =====================================================================
 const NEWS = [
   {
+    tag: 'Event',
+    title: 'The holiday season is here: 20% off, free /fly, Christmas skins and three December events',
+    body: 'All of December (Dec 1–31) there’s <strong>20% off all items</strong> and <strong>free <code>/fly</code></strong> for every player. A rare Christmas row arrives in the <strong>Nexus Crate</strong> after the Nov 30 maintenance, and December brings the <strong>Advent Calendar</strong> (Dec 1–25), the <strong>Advent Catch Challenge</strong> (Dec 1–24) and <strong>The Solstice Convergence</strong> (Dec 18–31).',
+    link: 'patchnotes.html',
+  },
+  {
     tag: 'Update',
     title: 'Christmas advent calendar, /dex counts the 1,025 standard Pokémon, no flying in the Breakout arena',
     body: 'Live now. From <strong>Dec 1 to 25</strong> there’s a gift every day with <code>/advent</code>, your <code>/dex</code> % counts the <strong>1,025 standard Pokémon</strong> (seasonal ones get their own line), Trainer wins stop paying RP at <strong>Ultra Ball</strong>, flying is off over the Breakout arena during a run, and Area Zero bosses no longer vanish right after they spawn.',
@@ -1642,6 +1648,20 @@ const NEWS = [
 //  newest first. `type` per change is one of: new | improved | fixed.
 // =====================================================================
 const PATCHNOTES = [
+  {
+    date: '2026-11-28',
+    tag: 'Event',
+    title: 'The holiday season is here on Cobble Asia: December bonuses, Christmas skins and events',
+    changes: [
+      { type: 'new', text: '🎄 <strong>Happy holidays!</strong> As the year comes to an end, we’re celebrating December with Christmas surprises, exclusive rewards, special events and holiday bonuses for everyone.' },
+      { type: 'new', text: '🛍️ <strong>20% off all items (Dec 1–31).</strong> Enjoy 20% off all items throughout December.' },
+      { type: 'new', text: '🪽 <strong>Free <code>/fly</code> (Dec 1–31).</strong> All players get free access to <code>/fly</code> for the entire month.' },
+      { type: 'new', text: '🎅 <strong>Christmas skins in the Nexus Crate (after the Nov 30 maintenance).</strong> A brand-new rare Christmas row: Santa Snorlax, Sleighbell Stantler, Candy Cane Sylveon, Gift-Wrap Mimikyu, Yule Queen Lopunny, and Yule Princess Gardevoir, who transforms into the <strong>Yule Empress</strong> when she Mega Evolves. Good luck getting your festive favorites!' },
+      { type: 'new', text: '🎁 <strong>Advent Calendar (Dec 1–25).</strong> A new gift every day, just for playing. Log in, enjoy your time on Cobble Asia, and collect special daily Christmas rewards. Full details, claiming instructions and the complete reward list will be announced soon.' },
+      { type: 'new', text: '🎯 <strong>Advent Catch Challenge (Dec 1–24).</strong> A daily catching challenge with special Pokémon, specific Poké Ball requirements and milestone rewards. The more challenges you complete, the bigger the rewards. Full details, daily requirements and rewards will be announced soon.' },
+      { type: 'new', text: '❄️ <strong>The Solstice Convergence (Dec 18–31).</strong> Our big Christmas event. Travel to the frozen hub of <strong>Vinterheim</strong>, take on daily tasks to collect <strong>Aurora Shards</strong>, and spend them in the event shop on exclusive rewards. Every Aurora Shard the server earns fills the <strong>Solstice Seal</strong>, and as the community fills it, bigger things begin to happen. Keep an eye out for <strong>Santa’s Descent</strong>! More details closer to launch.' },
+    ],
+  },
   {
     date: '2026-11-24',
     tag: 'Update',
